@@ -301,6 +301,86 @@ dowe takie jak WiFi 802.11abgn, Bluetooth (pomijany jest tu fakt braku możliwo�
 \end_layout
 
 \begin_layout Standard
+\align left
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Protokoły
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename protocol_1.png
+	display false
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Komunikacja
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename communicating.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Urządzenia UPnP można sklasyfikować w dwóch kategoriach, punktów kontrolnych
  (ang.
  Control Points) oraz urządzeń kontrolowanych (ang.
@@ -691,6 +771,135 @@ Zarówno serwer, jak i klient UPnP musi komunikować się z wykorzystaniem
  Jeżeli urządzenie nie otrzyma adresu IP powinno wykorzystać tzw.
  autoadresowanie IP (urządzenie wybiera adres z określonej puli np.
  169.254/16).
+\end_layout
+
+\begin_layout Standard
+Wywołania punktów kontrolnych odbywają się poprzez wykorzystanie adresów
+ SOAP SSDP UPNP_FORUM_PUBLIC_RYSUNKI
+\end_layout
+
+\begin_layout Section*
+Klasy urządzeń
+\end_layout
+
+\begin_layout Subsection*
+Serwery
+\end_layout
+
+\begin_layout Standard
+dswd
+\end_layout
+
+\begin_layout Subsubsection*
+Kodowanie w locie
+\end_layout
+
+\begin_layout Standard
+fewsfsf
+\end_layout
+
+\begin_layout Subsection*
+Odtwarzacze
+\end_layout
+
+\begin_layout Standard
+dewd
+\end_layout
+
+\begin_layout Subsection*
+Piloty
+\end_layout
+
+\begin_layout Subsection*
+Odmiany mobilne
+\end_layout
+
+\begin_layout Section*
+Multimedia w UPnP/DLNA
+\end_layout
+
+\begin_layout Subsection*
+Rodzaje multimediów
+\end_layout
+
+\begin_layout Subsubsection*
+Filmy
+\end_layout
+
+\begin_layout Paragraph*
+Sposoby odtwarzania
+\end_layout
+
+\begin_layout Paragraph*
+Ścieżka dźwiękowa
+\end_layout
+
+\begin_layout Paragraph*
+Napisy w filmach
+\end_layout
+
+\begin_layout Standard
+Kodowanie filmów
+\end_layout
+
+\begin_layout Standard
+Muzyka
+\end_layout
+
+\begin_layout Standard
+Zdjęcia
+\end_layout
+
+\begin_layout Standard
+Miniatury multimediów
+\end_layout
+
+\begin_layout Standard
+Teoria, a praktyka UPnP/DLNA
+\end_layout
+
+\begin_layout Standard
+Standard
+\end_layout
+
+\begin_layout Standard
+Polecenia protokołu
+\end_layout
+
+\begin_layout Standard
+Różnice działania odtwarzaczy różnych producentów
+\end_layout
+
+\begin_layout Standard
+Porównanie oprogramowania serwerów UPnP/DLNA
+\end_layout
+
+\begin_layout Standard
+Porównanie oprogramowania odtwarzaczy UPnP/DLNA
+\end_layout
+
+\begin_layout Standard
+Realizacja oprogramowania serwera UPnP
+\end_layout
+
+\begin_layout Standard
+Zdefiniowane wymagania
+\end_layout
+
+\begin_layout Standard
+platformy gui Porównanie różnych dostępnych framework’ów UPnP
+\end_layout
+
+\begin_layout Standard
+Sposób realizacji serwera
+\end_layout
+
+\begin_layout Standard
+Napotkane problemy
+\end_layout
+
+\begin_layout Standard
+Współpraca z odtwarzaczami w oprogramowaniu telewizorów
 \end_layout
 
 \begin_layout Bibliography

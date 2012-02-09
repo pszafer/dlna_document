@@ -301,6 +301,86 @@ dowe takie jak WiFi 802.11abgn, Bluetooth (pomijany jest tu fakt braku możliwo�
 \end_layout
 
 \begin_layout Standard
+\align left
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Protokoły
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename protocol_1.png
+	display false
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Komunikacja
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename communicating.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Urządzenia UPnP można sklasyfikować w dwóch kategoriach, punktów kontrolnych
  (ang.
  Control Points) oraz urządzeń kontrolowanych (ang.
@@ -693,10 +773,142 @@ Zarówno serwer, jak i klient UPnP musi komunikować się z wykorzystaniem
  169.254/16).
 \end_layout
 
+\begin_layout Standard
+Wywołania punktów kontrolnych odbywają się poprzez wykorzystanie adresów
+ SOAP SSDP UPNP_FORUM_PUBLIC_RYSUNKI
+\end_layout
+
+\begin_layout Section*
+Klasy urządzeń
+\end_layout
+
+\begin_layout Subsection*
+Serwery
+\end_layout
+
+\begin_layout Standard
+dswd
+\end_layout
+
+\begin_layout Subsubsection*
+Kodowanie w locie
+\end_layout
+
+\begin_layout Standard
+fewsfsf
+\end_layout
+
+\begin_layout Subsection*
+Odtwarzacze
+\end_layout
+
+\begin_layout Standard
+dewd
+\end_layout
+
+\begin_layout Subsection*
+Piloty
+\end_layout
+
+\begin_layout Subsection*
+Odmiany mobilne
+\end_layout
+
+\begin_layout Chapter*
+Multimedia w UPnP/DLNA
+\end_layout
+
+\begin_layout Section*
+Rodzaje multimediów
+\end_layout
+
+\begin_layout Subsection*
+Filmy
+\end_layout
+
+\begin_layout Subsubsection*
+Sposoby odtwarzania
+\end_layout
+
+\begin_layout Subsubsection*
+Ścieżka dźwiękowa
+\end_layout
+
+\begin_layout Subsubsection*
+Napisy w filmach
+\end_layout
+
+\begin_layout Subsubsection*
+Kodowanie filmów
+\end_layout
+
+\begin_layout Subsection*
+Muzyka
+\end_layout
+
+\begin_layout Subsection*
+Zdjęcia
+\end_layout
+
+\begin_layout Subsection*
+Miniatury multimediów
+\end_layout
+
+\begin_layout Chapter*
+Teoria, a praktyka UPnP/DLNA
+\end_layout
+
+\begin_layout Section*
+Standard
+\end_layout
+
+\begin_layout Subsection*
+Polecenia protokołu
+\end_layout
+
+\begin_layout Subsection*
+Różnice działania odtwarzaczy różnych producentów
+\end_layout
+
+\begin_layout Subsection*
+Porównanie oprogramowania serwerów UPnP/DLNA
+\end_layout
+
+\begin_layout Subsection*
+Porównanie oprogramowania odtwarzaczy UPnP/DLNA
+\end_layout
+
+\begin_layout Chapter*
+Realizacja oprogramowania serwera UPnP
+\end_layout
+
+\begin_layout Section*
+Zdefiniowane wymagania
+\end_layout
+
+\begin_layout Standard
+platformy gui 
+\end_layout
+
+\begin_layout Section*
+Porównanie różnych dostępnych framework’ów UPnP
+\end_layout
+
+\begin_layout Section*
+Sposób realizacji serwera
+\end_layout
+
+\begin_layout Section*
+Napotkane problemy
+\end_layout
+
+\begin_layout Section*
+Współpraca z odtwarzaczami w oprogramowaniu telewizorów
+\end_layout
+
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-label "1"
 key "key-1"
 
 \end_inset
@@ -709,6 +921,131 @@ UPnP Forum, UPnP Device Architecture 1.0.
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-2"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://brage.bibsys.no/hia/bitstream/URN:NBN:no-bibsys_brage_9695/1/andreas-haber-
+phone-based-upnp-control.pdf
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-9"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.upnp.org/specs/gw/UPnP-gw-DeviceProtection-v1-Service-20110224.pdf
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.google.com/url?q=http%3A%2F%2Fwww.pervasive.jku.at%2FResearch%2FPublicatio
+ns%2F_Documents%2F2011_Online%2520UPnP%2520AV%2520Device%2520Database%2520for%25
+20Quick%2520and%2520Easy%2520Capability%2520Checking_Riener.pdf&sa=D&sntz=1&usg=A
+FQjCNEMLLsCjydhx6Qy1L30d4wZ5HgUVA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-4"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.google.com/url?q=http%3A%2F%2Fwww.territorioscuola.com%2Fwikipedia%2Fen.wi
+kipedia.php%3Ftitle%3DTalk%3ADigital_Living_Network_Alliance&sa=D&sntz=1&usg=AFQj
+CNFB10Qj3jNXfAqwV_NNQaRlBOk5zg
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-5"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.google.com/url?q=http%3A%2F%2Fsuperuser.com%2Fquestions%2F226636%2Fwhat-
+is-the-difference-between-dlna-and-upnp&sa=D&sntz=1&usg=AFQjCNHUjlpiufrZlgM_YLSN
+ohaL355J_g
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-6"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.google.com/url?q=http%3A%2F%2Fjan.newmarch.name%2Fpublications%2Fjini_upn
+p.isng05.pdf&sa=D&sntz=1&usg=AFQjCNEZCczU2XK8hGsmHe7wU1mAbQpeKA
+\end_layout
 
 \end_inset
 
