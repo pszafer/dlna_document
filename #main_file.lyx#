@@ -250,7 +250,7 @@ UPnP ma za zadanie umożliwić użytkownikowi na łatwe wykrywanie urządzeń
 h cech takich jak ochrona DRM (ochrona przed kopiowaniem).
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Standard UPNP
 \end_layout
 
@@ -286,7 +286,7 @@ UPNP AV określa sposób komunikacji, między serwerem multimediów, a odtwarzac
  urządzenia, odtwarzanej treści i sposobu przesyłania danych.
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Zbiór protokołów UPnP, a sieć
 \end_layout
 
@@ -750,7 +750,7 @@ Punkty kontrolne UPnP do wywoływania pożądanej usługi i kontrolowania urząd
  wykorzystują protokół SOAP.
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Adresowanie
 \end_layout
 
@@ -764,6 +764,14 @@ Zarówno serwer, jak i klient UPnP musi komunikować się z wykorzystaniem
  Jeżeli urządzenie nie otrzyma adresu IP powinno wykorzystać tzw.
  autoadresowanie IP (urządzenie wybiera adres z określonej puli np.
  169.254/16).
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-8"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -771,11 +779,38 @@ Wywołania punktów kontrolnych odbywają się poprzez wykorzystanie adresów
  SOAP SSDP UPNP_FORUM_PUBLIC_RYSUNKI
 \end_layout
 
-\begin_layout Section*
+\begin_layout Subsection
+Wykrywanie
+\end_layout
+
+\begin_layout Standard
+Proces wykrywania polega na rozgłaszaniu przez nowo podłączone urządzenia
+ informacji o swoim istnieniu.
+ Wykorzystywany jest do tego protokół SSDP.
+\end_layout
+
+\begin_layout Standard
+Pakiety SSDP wypisać
+\end_layout
+
+\begin_layout Standard
+Tak jak przy podłączaniu urządzeń wysyłają one komunikaty SSDP:Hello, zarówno
+ przy odłączaniu od sieci powinny wysłać stosowny komunikat, mianowicie
+ SSDP:byebye.
+\end_layout
+
+\begin_layout Standard
+Natomiast punkty kontrolne rozgłaszają jedynie pakiet z danymi o typie,
+ identyfikatorze pożądanego urządzenia lub usługi.
+ Wykorzystują przy tym adres 239.255.255.250 oraz port 1900.
+ 
+\end_layout
+
+\begin_layout Section
 Klasy urządzeń
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Serwery
 \end_layout
 
@@ -783,7 +818,7 @@ Serwery
 dswd
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection
 Kodowanie w locie
 \end_layout
 
@@ -791,7 +826,7 @@ Kodowanie w locie
 fewsfsf
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Odtwarzacze
 \end_layout
 
@@ -799,83 +834,83 @@ Odtwarzacze
 dewd
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Piloty
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Odmiany mobilne
 \end_layout
 
-\begin_layout Chapter*
+\begin_layout Chapter
 Multimedia w UPnP/DLNA
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Rodzaje multimediów
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Filmy
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection
 Sposoby odtwarzania
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection
 Ścieżka dźwiękowa
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection
 Napisy w filmach
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection
 Kodowanie filmów
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Muzyka
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Zdjęcia
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Miniatury multimediów
 \end_layout
 
-\begin_layout Chapter*
+\begin_layout Chapter
 Teoria, a praktyka UPnP/DLNA
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Standard
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Polecenia protokołu
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Różnice działania odtwarzaczy różnych producentów
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Porównanie oprogramowania serwerów UPnP/DLNA
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Porównanie oprogramowania odtwarzaczy UPnP/DLNA
 \end_layout
 
-\begin_layout Chapter*
+\begin_layout Chapter
 Realizacja oprogramowania serwera UPnP
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Zdefiniowane wymagania
 \end_layout
 
@@ -883,19 +918,19 @@ Zdefiniowane wymagania
 platformy gui 
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Porównanie różnych dostępnych framework’ów UPnP
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Sposób realizacji serwera
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Napotkane problemy
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Współpraca z odtwarzaczami w oprogramowaniu telewizorów
 \end_layout
 
@@ -938,7 +973,7 @@ phone-based-upnp-control.pdf
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-9"
+key "key-3"
 
 \end_inset
 
@@ -960,7 +995,7 @@ http://www.upnp.org/specs/gw/UPnP-gw-DeviceProtection-v1-Service-20110224.pdf
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-3"
+key "key-4"
 
 \end_inset
 
@@ -985,7 +1020,7 @@ FQjCNEMLLsCjydhx6Qy1L30d4wZ5HgUVA
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-4"
+key "key-5"
 
 \end_inset
 
@@ -1009,7 +1044,7 @@ CNFB10Qj3jNXfAqwV_NNQaRlBOk5zg
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-5"
+key "key-6"
 
 \end_inset
 
@@ -1033,7 +1068,7 @@ ohaL355J_g
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-6"
+key "key-7"
 
 \end_inset
 
@@ -1050,6 +1085,18 @@ p.isng05.pdf&sa=D&sntz=1&usg=AFQjCNEZCczU2XK8hGsmHe7wU1mAbQpeKA
 \end_inset
 
 
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-8"
+
+\end_inset
+
+Abul Ahsan Md.
+ Mahmudul Haque, UPnP Networking: Architecture and Security Issues, 2007
 \end_layout
 
 \end_body
