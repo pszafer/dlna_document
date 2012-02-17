@@ -330,10 +330,6 @@ Protokoły
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -364,14 +360,9 @@ Komunikacja
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename communicating.png
-	scale 50
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -907,6 +898,7 @@ Współpraca z odtwarzaczami w oprogramowaniu telewizorów
 \end_layout
 
 \begin_layout Bibliography
+\labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-1"
@@ -918,6 +910,7 @@ UPnP Forum, UPnP Device Architecture 1.0.
 \end_layout
 
 \begin_layout Bibliography
+\labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-2"
@@ -940,6 +933,7 @@ phone-based-upnp-control.pdf
 \end_layout
 
 \begin_layout Bibliography
+\labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-9"
@@ -961,6 +955,7 @@ http://www.upnp.org/specs/gw/UPnP-gw-DeviceProtection-v1-Service-20110224.pdf
 \end_layout
 
 \begin_layout Bibliography
+\labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-3"
@@ -985,6 +980,7 @@ FQjCNEMLLsCjydhx6Qy1L30d4wZ5HgUVA
 \end_layout
 
 \begin_layout Bibliography
+\labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-4"
@@ -1008,6 +1004,7 @@ CNFB10Qj3jNXfAqwV_NNQaRlBOk5zg
 \end_layout
 
 \begin_layout Bibliography
+\labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-5"
@@ -1031,6 +1028,7 @@ ohaL355J_g
 \end_layout
 
 \begin_layout Bibliography
+\labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-6"

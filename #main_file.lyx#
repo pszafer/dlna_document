@@ -323,14 +323,10 @@ Protokoły
 \begin_inset Graphics
 	filename protocol_1.png
 	display false
-	scale 40
+	width 70page%
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -364,14 +360,11 @@ Komunikacja
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename communicating.png
-	scale 50
+	display false
+	width 70page%
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -814,95 +807,100 @@ Piloty
 Odmiany mobilne
 \end_layout
 
-\begin_layout Section*
+\begin_layout Chapter*
 Multimedia w UPnP/DLNA
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section*
 Rodzaje multimediów
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection*
 Filmy
 \end_layout
 
-\begin_layout Paragraph*
+\begin_layout Subsubsection*
 Sposoby odtwarzania
 \end_layout
 
-\begin_layout Paragraph*
+\begin_layout Subsubsection*
 Ścieżka dźwiękowa
 \end_layout
 
-\begin_layout Paragraph*
+\begin_layout Subsubsection*
 Napisy w filmach
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsubsection*
 Kodowanie filmów
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection*
 Muzyka
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection*
 Zdjęcia
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection*
 Miniatury multimediów
 \end_layout
 
-\begin_layout Standard
+\begin_layout Chapter*
 Teoria, a praktyka UPnP/DLNA
 \end_layout
 
-\begin_layout Standard
+\begin_layout Section*
 Standard
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection*
 Polecenia protokołu
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection*
 Różnice działania odtwarzaczy różnych producentów
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection*
 Porównanie oprogramowania serwerów UPnP/DLNA
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection*
 Porównanie oprogramowania odtwarzaczy UPnP/DLNA
 \end_layout
 
-\begin_layout Standard
+\begin_layout Chapter*
 Realizacja oprogramowania serwera UPnP
 \end_layout
 
-\begin_layout Standard
+\begin_layout Section*
 Zdefiniowane wymagania
 \end_layout
 
 \begin_layout Standard
-platformy gui Porównanie różnych dostępnych framework’ów UPnP
+platformy gui 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Section*
+Porównanie różnych dostępnych framework’ów UPnP
+\end_layout
+
+\begin_layout Section*
 Sposób realizacji serwera
 \end_layout
 
-\begin_layout Standard
+\begin_layout Section*
 Napotkane problemy
 \end_layout
 
-\begin_layout Standard
+\begin_layout Section*
 Współpraca z odtwarzaczami w oprogramowaniu telewizorów
 \end_layout
 
 \begin_layout Bibliography
+\labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-1"
@@ -914,16 +912,7 @@ UPnP Forum, UPnP Device Architecture 1.0.
 \end_layout
 
 \begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-2"
-
-\end_inset
-
-test
-\end_layout
-
-\begin_layout Bibliography
+\labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-2"
@@ -931,9 +920,44 @@ key "key-2"
 \end_inset
 
 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://brage.bibsys.no/hia/bitstream/URN:NBN:no-bibsys_brage_9695/1/andreas-haber-
+phone-based-upnp-control.pdf
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-9"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.upnp.org/specs/gw/UPnP-gw-DeviceProtection-v1-Service-20110224.pdf
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-3"
@@ -941,9 +965,24 @@ key "key-3"
 \end_inset
 
 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.google.com/url?q=http%3A%2F%2Fwww.pervasive.jku.at%2FResearch%2FPublicatio
+ns%2F_Documents%2F2011_Online%2520UPnP%2520AV%2520Device%2520Database%2520for%25
+20Quick%2520and%2520Easy%2520Capability%2520Checking_Riener.pdf&sa=D&sntz=1&usg=A
+FQjCNEMLLsCjydhx6Qy1L30d4wZ5HgUVA
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
+\labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-4"
@@ -951,12 +990,15 @@ key "key-4"
 \end_inset
 
 
-\end_layout
+\begin_inset Flex URL
+status collapsed
 
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-5"
+\begin_layout Plain Layout
+
+http://www.google.com/url?q=http%3A%2F%2Fwww.territorioscuola.com%2Fwikipedia%2Fen.wi
+kipedia.php%3Ftitle%3DTalk%3ADigital_Living_Network_Alliance&sa=D&sntz=1&usg=AFQj
+CNFB10Qj3jNXfAqwV_NNQaRlBOk5zg
+\end_layout
 
 \end_inset
 
@@ -964,9 +1006,46 @@ key "key-5"
 \end_layout
 
 \begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-5"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.google.com/url?q=http%3A%2F%2Fsuperuser.com%2Fquestions%2F226636%2Fwhat-
+is-the-difference-between-dlna-and-upnp&sa=D&sntz=1&usg=AFQjCNHUjlpiufrZlgM_YLSN
+ohaL355J_g
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-6"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.google.com/url?q=http%3A%2F%2Fjan.newmarch.name%2Fpublications%2Fjini_upn
+p.isng05.pdf&sa=D&sntz=1&usg=AFQjCNEZCczU2XK8hGsmHe7wU1mAbQpeKA
+\end_layout
 
 \end_inset
 
