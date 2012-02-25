@@ -59,7 +59,7 @@ dcs
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language polish
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -298,6 +298,24 @@ dowe takie jak WiFi 802.11abgn, Bluetooth (pomijany jest tu fakt braku możliwo�
  technicznych niektórych protokołów do szybkiego przesyłania danych, co
  w przypadku niektórych typów multimediów, takich jak filmy czy muzyka,
  jest niezbędne).
+\end_layout
+
+\begin_layout Standard
+Raport techniczny UPnP definiuje jedynie sposoby działania w obrębie sieci
+ obsługiwanej przez protokół IPv4.
+ Aneks 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+
+\end_inset
+
+ do głównego raportu określa różnice jakie występują, gdy urządzenie działa
+ w obrębie sieci IPv6.
+ Jeżeli nie napisano inaczej, w niniejszej pracy autor jako pierwszą pozycje
+ określa przypadek sieci IPv4, natomiast drugi przypadek to sieć zgodna
+ z protokołem IPv6.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -758,20 +776,23 @@ Adresowanie
 Zarówno serwer, jak i klient UPnP musi komunikować się z wykorzystaniem
  protokołu IP.
  Organizacja UPnP Forum zdefiniowała, że każde urządzenie, które spełnia
- wymagania specyfikacji musi posiadać oprogramowanie klienta DHCP (ang.
- Dynamic Host Configuration Protocol) i podczas pierwszego podłączenia do
- sieci podejmuje próbę uzyskania adresu IP od serwera DHCP.
+ wymagania specyfikacji musi posiadać oprogramowanie serwera lub klienta
+ protkołu DHCP (ang.
+ Dynamic Host Configuration Protocol).
+ Podczas podłączania się do sieci podejmuje próbę uzyskania adresu IP od
+ serwera DHCP (jeżeli urządzenie nie jest serwerem DHCP).
  Jeżeli urządzenie nie otrzyma adresu IP powinno wykorzystać tzw.
  autoadresowanie IP (urządzenie wybiera adres z określonej puli np.
- 169.254/16).
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-8"
+ 169.254/16 lub w przypadku IPv6 FE80::/64).
+ Raport techinczny stworzony przez organizację UPnP Forum określa dokładnie
+ w jaki sposób urządzenie przydziela automatycznie adres IP, tak aby uniknąć
+ kolizji.
+\end_layout
 
-\end_inset
-
-
+\begin_layout Standard
+Zarówno w praktyce w większości urządzeń, jak i w aplikacji, którą opisuje
+ niniejsza praca problem adresowania nie jest najważniejszy, gdyż jest rozwiązyw
+any przez oprogramowanie dołączone do sprzętu, bądź systemu operacyjnego.
 \end_layout
 
 \begin_layout Standard
@@ -786,24 +807,508 @@ Wykrywanie
 \begin_layout Standard
 Proces wykrywania polega na rozgłaszaniu przez nowo podłączone urządzenia
  informacji o swoim istnieniu.
- Wykorzystywany jest do tego protokół SSDP.
+ Wykorzystywany jest do tego protokół SSDP oraz adres 239.255.255.250 oraz
+ port 1900 (dla IPv6 - [FF02::C]:1900).
 \end_layout
 
 \begin_layout Standard
-Pakiety SSDP wypisać
+Na potrzeby protokołu UPnP wyróżniane są następujące komunikaty SSDP 
+\series bold
+\bar under
+(rys nr 2.3)
+\series default
+\bar default
+:
+\end_layout
+
+\begin_layout Itemize
+ogłaszanie (
+\emph on
+ang.
+ advertise
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+szukanie (
+\emph on
+ang.
+ search
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+odpowiedzi (
+\emph on
+ang.
+ responses
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+Punkty kontrolne nasłuchują urządzeń na porcie 1900 lub rozgłaszają pakiet
+ z danymi o typie, identyfikatorze pożądanego urządzenia lub usługi.
+ Urządzenia oferujące swoje usługi wysyłają na wcześniej wspomniany adres
+ (239.255.255.250:1900) pakiety SSDP przy pomocy rozgłaszania typu 
+\emph on
+multicast
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Odpowiedzi są wysyłane przy pomocy rozgłaszania typu 
+\emph on
+unicast
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Urządzenie nowo dołączone do sieci wysyła rozgłoszenie o swoim istnieniu,
+ urządzenia wbudowane w nie również wysyłają rozgłoszenie o sobie oraz o
+ usługach, które świadczą.
+ Kontrolowane odłączenie od sieci wiążę się z obowiązkiem ogłoszenia zdarzenia
+ przez urządzenie.
+ Przyjęta jest w tym przypadku zasada, że powinno ono wysłać tyle komunikatów
+ odłączenia, ile wysłało komunikatów ogłaszających swoje działanie.
+\end_layout
+
+\begin_layout Standard
+Rozgłaszanie wiąże się niestety z obciążaniem sieci, często niepotrzebnym.
+ W tym celu zalecany czas życia pakietu (
+\emph on
+TTL - ang.
+ time-to-live
+\emph default
+) dla każdej wiadomości wynosi 4 (powinna istnieć możliwość modyfikacji
+ tej wartości).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Sposoby wykrywania urządzeń
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename discovery_messages.png
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Wykrywanie: Ogłaszanie
+\end_layout
+
+\begin_layout Standard
+W głównej części tego podrozdziału został opisany zarys sposobu ogłaszania
+ się urządzeń w sieci.
+ Jest to jednak bardzo newralgiczna cecha tego protokołu, gdyż bez możliwości
+ wzajemnego wykrywania nie ma możliwości, aby urządzenia efektywnie się
+ ze sobą komunikowały.
+ Każde urządzenie/usług wysyła pakiety ogłaszające (
+\emph on
+adertise
+\emph default
+) swoje działanie na adres 239.255.255.250:1900.
+ Punkty kontrolne nasłuchują na porcie 1900, oczekując na komunikaty wysyłane
+ przez urządzenia.
+ Opisywane komunikaty muszą być wysyłane często oraz co określony interwał
+ czasowy, gdyż zarówno urządzenie, jak i punkt kontrolny mogą zostać dołączone
+ do sieci w różnym czasie.
+ 
+\end_layout
+
+\begin_layout Standard
+Każda wiadomość 
+\begin_inset Quotes eld
+\end_inset
+
+ogłaszająca
+\begin_inset Quotes erd
+\end_inset
+
+ zawiera możiwości urządzenia (np.
+ odtwarzanie muzyki).
+ Ilość wiadomości jest zależna od ilości wbudowanych urządzeń/usług w główne
+ urządzenie.
+ Urządzenia wbudowane w komunikatach dołączają informacje o urządzeniu nadrzędny
+m (np.
+ informacja o systemie operacyjnym).
+ Oprócz wcześniej przedstawionych cech, komunikaty powinny zawierać czas
+ do wygaśnięcia ogłoszenia (jeżeli po czasie wygaśnięcia urządzenie nadal
+ chce oferować swoje usługi, wówczas powinno wysłać nowy komunikat z nowym
+ czasem wygaśnięcia).
+ Dzięki takiemu podejściu, pomimo, że urządzenia powinny ogłaszać swoje
+ odłączenie od sieci, to nawet, gdy komunikat wyłączenie nie może zostać
+ wysłany, wiadomość rozgłaszająca wygaśnie i nie zostanie przedłużona.
+ Ogranicza to możliwość istnienia w sieci usług już nie działających.
+\end_layout
+
+\begin_layout Standard
+Możliwe jest wysyłanie i odbieranie ogłoszenia przez sprzęt zgodny ze specyfikac
+ją UPnP, jedynie w przypadku, gdy komunikat jest stworzony według schematu
+ z 
+\series bold
+\bar under
+tabeli nizej
+\series default
+\bar default
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Stos protokołu UPnP w przypadku rozgłaszania -- 
+\series bold
+do poprawienia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+producent oprogramowania UPnP
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+organizacja UPnP
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+architektura urządzenia UPnP
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+komunikat SSDP
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HTTPMU (
+\emph on
+multicast
+\emph default
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+UDP
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IP
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pierwsza warstwa opisywanego stosu zawiera informacje specyficzne dla dostawcy
+ urządzenia.
+ Najczęściej producenci dołączają w tym miejscu adres URL do opisu urządzenia,
+ bądź też identyfikator urządzenia (UUID - 
+\emph on
+ang.
+ Universally unique identifier
+\emph default
+).
+ Kolejną warstwą stosu są informacje dostarczane przez organizację UPnP
+ Forum, np.
+ typ urządzenia.
+ Kolejnym dwie warstwy zostaną dokładnie opisane w niniejszym dokumencie,
+ a ich pełen opis znajduje się w specyfikacji protokołu UPnP.
+\end_layout
+
+\begin_layout Standard
+Trzy pozostałe warstwy nie są tematem niniejszej pracy.
+ Warto jedynie zwrócić uwagę na fakt, iż komunikaty HTTP nie są przesyłane
+ typowo przez protokół TCP, a przez protokół UDP.
+\end_layout
+
+\begin_layout Standard
+Jak zostało wspomniane wcześniej urządzenie dołączone do sieci rozgłasza
+ swoje istnienie.
+ Komunikat rozgłaszający wykorzystuje metodę NOTIFY protokołu HTTP.
+ W każdym komunikacie dołączane są informacje w następujących nagłówkach:
+\end_layout
+
+\begin_layout Itemize
+NT - Notification Type - typ ogłoszenia,
+\end_layout
+
+\begin_layout Itemize
+NTS - Notification Subtype - podtyp ogłoszenia,
+\end_layout
+
+\begin_layout Itemize
+USN - Unique Service Name - Unikalna nazwa usługi / UUID
+\end_layout
+
+\begin_layout Itemize
+LOCATION - URL z rozszerzonymi informacjami o urządzeniu,
+\end_layout
+
+\begin_layout Itemize
+CACHE-CONTROL - czas do wygaśnięcia ogłoszenia
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Przykładowy komunikat:
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Przykładowy komunikat
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NOTIFY * HTTP/1.1 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HOST: 239.255.255.250:1900 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CACHE-CONTROL: max-age = seconds until advertisement expires 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LOCATION: URL for IPP Printer with 'ipp' scheme 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NT: search target 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NTS: ssdp:alive 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SERVER: OS / version, IPP / 1.1, product / version 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+USN: advertisement UUID 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Tak jak przy podłączaniu urządzeń wysyłają one komunikaty SSDP:Hello, zarówno
  przy odłączaniu od sieci powinny wysłać stosowny komunikat, mianowicie
  SSDP:byebye.
-\end_layout
-
-\begin_layout Standard
-Natomiast punkty kontrolne rozgłaszają jedynie pakiet z danymi o typie,
- identyfikatorze pożądanego urządzenia lub usługi.
- Wykorzystują przy tym adres 239.255.255.250 oraz port 1900.
- 
 \end_layout
 
 \begin_layout Subsection
@@ -946,8 +1451,7 @@ key "key-1"
 
 \end_inset
 
-UPnP Forum, UPnP Device Architecture 1.0.
- Technical report, 2006.
+UPnP Forum, UPnP Device Architecture 1.0, 2006.
 \end_layout
 
 \begin_layout Bibliography
@@ -1101,6 +1605,17 @@ key "key-8"
 
 Abul Ahsan Md.
  Mahmudul Haque, UPnP Networking: Architecture and Security Issues, 2007
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-9"
+
+\end_inset
+
+UPnP Device Architecture V1.0 Annex A – IP Version 6 Support
 \end_layout
 
 \end_body
