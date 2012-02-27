@@ -32,10 +32,11 @@ dcs
 \font_tt_scale 100
 
 \graphics default
-\default_output_format default
+\default_output_format pdf2
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement H
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -321,9 +322,10 @@ key "key-9"
 \begin_layout Standard
 \align left
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -355,6 +357,7 @@ Protokoły
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -364,6 +367,13 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "test"
+
+\end_inset
+
+
 \begin_inset Caption
 
 \begin_layout Plain Layout
@@ -380,6 +390,7 @@ Komunikacja
 	filename communicating.png
 	display false
 	width 70page%
+	groupId figures
 
 \end_inset
 
@@ -801,6 +812,12 @@ Wywołania punktów kontrolnych odbywają się poprzez wykorzystanie adresów
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Wykrywanie"
+
+\end_inset
+
 Wykrywanie
 \end_layout
 
@@ -891,9 +908,10 @@ TTL - ang.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -934,7 +952,7 @@ W głównej części tego podrozdziału został opisany zarys sposobu ogłaszani
  ze sobą komunikowały.
  Każde urządzenie/usług wysyła pakiety ogłaszające (
 \emph on
-adertise
+advertise
 \emph default
 ) swoje działanie na adres 239.255.255.250:1900.
  Punkty kontrolne nasłuchują na porcie 1900, oczekując na komunikaty wysyłane
@@ -974,19 +992,10 @@ m (np.
 \begin_layout Standard
 Możliwe jest wysyłanie i odbieranie ogłoszenia przez sprzęt zgodny ze specyfikac
 ją UPnP, jedynie w przypadku, gdy komunikat jest stworzony według schematu
- z 
-\series bold
-\bar under
-tabeli nizej
-\series default
-\bar default
- 
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
+ z tabeli 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Stos-protokołu-UPnP"
 
 \end_inset
 
@@ -1000,13 +1009,15 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Stos-protokołu-UPnP"
+
+\end_inset
+
 Stos protokołu UPnP w przypadku rozgłaszania -- 
 \series bold
 do poprawienia
@@ -1133,24 +1144,522 @@ ang.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+Przykładowy komunikat przyłączający do sieci:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NOTIFY * HTTP/1.1 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HOST: 239.255.255.250:1900 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CACHE-CONTROL: max-age = seconds until advertisement expires 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LOCATION: URL for IPP Printer with 'ipp' scheme 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NT: search target 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NTS: ssdp:alive 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SERVER: OS / version, IPP / 1.1, product / version 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+USN: advertisement UUID 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Trzy pozostałe warstwy nie są tematem niniejszej pracy.
  Warto jedynie zwrócić uwagę na fakt, iż komunikaty HTTP nie są przesyłane
  typowo przez protokół TCP, a przez protokół UDP.
-\end_layout
-
-\begin_layout Standard
-Jak zostało wspomniane wcześniej urządzenie dołączone do sieci rozgłasza
+ Jak zostało wspomniane wcześniej urządzenie dołączone do sieci rozgłasza
  swoje istnienie.
+ Komunikat rozgłaszający wykorzystuje metodę NOTIFY protokołu HTTP.
+ W każdym komunikacie dołączane są informacje w następujących nagłówkach:
+\end_layout
+
+\begin_layout Itemize
+NT - Notification Type - typ ogłoszenia,
+\end_layout
+
+\begin_layout Itemize
+NTS - Notification Subtype - podtyp ogłoszenia,
+\end_layout
+
+\begin_layout Itemize
+USN - Unique Service Name - Unikalna nazwa usługi / UUID
+\end_layout
+
+\begin_layout Itemize
+LOCATION - URL z rozszerzonymi informacjami o urządzeniu,
+\end_layout
+
+\begin_layout Itemize
+CACHE-CONTROL - czas do wygaśnięcia ogłoszenia
 \end_layout
 
 \begin_layout Standard
-Tak jak przy podłączaniu urządzeń wysyłają one komunikaty SSDP:Hello, zarówno
- przy odłączaniu od sieci powinny wysłać stosowny komunikat, mianowicie
- SSDP:byebye.
+Opisywana metoda protokołu HTTP (NOTIFY) wykorzystywana jest przy ogłaszaniu
+ podłączenia, bądź też odłączenia od sieci.
+ W komunikacie podłączenia pole 
+\emph on
+NTS
+\emph default
+ jest podtypu 
+\emph on
+ssdp:alive
+\emph default
+, natomiast rozłączenie cechuje podtyp 
+\emph on
+ssdp:byebye.
+\end_layout
+
+\begin_layout Standard
+Organizacja stanowiąca zasady protokołu UPnP w przypadku wykrywania urządzeń,
+ poza wzajemnym informowaniem się o obecności (bądź też nieobecności), zagwarant
+owała również szukanie się wzajemne urządzeń UPnP.
+ Do wyszukiwania służy metoda M-SEARCH, której ogólny format przedstawia
+ 
+\series bold
+tabela nr.
+ 
+\series default
+Pola 
+\emph on
+HOST
+\emph default
+ i 
+\emph on
+MAN 
+\emph default
+nie mogą zostać zmienione i zawsze muszą mieć taką wartość jak podana w
+ tabeli.
+ Pole 
+\emph on
+MX
+\emph default
+ określa maksymalny czas oczekiwanie w sekundach.
+ Jego wartość powinna mieścić się w przedziale 1, a 120.
+ Ostatnie pole, 
+\emph on
+ST
+\emph default
+ (
+\emph on
+Search Target
+\emph default
+) określa rodzaj wyszukiwanego urządzeń.
+ Dostępne rodzaje to:
+\end_layout
+
+\begin_layout Itemize
+ssdp:all - wyszukiwanie wszystkich urządzeń i usług,
+\end_layout
+
+\begin_layout Itemize
+upnp:rootdevice - wyszukiwanie jedynie urządzeń głównych,
+\end_layout
+
+\begin_layout Itemize
+uuid:device-UUID - wyszkuwanie konkretnego urządzenia,
+\end_layout
+
+\begin_layout Itemize
+urn:schemas-upnp-org:device:deviceType:v - wyszukiwanie urządzenia według
+ typu.
+ Lista typów możliwych do odnalezienia znajduje się w 
+\series bold
+...
+\end_layout
+
+\begin_layout Itemize
+urn:schemas-upnp-org:device:seviceType:v - wyszukiwanie urządzenia według
+ typu usługi, którą świadczy.
+ Lista typów 
+\series bold
+jak wyżej
+\end_layout
+
+\begin_layout Itemize
+urn:domain-name:device:deviceType:v - takie jak przeszukiwanie urządzenia
+ według typu, z tym, że nazwę domeny typ urządzenia i jego wersję definiuje
+ producent urządzenia UPnP,
+\end_layout
+
+\begin_layout Itemize
+urn:domain-name:device:serviceType:v - takie jak przeszukiwanie urządzenia
+ według typu uslugi, z tym, że nazwę domeny typ urządzenia i jego wersję
+ definiuje producent urządzenia UPnP.
+\end_layout
+
+\begin_layout Standard
+Bezpośrednio powiązana z komunikatem M-SEARCH jest odpowiedź na nią, którą
+ urządzenie odpowiadające wysyła na adres źródłowy wcześniejszego pakietu.
+ Odpowiedź jest zgoda z protokołem HTTP.
+ Jej schemat widnieje w 
+\series bold
+tabeli nr 4.
+ 
+\series default
+Odpowiedź nie zawiera treści (
+\emph on
+HTTP BODY
+\emph default
+), lecz musi posiadać jedną pustą linię poniżej nagłówka.
+ Zarówno dla metody 
+\emph on
+M-SEARCH, 
+\emph default
+jak i odpowiedzi na nią nie ma potrzeby określania czasu życia pakietu 
+\emph on
+TTL.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Metoda M-Search
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+M-SEARCH * HTTP/1.1
+\end_layout
+
+\begin_layout Plain Layout
+HOST: 239.255.255.250:1900
+\end_layout
+
+\begin_layout Plain Layout
+MAN: 
+\begin_inset Quotes pld
+\end_inset
+
+ssdp:discover
+\begin_inset Quotes prd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+MX: seconds to delay response
+\end_layout
+
+\begin_layout Plain Layout
+ST: search target
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Odpowiedź na metodę M-SEARCH
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+HTTP/1.1 200 OK
+\end_layout
+
+\begin_layout Plain Layout
+CACHE-CONTROL: max-age = seconds until advertisment expires
+\end_layout
+
+\begin_layout Plain Layout
+DATE: when response was generated
+\end_layout
+
+\begin_layout Plain Layout
+EXT:
+\end_layout
+
+\begin_layout Plain Layout
+LOCATION: URL for UPnP description for root device
+\end_layout
+
+\begin_layout Plain Layout
+SERVER: OS/version UPnP/1.0 product/version
+\end_layout
+
+\begin_layout Plain Layout
+ST: search target 
+\series bold
+OPISAĆ STRONA 21
+\end_layout
+
+\begin_layout Plain Layout
+USN: advertisment UUID
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-Opis usługi
+Opis urządzeń i usług
+\end_layout
+
+\begin_layout Standard
+Po udanym wyszukaniu urządzenia, punkt kontrolny posiada jedynie podstawowe
+ informacje o urządzeniu, które zostały zawarte we wcześniejszych komunikatach
+ (
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sub:Wykrywanie"
+
+\end_inset
+
+).
+ Do interakcji z urządzeniem punkt kontrolny potrzebuje więcej danych, niż
+ te zawarte w pierwszych komunikatach.
+ W tym celu może pobrać dokładne informacje z adresu URL przesyłanego wraz
+ z komunikatem o przyłączeniu do sieci (ang.
+ 
+\emph on
+advertising
+\emph default
+).
+ Pobiera informacje nazywane są opisem usługi (ang.
+ 
+\emph on
+description
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+Uproszczony schemat pobierania informacji o urządzeniu znajduje się na rysunku
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Schemat-pobierania-opisu"
+
+\end_inset
+
+.
+ Pojedyńczy schemat pobierania opisu można podzielić na dwie operacje, uzyskania
+ informacji o urządzeniach oraz o usługach, które one oferują.
+ W najprostszym schemacie cały proces wykonywany jest w kilku krokach:
+\end_layout
+
+\begin_layout Enumerate
+Pobranie informacji o głównym urządzeniu (ang.
+ 
+\emph on
+root device
+\emph default
+),
+\end_layout
+
+\begin_layout Enumerate
+Pobranie informacji o usługach udostępnianych przez urządzenie (ang.
+ 
+\emph on
+services
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+Opis urządzenia zawiera informacje o fizycznych i logicznych kontenerach
+ 
+\series bold
+(opisać termin kontener).
+ 
+\series default
+Natomiast opis usług określa w sposób bardzo dokładny oferowane prze urządzenie
+ funkcje.
+ Pojedyńcze urządzenie fizyczne może zawierać wiele urządzeń logicznych,
+ każde z nich może być skonfigurowane jako główne (ang.
+ 
+\emph on
+root device
+\emph default
+).
+ Ponadto każde urządzenie logiczne może oferować jedną lub wiele usług.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Schemat-pobierania-opisu"
+
+\end_inset
+
+Schemat pobierania opisu usługi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename get_decription.png
+	display false
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Opis urządzenia/usługi jest napisany przez dostawcę oprogramowania.
+ Jest napisany w języku XML i zalecane jest, aby był zgodny z wytycznymi
+ przedstawionymi w szablonie opisu urządzenia.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-10"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1289,7 +1798,7 @@ key "key-1"
 
 \end_inset
 
-UPnP Forum, UPnP Device Architecture 1.0, 2006.
+UPnP Forum, UPnP Device Architecture 1.0, 2008.
 \end_layout
 
 \begin_layout Bibliography
@@ -1454,6 +1963,17 @@ key "key-9"
 \end_inset
 
 UPnP Device Architecture V1.0 Annex A – IP Version 6 Support
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-10"
+
+\end_inset
+
+UPnP Device Template
 \end_layout
 
 \end_body

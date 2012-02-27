@@ -1649,20 +1649,7 @@ Schemat pobierania opisu usługi
 \end_layout
 
 \begin_layout Standard
-Opis urządzenia/usługi jest napisany przez dostawcę oprogramowania.
- Jest napisany w języku XML i zalecane jest, aby był zgodny z wytycznymi
- przedstawionymi w szablonie opisu urządzenia.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "key-10"
-
-\end_inset
-
- Najważniejszym elementem z punktu widzenia autora jest sposób opisu usługi,
- który powinien być stworzony tak, aby punkty kontrolne jak największej
- liczby producentów (stan idealny - wszystkich producentów) sprzętu i oprogramow
-ania potrafiły uzyskać przydatne dla nich informacje.
+Opis u
 \end_layout
 
 \begin_layout Section
@@ -1966,17 +1953,6 @@ key "key-9"
 \end_inset
 
 UPnP Device Architecture V1.0 Annex A – IP Version 6 Support
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-10"
-
-\end_inset
-
-UPnP Device Template
 \end_layout
 
 \end_body
