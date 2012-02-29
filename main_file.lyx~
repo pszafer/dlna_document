@@ -1659,7 +1659,111 @@ key "key-10"
 
 \end_inset
 
+ Najważniejszym elementem z punktu widzenia autora jest sposób opisu usługi,
+ który powinien być stworzony tak, aby punkty kontrolne jak największej
+ liczby producentów (stan idealny - wszystkich producentów) sprzętu i oprogramow
+ania potrafiły uzyskać przydatne dla nich informacje.
+\end_layout
 
+\begin_layout Standard
+W celu otrzymania opisu urządzenia (bądź usługi) wykorzystywana jest metoda
+ GET protokołu HTTP.
+ Adres URL znajduje się w wiadomościach z ogłoszeniem o przyłączeniu do
+ sieci.
+\end_layout
+
+\begin_layout Subsection
+Kontrola
+\end_layout
+
+\begin_layout Standard
+Po uzyskaniu opisu urządzenia oraz usługi, punkt kontrolny może wywołać
+ akcje, które mogą wykonywać dostawcy usług.
+ Wywoływanie usługi przez punkt kontrolny można określić jako rodzaj wywołań
+ zdalnych RPC (ang.
+ 
+\emph on
+Remote Procedure Call
+\emph default
+).
+ Każde polecenie, niezależnie czy wywoływane przez punkt kontrolny czy jako
+ odpowiedź zwrotna od usługi, jest enkapsulowane w komunikatach SOAP (ang.
+ 
+\emph on
+Simple Object Access Procotol
+\emph default
+) poprzez wywołania protokołu HTTP.
+ Wywoływanie procedur przez punkt kontrolny może (lecz nie musi) być przedstawio
+ne poprzez modyfikację zmiennych określających stan usługi.
+ O każdym takim zdarzeniu powinny zostać poinformowane wszystkie zainteresowane
+ punkty kontrolne.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-11"
+
+\end_inset
+
+ Punkt kontrolny może wykorzystywać wywołania zdalne, tak długo, aż wcześniej
+ wysłane ogłoszenie nie wygaśnie lub nie zostanie odwołane (przesłanie nowego
+ ogłoszenia, wydłuża możliwość wykonywania wywołań kontrolnych).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Wywołanie akcji przez punkt kontrolny
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename control.png
+	display false
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Zdarzenia
+\end_layout
+
+\begin_layout Standard
+fdqewfefew
+\end_layout
+
+\begin_layout Subsection
+Prezentacja
+\end_layout
+
+\begin_layout Standard
+fewfew
 \end_layout
 
 \begin_layout Section
@@ -1974,6 +2078,41 @@ key "key-10"
 \end_inset
 
 UPnP Device Template
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-11"
+
+\end_inset
+
+Networked Digital Media Standards A UPnP / DLNA Overview, Allegro Software
+ Development Corporation, 2006.
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-12"
+
+\end_inset
+
+RFC 2616 Hypertext Transfer Protocol -- HTTP/1.1, Internet Engineering Task
+ Force, 1999
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-13"
+
+\end_inset
+
+SOAP Simple Object Access Protocol, W3C, 2007
 \end_layout
 
 \end_body
