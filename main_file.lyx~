@@ -1525,6 +1525,12 @@ USN: advertisment UUID
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Opis-urządzeń-i"
+
+\end_inset
+
 Opis urządzeń i usług
 \end_layout
 
@@ -1769,6 +1775,12 @@ Wywołanie akcji przez punkt kontrolny
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Zdarzenia"
+
+\end_inset
+
 Zdarzenia
 \end_layout
 
@@ -1907,20 +1919,267 @@ Przykładem zdarzeń może być zmiana poziomu głośności urządzenia UPnP, kt
  plików w sposób wygodny i nie wymagający interwencji użytkownika.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Komunikacja-pomiędzy-punktem"
+
+\end_inset
+
+Komunikacja pomiędzy punktem kontrolnym, a usługą w przypadku zapisywania
+ do subskrybcji
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename eventing.png
+	display false
+	width 70theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Prezentacja
 \end_layout
 
 \begin_layout Standard
-fewfew
+Warstwa prezentacji jest ostatnią w stosie protokołu UPnP.
+ Wyświetla ona interfejs użytkownika w postaci strony HTML, który umożliwia
+ kontrolę i sprawdzanie statusu urządzenia oraz usług wbudowanych w to urządzeni
+e.
+ Dostęp do interfejsu użytkownika urządzenia umożliwia adres URL, dostarczany
+ wraz z opisem urządzenia (warstwa opisu) 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Opis-urządzeń-i"
+
+\end_inset
+
+.
+ Dostarczanie prezentacji nie jest obowiązkowe i wiele urządzeń takiego
+ interfejsu nie zapewnia.
+ Uzyskanie opisywanej strony HTML urządzenia odbywa się zgodnie ze standardem
+ HTTP (wykorzystując metodę HTTP GET).
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wygląd prezentacji nie jest narzucowny w żaden sposób przez zrzeszenie UPnP
+ Forum i jest zależna w pełni od preferencji producenta urządzenia.
+ Wymanage jest jednakże, aby strona była zgodna ze standardem HTML i powinna
+ być w wersji 3.0 lub późniejszej.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Często do kontroli urządzenia poprzez warstwę prezentacji wykorzystywane
+ są pozostałe wartwy stosu UPnP.
+ Jednakże nie każdy interfejs UPnP umożliwia modyfikację wszystkich danych
+ (rozdział dotyczący warstwy zdarzeń 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Zdarzenia"
+
+\end_inset
+
+), co zmusza programistów do tworzenia kilku interfejsu kontroli usług UPnP.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Żądanie strony prezentacji od urządzenia UPnP przez punkt kontrolny
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename presentation.png
+	display false
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-Klasy urządzeń
+Klasy urządzeń multimedialnych UPnP
+\end_layout
+
+\begin_layout Standard
+Specyfikacja UPnP definiuje kilka rodzajów urządzeń, które dotyczą protokołu
+ UPnP w sieci IP.
+ W niniejszym rozdziale zostaną opisane rodzaje spotykanych urządzeń UPnP
+ ze szczególnym ukierunkowaniem na rodzaje przeznaczone do współpracy z
+ materiałami multimedialnymi.
+\end_layout
+
+\begin_layout Standard
+Organizacja DLNA (ang.
+ 
+\emph on
+Digital Living Network Alliance) 
+\emph default
+zaczerpnęła
+\emph on
+ 
+\emph default
+mutlimedialne rodzaje urządzeń ze specyfikacji UPnP, dlatego w niniejszym
+ rozdziale zostaną przedstawione zarówno nazwy urządzeń DLNA, jak i multimedialn
+ych urządzeń UPnP.
+\end_layout
+
+\begin_layout Standard
+Jak zostało opisane w poprzednim rozdziale wyróżniamy trzy główne rodzaje
+ urządzeń:
+\end_layout
+
+\begin_layout Itemize
+punkty kontrolne,
+\end_layout
+
+\begin_layout Itemize
+usługi,
+\end_layout
+
+\begin_layout Itemize
+urządzenia.
+\end_layout
+
+\begin_layout Standard
+Urządzenia multimedialne podzielone zostały na następujące kategorie:
+\end_layout
+
+\begin_layout Itemize
+serwer multimediów (ang.
+ 
+\emph on
+Media Server
+\emph default
+) / cyfrowy serwer multimediów (ang.
+ 
+\emph on
+Digital Media Server
+\emph default
+) - DMS,
+\end_layout
+
+\begin_layout Itemize
+* / cyfrowy odtwarzacz multimediów (ang.
+ 
+\emph on
+Digital Media Player
+\emph default
+) - DMP,
+\end_layout
+
+\begin_layout Itemize
+serwer renderujący (ang.
+ 
+\emph on
+Media Renderer) / 
+\emph default
+cyfrowy serwer renderujący (ang.
+ 
+\emph on
+Digial Media Renderer
+\emph default
+) - DMR,
+\end_layout
+
+\begin_layout Itemize
+* / cyfrowy kontroler multimediów (ang.
+ 
+\emph on
+Digital Media Controller
+\emph default
+) - DMC,
+\end_layout
+
+\begin_layout Itemize
+drukarka multimediów (ang.
+ 
+\emph on
+Digital Media Printer) 
+\emph default
+- DMPr,
+\end_layout
+
+\begin_layout Standard
+W powyższej liście pierwsza nazwa jest nazwą nadaną przez organizację UPnP,
+ druga przez organizację DLNA, natomiast myślnikiem oddzielona została skrócona
+ nazwa urządzenia, którą autor będzie w niniejszym rozdziale używał.
+ Jeżeli
 \end_layout
 
 \begin_layout Subsection
-Serwery
+Punkty kontrolne
 \end_layout
 
 \begin_layout Standard
