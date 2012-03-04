@@ -1709,6 +1709,18 @@ key "key-11"
 \end_layout
 
 \begin_layout Standard
+Przykładowe wywołanie akcji do usługi znajdującej się w urządzeniu UPnP
+ zostało umieszoncze na rysunku 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Wywołanie-akcji-przez"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -1722,6 +1734,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Wywołanie-akcji-przez"
+
+\end_inset
+
 Wywołanie akcji przez punkt kontrolny
 \end_layout
 
@@ -1755,7 +1773,138 @@ Zdarzenia
 \end_layout
 
 \begin_layout Standard
-fdqewfefew
+W opisie urządzenia UPnP przesyłana jest lista akcji możliwych do wykonania
+ przez usługę oraz lista zmiennych modelujących aktualny stan usługi (w
+ trakcie jej działania).
+ Jako zdarzenie (ang.
+ 
+\emph on
+event
+\emph default
+) została zdefiniowana zmiana wartości wcześniej wspomnianych zmiennych.
+ Każdy punkt kontrolny może zasubskrybować (z ang.
+ 
+\emph on
+subscribe)
+\emph default
+ otrzymywanie informacji o takich zmianach.
+ Punkt kontrolny, który zamówił subskrypcję zdarzeń nazywany subskrybentem
+ (ang.
+ 
+\emph on
+subscriber
+\emph default
+), natomiast usługę, która takową subskrypcję realizuje (wysyła informację
+ o zmianie stanu zmiennych) określamy jako wydawcę (ang.
+ 
+\emph on
+publisher
+\emph default
+).
+ Wiadomości przesyłane są poprzez protokół GENA (ang.
+ 
+\emph on
+General Event Notification Architecture
+\emph default
+), który jest rozszerzeniem protokołu HTTP zaprojektowanym na potrzeby organizac
+ji UPnP Forum.
+\end_layout
+
+\begin_layout Standard
+Punkt kontrolny w celu otrzymywania subskrypcji wysyła zgłoszenie subskrypcji
+ (ang.
+ 
+\emph on
+subscription message
+\emph default
+).
+ Jeżeli zgłoszenie jest zaakecptowane wydawca zwraca potwierdzenie w postaci
+ czasu ważności sybksrypcji.
+ Subskrypcja musi być odnawiana przez subskrybenta poprzez wysłanie kolejnych
+ zgłoszeń.
+ Punkt kontrolny, który otrzymuje informacje o zmianie stanu zmiennych może
+ w każdej chwili zrezygnować z ich prenumeraty poprzez wysłanie wiadomości
+ unieważniającej (ang.
+ 
+\emph on
+cancellation message
+\emph default
+) do wydawcy.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-11"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Do wydawcy należy zadanie wysyłania informacji o zdarzeniach.
+ Komunikat zdarzenia (ang.
+ 
+\emph on
+event message
+\emph default
+) zawiera jeden lub więcej zmiennych, wraz z ich aktualnymi wartościami
+ i jest zapisany w notacji języka XML (ang.
+ 
+\emph on
+Extensible Markup Language
+\emph default
+).
+ Pierwsza wiadomość wysłana do subskrybenta jest nazywana wiadomością inicjująca
+ (ang.
+ 
+\emph on
+initial event message
+\emph default
+) i zawiera wszystkie zmienne (wraz z ich wartościami).
+ Wydawca rozsyła zawsze wszystkie zmienione wersje do każdego punktu kontrolnego
+, który zgłosił chęć otrzymywania powiadomień (nie ma możliwości przesyłania
+ jedynie niektórych zmiennych).
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-11"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zmienne, których wartości są zbyt duże lub których wartości ulega bardzo
+ często zmianie, przez co ich wysłanie w komunikacie zdarzenia jest bezcelowe
+ lub niemożliwe, wydawca może oznaczyć jako tagiem 
+\emph on
+non-evented
+\emph default
+, czyli jako niezgłaszane w rozsłyanych pakietach.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+
+\end_inset
+
+ Rozmiar (wielkość) zmiennych jest zgodna ze schematem dokumentu XML 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-14"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Przykładem zdarzeń może być zmiana poziomu głośności urządzenia UPnP, które
+ to zdarzenie jest wysyłane do zainteresowanego punktu kontrolnego.
+ Innym przykładem, dotyczącym multimediów, jest dodanie pliku, bądź plików
+ multimedialnych i wysłanie powiadomienia o tym fakcie do subskrybentów.
+ Dzięki temu punkty kontrolne mogą wykonać natychmiastową aktualizacje listy
+ plików w sposób wygodny i nie wymagający interwencji użytkownika.
 \end_layout
 
 \begin_layout Subsection
@@ -2113,6 +2262,17 @@ key "key-13"
 \end_inset
 
 SOAP Simple Object Access Protocol, W3C, 2007
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-14"
+
+\end_inset
+
+Extensible Markup Language (XML) 1.0 (Fifth Edition), W3C, 2008
 \end_layout
 
 \end_body
