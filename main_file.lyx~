@@ -2162,7 +2162,7 @@ Digial Media Renderer
 \end_layout
 
 \begin_layout Itemize
-* / cyfrowy kontroler multimediów DMC (ang.
+punkt kontrolny / cyfrowy kontroler multimediów DMC (ang.
  
 \emph on
 Digital Media Controller
@@ -2233,43 +2233,678 @@ Schemat odtwarzania w UPnP AV
 \end_layout
 
 \begin_layout Subsection
-Punkty kontrolne
+Serwer multimedialny
 \end_layout
 
 \begin_layout Standard
-dswd
+Serwer multimediów w protokołach UPNP AV oraz DLNA jest niezbędnym elementem
+ sieci.
+ Serwer udostępnia stworzone, pobrane, nagrane pliki multimedialne.
+ Jest to jego główne zadanie.
+ W protokole DLNA jego rolą jest również zapewnienie ochrony treści (praw
+ autorskich).
+ Serwer multimediów UPnP AV nie zapewnia ochrony treści.
+ Serwer multimedialny jest to zazwyczaj oprogramowanie zainstalowane na
+ urządzeniach podłączonych do sieci Ethernet, takich jak:
 \end_layout
 
-\begin_layout Subsection
-Kodowanie w locie
+\begin_layout Itemize
+komputer typu PC,
+\end_layout
+
+\begin_layout Itemize
+nagrywarka cyfrowa,
+\end_layout
+
+\begin_layout Itemize
+smartfon,
+\end_layout
+
+\begin_layout Itemize
+kamera cyfrowa,
+\end_layout
+
+\begin_layout Itemize
+odtwarzacz BluRay / DVD.
 \end_layout
 
 \begin_layout Standard
-fewsfsf
+Na urządzenie lub oprogramowanie serwera UPnP składają się następujące usługi:
 \end_layout
 
-\begin_layout Subsection
-Odtwarzacze
+\begin_layout Itemize
+usługa zarządzania treścią (ang.
+ 
+\emph on
+Content Directory Service),
+\end_layout
+
+\begin_layout Itemize
+usługa menedżera połączeń (ang.
+ 
+\emph on
+ConnectionManager Service
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+opcjonalna: usługa transportu AV (ang.
+ 
+\emph on
+AVTransport Service
+\emph default
+).
 \end_layout
 
 \begin_layout Standard
-dewd
+Pierwsza z usług, dotycząca zarządzania treścią umożliwia punktom kontrolnym
+ przeglądanie zasobów udostępnianych przez serwer.
+ Jedną z metod jest przeglądanie - 
+\emph on
+ContentDirectory:::Browse(), 
+\emph default
+która po
+\emph on
+zwala 
+\emph default
+uzyskać informacje uzyskać informacje o pliku wraz z jego metadanymi - nazwa,
+ artysta itd.
+ W metadanych mogą również być zawarte informacje o kodowaniu, transporcie,
+ dzięki którym punkt kontrolny potrafi określić czy dany odtwarzacz ma możliwość
+ odtworzenia zawartości.
+ Druga z usług wykorzystywana jest do zarządzania ustanowionych już połączeń.
+ Ostatnia z opisywanych usług, służy do zarządzania odtwarzanym materiałem.
+ Umożliwia wydawanie poleceń takich jak: odtwarzaj, pauza, stop, przewiń
+ wprzód, przewiń w tył itd.
+\end_layout
+
+\begin_layout Standard
+Wszystkie powyżej opisane usługi 
+\begin_inset Quotes pld
+\end_inset
+
+wewnętrzne
+\begin_inset Quotes prd
+\end_inset
+
+ są również integralną częścią specyfikacji DLNA (ich nazwy w większości
+ publikacji pozostały takie same).
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-19"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-Piloty
+Odtwarzacz multimediów oraz odtwarzacz renderujący
+\end_layout
+
+\begin_layout Standard
+W przypadku opisywanego oprogramowania różnica, między standardami UPnP,
+ a DLNA jest najbardziej widoczna.
+ Zróżnicowanie te polega głównie na rozdzieleniu ogólnie pojętego zadania
+ odtwarzania materiałów multimedialnych na mniejsze, pośrednie zadania.
+\end_layout
+
+\begin_layout Standard
+W przypadku UPnP AVw odtwarzaniu treści multimedialnych uczestniczy punk
+ kontrolny, który wyszukuje materiały udostępniane przez serwer multimediów
+ oraz zleca ich odtworzenie.
+ Polecenie odtworzenia może zostać wykonane w postaci dwóch metod.
+ Metodą 
+\emph on
+push
+\emph default
+, w której serwer mutlimediów wysyła treść do wybranego przez punkt kontrolny
+ odtwarzacz renderujący, bądź też metodą 
+\emph on
+pull, 
+\emph default
+w której odtwarzaczacz renderujący (ang.
+ 
+\emph on
+MediaRenderer
+\emph default
+) pobiera dane z serwera multimediów, renderuje je i/lub odtwarza (może
+ je renderować i wysyłać do odtwarzania do innego odtwarzacza).
+ Uproszczony schemat opisanej powyżej procedury znajduje się na rysunku
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Architektura-odtwarzania-UPnP"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Architektura-odtwarzania-UPnP"
+
+\end_inset
+
+Architektura odtwarzania UPnP AV
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename playback_architecture_upnpav.png
+	display false
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+W przypadku architektury DLNA wyróżniamy dwie usługi potrafiące odtwarzać
+ materiały:
+\end_layout
+
+\begin_layout Itemize
+odtwarzacz multimedialny (ang.
+ 
+\emph on
+Digital Media Player
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+odtwarzacz renderujący (ang.
+ 
+\emph on
+Digital Media Renderer
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+Pierwszy z nich służy do wyszukiwania i renderowania treści multimedialnych.
+ Natomiast zadaniem drugiego jest renderowanie oraz odtwarzanie zadań zleconych
+ przez kontroler multimediów.
+ Różnica między pierwszym, a drugim jest taka, że odtwarzaczowi renderującemu
+ trzeba zlecić zadanie odtwarzanie, natomiast odtwarzacz multimedialny może
+ podjąć taką decyzję 
+\begin_inset Quotes pld
+\end_inset
+
+samodzielnie
+\begin_inset Quotes prd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Urządzeniami tego typu może być:
+\end_layout
+
+\begin_layout Itemize
+telewizor,
+\end_layout
+
+\begin_layout Itemize
+odtwarzacz DVD/BluRay,
+\end_layout
+
+\begin_layout Itemize
+amplituner,
+\end_layout
+
+\begin_layout Itemize
+smartfon,
+\end_layout
+
+\begin_layout Itemize
+komputer PC.
+\end_layout
+
+\begin_layout Standard
+Podobnie, jak w przypadku serwera UPnP, odtwarzacz posiada intergralne usługi,
+ które musi, bądź powinien mieć zaimplementowane:
+\end_layout
+
+\begin_layout Itemize
+usługa kontroli renderowania,
+\end_layout
+
+\begin_layout Itemize
+usługa menedżera połączeń (ang.
+ 
+\emph on
+ConnectionManager Service
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+opcjonalna: usługa transportu AV (ang.
+ 
+\emph on
+AVTransport Service
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+Dwie ostatnie usługi komunikują się ze swoimi odpowiednikami w implementacji
+ serwera multimedialnego (ich funkcje się uzupełniają).
+ Usługa kontroli renderowania pozwala punktowi kontrolnemu sterować sposobem
+ przetwarzania treści przez odtwarzacz renderujący.
+ Oznacza to zmianę takich funkcji jak: jasność, kontrast, głośność, wyciszenie
+ itd.
+ Usługa kontroli renderowania może obsługiwać wiele odtwarzaczy renderujących,
+ co umożliwia jednoczesną zmianę ustawień w wielu urządzeniach UPnP.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-19"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Punkt kontrolny oraz kontroler multimedialny
+\end_layout
+
+\begin_layout Standard
+W przypadku UPnP A/V nie wyspecyfikowano oddzielnej usługi / urządzenia
+ do kontroli odtwarzacza.
+ Taką rolę spełnia punkt kontrolny w obrębie całej specyfikacji UPnP.
+ Punkt kontrolny w UPnP koordynuje działania serwera multimediów i odtwarzacza.
+ Zazwyczaj wysyłanie poleceń jest efektem interakcji z użytkownikiem poprzez
+ interfejs użytkownika.
+ Punktu kontrolnego, w opisywanej roli, specyfikacja UPnP AV nie określa
+ jako pełnoprawnego urządzenia UPnP (nie dostarcza żadnych usług UPnP oraz
+ nie jest widoczny jako urządzenie UPnP w sieci), lecz jest niezbędnym pośrednik
+iem, między użytkownikiem, a urządzeniami UPnP.
+\end_layout
+
+\begin_layout Standard
+Specyfikacja DLNA wyróżnia punkt kontrolny do zarządzania odtwarzaczem multimedi
+alnym, bądź renderującym.
+ Kontroler multimedialny (ang.
+ 
+\emph on
+Digital Media Controller)
+\emph default
+ odtwarza zawartość, znalezioną w udostępnianych zasobach serwera multimedialneg
+o lub zarządza odtwarzaną zawartość odtwarzacza renderującego.
+ Kontrolerami multimedialnymi zazwyczaj są:
+\end_layout
+
+\begin_layout Itemize
+smartfony,
+\end_layout
+
+\begin_layout Itemize
+tablety,
+\end_layout
+
+\begin_layout Itemize
+itd.
+\end_layout
+
+\begin_layout Standard
+Uproszczony sposób działania algorytmu punktu kontrolnego, współpracującego
+ z pojedyńczym serwerem multimedialnych oraz serwerem renderującym wygląda
+ następująco:
+\end_layout
+
+\begin_layout Enumerate
+Wykrywanie urządzeń Audio / Video (przy pomocy mechanizmów UPnP).
+\end_layout
+
+\begin_layout Enumerate
+Zlokalizowanie pożądanej treść, przy pomocy metod serwera UPnP, takich jak
+ 
+\emph on
+ContentDirectory::Browse() 
+\emph default
+oraz 
+\emph on
+ContentDirectory::Search(), 
+\emph default
+które umożliwiają odnalezienie zasobu.
+\end_layout
+
+\begin_layout Enumerate
+Pobierz wspierane, przez odtwarzacz renderujący, formaty danych i protokoły
+ (poprzez metodę 
+\emph on
+ConnectionManager::GetProtocolInfo()
+\emph default
+).
+\end_layout
+
+\begin_layout Enumerate
+Sprawdź możliwości odtworzenia materiału przez pożądany odtwarzacz, wyznacz
+ najlepszy sposób transmisji oraz format danych.
+\end_layout
+
+\begin_layout Enumerate
+Skonfiguruj serwer oraz odtwarzacz renderujący - wykorzystywane są takie
+ polecenia jak: 
+\emph on
+ConnectionManager::PrepareForConnection(), AVTransport::Play(), AVTransport::Sto
+p(), AVTransport::Pause(), AVTransport::Seek() itd.
+\end_layout
+
+\begin_layout Enumerate
+Wyznacz zawartość do przesłania.
+\end_layout
+
+\begin_layout Enumerate
+Rozpocznij przesyłanie wybranej treści.
+\end_layout
+
+\begin_layout Enumerate
+Możliwe wywoływanie działań na odtwarzaczu (np.
+ pauza).
+\end_layout
+
+\begin_layout Enumerate
+Wybierz opcję: powtórz odtworzenie lub kolejny materiał.
+\end_layout
+
+\begin_layout Enumerate
+Po zakończeniu działania zamknij połączenia z serwerem multimediów.
 \end_layout
 
 \begin_layout Subsection
 Odmiany mobilne
 \end_layout
 
+\begin_layout Standard
+Specyfikacja DLNA dla większości typów urządzeń (wyjątkiem jest drukarka
+ 
+\emph on
+DMPr
+\emph default
+) przewiduje możliwość ich odmiany mobilnej.
+ Spełniają one te same funkcje co typy główne.
+ Rozróżnienie dużej ilości typów zostało wprowadzone dla ułatwionej orientacji
+ konsumentów, pośród różnych produktów.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-20"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Poza powtarzającymi się typami wyróżniamy dwa, które istnieją jedynie w
+ wersji mobilnej:
+\end_layout
+
+\begin_layout Itemize
+menedżer wysyłania multimediów (ang.
+ 
+\emph on
+Mobile Digital Media Uploader M-DMU)
+\emph default
+,
+\end_layout
+
+\begin_layout Itemize
+menedżer pobierania multimediów (ang.
+ 
+\emph on
+Mobile Digital Media Downloader M-DMD).
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-20"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pierwszy typ służy do wysłania (całości) materiału do serwera multimediów
+ (mobilnej wersji bądź standardowej) poprzez sieć bezprzewodową.
+ Przykładem takich urządzeń mogą być: cyfrowy aparat fotograficzny, kamera
+ wideo, smartfon.
+ Menedżer pobierania multimediów, również jest urządzeniem działającym w
+ obrębie sieci bezprzewodowej, które pobiera materiały udostępniane przez
+ serwer DLNA (niezależnie od wersji mobilnej, bądź standardowej).
+ Menedżerem pobierania może być smartfon lub przenośny odtwarzacz muzyki.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-20"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Odmiany mobilne urządzeń i usług nie są wyróżnione w dokumentacji UPnP.
+\end_layout
+
 \begin_layout Chapter
-Multimedia w UPnP/DLNA
+Multimedia w UPnP AV/DLNA
+\end_layout
+
+\begin_layout Standard
+Specyfikacje UPnP AV oraz DLNA zostały stworzone do umożliwienia oraz ustandaryz
+owania sposobu odtwarzania materiałów multimedialnych w obrębie sieci lokalnej
+ oraz zapewnienie współpracy między urządzeniami różnych producentów.
+ Pierwszy z projektów UPnP AV niestety nie spełniał w pełni tych wymogów.
+ Oznacza to, że sposób implementacji zdefiniowanych funkcji mógł być w odrębny
+ sposób interpretowany przez różne zespoły programistów, co prowadziło do
+ braku komunikacji, między urządzeniami różnych typów, bądź różnych producentów.
+ 
+\end_layout
+
+\begin_layout Standard
+Konsorcjum DLNA starało się opisywany problem wyeliminować i w odróżnieniu
+ od UPnP AV, certyfikat zalecenia DLNA są stosowane przez większość producentów
+ urządzeń multimedialnych, a spośród w chwili obecnej najprawdopodobniej
+ najpopularniejszego przeznaczenia DLNA (odtwarzanie filmów), większość
+ producentów nowoczesnych telewizorów wyposaża je w oprogramowanie odtwarzacza
+ DLNA.
 \end_layout
 
 \begin_layout Section
 Rodzaje multimediów
+\end_layout
+
+\begin_layout Standard
+Klasą główną urządzeń UPnP jest 
+\emph on
+item, 
+\emph default
+w którym są zawarte następujące podtypy:
+\end_layout
+
+\begin_layout Itemize
+rysunek (
+\emph on
+imageItem
+\emph default
+),
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+obraz (
+\emph on
+photo
+\emph default
+),
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+audio (
+\emph on
+audioItem
+\emph default
+)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+utwór muzyczny (
+\emph on
+musicTrack),
+\end_layout
+
+\begin_layout Itemize
+nadawanie materiału audio (
+\emph on
+audioBroadcast
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+audiobook (
+\emph on
+audiobook
+\emph default
+),
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+wideo (
+\emph on
+videoItem
+\emph default
+),
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+film (
+\emph on
+movie)
+\emph default
+,
+\end_layout
+
+\begin_layout Itemize
+nadawanie materiału wideo (
+\emph on
+videoBroadcast
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+teledysk (
+\emph on
+musicVideoClip),
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+lista odtwarzania (
+\emph on
+playlistItem
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+tekst (
+\emph on
+textItem
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+Każdy z powyższych typów, może posiadać podtypy określone przez wystawcę
+ oprogramowania.
+ Schemat typów został dodatkowo przedstawiony na rysunku nr 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Schemat-typu-item"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Schemat-typu-item"
+
+\end_inset
+
+Schemat typu 
+\emph on
+item
+\emph default
+ wraz ze standardowymi podtypami
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename item_type.png
+	display false
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2305,7 +2940,7 @@ Miniatury multimediów
 \end_layout
 
 \begin_layout Chapter
-Teoria, a praktyka UPnP/DLNA
+Teoria, a praktyka UPnP AV/DLNA
 \end_layout
 
 \begin_layout Section
@@ -2633,6 +3268,28 @@ key "key-18"
 
 UPnP Design by Example: A Software Developers's Guide to Universal Plug
  and Play, Michael Jeromino, Jack Weast, 2003
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-19"
+
+\end_inset
+
+UPnP Forum UPnP AV Architecture:2, 2010
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-20"
+
+\end_inset
+
+Network Media Content Aggregator for DLNA Server, Jan Kubový, 2011
 \end_layout
 
 \end_body
