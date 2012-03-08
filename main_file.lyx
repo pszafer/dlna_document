@@ -2078,6 +2078,13 @@ Specyfikacja UPnP definiuje kilka rodzajów urządzeń, które dotyczą protoko�
  W niniejszym rozdziale zostaną opisane rodzaje spotykanych urządzeń UPnP
  ze szczególnym ukierunkowaniem na rodzaje przeznaczone do współpracy z
  materiałami multimedialnymi.
+ Urządzenia te są zgodne z jedną z kategorii opisywanego protokołu nazywanego
+ UPnP AV (od ang.
+ 
+\emph on
+Audio / Video
+\emph default
+).
 \end_layout
 
 \begin_layout Standard
@@ -2090,9 +2097,10 @@ zaczerpnęła
 \emph on
  
 \emph default
-mutlimedialne rodzaje urządzeń ze specyfikacji UPnP, dlatego w niniejszym
- rozdziale zostaną przedstawione zarówno nazwy urządzeń DLNA, jak i multimedialn
-ych urządzeń UPnP.
+mutlimedialne rodzaje urządzeń ze specyfikacji UPnP oraz dodała elementy
+ wyróżniające DLNA (np drukarkę multimediów).
+ W niniejszym rozdziale zostaną przedstawione zarówno nazwy urządzeń DLNA,
+ jak i multimedialnych urządzeń UPnP AV.
 \end_layout
 
 \begin_layout Standard
@@ -2122,21 +2130,21 @@ serwer multimediów (ang.
 \emph on
 Media Server
 \emph default
-) / cyfrowy serwer multimediów (ang.
+) / cyfrowy serwer multimediów DMS (ang.
  
 \emph on
 Digital Media Server
 \emph default
-) - DMS,
+),
 \end_layout
 
 \begin_layout Itemize
-* / cyfrowy odtwarzacz multimediów (ang.
+* / cyfrowy odtwarzacz multimediów DMP (ang.
  
 \emph on
 Digital Media Player
 \emph default
-) - DMP,
+),
 \end_layout
 
 \begin_layout Itemize
@@ -2145,45 +2153,119 @@ serwer renderujący (ang.
 \emph on
 Media Renderer) / 
 \emph default
-cyfrowy serwer renderujący (ang.
+cyfrowy serwer renderujący DMR (ang.
  
 \emph on
 Digial Media Renderer
 \emph default
-) - DMR,
+) ,
 \end_layout
 
 \begin_layout Itemize
-* / cyfrowy kontroler multimediów (ang.
+* / cyfrowy kontroler multimediów DMC (ang.
  
 \emph on
 Digital Media Controller
 \emph default
-) - DMC,
+),
 \end_layout
 
 \begin_layout Itemize
-drukarka multimediów (ang.
+drukarka multimediów DMPr (ang.
  
 \emph on
-Digital Media Printer) 
-\emph default
-- DMPr,
+Digital Media Printer).
 \end_layout
 
 \begin_layout Standard
 W powyższej liście pierwsza nazwa jest nazwą nadaną przez organizację UPnP,
- druga przez organizację DLNA, natomiast myślnikiem oddzielona została skrócona
- nazwa urządzenia, którą autor będzie w niniejszym rozdziale używał.
- Jeżeli
-\end_layout
-
-\begin_layout Subsection
-Punkty kontrolne
+ druga przez organizację DLNA.
+ W przypadku, gdy odpowiednik, w którymś z protokołów nie występuje, na
+ miejscu nazwy usługi lub urządzenia znajduje się znak myślnika.
 \end_layout
 
 \begin_layout Standard
-dswd
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Schemat-odtwarzania-w"
+
+\end_inset
+
+Schemat odtwarzania w UPnP AV
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename upnpavplaying.png
+	display false
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Serwer multimedialny
+\end_layout
+
+\begin_layout Standard
+Serwer multimediów w protokołach UPNP AV oraz DLNA jest niezbędnym elementem
+ sieci.
+ Serwer udostępnia stworzone, pobrane, nagrane pliki multimedialne.
+ Jest to jego główne zadanie.
+ W protokole DLNA jego rolą jest również zapewnienie ochrony treści (praw
+ autorskich).
+ Serwer multimediów UPnP AV nie zapewnia ochrony treści.
+ Serwer multimedialny jest to zazwyczaj oprogramowanie zainstalowane na
+ urządzeniach podłączonych do sieci Ethernet, takich jak:
+\end_layout
+
+\begin_layout Itemize
+komputer typu PC,
+\end_layout
+
+\begin_layout Itemize
+nagrywarka cyfrowa,
+\end_layout
+
+\begin_layout Itemize
+smartfon,
+\end_layout
+
+\begin_layout Itemize
+kamera cyfrowa,
+\end_layout
+
+\begin_layout Itemize
+odtwarzacz BluRay / DVD.
 \end_layout
 
 \begin_layout Subsection

@@ -2233,27 +2233,135 @@ Schemat odtwarzania w UPnP AV
 \end_layout
 
 \begin_layout Subsection
-Punkty kontrolne
+Serwer multimedialny
 \end_layout
 
 \begin_layout Standard
-dswd
+Serwer multimediów w protokołach UPNP AV oraz DLNA jest niezbędnym elementem
+ sieci.
+ Serwer udostępnia stworzone, pobrane, nagrane pliki multimedialne.
+ Jest to jego główne zadanie.
+ W protokole DLNA jego rolą jest również zapewnienie ochrony treści (praw
+ autorskich).
+ Serwer multimediów UPnP AV nie zapewnia ochrony treści.
+ Serwer multimedialny jest to zazwyczaj oprogramowanie zainstalowane na
+ urządzeniach podłączonych do sieci Ethernet, takich jak:
+\end_layout
+
+\begin_layout Itemize
+komputer typu PC,
+\end_layout
+
+\begin_layout Itemize
+nagrywarka cyfrowa,
+\end_layout
+
+\begin_layout Itemize
+smartfon,
+\end_layout
+
+\begin_layout Itemize
+kamera cyfrowa,
+\end_layout
+
+\begin_layout Itemize
+odtwarzacz BluRay / DVD.
 \end_layout
 
 \begin_layout Subsection
-Kodowanie w locie
+Odtwarzacz multimediów oraz odtwarzacz renderujący
 \end_layout
 
 \begin_layout Standard
-fewsfsf
-\end_layout
-
-\begin_layout Subsection
-Odtwarzacze
+W przypadku opisywanego oprogramowania różnica, między standardami UPnP,
+ a DLNA jest najbardziej widoczna.
+ Zróżnicowanie te polega głównie na rozdzieleniu ogólnie pojętego zadania
+ odtwarzania materiałów multimedialnych na mniejsze, pośrednie zadania.
 \end_layout
 
 \begin_layout Standard
-dewd
+W przypadku UPnP AVw odtwarzaniu treści multimedialnych uczestniczy punk
+ kontrolny, który wyszukuje materiały udostępniane przez serwer multimediów
+ oraz zleca ich odtworzenie.
+ Polecenie odtworzenia może zostać wykonane w postaci dwóch metod.
+ Metodą 
+\emph on
+push
+\emph default
+, w której serwer mutlimediów wysyła treść do wybranego przez punkt kontrolny
+ odtwarzacz renderujący, bądź też metodą 
+\emph on
+pull, 
+\emph default
+w której odtwarzaczacz renderujący (ang.
+ 
+\emph on
+MediaRenderer
+\emph default
+) pobiera dane z serwera multimediów, renderuje je i/lub odtwarza (może
+ je renderować i wysyłać do odtwarzania do innego odtwarzacza).
+ Uproszczony schemat opisanej powyżej procedury znajduje się na rysunku
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Architektura-odtwarzania-UPnP"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Architektura-odtwarzania-UPnP"
+
+\end_inset
+
+Architektura odtwarzania UPnP AV
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename playback_architecture_upnpav.png
+	display false
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+jest wykorzystywany jako pośrednik w odtwarzaniu materiałów, pomiędzy serwerem
+ multimediów, a odtwarzaczem UPnP/DLNA.
+ Ma za zadanie przetwarzać materiał dla odtwarzacza, bądź samodzielnie go
+ odtwarzać.
+ Nie ma możliwości samodzielnego wyszukiwania zasobów serwera multimediów
+ UPnP/DLNA.
 \end_layout
 
 \begin_layout Subsection
