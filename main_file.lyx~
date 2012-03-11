@@ -2717,23 +2717,68 @@ Multimedia w UPnP AV/DLNA
 \end_layout
 
 \begin_layout Standard
-Specyfikacje UPnP AV oraz DLNA zostały stworzone do umożliwienia oraz ustandaryz
-owania sposobu odtwarzania materiałów multimedialnych w obrębie sieci lokalnej
- oraz zapewnienie współpracy między urządzeniami różnych producentów.
- Pierwszy z projektów UPnP AV niestety nie spełniał w pełni tych wymogów.
- Oznacza to, że sposób implementacji zdefiniowanych funkcji mógł być w odrębny
- sposób interpretowany przez różne zespoły programistów, co prowadziło do
- braku komunikacji, między urządzeniami różnych typów, bądź różnych producentów.
- 
+Specyfikacja UPnP AV została stworzona do umożliwienia oraz ustandaryzowania
+ sposobu komunikacji ze sobą urządzeń multimedialnych w obrębie sieci lokalnej
+ oraz zapewnienie współpracy między produktami różnych dostawców.
+ Cel ten w specyfikacji UPnP AV został w dużej mierze osiągnięty.
+ Specyfikacja UPnP AV pozostawia jednak swobodę w możliwościach obsługiwanych
+ formatów danych.
+ Oznacza to, że pomimo komunikowania się ze sobą różnych urządzeń, cel dla
+ użytkownika końcowego, czyli odtworzenie treści, nie zawsze może być spełniony.
+ Liberalność w kwestii wspieranych formatów zadziałał w tym przypadku na
+ niekorzyść specyfikacji UPnP AV.
 \end_layout
 
 \begin_layout Standard
-Konsorcjum DLNA starało się opisywany problem wyeliminować i w odróżnieniu
- od UPnP AV, certyfikat zalecenia DLNA są stosowane przez większość producentów
- urządzeń multimedialnych, a spośród w chwili obecnej najprawdopodobniej
- najpopularniejszego przeznaczenia DLNA (odtwarzanie filmów), większość
- producentów nowoczesnych telewizorów wyposaża je w oprogramowanie odtwarzacza
- DLNA.
+Z powyżej opisanego powodu producenci urządzeń powołali konsorcjum DLNA.
+ W specyfikacji DLNA autorzy skupili się w również na formatach odtwarzanych
+ plików.
+ Natomiast ze specyfikacji UPnP zapożyczyli między innymi w prawidłowy sposób
+ działającą komunikację między urządzeniami.
+ Jako format definiuje się możliwy sposób zakodowania pliku.
+\end_layout
+
+\begin_layout Standard
+Certyfikacja DLNA jest stosowana przez większość producentów urządzeń multimedia
+lnych, a spośród w chwili obecnej najprawdopodobniej najpopularniejszego
+ przeznaczenia DLNA (odtwarzanie filmów), większość producentów nowoczesnych
+ telewizorów wyposaża je w oprogramowanie odtwarzacza DLNA.
+\end_layout
+
+\begin_layout Standard
+Zgodnie ze standardem UPnP AV oraz DLNA plik multimedialny można zaklasyfikować
+ do jednego z następujących formatów:
+\end_layout
+
+\begin_layout Itemize
+audio (ang.
+ 
+\emph on
+audio
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+obraz (ang.
+ 
+\emph on
+image
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+audio-wideo (ang.
+ 
+\emph on
+AV / audio-video).
+\end_layout
+
+\begin_layout Standard
+W niniejszym rozdziale zostaną opisane obsługiwane typy multimediów, ich
+ klasyfikacje w opisywanych specyfikacjach oraz formaty kodowania plików,
+ przechowywania oraz sposób ich obsługi.
 \end_layout
 
 \begin_layout Section
@@ -2844,6 +2889,13 @@ tekst (
 textItem
 \emph default
 ).
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-21"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2888,7 +2940,7 @@ item
 
 \end_inset
 
-
+upnp_av_contentdirectory_service:2 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2905,6 +2957,41 @@ item
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Poza typowymi 
+\series bold
+\emph on
+item 
+\series default
+\emph default
+wyróżniamy również tak zwane kontenery (ang.
+ 
+\emph on
+containers
+\emph default
+).
+ Reprezentują one kolekcje obiektów (fizyczną, bądź logiczną np.
+ posortowaną według typów filmów).
+ Dokładny opis obu typów, wraz ze sposobem stosowania, znajduje się w rozdziale
+ implementacyjnym niniejszej pracy magisterskiej.
+\end_layout
+
+\begin_layout Standard
+W przypadku DLNA zrezygnowano w materiałach z przyrostka 
+\emph on
+item
+\emph default
+ i pozostały nazwy takie jak: 
+\emph on
+audio, AV, image
+\emph default
+.
+ Jednakże w implementacji DLNA pozostawiono nazwy, takie jak w UPnP AV,
+ dlatego w niniejszej pracy autor używa nazw pochodzących z UPnP AV.
+ Wyjątek stanowi sytuacja, gdy nazwa została zdefiniowana jedynie w specyfikacji
+ DLNA, a w specyfikacji autorstwa UPnP Forum jej odpowiednik nie występuje.
 \end_layout
 
 \begin_layout Subsection
@@ -3290,6 +3377,18 @@ key "key-20"
 \end_inset
 
 Network Media Content Aggregator for DLNA Server, Jan Kubový, 2011
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-21"
+
+\end_inset
+
+ContentDirectory service:2 Service Template Version 1.01 – Document Version
+ 1.00, 2006
 \end_layout
 
 \end_body
