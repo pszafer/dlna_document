@@ -3006,13 +3006,13 @@ key "key-22"
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="3">
+<lyxtabular version="3" rows="6" columns="3">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3021,7 +3021,7 @@ Klasa multimediów
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3041,7 +3041,7 @@ Opcjonalne typy plików
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3055,7 +3055,7 @@ Image
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3075,7 +3075,7 @@ PNG, GIF, TIFF
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3084,7 +3084,7 @@ Audio
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3097,14 +3097,43 @@ MP3, MPEG4 AAC LC
 \begin_inset Text
 
 \begin_layout Plain Layout
-MPEG4 (HE AAC, AAC LTP, BSAC), AMR, ATRAC3plus, G.726, WMA, LPCM
+MPEG4 (HE AAC, AAC LTP, BSAC),
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AMR, ATRAC3plus, G.726, WMA, LPCM
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3118,7 +3147,7 @@ Video
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3127,11 +3156,40 @@ MPEG4 AVC (AAC LC)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-VC1, H.263, MPEG4, MPEG2, MPEG4 AVC (np.
+VC1, H.263, MPEG4, 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MPEG2, MPEG4 AVC (np.
  BSAC)
 \end_layout
 
@@ -3376,7 +3434,166 @@ res (ang.
 \begin_layout Subsection
 Klasa 
 \emph on
+object 
+\emph default
+oraz klasa 
+\emph on
 item
+\end_layout
+
+\begin_layout Standard
+Wyróżniamy dwie klasy główne: 
+\emph on
+object 
+\emph default
+i 
+\emph on
+item.
+
+\emph default
+ Pierwsza z nich to klasa główna , w której znajduje się cała udostępniana
+ odtwarzaczowi UPnP lub DLNA treść multimedialna (ang.
+ 
+\emph on
+ContentDirectory
+\emph default
+).
+ Klasa 
+\emph on
+object
+\emph default
+ określa właściwości, które są wspólne dla każdego z udostępnianych plików,
+ jak i dla ustrukturyzowanej logicznej kolekcji materiałów.
+ Niniejsza lista przedstawia wymagane właściwości dostarczane wraz z obiektem:
+\end_layout
+
+\begin_layout Itemize
+@id - unikalny identyfikator klasy głównej,
+\end_layout
+
+\begin_layout Itemize
+@parentID - identyfikator klasy nadrzędnej,
+\end_layout
+
+\begin_layout Itemize
+@restricted - ...???
+\end_layout
+
+\begin_layout Itemize
+dc:title - nazwa obiektu,
+\end_layout
+
+\begin_layout Itemize
+upnp:class - klasa zawartości zgodna z UPnP
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-21"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Dodatkowymi właściwościami opisywanej klasy są:
+\end_layout
+
+\begin_layout Itemize
+dc:creator - ...?
+\end_layout
+
+\begin_layout Itemize
+res - URL ????
+\end_layout
+
+\begin_layout Itemize
+upnp:writeStatus - ?????????????.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-21"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Klasa 
+\emph on
+item
+\emph default
+ jest typem określającym każdy indywidualny materiał multimedialny np.
+ zdjęcie w albumie.
+ Obiekt ten nie może zawierać w sobie innych obiektów (nie może być 
+\begin_inset Quotes pld
+\end_inset
+
+katalogiem
+\begin_inset Quotes prd
+\end_inset
+
+).
+ Klasa dziedziczy wszystkie opcje po klasie głównej 
+\emph on
+object 
+\emph default
+oraz wprowadza następujące właściwości (wszystkie są opcjonalne):
+\end_layout
+
+\begin_layout Itemize
+@refID - odniesienie do pliku głównego (w przypadku gdy plik znajduje się
+ w logicznym kontenerze).
+ Jeżeli udostępniany zasób jest odniesieniem, wówczas pole opisywana opcja
+ jest obowiązkowa,
+\end_layout
+
+\begin_layout Itemize
+upnp:bookmarkID - ..........?
+\end_layout
+
+\begin_layout Subsection
+Klasa kontener
+\end_layout
+
+\begin_layout Standard
+Klasa kontener (ang.
+ 
+\emph on
+container
+\emph default
+) dziedziczy po typie głównym 
+\emph on
+object
+\emph default
+ i reprezentuje kolekcje innych obiektów (innych kontenerów lub innych podtypów
+ dziedziczącej po klasie 
+\emph on
+object
+\emph default
+).
+ Nie określa ona żadnych obowiązkowych właściwości, które trzeba dostarczyć
+ drugiej stronie komunikacji.
+ Opcjami dodatkowymi są natomiast pola:
+\end_layout
+
+\begin_layout Itemize
+@childCount - liczba obiektów, które znajdują się w kontenerze,
+\end_layout
+
+\begin_layout Itemize
+upnp:CreateClass - ........?
+\end_layout
+
+\begin_layout Itemize
+upnp:SearchClass - ...........?
+\end_layout
+
+\begin_layout Itemize
+@searchable - wartość 0 lub 1????????
+\end_layout
+
+\begin_layout Itemize
+@neverPlayable - ????????????
 \end_layout
 
 \begin_layout Subsection
@@ -3519,8 +3736,434 @@ Obsługiwany obowiązkowo typ grafik to JPEG_SM.
 \end_layout
 
 \begin_layout Standard
-Na podstawie dokumentacji DLNA autor opracował tabelę zestawiającą formaty
- plików - .
+Na podstawie dokumentacji DLNA autor opracował tabelę 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Tabela-porównawcza-formatów"
+
+\end_inset
+
+ zestawiającą formaty plików oraz ich właściwości.
+ Tabela zawiera standardowe formaty danych i nie uwzględnia formatów opcjonalnyc
+h (takich jak PNG czy BMP), które mogą być obsługiwane przez urządzenie.
+ Jednakże bez względu na typ pliku, właściwości dotyczące rozmiaru (na podstawie
+ którego klasyfikowana jest nazwa skrócona obrazu np.
+ MED) muszą być uwzględnione, a obraz udostępniony z odpowiednią nazwą profilu
+ (np.
+ PNG_MED).
+\end_layout
+
+\begin_layout Standard
+Obrazy udostępniane są również w postaci miniatur.
+ Miniatury mogą odnosić się nie tylko do obrazów i zdjęć, lecz do pozostałej
+ udostępnianej zawartości, czyli muzyki i filmów.
+ Każdy album muzyczny może mieć miniaturę z okładką albumu, zaś film miniature
+ z plakatem, wybraną sceną lub inny dowolny obraz.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Tabela-porównawcza-formatów"
+
+\end_inset
+
+Tabela porównawcza standardowych formatów obrazów w technologii DLNA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="12" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Typ MIME
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Profil*
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Właściwości
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+image/jpeg
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JPEG_SM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+maksymalny rozmiar**: 640 x 480
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+paleta kolorów: niekalibrowane lub sRGB
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JPEG_MED
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+maksymalny rozmiar: 1024 x 768
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JPEG_LRG
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+maksymalny rozmiar: 4096 x 4096
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JPEG_TN
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+maksymalny rozmiar: 160 x 160
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JPEG_SM_ICO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+maksymalny rozmiar: 48 x 48
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JPEG_LRG_ICO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+maksymalny rozmiar: 120 x 120
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+image/png
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PNG_TN
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+maksymalny rozmiar: 160 x 160
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PNG_SM_ICO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+maksymalny rozmiar: 48 x 48
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+paleta kolorów: odcienie szarości, 24 bitowa paleta kolorów
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PNG_LRG_ICO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+maksymalny rozmiar: 120 x 120
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+*na profil składa się typ pliku (np.
+ JPEG) oraz rozmiar: SM - mały, MED - średni, LRG - wielki, TN - miniatura,
+ SM_ICO - mała ikona, LRG_ICO - duża ikona
+\end_layout
+
+\begin_layout Plain Layout
+** rozmiar podawany w pikselach
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Muzyka
 \end_layout
 
 \begin_layout Subsection
@@ -3541,10 +4184,6 @@ Napisy w filmach
 
 \begin_layout Subsection
 Kodowanie filmów
-\end_layout
-
-\begin_layout Subsection
-Muzyka
 \end_layout
 
 \begin_layout Subsection
@@ -3576,7 +4215,7 @@ Porównanie oprogramowania odtwarzaczy UPnP/DLNA
 \end_layout
 
 \begin_layout Chapter
-Realizacja oprogramowania serwera UPnP
+Realizacja oprogramowania serwera UPnP AV
 \end_layout
 
 \begin_layout Section
@@ -3584,11 +4223,274 @@ Zdefiniowane wymagania
 \end_layout
 
 \begin_layout Standard
-platformy gui 
+Autor na potrzeby niniejszej pracy chciał stworzyć w pełni funkcjonalny
+ serwer UPnP AV współpracym z urządzeniami DLNA w jak najszerszym zakresie,
+ tj.
+ takiego serwera, którego odtwarzacz potrafiłby wykorzystać jak największą
+ możliwą ilość funkcji.
+ Ilość serwerów DLNA dostarczanych przez producentów jest coraz większa
+ i są one coraz bardziej kompatybilne z różnymi odtwarzaczami.
+ 
+\end_layout
+
+\begin_layout Standard
+Zdefiniowanie środowiska do implementacji oprogramowania było bardzo ważnym
+ wyborem.
+ Autor do codziennej pracy używa systemu operacyjnego z rodziny Linux, jednakże
+ większość użytkowników komputerów typu PC używa systemu operacyjnego Microsoft
+ Windows.
+ Dlatego też środowisko implementacji ma zapewniać kompatybilność z oboma
+ systemami operacyjnymi.
+ Pierwszym wyborem ze względu na biegłą znajomość języka było środowisko
+ Java.
+\end_layout
+
+\begin_layout Standard
+W dzisiejszych czasach coraz więcej urządzeń sieci lokalnej nie jest oparta
+ o architekturę PC.
+ Przykładami takich urządzeń mogą być routery lub smartfony.
+ Pierwsze z nich bardzo często w standardzie są wyposażone w złącza USB
+ oraz wbudowane oprogramowanie do udostępniania multimediów.
+ Z doświadczeń własnych autora, wynika jednak, że zakres możliwości oraz
+ szybkość takiego oprogramowania pozostawia wiele do życzenia.
+ Skutecznie udostępniane są jedynie zdjęcia, natomiast największy problem
+ pojawia się w kwestii odtwarzania filmów.
+ W tabeli 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Platformy-obsługiwane-przez"
+
+\end_inset
+
+ zostały zdefiniowane platformy konieczne do obsługiwania przez serwer UPnP.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Platformy-obsługiwane-przez"
+
+\end_inset
+
+Platformy obsługiwane przez serwer UPnP AV
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Klasa urządzenia
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+System operacyjny
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Router
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DD-WRT
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tomato
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Windows
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Linux
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+W przypadku środowiska Java wymienione we wcześniejszych akapitach wymagania
+ mogły być realizowane, jednak obciążenie procesora w systemie operacyjnym
+ Ubuntu wynosiło około 5%, co bez dalszych testów uniemożliwiało dobrą pracę
+ serwera na słabych wydajnościowo routerach.
+ Dlatego też po pierwszych testach autor podjął decyzję o wyborze języka
+ Python do realizacji oprogramowania.
+\end_layout
+
+\begin_layout Standard
+Pozostałe wymagania zostały narzucone przez standardy UPnP AV i DLNA, co
+ prosto można określić jako wymaganie pełnej współpracy z certyfikowanymi
+ urządzeniami DLNA lub UPnP.
+ Głównymi wymaganiami są:
+\end_layout
+
+\begin_layout Itemize
+współpraca z podstawowymi urządzeniami DLNA - telewizorami, odtwarzaczami
+ BluRay itd.,
+\end_layout
+
+\begin_layout Itemize
+odtwarzanie (o ile podstawowy odtwarzacz urządzenia ma taką możliwość) konteneró
+w muzycznych i filmowych np.
+ plików Matroska - MKV,
+\end_layout
+
+\begin_layout Itemize
+odtwarzanie napisów w filmach i muzyce (np.
+ do karaoke, specjalny tryb serwera), zarówno z plików tekstowych, jak i
+ z kontenerów (w tym przypadku tylko pliki Matroska, MKV),
+\end_layout
+
+\begin_layout Itemize
+przewijanie materiału,
+\end_layout
+
+\begin_layout Itemize
+udostępnianie materiału w pełnej jakości,
+\end_layout
+
+\begin_layout Itemize
+dodawanie / usuwanie udostępnianej zawartości bez konieczności ponownego
+ uruchamiania oprogramowania,
+\end_layout
+
+\begin_layout Itemize
+tworzenie albumów, klasyfikacji treści w logicznych katalogach.
+\end_layout
+
+\begin_layout Standard
+W oprogramowaniu autor jako opcjonalne wymaganie zdefiniował renderowanie
+ filmów do gorszej jakości w locie.
+ W chwili obecnej większość nowoczesnego sprzętu na rynku obsługuje dużą
+ ilość formatów i mimo swoich możliwości to oprogramowanie odtwarzacza DLNA
+ jest przestarzałe lub stworzone z minimalnymi wymaganiami certyfikacji,
+ co powoduje komunikat o niekompatybilności materiału, pomimo, że w rzeczywistoś
+ci taka sytuacja nie ma miejsca.
+ Z tego powodu autor skupił się podczas tworzenia oprogramowania serwera
+ na ominięciu przeszkód postawionych przez większość producentów i wymuszenie
+ odtwarzania materiałów na każdym urządzeniu.
+\end_layout
+
+\begin_layout Standard
+Nie wszystkie urządzenia posiadają interfejs graficzny użytkownika.
+ Interfejs użytkownika w serwerze UPnP AV/DLNA jest dostarczane wraz z oprogramo
+waniem serwera www i interfejsem strony internetowej do zarządzania serwerem
+ oraz uruchamiania go.
 \end_layout
 
 \begin_layout Section
 Porównanie różnych dostępnych framework’ów UPnP
+\end_layout
+
+\begin_layout Standard
+cling
+\end_layout
+
+\begin_layout Standard
+pythonovy
 \end_layout
 
 \begin_layout Section
@@ -3622,19 +4524,20 @@ key "key-2"
 
 \end_inset
 
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://brage.bibsys.no/hia/bitstream/URN:NBN:no-bibsys_brage_9695/1/andreas-haber-
-phone-based-upnp-control.pdf
+Digital Living Network Alliance Home Networked Device Interoperability Guideline
+s Version: 1.0 
 \end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3-1"
 
 \end_inset
 
-
+Digital Living Network Alliance Home Networked Device Interoperability Guideline
+s Version: 1.0 Errata Version 2.0 
 \end_layout
 
 \begin_layout Bibliography
@@ -3647,7 +4550,7 @@ key "key-3"
 
 
 \begin_inset Flex URL
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -3925,6 +4828,18 @@ key "key-22"
 \end_inset
 
 DLNA Overview and Vision Whitepaper 2007 
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-23"
+
+\end_inset
+
+http://brage.bibsys.no/hia/bitstream/URN:NBN:no-bibsys_brage_9695/1/andreas-haber-
+phone-based-upnp-control.pdf
 \end_layout
 
 \end_body
