@@ -3597,7 +3597,7 @@ upnp:SearchClass - ...........?
 \end_layout
 
 \begin_layout Subsection
-Obrazy
+Klasa obraz
 \end_layout
 
 \begin_layout Standard
@@ -4163,11 +4163,355 @@ maksymalny rozmiar: 120 x 120
 \end_layout
 
 \begin_layout Subsection
-Muzyka
+Klasa audio
+\end_layout
+
+\begin_layout Standard
+Typ audio służy do udostępniania plików audio, które są przeznaczone jedynie
+ do słuchania.
+ Oznacza to, że klasa ta nie dotyczy ścieżki dźwiękowej w materiałach wideo,
+ takich jak filmy czy transmisja telewizyjna.
+ Klasą nadrzedną dla audio, jest klasa 
+\emph on
+item
+\emph default
+, od której dziedziczone są wszystkie jej właściwości.
+ Podobnie jak w klasie opisującej obraz, powinna ona zawierać opcję 
+\emph on
+res
+\emph default
+ wraz z danymi dotyczącymi zasobu.
+ Ponadto opcjonalnymi właściwościami możliwymi do załączenia są:
+\end_layout
+
+\begin_layout Itemize
+upnp:genre - gatunek pliku audio,
+\end_layout
+
+\begin_layout Itemize
+dc:description - opis pliku,
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+upnp:longDescritpion
+\emph default
+ - rozszerzony opis pliku,
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+dc:publisher
+\emph default
+ - wydawca,
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+dc:language
+\emph default
+ - język,
+\end_layout
+
+\begin_layout Itemize
+dc:relation - ......?,
+\end_layout
+
+\begin_layout Itemize
+dc:rights - .........?
+\end_layout
+
+\begin_layout Standard
+Klasa audio posiada następujące podtypy, określające rodzaj dostępnego materialu
+ dźwiękowego:
+\end_layout
+
+\begin_layout Itemize
+muzyka (ang.
+ 
+\emph on
+musicTrack
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+transmisja audio (ang.
+ 
+\emph on
+audioBroadcast
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+książka audio (ang.
+ 
+\emph on
+audioBook
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+Pierwszy z podtypów jest jednocześnie najbardziej popularnym do udostępniania
+ w klasie audio.
+ Muzykę można klasyfikować w albumy, listy odtwarzania, udostępniać informacje
+ o artyście.
+ Wszystkie te atrybuty są opcjonalne, a ich pełna lista wygląda następująco:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+upnp:artist
+\emph default
+ - wykonawca,
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+upnp:album
+\emph default
+ - album muzyczny,
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+upnp:originalTrackNumber
+\emph default
+ - oryginalny numer utworu,
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+upnp:playlist
+\emph default
+ - lista odtwarzania,
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+upnp:storageMedium
+\emph default
+ - rodzaj pamięci??,
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+dc:contributor - 
+\emph default
+?????
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+dc:date - data???????
+\end_layout
+
+\begin_layout Standard
+Transmisja audio daje bardzo dużo możliwości rozszerzenia funkcji odtwarzaczy
+ o wzbogacenie ich o takie opcje jak radio internetowe, dzięki przekazywaniu
+ transmisji na żywo przez serwer.
+ Opisywany podtyp można przesłać wraz z opcją 
+\emph on
+res
+\emph default
+ zawierającą dane o zasobie oraz opcjonalnymi atrybutami, takimi jak:
+\end_layout
+
+\begin_layout Itemize
+upnp:region 
+\end_layout
+
+\begin_layout Itemize
+upnp:radioCallSign 
+\end_layout
+
+\begin_layout Itemize
+upnp:radioStationID 
+\end_layout
+
+\begin_layout Itemize
+upnp:radioBand 
+\end_layout
+
+\begin_layout Itemize
+upnp:channelNr 
+\end_layout
+
+\begin_layout Itemize
+upnp:signalStrength 
+\end_layout
+
+\begin_layout Itemize
+upnp:signalLocked 
+\end_layout
+
+\begin_layout Itemize
+upnp:tuned 
+\end_layout
+
+\begin_layout Itemize
+upnp:recordable .??????????????????????????
+\end_layout
+
+\begin_layout Standard
+Ostatni z typów dziedziczący po klasie audio, czyli audiobook, służy do
+ określania charakterystyki tego typu książek.
+ Pole z zasobem (
+\emph on
+res
+\emph default
+) powinno być zawarte w przesłanych danych co najmniej raz.
+ Poza nim mogą zostać dołączone następujące atrybuty:
+\end_layout
+
+\begin_layout Itemize
+upnp:storageMedium,
+\end_layout
+
+\begin_layout Itemize
+upnp:producer,
+\end_layout
+
+\begin_layout Itemize
+dc:contributor, 
+\end_layout
+
+\begin_layout Itemize
+dc:date .????????
 \end_layout
 
 \begin_layout Subsection
-Filmy
+Klasa wideo
+\end_layout
+
+\begin_layout Standard
+Klasa wideo opisuje materiały audiowizualne udostępniane w sieci.
+ Są to materiały, których udostępnianie jest najtrudniejsze, zarówno z perspekty
+wy programisty, jak i użytkownika.
+ Jest to spowodowane bardzo dużą rozległością w sposobach kodowania materiałów
+ oraz wciąż niepełną kompatybilnością wielu urządzeń z wieloma formatami
+ plików.
+ W plikach wideo warto zwrócić uwagę na dwa podstawowe pojęcia: kontener
+ multimedialny oraz format pliku wideo.
+ Pojęcie te występuje również w plikach graficznych i audio, jednakże stopień
+ komplikacji dla sprzętu komputerowego występuje dopiero w plikach zawartych
+ w opisywanej klasie.
+\end_layout
+
+\begin_layout Standard
+W ogólnie rozumianym kontenerze multimedialnym może być przechowywanych
+ wiele strumieni obrazów, audio, wideo, napisów, informacji o strumieniach
+ i innych metadanych.
+ Pozwala on na przechowywanie wszystkich tych danych w jednym pliku
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-24"
+
+\end_inset
+
+.
+ Natomiast jako format wideo definiowany jest sposób kodowania strumienia
+ wideo.
+ Analogiczne definicje dotyczą formatów audio oraz obrazów.
+\end_layout
+
+\begin_layout Standard
+Podstawowy typ wideo (ang.
+ 
+\emph on
+videoItem
+\emph default
+) dziedziczy po klasie głównej 
+\emph on
+item
+\emph default
+.
+ Zawiera minimum jedną informacje o zasobie 
+\emph on
+res
+\emph default
+.
+ Ponadto z materiałem mogą być przekazane następujące atrybuty:
+\end_layout
+
+\begin_layout Itemize
+upnp:genre,
+\end_layout
+
+\begin_layout Itemize
+upnp:genre@id,
+\end_layout
+
+\begin_layout Itemize
+upnp:genre@type,
+\end_layout
+
+\begin_layout Itemize
+upnp:longDescription,
+\end_layout
+
+\begin_layout Itemize
+upnp:producer,
+\end_layout
+
+\begin_layout Itemize
+upnp:rating,
+\end_layout
+
+\begin_layout Itemize
+upnp:actor,
+\end_layout
+
+\begin_layout Itemize
+upnp:director,
+\end_layout
+
+\begin_layout Itemize
+dc:description,
+\end_layout
+
+\begin_layout Itemize
+dc:publisher,
+\end_layout
+
+\begin_layout Itemize
+dc:language,
+\end_layout
+
+\begin_layout Itemize
+dc:relation,
+\end_layout
+
+\begin_layout Itemize
+upnp:playbackCount,
+\end_layout
+
+\begin_layout Itemize
+upnp:lastPlaybackTime,
+\end_layout
+
+\begin_layout Itemize
+upnp:lastPlaybackPosition,
+\end_layout
+
+\begin_layout Itemize
+upnp:recordedDayOfWeek,
+\end_layout
+
+\begin_layout Itemize
+upnp:srsRecordScheduleID.?????????
 \end_layout
 
 \begin_layout Subsection
@@ -4840,6 +5184,17 @@ key "key-23"
 
 http://brage.bibsys.no/hia/bitstream/URN:NBN:no-bibsys_brage_9695/1/andreas-haber-
 phone-based-upnp-control.pdf
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-24"
+
+\end_inset
+
+Wikipedia, http://pl.wikipedia.org/wiki/Kontener_multimedialny, 2011
 \end_layout
 
 \end_body
