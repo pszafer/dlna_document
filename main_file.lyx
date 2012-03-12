@@ -2816,6 +2816,13 @@ name "tab:Typy-obsługiwanych-plików"
 \end_inset
 
 Typy obsługiwanych plików w DLNA - standardowe urządzenia
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-22"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2983,6 +2990,13 @@ status open
 
 \begin_layout Plain Layout
 Typy obsługiwanych plików w DLNA - urządzenia mobilne
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-22"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -3380,7 +3394,8 @@ imageItem
 item 
 \emph default
 i dziedziczy od niej wymagane opcje.
- Obraz powinien zawierać następujące opcje (minimum jedno wystąpienie):
+ Ponadto typ obraz powinien zawierać następujące opcje (minimum jedno wystąpieni
+e):
 \end_layout
 
 \begin_layout Itemize
@@ -3398,11 +3413,114 @@ res@resolution - rozdzielczość obrazu,
 
 \end_deeper
 \begin_layout Itemize
-dc:date - data powstania obrazu
+upnp:longDescription - długi opis obrazu,
+\end_layout
+
+\begin_layout Itemize
+upnp:storageMedium - rodzaj pamięci,
+\end_layout
+
+\begin_layout Itemize
+upnp:rating - ocena,
+\end_layout
+
+\begin_layout Itemize
+dc:description - opis obrazu,
+\end_layout
+
+\begin_layout Itemize
+dc:publisher - wydawca,
+\end_layout
+
+\begin_layout Itemize
+dc:date - data powstania obrazu,
+\end_layout
+
+\begin_layout Itemize
+dc:rights - prawa do obrazu (???) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-21"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-album
+Gdy przedstawianym obrazem jest zdjęcie może ono być podtypu zdjęcie 
+\emph on
+photo:imageItem
+\emph default
+, które dziedziczy wszystkie właściwości typ obraz oraz umożliwia układanie
+ zdjęć w albumy, dzięki opcjonalnej właściwości:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+upnp:album 
+\emph default
+- nazwa albumu.
+\end_layout
+
+\begin_layout Standard
+Obraz lub zdjęcie może być udostępnione w kilku rozmiarach oraz według kilku
+ typów.
+ Zdjęcie może być udostępnione w następujących rozmiarach:
+\end_layout
+
+\begin_layout Itemize
+SM (ang.
+ 
+\emph on
+small
+\emph default
+) - małe,
+\end_layout
+
+\begin_layout Itemize
+MED (ang.
+ 
+\emph on
+medium
+\emph default
+) - średnie,
+\end_layout
+
+\begin_layout Itemize
+LRG (ang.
+ 
+\emph on
+large
+\emph default
+) - wielkie,
+\end_layout
+
+\begin_layout Itemize
+TN (ang.
+ 
+\emph on
+thumbnail
+\emph default
+) - miniatura.
+\end_layout
+
+\begin_layout Standard
+Obsługiwany obowiązkowo typ grafik to JPEG_SM.
+ Opcjonalnymi typami, które może obsługiwać odtwarzacz są JPEG_MED, JPEG_LRG,
+ JPEG_TN, PNG_TN.
+ Ponadto miniaturami obrazów, urządzenie może udostępniać ikony (np.
+ ikona z logiem producenta oprogramowania).
+ Ikony mogą być formatowane zgodnie z następującymi rozmiarami: PNG_SM_ICO,
+ PNG_LRG_ICO, JPEG_SM_ICO, JPEG_LRG_ICO.
+ W przypadku ikon, jeżeli urządzenie wspiera ich udostępnianie, wówczas
+ musi udostępniać ich wszystkie rozmiary.
+\end_layout
+
+\begin_layout Standard
+Na podstawie dokumentacji DLNA autor opracował tabelę zestawiającą formaty
+ plików - .
 \end_layout
 
 \begin_layout Subsection
@@ -3796,6 +3914,17 @@ key "key-21"
 
 ContentDirectory service:2 Service Template Version 1.01 – Document Version
  1.00, 2006
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-22"
+
+\end_inset
+
+DLNA Overview and Vision Whitepaper 2007 
 \end_layout
 
 \end_body
