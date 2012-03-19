@@ -4514,12 +4514,836 @@ upnp:recordedDayOfWeek,
 upnp:srsRecordScheduleID.?????????
 \end_layout
 
+\begin_layout Standard
+Jak jest widoczne na powyższej liście ilość atrybutów możliwych do przesłania
+ jest bardzo duża.
+ Jest to bazowa klasa dla pozostałych typów wideo, którymi są:
+\end_layout
+
+\begin_layout Itemize
+film (
+\emph on
+movie:videoItem
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+transmisja wideo (
+\emph on
+videoBroadcast:videoItem
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+teledysk / klip muzyczny (
+\emph on
+musicVideoClip:videoItem
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+Klasa film reprezentuje materiały filmowe i umożliwia załączenie dodatkowych
+ danych odnośnie filmu w wyspecyfikowanych, przez autorów dokumentacji UPnP
+ AV, atrybutach.Na atrybuty składają się:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+upnp:storageMedium 
+\emph default
+- nośnik pamięci,
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+upnp:DVDRegionCode
+\emph default
+ - kod regionalny materiału DVD,
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+upnp:channelName
+\emph default
+ - nazwa kanału,
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+upnp:scheduleStartTime - 
+\emph default
+planowany start transmisji,
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+upnp:scheduleEndTime - 
+\emph default
+planowany koniec transmisji,
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+upnp:programTitle
+\emph default
+ - tytuł programu (odcinka),
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+upnp:seriesTitle
+\emph default
+ - tytuł serii,
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+upnp:episodeCount
+\emph default
+ - liczba odcinków,
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+upnp:episodeNr 
+\emph default
+- numer odcinka.
+\end_layout
+
+\begin_layout Standard
+Wszystkie z powyższych opcji są możliwe do udostępnienia w postaci atrybutów
+ XML, lecz nie są obowiązkowe.
+\end_layout
+
+\begin_layout Section
+Sposoby odtwarzania multimediów
+\end_layout
+
+\begin_layout Standard
+W odtwarzaniu multimediów w DLNA (analogicznie w UPnP AV) muszą brać udział
+ minimum dwa urządzenia.
+ Jedno to serwer multimediów udostępniający materiał, drugie to odtwarzacz
+ DLNA (rysunek 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Uproszczony-schemat-komunikacji"
+
+\end_inset
+
+).
+ Istnieje również schemat w którym udział bierze więcej urządzeń, a trzecim
+ urządzeniem jest kontroler multimedialny pełniący rolę 
+\begin_inset Quotes pld
+\end_inset
+
+pilota
+\begin_inset Quotes prd
+\end_inset
+
+ zarządzającego, co ma być odtwarzane oraz zarządzać odtwarzaniem (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:2Uproszczony-schemat-komunikacji"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Uproszczony-schemat-komunikacji"
+
+\end_inset
+
+Uproszczony schemat komunikacji 2 urządzeń
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename 2box_playing.png
+	display false
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:2Uproszczony-schemat-komunikacji"
+
+\end_inset
+
+Uproszczony schemat komunikacji 3 urządzeń
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename 3box_playing.png
+	display false
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pierwsze dwa kroki w celu odtwarzania materiału to podłączenie urządzenia
+ do sieci:
+\end_layout
+
+\begin_layout Enumerate
+Urządzenie dołącza do sieci lokalnej (pobiera adres z serwera DHCP lub autorytat
+ywnie przydziela sobie adres IP - metoda Auto-IP),
+\end_layout
+
+\begin_layout Enumerate
+Urządzenie wysyła informacje o sobie z wykorzystaniem protokołu SSDP na
+ adres 239.255.255.255:1900.
+\end_layout
+
+\begin_layout Standard
+W dalszej kolejności następuje prawidłowa procedura odtwarzania:
+\end_layout
+
+\begin_layout Enumerate
+Punkt kontrolny (w notacji DLNA - odtwarzacz multimedialny lub kontroler
+ multimedialny) wysyła żądanie opisu urządzenia i usługi (usług) do serwera
+ multimedialnego.
+\end_layout
+
+\begin_layout Enumerate
+Serwer multimedialny odsyła opis urządzenia i usługi (usług) w postaci pliku
+ XML.
+\end_layout
+
+\begin_layout Enumerate
+Punkt kontrolny za pomocą komunikat SOAP wysyła do serwera akcje, którą
+ chce wykonać.
+ W przypadku odtwarzania mogą być to komunikaty przeglądania multimediów
+ (ang.
+ 
+\emph on
+browse
+\emph default
+), ich wyszukiwania (ang.
+ 
+\emph on
+search
+\emph default
+).
+ Ilość komunikatów jest zależna od drzewa wyszukiwania pożądanego pliku
+ przez użytkownika.
+\end_layout
+
+\begin_layout Enumerate
+Wyszukiwanie kończy się wyborem pliku z wykorzystaniem metod protokołu HTTP
+ np.
+ HTTP GET.
+\end_layout
+
+\begin_layout Standard
+Odtwarzacz mutimedialny ma możliwość, działania w typowy sposób dla tradycyjnego
+ odtwarzacza muzyki lub wideo/DVD.
+ Może przewijać materiał w przód, w tył.
+ Przewijanie jest wykonywane przez podawania pożądanych bajtów pliku (np.
+ bajt 50 000 - 150 000) przez odtwarzacz multimedialny.
+ Wykonywanie przewijania i skoków w filmie jest możliwe tylko wtedy gdy
+ serwer multimedialny udostępnia rozmiar pliku lub długość pliku (niektóre
+ odtwarzacze pożądają jednostek w minutach dla długości muzyki czy filmu,
+ pomimo, że prawdiłowo wykorzystują pobieranie tzn.
+ pobierają okresloną ilość bajtów).
+\end_layout
+
+\begin_layout Standard
+Odtwarzacz multimedialny zgodnie z przytaczanymi specyfikacjami mają możliwość
+ układania list odtwarzania (ang.
+ 
+\emph on
+playlist
+\emph default
+), jednakże autor nie odnalazł odtwarzacza, który umożliwiałby jej utworzenie.
+\end_layout
+
+\begin_layout Section
+Formaty multimediów
+\end_layout
+
+\begin_layout Standard
+Filmy, a dokładnie ich pełne wsparcie i obsługa, były najciekawszym i zarazem
+ najtrudniejszym tematem do realizacji dla autora niniejszej pracy.
+ Z tego powodu niniejszy podrozdział zostanie głównie poświęcony opisowi,
+ w jaki sposób w erze komputerów przechowywane są tego rodzaju materiały.
+\end_layout
+
+\begin_layout Standard
+Ilość formatów danych multimedialnych jest bardzo duża.
+ Najbardziej pożądanymi formatami są formaty kompresujące dane.
+ Formaty plików zapewniające tzw kompresję bezstratną (formaty 
+\emph on
+RAW
+\emph default
+ - surowe) są formatami pozwalającymi zachować najwyższą jakość obrazu lub
+ dźwięku.
+ Przykładami takich formatów są dla plików graficznych - RAW, natomiast
+ audio - format FLAC (ang.
+ 
+\emph on
+Free Lossless Codec).
+ 
+\emph default
+Innym popularnym formatem dźwięku, który jest uważany za bardzo bliski oryginało
+wi, dzięki pokrywaniu całego zakresu pasma częstotliwości słyszalnych jest
+ kodowanie PCM, stosowane bardzo często w formacie WAV (http://pl.wikipedia.org/wi
+ki/PCM).
+ Spośród plików wideo można wyróżnić formaty danych o niskiej kompresji
+ stratnej.
+ Przykładem takich plików są formaty MPEG-2 oraz MPEG-4.
+ Drugi z nich pozwala na przesyłanie materiału HD i posiadają kompresję
+ w stosunku 4:1 
+\bar under
+(skąd to wiem)
+\bar default
+.
+ Wykorzystywany jest współcześnie w przesyłaniu cyfrowej telewizji naziemnej
+ oraz częściowo satelitarnej.
+\end_layout
+
+\begin_layout Standard
+W przypadku zdjęć prym wiedzie format JPEG, który jest ustandaryzowany przez
+ organizację ISO/IEC 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-26"
+
+\end_inset
+
+, jest formatem kompresji stratnej.
+ Jednakże kompromis między kompresją, a jakością obrazu (kompresja 10:1)
+ jest na tyle zadowalający, że stał się najpopularniejszym formatem danych
+ graficznych (z pominięciem zastosowań profesjonalnych, gdzie często wykorzystyw
+ane są formaty bezstratne, bądź inne specjalistyczne, specyficzne dla oprogramow
+ania obróbki grafiki).
+\end_layout
+
+\begin_layout Standard
+Najpopularniejszym formatem audio dla przechowywania muzyki wśród końcowych
+ użytkowników jest format MP3 (ang.
+ 
+\emph on
+MPEG-1/MPEG-2 Audio Layer 3
+\emph default
+).
+ Jest standardem RFC....
+ W swojej pierwotnej, a zarazem najpopularniejszej wersji pozwala na zapis
+ muzyki w postaci dźwięku jednokanałowego (mono) lub dwukanałowego (stereo)
+ i oferuje najwyższy stopień kompresji, przy zachowaniu dobrej jakości dźwięku.
+ W przypadku ścieżek dźwiękowych do filmów czętsze zastosowanie ma standard
+ AC3 [wikipedia]
+\end_layout
+
+\begin_layout Standard
+W przypadku materiałów filmowych trudnym zadaniem jest jednoznaczne określenie
+ najpopularniejszego formatu tego typu danych.
+ W kolejnych podrozdziałach został dokładnie opisany ten rodzaj multimediów.
+\end_layout
+
 \begin_layout Subsection
-Sposoby odtwarzania
+Filmy
+\end_layout
+
+\begin_layout Standard
+Film można rozumieć zgodnie z następującym schematem:
+\end_layout
+
+\begin_layout Itemize
+Kontener filmowy(np.
+ AVI, MKV)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Format wideo (np.
+ MPEG-2),
+\end_layout
+
+\begin_layout Itemize
+Format audio (np.
+ AC3),
+\end_layout
+
+\begin_layout Itemize
+Napisy,
+\end_layout
+
+\begin_layout Itemize
+Rozdziały,
+\end_layout
+
+\begin_layout Itemize
+Metadane opisujące powyższe dane.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Istnieje wiele rodzajów kontenerów.
+ Część z nich ma przeznaczenie do udostępniania multimediów w sieci internetowej
+ (Flash), inne są dedykowane dla urządzeń mobilnych (MP4).
+ Najpopularniejszymi kontenerami multimedialnymi są:
+\end_layout
+
+\begin_layout Itemize
+AVI (rozszerzenie AVI),
+\end_layout
+
+\begin_layout Itemize
+Matroska (rozszerzenie MKV),
+\end_layout
+
+\begin_layout Itemize
+Flash (rozszerzenie FLV lub F4V).
+\end_layout
+
+\begin_layout Itemize
+MP4,
+\end_layout
+
+\begin_layout Itemize
+DivX.
+\end_layout
+
+\begin_layout Standard
+Kontenery różnią się metadanymi opisującymi pliki oraz możliwościami we
+ wspieraniu przechowywanych formatów danych.
+ Tabela porównawcza formatów AVI i MKV pokazuje podstawowe różnice między
+ tymi formatami (tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Porównanie-formatów-AVI"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Materiał wideo w filmach może być kodowany w formatach, takich jak:
+\end_layout
+
+\begin_layout Itemize
+MPEG-1,
+\end_layout
+
+\begin_layout Itemize
+MPEG-2
+\end_layout
+
+\begin_layout Itemize
+MPEG-4 AVC / H.264,
+\end_layout
+
+\begin_layout Itemize
+WMV (ang.
+ 
+\emph on
+Windows Media Video
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+RealVideo.
+\end_layout
+
+\begin_layout Standard
+Kontenery filmowe pozwalają przewchowywać różne formaty wideo (część z nich
+ widoczna jest powyżej), różne formaty audio (jeden plik może zawierać kilka
+ ścieżek audio w różnych formatach np.
+ MP3 lub AC3).
+ Niektóre umożliwiają przechowywanie w kontenerze plików z napisami (we
+ wspieranych formatach), posiadają możliwości podziału materiału na sekcję
+ lub przechowywania materiału trójwymiarowego 3D.
+ Wszystkie dane co przechowywane jest w danym pliku zawierają się metadanych
+ pliku.
+ Każdy rodzaj konteneru posiada (niestety) zróżnicowany sposób tworzenia
+ metadanych.
+ Utrudnia to w znaczący sposób łatwe wsparcie jak ich największej ilości.
+\end_layout
+
+\begin_layout Standard
+Oddzielnym tematem są formaty płyt Blu-Ray, bądź DVD.
+ Formaty te posiadają specjalną strukturę plików oraz schemat katalogów,
+ według których umieszczone są odpowiednie dane.
+ W uproszczeniu można powiedzieć, że nośnik Blu-Ray jest kontenerem multimedialn
+ym, takim jak AVI czy MKV.
+ Podobna sytuacja ma miejsce w przypadku płyt DVD.
+ 
+\end_layout
+
+\begin_layout Standard
+Płyta Blu-Ray, zgodna ze standardem posiada drzewo, składające się z dwóch
+ plików 
+\begin_inset Quotes pld
+\end_inset
+
+index.bdmv
+\begin_inset Quotes prd
+\end_inset
+
+ (zawierający informacje o zawartości katalogów płyty BD), MovieObject.bdmv
+ (zawierający informacje o obiektach filmowych) oraz katalogów: PLAYLIST
+ (lista odtwarzania filmu / rozdziały), CLIPINF (informacje o klipach wideo),
+ STREAM (strumień audio wideo w kontenerze m2ts - ang.
+ MPEG-2 Transport Stream), AUXDATA (pliki dźwiękowe oraz czcionki dla plików
+ z napisami), BACKUP (katalogów zawierający kopie zapasowe plików index.bdmv
+ oraz MovieObject.bdmv).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Porównanie-formatów-AVI"
+
+\end_inset
+
+Porównanie formatów AVI i MKV
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Format
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rozdziały
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Napisy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Formaty wideo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Formaty audio
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AVI
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tak
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nie (poza standardem tak)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MPEG-1, MPEG-2, WMV, RealVideo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP3, WMA, AAC, AC-3, DTS, PCM
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MKV
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tak
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tak
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MPEG-1, MPEG-2, 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP3, WMA, AAC, AC-3, 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MPEG-4 AVC, WMV, RealVideo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DTS, PCM, RealAudio, Vorbis, APE, Flac, DTS-HD
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 Ścieżka dźwiękowa
+\end_layout
+
+\begin_layout Standard
+Film może posiadać wiele ścieżek dźwiękowych.
 \end_layout
 
 \begin_layout Subsection
@@ -4535,7 +5359,7 @@ Miniatury multimediów
 \end_layout
 
 \begin_layout Chapter
-Teoria, a praktyka UPnP AV/DLNA
+Teoria, a praktyka UPnP AV oraz DLNA
 \end_layout
 
 \begin_layout Section
@@ -4830,15 +5654,48 @@ Porównanie różnych dostępnych framework’ów UPnP
 \end_layout
 
 \begin_layout Standard
-cling
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:frameworks"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-pythonovy
+W internecie można odnaleźć bardzo dużo framework'ów, które obsługują UPnP
+ AV oraz DLNA.
+ Przed wyborem języka programowania autor skupił się na poszukiwaniu odpowiednie
+go środowiska, który wspiera komunikację w sieci multimedialnej, posiada
+ darmową, otwartą do modyfikacji licencję oraz nie obciąża w znaczący sposób
+ systemu operacyjnego.
+ 
+\end_layout
+
+\begin_layout Standard
+cling, python dwqdqw
 \end_layout
 
 \begin_layout Section
 Sposób realizacji serwera
+\end_layout
+
+\begin_layout Standard
+Serwer multimedialny UPnP AV / DLNA został wykonany w języku Python.
+ Do jego realizacji wykorzystany został framework Coherence którego opis
+ znajduje się w rozdziale 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:frameworks"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Tworzenie biblioteki multimediów
 \end_layout
 
 \begin_layout Section
@@ -4894,7 +5751,7 @@ key "key-3"
 
 
 \begin_inset Flex URL
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -5195,6 +6052,17 @@ key "key-24"
 \end_inset
 
 Wikipedia, http://pl.wikipedia.org/wiki/Kontener_multimedialny, 2011
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-26"
+
+\end_inset
+
+ISO/IEC 10918, JPEG
 \end_layout
 
 \end_body

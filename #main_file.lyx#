@@ -5030,6 +5030,22 @@ Kontenery filmowe pozwalają przewchowywać różne formaty wideo (część z ni
 \end_layout
 
 \begin_layout Standard
+Oddzielnym tematem są formaty płyt Blu-Ray, bądź DVD.
+ Formaty te posiadają specjalną strukturę plików oraz schemat katalogów,
+ według których umieszczone są odpowiednie dane.
+ W uproszczeniu można powiedzieć, że nośnik Blu-Ray jest kontenerem multimedialn
+ym, takim jak AVI czy MKV.
+ Podobna sytuacja ma miejsce w przypadku płyt DVD.
+ 
+\end_layout
+
+\begin_layout Standard
+Płyta Blu-Ray, zgodna ze standardem posiada drzewo, składające się z katalogów:
+ PLAYLIST (lista odtwarzania filmu / rozdziały), CLIPINF (informacje o klipach
+ wideo), STREAM (strumień audio wideo w formacie m2ts
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
@@ -5310,7 +5326,11 @@ DTS, PCM, RealAudio, Vorbis, APE, Flac, DTS-HD
 \end_layout
 
 \begin_layout Subsection
-Ścieżka dźwiękowa 
+Ścieżka dźwiękowa
+\end_layout
+
+\begin_layout Standard
+Film może posiadać wiele ścieżek dźwiękowych.
 \end_layout
 
 \begin_layout Subsection
