@@ -209,8 +209,12 @@ Technologie udostępniania multimediów w sieciach, zarówno lokalnych, jak
  Co gorsza odtworzenie 
 \end_layout
 
+\begin_layout Part
+Opis technologii
+\end_layout
+
 \begin_layout Chapter
-O UPnP i DLNA
+Standardy UPnP i DLNA
 \end_layout
 
 \begin_layout Standard
@@ -252,7 +256,7 @@ h cech takich jak ochrona DRM (ochrona przed kopiowaniem).
 \end_layout
 
 \begin_layout Section
-Standard UPNP
+Opis standardu UPNP
 \end_layout
 
 \begin_layout Standard
@@ -288,7 +292,7 @@ UPNP AV określa sposób komunikacji, między serwerem multimediów, a odtwarzac
 \end_layout
 
 \begin_layout Section
-Zbiór protokołów UPnP, a sieć
+Stos protokołów UPnP
 \end_layout
 
 \begin_layout Standard
@@ -3209,7 +3213,200 @@ MPEG2, MPEG4 AVC (np.
 \end_layout
 
 \begin_layout Section
-Klasy multimediów
+Odtwarzanie multimediów
+\end_layout
+
+\begin_layout Standard
+W odtwarzaniu multimediów w DLNA (analogicznie w UPnP AV) muszą brać udział
+ minimum dwa urządzenia.
+ Jedno to serwer multimediów udostępniający materiał, drugie to odtwarzacz
+ DLNA (rysunek 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Uproszczony-schemat-komunikacji"
+
+\end_inset
+
+).
+ Istnieje również schemat w którym udział bierze więcej urządzeń, a trzecim
+ urządzeniem jest kontroler multimedialny pełniący rolę 
+\begin_inset Quotes pld
+\end_inset
+
+pilota
+\begin_inset Quotes prd
+\end_inset
+
+ zarządzającego, co ma być odtwarzane oraz zarządzać odtwarzaniem (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:2Uproszczony-schemat-komunikacji"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Uproszczony-schemat-komunikacji"
+
+\end_inset
+
+Uproszczony schemat komunikacji 2 urządzeń
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename 2box_playing.png
+	display false
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:2Uproszczony-schemat-komunikacji"
+
+\end_inset
+
+Uproszczony schemat komunikacji 3 urządzeń
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename 3box_playing.png
+	display false
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pierwsze dwa kroki w celu odtwarzania materiału to podłączenie urządzenia
+ do sieci:
+\end_layout
+
+\begin_layout Enumerate
+Urządzenie dołącza do sieci lokalnej (pobiera adres z serwera DHCP lub autorytat
+ywnie przydziela sobie adres IP - metoda Auto-IP),
+\end_layout
+
+\begin_layout Enumerate
+Urządzenie wysyła informacje o sobie z wykorzystaniem protokołu SSDP na
+ adres 239.255.255.255:1900.
+\end_layout
+
+\begin_layout Standard
+W dalszej kolejności następuje prawidłowa procedura odtwarzania:
+\end_layout
+
+\begin_layout Enumerate
+Punkt kontrolny (w notacji DLNA - odtwarzacz multimedialny lub kontroler
+ multimedialny) wysyła żądanie opisu urządzenia i usługi (usług) do serwera
+ multimedialnego.
+\end_layout
+
+\begin_layout Enumerate
+Serwer multimedialny odsyła opis urządzenia i usługi (usług) w postaci pliku
+ XML.
+\end_layout
+
+\begin_layout Enumerate
+Punkt kontrolny za pomocą komunikat SOAP wysyła do serwera akcje, którą
+ chce wykonać.
+ W przypadku odtwarzania mogą być to komunikaty przeglądania multimediów
+ (ang.
+ 
+\emph on
+browse
+\emph default
+), ich wyszukiwania (ang.
+ 
+\emph on
+search
+\emph default
+).
+ Ilość komunikatów jest zależna od drzewa wyszukiwania pożądanego pliku
+ przez użytkownika.
+\end_layout
+
+\begin_layout Enumerate
+Wyszukiwanie kończy się wyborem pliku z wykorzystaniem metod protokołu HTTP
+ np.
+ HTTP GET.
+\end_layout
+
+\begin_layout Standard
+Odtwarzacz mutimedialny ma możliwość, działania w typowy sposób dla tradycyjnego
+ odtwarzacza muzyki lub wideo/DVD.
+ Może przewijać materiał w przód, w tył.
+ Przewijanie jest wykonywane przez podawania pożądanych bajtów pliku (np.
+ bajt 50 000 - 150 000) przez odtwarzacz multimedialny.
+ Wykonywanie przewijania i skoków w filmie jest możliwe tylko wtedy gdy
+ serwer multimedialny udostępnia rozmiar pliku lub długość pliku (niektóre
+ odtwarzacze pożądają jednostek w minutach dla długości muzyki czy filmu,
+ pomimo, że prawdiłowo wykorzystują pobieranie tzn.
+ pobierają okresloną ilość bajtów).
+\end_layout
+
+\begin_layout Standard
+Odtwarzacz multimedialny zgodnie z przytaczanymi specyfikacjami mają możliwość
+ układania list odtwarzania (ang.
+ 
+\emph on
+playlist
+\emph default
+), jednakże autor nie odnalazł odtwarzacza, który umożliwiałby jej utworzenie.
+\end_layout
+
+\begin_layout Section
+Klasy multimediów UPnP
 \end_layout
 
 \begin_layout Standard
@@ -4628,204 +4825,7 @@ Wszystkie z powyższych opcji są możliwe do udostępnienia w postaci atrybutó
 \end_layout
 
 \begin_layout Section
-Sposoby odtwarzania multimediów
-\end_layout
-
-\begin_layout Standard
-W odtwarzaniu multimediów w DLNA (analogicznie w UPnP AV) muszą brać udział
- minimum dwa urządzenia.
- Jedno to serwer multimediów udostępniający materiał, drugie to odtwarzacz
- DLNA (rysunek 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Uproszczony-schemat-komunikacji"
-
-\end_inset
-
-).
- Istnieje również schemat w którym udział bierze więcej urządzeń, a trzecim
- urządzeniem jest kontroler multimedialny pełniący rolę 
-\begin_inset Quotes pld
-\end_inset
-
-pilota
-\begin_inset Quotes prd
-\end_inset
-
- zarządzającego, co ma być odtwarzane oraz zarządzać odtwarzaniem (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:2Uproszczony-schemat-komunikacji"
-
-\end_inset
-
-).
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Uproszczony-schemat-komunikacji"
-
-\end_inset
-
-Uproszczony schemat komunikacji 2 urządzeń
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename 2box_playing.png
-	display false
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:2Uproszczony-schemat-komunikacji"
-
-\end_inset
-
-Uproszczony schemat komunikacji 3 urządzeń
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename 3box_playing.png
-	display false
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Pierwsze dwa kroki w celu odtwarzania materiału to podłączenie urządzenia
- do sieci:
-\end_layout
-
-\begin_layout Enumerate
-Urządzenie dołącza do sieci lokalnej (pobiera adres z serwera DHCP lub autorytat
-ywnie przydziela sobie adres IP - metoda Auto-IP),
-\end_layout
-
-\begin_layout Enumerate
-Urządzenie wysyła informacje o sobie z wykorzystaniem protokołu SSDP na
- adres 239.255.255.255:1900.
-\end_layout
-
-\begin_layout Standard
-W dalszej kolejności następuje prawidłowa procedura odtwarzania:
-\end_layout
-
-\begin_layout Enumerate
-Punkt kontrolny (w notacji DLNA - odtwarzacz multimedialny lub kontroler
- multimedialny) wysyła żądanie opisu urządzenia i usługi (usług) do serwera
- multimedialnego.
-\end_layout
-
-\begin_layout Enumerate
-Serwer multimedialny odsyła opis urządzenia i usługi (usług) w postaci pliku
- XML.
-\end_layout
-
-\begin_layout Enumerate
-Punkt kontrolny za pomocą komunikat SOAP wysyła do serwera akcje, którą
- chce wykonać.
- W przypadku odtwarzania mogą być to komunikaty przeglądania multimediów
- (ang.
- 
-\emph on
-browse
-\emph default
-), ich wyszukiwania (ang.
- 
-\emph on
-search
-\emph default
-).
- Ilość komunikatów jest zależna od drzewa wyszukiwania pożądanego pliku
- przez użytkownika.
-\end_layout
-
-\begin_layout Enumerate
-Wyszukiwanie kończy się wyborem pliku z wykorzystaniem metod protokołu HTTP
- np.
- HTTP GET.
-\end_layout
-
-\begin_layout Standard
-Odtwarzacz mutimedialny ma możliwość, działania w typowy sposób dla tradycyjnego
- odtwarzacza muzyki lub wideo/DVD.
- Może przewijać materiał w przód, w tył.
- Przewijanie jest wykonywane przez podawania pożądanych bajtów pliku (np.
- bajt 50 000 - 150 000) przez odtwarzacz multimedialny.
- Wykonywanie przewijania i skoków w filmie jest możliwe tylko wtedy gdy
- serwer multimedialny udostępnia rozmiar pliku lub długość pliku (niektóre
- odtwarzacze pożądają jednostek w minutach dla długości muzyki czy filmu,
- pomimo, że prawdiłowo wykorzystują pobieranie tzn.
- pobierają okresloną ilość bajtów).
-\end_layout
-
-\begin_layout Standard
-Odtwarzacz multimedialny zgodnie z przytaczanymi specyfikacjami mają możliwość
- układania list odtwarzania (ang.
- 
-\emph on
-playlist
-\emph default
-), jednakże autor nie odnalazł odtwarzacza, który umożliwiałby jej utworzenie.
-\end_layout
-
-\begin_layout Section
-Formaty multimediów
+Rodzaje multimediów
 \end_layout
 
 \begin_layout Standard
@@ -4905,6 +4905,14 @@ MPEG-1/MPEG-2 Audio Layer 3
 W przypadku materiałów filmowych trudnym zadaniem jest jednoznaczne określenie
  najpopularniejszego formatu tego typu danych.
  W kolejnych podrozdziałach został dokładnie opisany ten rodzaj multimediów.
+\end_layout
+
+\begin_layout Subsection
+Muzyka
+\end_layout
+
+\begin_layout Standard
+Obrazy
 \end_layout
 
 \begin_layout Subsection
@@ -5338,56 +5346,75 @@ DTS, PCM, RealAudio, Vorbis, APE, Flac, DTS-HD
 
 \end_layout
 
-\begin_layout Subsection
-Ścieżka dźwiękowa
+\begin_layout Standard
+Film może posiadać wiele ścieżek dźwiękowych np.
+ różne wersje językowe lub lektora.
+ Płyty DVD oraz Blu-Ray w standardzie swoim mają możliwość zamieszczania
+ wielu ścieżek dźwiękowych.
+ Podobna sytuacja ma miejsce w przypadku kontenerów danych takich jak AVI
+ oraz Matroska.
+ Oprogramowanie udostępniające materiały multimedialne powinno zapewniać
+ możliwość wyboru ścieżki dźwiękowej.
+ W tym celu konieczne jest poprawne odczytywanie metadanych dostarczanych
+ wraz z kontenerem multimedialnym.
+ Filmy DVD oraz Blu-Ray ponadto, że umożliwiają zmianę ścieżki dźwiękowej,
+ wprowadziły do zestawów kina domowego możliwość wyświetlania napisów w
+ filmach (przedtem napisy były cechą wyróżniającą kina).
+ W przypadku płyt DVD napisy są przechowywane w formacie bitmapowym, co
+ wykracza poza standardy UPnP oraz DLNA (dla napisów), dlatego też nie są
+ one obsługiwane do udostępniania.
+ Płyty Bluray posiadają standard zbliżony do płyt DVD (napisy PGS - ang.
+ 
+\emph on
+Presentation Graphic Stream
+\emph default
+).
+ Łatwiejszym przypadkiem są kontenery plików.
+ Napisy w przypadku tego typu filmów mają postać pliku tekstowego.
+ Plik z napisami może być wbudowany w kontener, a może być udostępniany
+ jako oddzielny plik (zazwyczaj w tym samym folderze i tej samej nazwie
+ co film).
 \end_layout
 
 \begin_layout Standard
-Film może posiadać wiele ścieżek dźwiękowych.
+Istnieje wiele standardów napisów do filmów, które mogą być w prosty sposób
+ przechowywany na dysku twardym komputera stacjonarnego.
+ Głównymi standardami spotykanymi powszechnie w Internecie są MicroDVD oraz
+ SubRip.
+ Istnieje wiele formatów, jednakże standard DLNA pomija te cechy filmów
+ i nie specyfikuje jakie rodzaje napisów powinny być obsługiwane oraz w
+ jaki sposób.
+ Informacje o sposobie udostępniania napisów zostały określone jedynie w
+ specyfikacji UPnP AV dla urządzeń renderujących [http://www.upnp.org/specs/av/UPn
+P-av-RenderingControl-v3-Service-20101231.pdf].
 \end_layout
 
-\begin_layout Subsection
-Napisy w filmach
+\begin_layout Standard
+Brak jednoznacznych rozwiązań w kwestii napisów do filmów, sprawił, że producenc
+i w wielu przypadkach we własnym zakresie zapewniają ich wsparcie.
+ Odtwarzacze multimediów podłączonych przez złącze USB w telewizorach ma
+ zazwyczaj możliwość odtwarzania napisów w wersji tekstowej, w formatach
+ MicroDVD lub SubRIP.
+ Takie samo podejście zostało zastosowane w odtwarzaczach DLNA.
+ Obsługują one jeden z dwóch rodzajów napisów, a w gestii serwera leży,
+ aby w odpowiednim formacie takie napisy udostępnić (lub samodzielnie przekonwer
+tować do obsługiwanego formatu).
 \end_layout
 
 \begin_layout Subsection
 Kodowanie filmów
 \end_layout
 
-\begin_layout Subsection
-Miniatury multimediów
+\begin_layout Part
+Implementacja serwera UPnP
 \end_layout
 
 \begin_layout Chapter
-Teoria, a praktyka UPnP AV oraz DLNA
+Oprogramowanie serwera UPnP AV
 \end_layout
 
 \begin_layout Section
-Standard
-\end_layout
-
-\begin_layout Subsection
-Polecenia protokołu
-\end_layout
-
-\begin_layout Subsection
-Różnice działania odtwarzaczy różnych producentów
-\end_layout
-
-\begin_layout Subsection
-Porównanie oprogramowania serwerów UPnP/DLNA
-\end_layout
-
-\begin_layout Subsection
-Porównanie oprogramowania odtwarzaczy UPnP/DLNA
-\end_layout
-
-\begin_layout Chapter
-Realizacja oprogramowania serwera UPnP AV
-\end_layout
-
-\begin_layout Section
-Zdefiniowane wymagania
+Wymagania
 \end_layout
 
 \begin_layout Standard
@@ -5650,7 +5677,7 @@ waniem serwera www i interfejsem strony internetowej do zarządzania serwerem
 \end_layout
 
 \begin_layout Section
-Porównanie różnych dostępnych framework’ów UPnP
+Porównanie framework’ów UPnP
 \end_layout
 
 \begin_layout Standard
@@ -5678,7 +5705,7 @@ cling, python dwqdqw
 \end_layout
 
 \begin_layout Section
-Sposób realizacji serwera
+Środowisko programistyczne serwera
 \end_layout
 
 \begin_layout Standard
@@ -5698,12 +5725,56 @@ reference "sec:frameworks"
 Tworzenie biblioteki multimediów
 \end_layout
 
+\begin_layout Subsection
+Miniatury multimediów
+\end_layout
+
 \begin_layout Section
 Napotkane problemy
 \end_layout
 
 \begin_layout Section
 Współpraca z odtwarzaczami w oprogramowaniu telewizorów
+\end_layout
+
+\begin_layout Chapter
+Porównanie oprogramowania UPnP AV i DLNA
+\end_layout
+
+\begin_layout Standard
+wrew
+\end_layout
+
+\begin_layout Section
+Porównanie oprogramowania serwerów DLNA i UPnP AV
+\end_layout
+
+\begin_layout Standard
+dqwdq
+\end_layout
+
+\begin_layout Section
+Porównanie oprogramowania odtwarzaczy DLNA i UPnP AV
+\end_layout
+
+\begin_layout Standard
+dqwdwq
+\end_layout
+
+\begin_layout Chapter
+Polecenia UPnP AV i DLNA w praktyce
+\end_layout
+
+\begin_layout Section
+Obsługa standardu
+\end_layout
+
+\begin_layout Subsection
+Polecenia protokołu
+\end_layout
+
+\begin_layout Section
+Różnice działania odtwarzaczy różnych producentów
 \end_layout
 
 \begin_layout Bibliography
