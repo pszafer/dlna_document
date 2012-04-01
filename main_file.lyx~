@@ -178,8 +178,21 @@ LatexCommand tableofcontents
 
 \end_layout
 
-\begin_layout Chapter
+\begin_layout Chapter*
 Wstęp
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Wstęp}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5413,19 +5426,24 @@ Implementacja serwera UPnP
 Oprogramowanie serwera UPnP AV
 \end_layout
 
-\begin_layout Section
-Wymagania
+\begin_layout Standard
+Większość współczesnych odtwarzaczy Blu-ray, telewizorów, dekoderów i tym
+ podobnych urządzeń RTV, posiada złącze Ethernet (lub moduł 
+\emph on
+WiFi
+\emph default
+) i umożliwia podłączenie urządzenia do sieci lokalnej i Internetu.
+ Takie urządzenia posiadają oprogramowanie umożliwiające wyszukiwać oraz
+ odtwarzać materiały udostępniane przez serwery UPnP AV oraz DLNA.
+ Autor na potrzeby niniejszej pracy stworzył w pełni funkcjonalny serwer
+ UPnP AV współpracujący z urządzeniami UPnP i DLNA.
+ Głównym celem aplikacji było umożliwenie kooperacji dwóch urządzeń ze sobą,
+ w taki sposób, aby odtwarzacz potrafił wykorzystać jak największą możliwą
+ ilość funkcji określoną w specyfikacjach UPnP AV i DLNA.
 \end_layout
 
-\begin_layout Standard
-Autor na potrzeby niniejszej pracy chciał stworzyć w pełni funkcjonalny
- serwer UPnP AV współpracym z urządzeniami DLNA w jak najszerszym zakresie,
- tj.
- takiego serwera, którego odtwarzacz potrafiłby wykorzystać jak największą
- możliwą ilość funkcji.
- Ilość serwerów DLNA dostarczanych przez producentów jest coraz większa
- i są one coraz bardziej kompatybilne z różnymi odtwarzaczami.
- 
+\begin_layout Section
+Wymagania wstępne
 \end_layout
 
 \begin_layout Standard
@@ -5437,20 +5455,24 @@ Zdefiniowanie środowiska do implementacji oprogramowania było bardzo ważnym
  Dlatego też środowisko implementacji ma zapewniać kompatybilność z oboma
  systemami operacyjnymi.
  Pierwszym wyborem ze względu na biegłą znajomość języka było środowisko
- Java.
+ programistyczne języka Java.
 \end_layout
 
 \begin_layout Standard
 W dzisiejszych czasach coraz więcej urządzeń sieci lokalnej nie jest oparta
  o architekturę PC.
  Przykładami takich urządzeń mogą być routery lub smartfony.
- Pierwsze z nich bardzo często w standardzie są wyposażone w złącza USB
- oraz wbudowane oprogramowanie do udostępniania multimediów.
+ Pierwsze z nich, coraz częściej są wyposażone w złącza USB oraz posiadają
+ załączone oprogramowanie do udostępniania multimediów.
  Z doświadczeń własnych autora, wynika jednak, że zakres możliwości oraz
- szybkość takiego oprogramowania pozostawia wiele do życzenia.
- Skutecznie udostępniane są jedynie zdjęcia, natomiast największy problem
- pojawia się w kwestii odtwarzania filmów.
- W tabeli 
+ wydajność takiego oprogramowania pozostawia wiele do życzenia.
+ Skutecznie udostępniane są jedynie zdjęcia, natomiast użytkownicy natrafiają
+ na problemy w kwestii odtwarzania filmów oraz muzyki.
+ 
+\end_layout
+
+\begin_layout Standard
+W tabeli 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Platformy-obsługiwane-przez"
@@ -5608,11 +5630,16 @@ Linux
 
 \begin_layout Standard
 W przypadku środowiska Java wymienione we wcześniejszych akapitach wymagania
- mogły być realizowane, jednak obciążenie procesora w systemie operacyjnym
- Ubuntu wynosiło około 5%, co bez dalszych testów uniemożliwiało dobrą pracę
- serwera na słabych wydajnościowo routerach.
- Dlatego też po pierwszych testach autor podjął decyzję o wyborze języka
- Python do realizacji oprogramowania.
+ mogą być z łatwością realizowane.
+ Jednakże obciążenie procesora (ystem operacyjny Ubuntu 10.10) dla prostej
+ aplikacji UPnP wynosiło około 5%.
+ Analiza materiałów udostępnianych w Internecie oraz doświadczenie z użytkowania
+ aplikacji Java, poddawała w wątpliwość wydajną pracę serwera zaprojektowanego
+ w tym języku na mało wydajnych urządzeniach (np.
+ routery).
+ Po kilku próbah uruchomienia serwera Tomcat na routerze firmy Linksys E3000,
+ autor podjął decyzję o dalszym szukaniu środowiska do stworzenia aplikacji.
+ Ostateczny wybór padł na język Python do realizacji oprogramowania.
 \end_layout
 
 \begin_layout Standard
@@ -5677,7 +5704,104 @@ waniem serwera www i interfejsem strony internetowej do zarządzania serwerem
 \end_layout
 
 \begin_layout Section
-Porównanie framework’ów UPnP
+Wykorzystane narzędzia
+\end_layout
+
+\begin_layout Standard
+Aplikacja serwera UPnP AV została napisana w języku Python.
+ Jej szkielet został oparty o zmodyfikowaną wersję framework'a 
+\emph on
+Coherence, 
+\emph default
+opisanego w rozdziale 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Framework’i-UPnP"
+
+\end_inset
+
+.
+
+\emph on
+ 
+\emph default
+Druga aplikacja, zapewniająca zarządzanie serwerem została napisana w języku
+ Python, HTML oraz Javascript z wykorzystaniem popularnego framework'a Django.
+\end_layout
+
+\begin_layout Standard
+Aplikacja jest zarządzana przez narzędzie kontroli wersję Git na darmowym
+ serwerze Github.com
+\end_layout
+
+\begin_layout Standard
+Wykorzystane narzędzia na potrzeby opisywanego zestawu aplikacji to:
+\end_layout
+
+\begin_layout Itemize
+platforma Eclipse 3.6,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+języki programowania: Python, HTML, Javascript, 
+\series bold
+Django, 
+\series default
+T-SQL,
+\end_layout
+
+\begin_layout Itemize
+framework'i
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\emph on
+Coherence DLNA, 
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Django, 
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+JSONRPC, 
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Storm.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+GIMP do tworzenia grafiki aplikacji
+\end_layout
+
+\begin_layout Itemize
+odtwarzacze UPnP AV / DLNA do testów
+\end_layout
+
+\begin_layout Itemize
+GIT - do zarządzania wersjami oprogramowania.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Framework’i-UPnP"
+
+\end_inset
+
+Framework’i UPnP
 \end_layout
 
 \begin_layout Standard
@@ -5697,36 +5821,1540 @@ W internecie można odnaleźć bardzo dużo framework'ów, które obsługują UP
 go środowiska, który wspiera komunikację w sieci multimedialnej, posiada
  darmową, otwartą do modyfikacji licencję oraz nie obciąża w znaczący sposób
  systemu operacyjnego.
- 
+ Autor nie odnalazł framework'a, który natywnie wspierałby specyfikację
+ DLNA.
+ Jest to spowodowane prawdopodobnie koniecznością ponoszenia kosztów licencji
+ DLNA.
+ Liczba framework'ów, które wspierają protokół UPnP oraz UPnP AV, pomimo
+ że nie jest duża, to jest w zadowalający sposób zaimplementowana, dzięki
+ czemu autor nie musiał zaprogramować niższych warstw opisywanego protokołu.
 \end_layout
 
 \begin_layout Standard
-cling, python dwqdqw
+Pierwszym, prawdopodobnie najnowszym i najczęściej aktualizowanym jest oprogramo
+wanie 
+\emph on
+Cling
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-27"
+
+\end_inset
+
+.
+ Jest to biblioteka, której zadaniem docelowym (jest wciąż w fazie rozwoju
+ i wiele funkcji nie jest jeszcze zaimplementowanych) jest pełne wsparcie
+ protokołu UPnP.
+ Nie implementuje zmian wprowadzonych przez zrzeszenie DLNA.
+ Jest napisana w języku Java, możliwe jest jej wykorzystanie zarówno w oprogramo
+waniu PC, jak i oprogramowaniu Javy dla smartfonów z systemem operacyjnym
+ Android.
+ Autor odrzucił jej wykorzystanie, gdyż w ówczesnym stadium rozwoju implementowa
+ła zbyt małą liczbę koniecznych do komunikacji funkcji oraz niemożliwe byłoby
+ jej wykorzystanie na urządzeniach o bardzo małych możliwościach wydajnościowych
+ (np.
+ routery).
+\end_layout
+
+\begin_layout Standard
+Drugim branym pod uwagę jako podstawę do aplikacji serwera UPnP framework'iem
+ był 
+\emph on
+CyberLink for Java 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-28"
+
+\end_inset
+
+.
+ 
+\emph default
+Jest to pakiet oprogramowania umożliwiający twórcom aplikacji komunikację
+ w sieci UPnP.
+ Posiada wiele popularnych dla oprogramowania UPnP przykładów, np.
+ włączanie i wyłączanie żarówki.
+ Niestety w chwili porównywania możliwości framework'ów opisywany projekt
+ nie był rozwijany i jego ostatnia aktualizacja datowana była na 2003 rok.
+ Natomiast w trakcie pisania niniejszej pracy (już po stworzeniu oprogramowania)
+ autor zauważył wznowienie projektu poprzez dodanie wsparcia dla pisania
+ aplikacji UPnP do obsługi urządzeń mobilnych z systemem operacyjnym Android.
+ 
+\emph on
+CyberLink for Java
+\emph default
+ jest rozwijany na licencji nie zezwalającej na modyfikacje kodu źródłowego.
+\end_layout
+
+\begin_layout Standard
+Autor rozważał również wykorzystanie bibliotek popularnego w środowisku
+ 
+\emph on
+Linux 
+\emph default
+programu MiniUPnP 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-29"
+
+\end_inset
+
+ lub MiniDLNA 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-30"
+
+\end_inset
+
+.
+ Niestety oba umożliwiają wykorzystanie we własnym oprogramowaniu bibliotek
+ klienckich, a celem projektu było stworzenie serwera UPnP AV.
+\end_layout
+
+\begin_layout Standard
+Ostatnim opisanym w niniejszym podrozdziale będzie 
+\emph on
+Coherence DLNA/UPNP Framework for Digital Living 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-31"
+
+\end_inset
+
+.
+ 
+\emph default
+Pomimo, że ostatni to spełnił najwięcej wymagań stawianych przez autora
+ i dlatego został przez niego wybrany jako szkielet napisanej aplikacji.
+ 
+\emph on
+Coherence 
+\emph default
+jest zarówno programem udostępniającym prosty serwer multimediów, serwer
+ renderujący, posiada wiele wtyczek do popularnych programów (np.
+ Rhytmbox, Totem, Picasa).
+ Jest na bieżąco rozwijany, zaś jego licencja - MIT 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+
+\end_inset
+
+,zezwala na dowolną modyfikację.
+ Jest napisany w języku Python.
+ Dla deweloperów najważniejsze jest, że oprogramowanie zapewnia komunikację
+ (wykrywanie, ogłaszanie urządzeń) oraz posiada 
+\begin_inset Quotes pld
+\end_inset
+
+szablony
+\begin_inset Quotes prd
+\end_inset
+
+, to jest przykładowe aplikacje z funkcjonalnością udostępniania albumów,
+ filmów itd.
+ Niestety testy oprogramowania wykazały, że sposób implementacji protokołu
+ nie zapewnia komunikacji z wieloma urządzeniami (w tym mobilnymi).
+ Autor zdecydowal się wykorzystać w swoim oprogramowaniu opisywany framework
+ oraz wprowadzić w nim niezbędne modyfikacje, co dzięki liberalnej licencji
+ MIT było w kwestiach prawnych możliwe.
 \end_layout
 
 \begin_layout Section
-Środowisko programistyczne serwera
+Opis programu
 \end_layout
 
 \begin_layout Standard
-Serwer multimedialny UPnP AV / DLNA został wykonany w języku Python.
- Do jego realizacji wykorzystany został framework Coherence którego opis
- znajduje się w rozdziale 
+Zaprojektowana aplikacja do udostępniania materiałów multimedialnych, jest
+ to w rzeczywistości zestaw dwóch niezależnych od siebie programów.
+ Pierwsza aplikacja jest serwerem UPnP AV który komunikuje się bezpośrednio
+ z odtwarzaczami DLNA oraz UPnP AV.
+ Natomiast druga aplikacja służy do zarządzania współdzielonymi zasobami
+ oraz ustawieniami 
+\begin_inset Quotes pld
+\end_inset
+
+techincznymi
+\begin_inset Quotes prd
+\end_inset
+
+ serwera.
+\end_layout
+
+\begin_layout Standard
+Aplikacja posiada wbudowane wyszukiwanie multimediów różnych rodzajów w
+ lokalizacjach, które użytkownik wcześniej zdefiniował.
+ W przypadku podkatalogów stosowane jest przeszukiwanie rekursywne.
+ Serwer UPnP AV interpretuje zawartość katalogów i określa te pliki, które
+ są filmami, plikami tekstowymi (które są napisami do filmów), muzycznymi
+ oraz zdjęciami.
+ Pliki w odtwarzaczu mogą być przeglądane w katalogach oddających strukturę
+ w systemie plików serwera oraz w kategoriach (wirtualnych katalogach) zdefiniow
+anych przez użytkownika.
+\end_layout
+
+\begin_layout Section
+Funkcje programu
+\end_layout
+
+\begin_layout Standard
+Aplikacja składa się z dwóch modułów:
+\end_layout
+
+\begin_layout Itemize
+serwer UPnP AV,
+\end_layout
+
+\begin_layout Itemize
+aplikacji zarządającej.
+\end_layout
+
+\begin_layout Standard
+Funkcje pierwszego z modułów to:
+\end_layout
+
+\begin_layout Itemize
+ogłaszanie aktywności dla innych urządzeń UPnP,
+\end_layout
+
+\begin_layout Itemize
+wysyłanie, odpowiadanie na aktywność UPnP,
+\end_layout
+
+\begin_layout Itemize
+wyszukiwanie multimediów: filmów, plików z napisami, muzyki, obrazów,
+\end_layout
+
+\begin_layout Itemize
+tworzenie biblioteki multimediów:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+zgodnie ze strukturą katalogów,
+\end_layout
+
+\begin_layout Itemize
+według typów plików (sortowanie według typów multimedialnych MIME),
+\end_layout
+
+\begin_layout Itemize
+według typów zawartości:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Muzyka,
+\end_layout
+
+\begin_layout Itemize
+Wideo,
+\end_layout
+
+\begin_layout Itemize
+Zdjęcia.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+udostępnianie w językach:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+angielski,
+\end_layout
+
+\begin_layout Itemize
+polski,
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+udostępnianie informacji o plikach
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+rozdzielczość,
+\end_layout
+
+\begin_layout Itemize
+rodzaj,
+\end_layout
+
+\begin_layout Itemize
+rozszerzenie,
+\end_layout
+
+\begin_layout Itemize
+czas trwania,
+\end_layout
+
+\begin_layout Itemize
+jakość,
+\end_layout
+
+\begin_layout Itemize
+data dodania,
+\end_layout
+
+\begin_layout Itemize
+rozmiar pliku,
+\end_layout
+
+\begin_layout Itemize
+lokalizacja pliku.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Biblioteka multimediów
+\end_layout
+
+\begin_layout Standard
+Biblioteka multimediów jest zbiorem plików udostępnianych przez serwer UPnP
+ AV.
+ W opisywanej aplikacji biblioteka została podzielona na kilka głównych
+ kategorii.
+ Pierwszą z nich jest odwzorowanie zgodnie z położeniem w systemie plików
+ (gdy to możliwe wyświetlana jest tylko nazwa katalogu nadrzędnego, w którym
+ znajduje bądź znajdują się pliki multimedialne).
+ Oznacza to, że przy pomocy odtwarzacza UPnP AV lub DLNA użytkownik może
+ nawigować do przeglądania zawartości serwera i do sekcji 
+\begin_inset Quotes pld
+\end_inset
+
+Katalogi
+\begin_inset Quotes prd
+\end_inset
+
+ (ang.
+ 
+\emph on
+
+\begin_inset Quotes pld
+\end_inset
+
+Directories
+\emph default
+
+\begin_inset Quotes prd
+\end_inset
+
+).
+ W dalszej kolejności wyświetlane są nazwy katalogów z plikami multimedialnymi.
+\end_layout
+
+\begin_layout Standard
+Kolejnym krokiem nawigacji może być 
+\begin_inset Quotes pld
+\end_inset
+
+Typy MIME
+\begin_inset Quotes prd
+\end_inset
+
+ (ang.
+ 
+\begin_inset Quotes pld
+\end_inset
+
+
+\emph on
+Mimetypes
+\emph default
+
+\begin_inset Quotes prd
+\end_inset
+
+), w którym wyselekcjonowane materiały są dzielone według swoich typów MIME.
+\end_layout
+
+\begin_layout Standard
+Dalszymi dostępnymi ścieżkami są następujące kategorie: 
+\end_layout
+
+\begin_layout Itemize
+Wideo (ang.
+ 
+\emph on
+Video
+\emph default
+), 
+\end_layout
+
+\begin_layout Itemize
+Muzyka (ang.
+ 
+\emph on
+Music
+\emph default
+), 
+\end_layout
+
+\begin_layout Itemize
+Zdjęcia (ang.
+ 
+\emph on
+Images
+\emph default
+),
+\end_layout
+
+\begin_layout Standard
+Pliki są segregowane przez algorytm zgodnie ze swoją kategorią (zgodnie
+ z typem MIME), a następnie umieszczane w odpowiadającej kategorii bibliotece.
+ Typ MIME w swojej nazwie dla każdej z bibliotek w pliku posiada cechę wspólną.
+ W niniejszym przypadku pliki graficzne posiadają w typie MIME słowo 
+\emph on
+image
+\emph default
+, muzyka słowo 
+\emph on
+audio
+\emph default
+, natomiast materiały wideo, słowo 
+\emph on
+video
+\emph default
+.
+ Upraszcza to w dużym stopniu sposób kategoryzowania plików.
+\end_layout
+
+\begin_layout Standard
+Dla każdego odnalezionego katalogu oraz pliku multimedialnego tworzony jest
+ obiekt 
+\emph on
+MediaItem
+\emph default
+, który przechowuje niezbędne informacje dla serwera UPnP AV.
+ Dzięki odczytaniu informacji o obiekcie możliwy jest zwrócenie odtwarzaczom
+ posiadanych informacje o pliku, katalogu lub katalogu wirtualnym.
+\end_layout
+
+\begin_layout Standard
+Parametry możliwe do zwrócenia dla każdego z wcześniej wymienionych typów
+ są umieszczone w tabeli 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:frameworks"
+reference "tab:Parametry-dla-kategorii"
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Subsection
-Tworzenie biblioteki multimediów
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Parametry-dla-kategorii"
+
+\end_inset
+
+Parametry dla kategorii UPnP
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="17" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pobierany parametr | Rodzaj
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Katalog
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wideo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Audio
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zdjęcia
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ścieżka URL
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ilość podkatalogów
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Podkatalog
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Obiekt 
+\emph on
+MediaItem
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Katalog nadrzędny
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inne katalogi nadrzędne
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ID
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nazwa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Okładka (miniatura)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Typ MIME
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rozmiar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Czas trwania
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bitrate
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Kanały audio
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Napisy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rozdzielczość
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Biblioteka multimediów umożliwia dodawanie nowych kategorii w trakcie działania
+ aplikacji bez konieczności przerywania jej działania.
+ Odpowiada za to parametr zdefiniowany w specyfikacji UPnP - parametr aktualizac
+ji (ang.
+ 
+\emph on
+updateID
+\emph default
+), który jest numerem sekwencyjnym określającym ilość zmian w danej bibliotece.
+ Jeżeli odtwarzacz posiada dane o plikach z nieaktualnym parametrem aktualizacji
+, wówczas pobiera od nowa listę multimediów.
+ Aplikacja w podobny sposób reaguje na dodanie i usunięcie pliku (plików)
+ do istniejącego już, w ścieżce wyszukiwania, katalogu.
 \end_layout
 
 \begin_layout Subsection
 Miniatury multimediów
+\end_layout
+
+\begin_layout Standard
+Miniatury multimediów nie są obowiązkową treścią, którą musi udostępniać
+ serwer DLNA.
+ Jednakże sposób udostępniania ich nie odbiega znacząco od sposobu udostępniania
+ innych materiałów, dlatego autor uznał, że warto tą funkcje również zaimplement
+ować.
+\end_layout
+
+\begin_layout Standard
+Większość współczesnych systemów operacyjnych tworzy miniatury filmów oraz
+ obrazów na własne potrzeby oraz często pobiera okładki albumów muzycznych
+ z Internetu.
+ Autor zdecydował się w pierwszej kolejności korzystać z miniatur stworzonych
+ przez system operacyjny, zaś w dalszej kolejności z miniatur tworzonych
+ przez aplikację (w przypadku gdy miniatura systemu operacyjnego nie istnieje
+ lub nie spełnia wymogów co do rozmiarów).
+ Miniatura tworzona przez aplikację ma rozmiar 120 x 120 pikseli i jest
+ zapisana w standardzie JPEG z tą samą nazwą pliku jaką posiada główny plik
+ multimedialny, z przedrostkiem TH (od ang.
+ 
+\emph on
+Thumbnail
+\emph default
+ - miniatura).
+\end_layout
+
+\begin_layout Subsection
+Zmiana opcji
+\end_layout
+
+\begin_layout Section
+Budowa wewnętrzna serwera
+\end_layout
+
+\begin_layout Standard
+Serwer multimedialny UPnP AV / DLNA został wykonany w języku Python.
+ Do jego realizacji wykorzystany został framework 
+\emph on
+Coherence DLNA/UPNP Framework for Digital Living
+\emph default
+ którego opis znajduje się w rozdziale 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:frameworks"
+
+\end_inset
+
+.
+ 
+\series bold
+Zestaw oprogramowania został podzielony na dwie niezależne aplikacje, serwer
+ multimedialny UPnP AV oraz serwer zarządzający.
+ Każdy z nich składa się z wielu podmodułów.
+\end_layout
+
+\begin_layout Standard
+Serwer multimedialny UPnP AV udostępnia swoje funkcje poprzez protokół UPnP
+ w wersji tylko do odczytu, natomiast zarządzanie nim następuję przy pomocy
+ poleceń RPC wysyłanych do wewnętrznego serwera RPC.
+ Polecenia do integralnego serwera RPC wysyłane są z drugiej aplikacji,
+ z serwera zarządzającego.
+ Poprzez zarządzanie rozumiane są takie funkcje jak:
+\end_layout
+
+\begin_layout Itemize
+uruchomienie / zatrzymanie serwera UPnP,
+\end_layout
+
+\begin_layout Itemize
+uruchomienie / zatrzymanie / uruchomienie ponowne serwera RPC,
+\end_layout
+
+\begin_layout Itemize
+zatrzymanie / uruchomienie ponowne serwera zarządzającego,
+\end_layout
+
+\begin_layout Itemize
+zmiana interfejsu sieciowego serwera UPnP, bądź RPC,
+\end_layout
+
+\begin_layout Itemize
+zmiana portu zarządzającego serwerem RPC,
+\end_layout
+
+\begin_layout Itemize
+dodawanie, modyfikacja, usuwanie ścieżek, z których są udostępniane multimedia,
+\end_layout
+
+\begin_layout Itemize
+tworzenie, modyfikacja, usuwanie wirtualnych bibliotek UPnP AV,
+\end_layout
+
+\begin_layout Itemize
+wymuszanie ponownego przeskanowania folderów w celu znalezienia plików multimedi
+alnych,
+\end_layout
+
+\begin_layout Itemize
+zmiana loga serwera UPnP, widocznego w odtwarzaczu UPnP AV bądź DLNA.
+\end_layout
+
+\begin_layout Standard
+W całej aplikacji wykorzystywane są bazy danych 
+\emph on
+SQLite 
+\emph default
+(zawierającymi np.
+ ścieżki do przeszukiwania).
+ Jest to wybór stosunkowo oczywisty w kontekście umożliwienia działania
+ na urządzeniach o niskiej wydajności.
+ Baza danych 
+\emph on
+SQLite
+\emph default
+ została stworzona z myślą o przechowywaniu małej ilości rekodordów.
+ Obsługuje się ją poprzez zewnętrzną bibliotekę.
+ Przy dużej ilości danych powoduje to nadmierne obciążenie aplikacji.
+ Jednakże w przypadku wielu małych aplikacji, jak i niniejszego serwera
+ UPnP, rozwiązanie to eliminuje konieczność instalowania dodatkowego oprogramowa
+nia bazodanowego (np.
+ 
+\emph on
+MySQL
+\emph default
+) działającego zazwyczaj w trybie klient - serwer (wprowadza to dodatkowy
+ narzut komunikacyjny).
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-33"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Główna aplikacja, która udostępnia multimedia w sieci UPnP AV i/lub DLNA
+ ma możliwość uruchomienia w tle (w trybie demona zgodnie z nazewnictwem
+ systemu Linux lub usługi, zgodnie z nazewnictwem systemu Windows) lub w
+ trybie pierwszoplanowym (ang.
+ 
+\emph on
+foreground
+\emph default
+), w którym wszystkie komunikaty są wyświetlane w oknie wiersza poleceń.
+ W pierwszej kolejności aplikacja otwiera pliki baz danych, z których wczytywane
+ są ustawienia oraz ścieżki wyszukiwania plików multimedialnych.
+ W przypadku poprawnego wczytania wszystkich danych 
+\end_layout
+
+\begin_layout Standard
+Jej uogólniony schemat działania widoczny jest na diagramach stanów oraz
+ komunikacji (
+\series bold
+rysunku ).
+ 
+\end_layout
+
+\begin_layout Subsection
+Klasa demona
+\end_layout
+
+\begin_layout Standard
+ewwef
+\end_layout
+
+\begin_layout Subsection
+Klasa główna serwera UPnP
+\end_layout
+
+\begin_layout Standard
+fewfwe
+\end_layout
+
+\begin_layout Subsubsection
+Obiekt MediaStore
+\end_layout
+
+\begin_layout Standard
+ewqedq
+\end_layout
+
+\begin_layout Subsubsection
+Obiekt MediaItem
+\end_layout
+
+\begin_layout Subsection
+Modyfikacja frameworka UPnP Coherence
+\end_layout
+
+\begin_layout Standard
+ewqewq
+\end_layout
+
+\begin_layout Subsection
+Klasa serwera RPC
+\end_layout
+
+\begin_layout Standard
+fewfew
+\end_layout
+
+\begin_layout Subsection
+Klasa obsługi zmiany parametrów
+\end_layout
+
+\begin_layout Standard
+fwfew
+\end_layout
+
+\begin_layout Chapter
+Testy
+\end_layout
+
+\begin_layout Standard
+rerew
+\end_layout
+
+\begin_layout Section
+Sposób testowania aplikacji
+\end_layout
+
+\begin_layout Standard
+fewfwe
+\end_layout
+
+\begin_layout Section
+Współpraca z odtwarzaczami w oprogramowaniu telewizorów
+\end_layout
+
+\begin_layout Standard
+fewfew
+\end_layout
+
+\begin_layout Section
+Polecenia UPnP AV i DLNA w praktyce
 \end_layout
 
 \begin_layout Section
@@ -5734,23 +7362,27 @@ Napotkane problemy
 \end_layout
 
 \begin_layout Section
-Współpraca z odtwarzaczami w oprogramowaniu telewizorów
+Wyniki testów
 \end_layout
 
 \begin_layout Chapter
-Porównanie oprogramowania UPnP AV i DLNA
+Przegląd oprogramowania UPnP AV i DLNA
 \end_layout
 
 \begin_layout Standard
 wrew
 \end_layout
 
+\begin_layout Standard
+dqwdq
+\end_layout
+
 \begin_layout Section
-Porównanie oprogramowania serwerów DLNA i UPnP AV
+Porównanie oprogramowania serwerów UPnP AV i DLNA
 \end_layout
 
 \begin_layout Standard
-dqwdq
+fewefe
 \end_layout
 
 \begin_layout Section
@@ -5761,28 +7393,16 @@ Porównanie oprogramowania odtwarzaczy DLNA i UPnP AV
 dqwdwq
 \end_layout
 
-\begin_layout Chapter
-Teoria, a praktyka UPnP AV oraz DLNA
-\end_layout
-
-\begin_layout Section
-Standard
-\end_layout
-
-\begin_layout Subsection
-Polecenia protokołu
-\end_layout
-
 \begin_layout Subsection
 Różnice działania odtwarzaczy różnych producentów
 \end_layout
 
-\begin_layout Subsection
-Porównanie oprogramowania serwerów UPnP/DLNA
+\begin_layout Standard
+ffwefe
 \end_layout
 
-\begin_layout Subsection
-Porównanie oprogramowania odtwarzaczy UPnP/DLNA
+\begin_layout Section
+Obsługa standardu
 \end_layout
 
 \begin_layout Bibliography
@@ -6142,6 +7762,96 @@ key "key-26"
 \end_inset
 
 ISO/IEC 10918, JPEG
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-27"
+
+\end_inset
+
+ Cling Framework, http://4thline.org/projects/cling
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-28"
+
+\end_inset
+
+Cyberlink for Java, http://www.cybergarage.org/twiki/bin/view/Main/CyberLinkForJav
+a
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-29"
+
+\end_inset
+
+ MiniUPnP, http://miniupnp.free.fr/
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-30"
+
+\end_inset
+
+MiniDLNA, http://sourceforge.net/projects/minidlna/
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-31"
+
+\end_inset
+
+Coherence http://coherence.beebits.net/wiki/WikiStart#CurrentState
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-32"
+
+\end_inset
+
+ Licencja MIT, http://www.opensource.org/licenses/mit-license.php
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-33"
+
+\end_inset
+
+Test Baz danych Open Source, SDJ Extra nr 17, PHP Starter Kit, http://www.scribd.c
+om/doc/51087611/2/Test-baz-danych-Open-Source
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-34"
+
+\end_inset
+
+Typy multimedialne MIME, http://tools.ietf.org/html/rfc2046
 \end_layout
 
 \end_body

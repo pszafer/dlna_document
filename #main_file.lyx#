@@ -7114,6 +7114,18 @@ updateID
  do istniejącego już, w ścieżce wyszukiwania, katalogu.
 \end_layout
 
+\begin_layout Standard
+Metadane dotyczące plików są pobierane przy wykorzystaniu różnych narzędzi.
+ Najprostszym przypadkiem jest typ graficzny, dla którego wykorzystywana
+ jest wbudowana klasa języka Python - 
+\emph on
+Image
+\emph default
+.
+ Przy jej pomocy uzyskiwane są informacje o rozmiarze pliku i jego rozdzielczośc
+i.
+\end_layout
+
 \begin_layout Subsection
 Miniatury multimediów
 \end_layout
@@ -7142,6 +7154,20 @@ Większość współczesnych systemów operacyjnych tworzy miniatury filmów ora
 Thumbnail
 \emph default
  - miniatura).
+\end_layout
+
+\begin_layout Standard
+Miniatury mogą być tworzone przy pomocy dwóch narzędzi: 
+\emph on
+ffmpegthumbnailer
+\emph default
+ dla plików wideo lub przy pomocy klasy 
+\emph on
+Image
+\emph default
+ języka Python dla plików graficznych (klasa ta posiada specjalną metodę
+ do tworzenia miniatur).
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -7303,36 +7329,6 @@ ewqedq
 
 \begin_layout Subsubsection
 Obiekt MediaItem
-\end_layout
-
-\begin_layout Standard
-Metadane dotyczące plików są pobierane przy wykorzystaniu różnych narzędzi.
- Najprostszym przypadkiem jest typ graficzny, dla którego wykorzystywana
- jest wbudowana klasa języka Python - 
-\emph on
-Image
-\emph default
-.
- Przy jej pomocy uzyskiwane są informacje o rozmiarze pliku i jego rozdzielczośc
-i.
-\end_layout
-
-\begin_layout Standard
-Dla plik
-\end_layout
-
-\begin_layout Standard
-Miniatury mogą być tworzone przy pomocy dwóch narzędzi: 
-\emph on
-ffmpegthumbnailer
-\emph default
- dla plików wideo lub przy pomocy klasy 
-\emph on
-Image
-\emph default
- języka Python dla plików graficznych (klasa ta posiada specjalną metodę
- do tworzenia miniatur).
- 
 \end_layout
 
 \begin_layout Subsection
