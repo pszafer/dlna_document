@@ -5415,7 +5415,48 @@ tować do obsługiwanego formatu).
 \end_layout
 
 \begin_layout Subsection
-Kodowanie filmów
+Kodowanie i kompresja filmów
+\end_layout
+
+\begin_layout Standard
+Niniejszy podrozdział jest poświęcony jedynie tematyce kodowania filmów,
+ z pominięciem roli kontenerów multimedialnych.
+ Kodowanie służy do przedstawienia materiału wideo w reprezentacji kodu
+ binarnego.
+ Kompresja natomiast to takie kodowanie, które zmniejsza wielkość strumienia
+ wideo, przy spadku jakości.
+ Obecnie najpopularniejszymi koderem jest kodek MPEG-4 AVC (ang.
+ 
+\emph on
+Advanced Video Coding
+\emph default
+).
+ Jest to obecnie najbardziej wydajny standard kodowania, pozwalający uzyskać
+ bardzo dobrą jakość obrazu, o rozdzielczości do Full HD (1920 x 1080i).
+ Coraz powszechniej jest wykorzystywany w transmisjach telewizyjnych, w
+ kompresji filmów Blu-ray.
+ Opisywany kodek jest zamiennie nazywany MPEG-4 AVC lub H.264.
+ W fazie początkowej były to dwa różne standardy, jednakże w kolejnych etapach
+ projekty zostały połączone.
+ Standard jest opisany w dokumencie 
+\emph on
+MPEG-4 Part 10, Advanced Video Coding 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-35"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Urządzenia DLNA (i nie tylko) posiadają wbudowane dekodery formatów wideo.
+ Obecnie najpopularniejszym dekoderem znajdującym się w kartach graficznych,
+ telewizorach i innych urządzeniach odtwarzających jest dekoder MPEG-4 AVC/H.264.
+ Są to najnowocześniejsze dekodery umożliwiające odtworzenie prawie każdego
+ dostępnego współcześnie materiału wideo.
+ 
 \end_layout
 
 \begin_layout Part
@@ -7145,7 +7186,410 @@ Thumbnail
 \end_layout
 
 \begin_layout Subsection
-Zmiana opcji
+Zarządzanie aplikacją
+\end_layout
+
+\begin_layout Standard
+Serwer zarządzający serwerem multimediów DLNA jest to aplikacja internetowa
+ przygotowana w oparciu o framework 
+\emph on
+Django.
+ 
+\emph default
+Serwer WWW nasłuchuje domyślnie na porcie 8080 (zmiana portu jest możliwa
+ poprzez modyfikację plików konfiguracyjnych 
+\emph on
+Django
+\emph default
+).
+ Autor zaleca wykorzystywać serwer dostarczany wraz z 
+\emph on
+Django
+\emph default
+, lecz nie ma żadnych przeciwwskazań, aby wykorzystywać inne oprogramowanie
+ serwerowe (np.
+ serwer 
+\emph on
+Apache
+\emph default
+).
+ Aplikacja zarządzająca podobnie, jak serwer UPnP AV, jest dostępna w dwóch
+ wersjach językowych: polskim i angielskim.
+\end_layout
+
+\begin_layout Standard
+Do zarządzania opcjami aplikacji konieczne jest wykorzystanie przeglądarki
+ WWW i otworzyć stronę np.
+ 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://localhost:8080/
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+W głównym menu można wybrać następujące opcje (pierwsza nazwa w języku polskim,
+ druga w języku angielskim):
+\end_layout
+
+\begin_layout Itemize
+status - 
+\emph on
+status
+\emph default
+,
+\end_layout
+
+\begin_layout Itemize
+ustawienia - 
+\emph on
+settings
+\emph default
+,
+\end_layout
+
+\begin_layout Itemize
+multimedia - 
+\emph on
+media
+\emph default
+,
+\end_layout
+
+\begin_layout Itemize
+pomoc - 
+\emph on
+help
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Pierwszy ekran widoczny na rysunku 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Status-serwera-UPnP"
+
+\end_inset
+
+ wyświetla status serwera UPnP oraz serwera RPC.
+ Serwer RPC jest niezbędny do zmiany jakichkolwiek opcji, natomiast serwer
+ UPnP AV jest niezbędny do udostępniania multimediów w sieciach UPnP AV
+ oraz DLNA.
+ Obie usługi mogą działać niezależnie, jednakże autor dla uproszczenia sposobu
+ używania aplikacji uniemożliwił selektywne uruchamianie usług.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Status-serwera-UPnP"
+
+\end_inset
+
+Status serwera UPnP AV
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename dlnaserver_web1.png
+	display false
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Druga dostępna opcja, czyli 
+\begin_inset Quotes pld
+\end_inset
+
+Ustawienia
+\begin_inset Quotes prd
+\end_inset
+
+ (ang.
+ 
+\emph on
+settings
+\emph default
+) umożliwia modyfikację podstawowych funkcji serwer UPnP AV.
+ W niniejszej sekcji możliwa jest zmiana następujących opcji:
+\end_layout
+
+\begin_layout Itemize
+nazwa serwera UPnP AV,
+\end_layout
+
+\begin_layout Itemize
+adres IP serwera UPnP AV (domyślnie serwer działa na wszystkich adresach
+ sieci lokalnej),
+\end_layout
+
+\begin_layout Itemize
+port serwera UPnP AV (domyślnie losowy),
+\end_layout
+
+\begin_layout Itemize
+wzorzec ignorowania - np.
+ ignorowanie plików o podanym rozszerzeniu - *.avi (domyślnie brak wzorca),
+\end_layout
+
+\begin_layout Itemize
+stwórz oddzielny konterer typów MIME (domyślnie włączona),
+\end_layout
+
+\begin_layout Itemize
+transkodowanie (domyślnie wyłączone),
+\end_layout
+
+\begin_layout Itemize
+własna ikona serwera,
+\end_layout
+
+\begin_layout Itemize
+maksymalna ilość przeszukania rekursywnego (domyślnie nieorganiczona) -
+ ile folderów 
+\begin_inset Quotes pld
+\end_inset
+
+w dół
+\begin_inset Quotes prd
+\end_inset
+
+ rekursywnie ma przeszukiwać algorytm tworzenia biblioteki multimediów.
+\end_layout
+
+\begin_layout Standard
+Opisywana opcja została przedstawiona na rysunku 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Ustawienia-serwera-UPnP"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Ustawienia-serwera-UPnP"
+
+\end_inset
+
+Ustawienia serwera UPnP AV
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename dlnaserver_web2.png
+	display false
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kolejną opcją jest wybieranie katalogów do wyszukiwania multimediów.
+ Została ona przez autora przedstawiona w wersji skróconej jako 
+\begin_inset Quotes pld
+\end_inset
+
+Multimedia
+\begin_inset Quotes prd
+\end_inset
+
+ (ang.
+ 
+\emph on
+Media
+\emph default
+).
+ W niej możliwe jest dodawanie katalogów do przeszukiwania.
+ Po dodaniu lub usunięciu wiersza ze ścieżką konieczne jest ręczne zapisanie
+ zmiany poprzez wybranie przycisku 
+\begin_inset Quotes pld
+\end_inset
+
+Zapisz
+\begin_inset Quotes prd
+\end_inset
+
+ (ang.
+ 
+\emph on
+Save
+\emph default
+).
+ Przycisk nie jest widoczny na rysunku 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Wybieranie-multimediów-dla"
+
+\end_inset
+
+, który przedstawia opisywaną w niniejszym akapicie część aplikacji.
+ 
+\end_layout
+
+\begin_layout Standard
+Dodanie multimediów jest możliwe poprzez ręczne wpisanie absolutnej ścieżki
+ do katalogu.
+ Ścieżka relatywna może powodować niepoprawne wyszukiwanie materiałów np.
+ ścieżka 
+\begin_inset Quotes pld
+\end_inset
+
+~/Wideo
+\begin_inset Quotes prd
+\end_inset
+
+ może być poprawnie przeszukana, gdy serwer jest uruchomiony przez tego
+ samego użytkownika, co pożądany katalog Wideo, lecz niepoprawnie, gdy uruchomił
+ go inny użytkownik systemu.
+ Drugim sposobem dodania katalogu jest wybór opcji 
+\begin_inset Quotes pld
+\end_inset
+
+Przeglądaj
+\begin_inset Quotes prd
+\end_inset
+
+ (ang.
+ 
+\emph on
+Browse
+\emph default
+) i wybranie folderu, który zostanie przeszukany.
+ W drugim przypadku ściezka do folderu zostanie dodana do linii absolutnej
+ ściezki do katalogu (jest to opcja wygodniejsza dla niektórych użytkowników).
+\end_layout
+
+\begin_layout Standard
+W przypadku braku katalogu lub innych problemów serwer WWW wykonuje sprawdzenie
+ poprawności wpisanych danych.
+ W przypadku braku katalogu (lub innego błędu wyszukania folderu) obok wiersza
+ ze ścieżką pojawia się czerwony znak 'X'.
+ Jednakże aplikacja zarządzająca zezwoli na dodanie ścieżki do bazy danych
+ i wyszukanie jej przez serwer UPnP AV i to do niego należy ewentualne zadanie
+ ignorowania niepoprawnych ścieżek.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Wybieranie-multimediów-dla"
+
+\end_inset
+
+Wybieranie multimediów dla serwera UPnP AV
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename dlnaserver_web3.png
+	display false
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ostatni z dostępnych ekranów, to jest 
+\begin_inset Quotes pld
+\end_inset
+
+Pomoc
+\begin_inset Quotes prd
+\end_inset
+
+ (ang.
+ 
+\emph on
+Help
+\emph default
+).
+ Znajduje się w nim opis wszystkich opcji dostępnych w serwerze WWW, przybliżony
+ sposób wyszukiwania serwera w odtwarzaczu DLNA oraz uproszczona specyfikacja
+ serwera DLNA.
+ Istnieją w niej informacje o wyszukiwanych plikach multimedialnych, sposobie
+ dołączania załączników do plików (np.
+ napisy), opis tworzenia miniatur oraz wymagane oprogramowania do działania
+ opisywanej aplikacji.
+ Plik pomocy dostępny jest również w postaci PDF.
 \end_layout
 
 \begin_layout Section
@@ -7303,6 +7747,36 @@ ewqedq
 
 \begin_layout Subsubsection
 Obiekt MediaItem
+\end_layout
+
+\begin_layout Standard
+Metadane dotyczące plików są pobierane przy wykorzystaniu różnych narzędzi.
+ Najprostszym przypadkiem jest typ graficzny, dla którego wykorzystywana
+ jest wbudowana klasa języka Python - 
+\emph on
+Image
+\emph default
+.
+ Przy jej pomocy uzyskiwane są informacje o rozmiarze pliku i jego rozdzielczośc
+i.
+\end_layout
+
+\begin_layout Standard
+Dla plik
+\end_layout
+
+\begin_layout Standard
+Miniatury mogą być tworzone przy pomocy dwóch narzędzi: 
+\emph on
+ffmpegthumbnailer
+\emph default
+ dla plików wideo lub przy pomocy klasy 
+\emph on
+Image
+\emph default
+ języka Python dla plików graficznych (klasa ta posiada specjalną metodę
+ do tworzenia miniatur).
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -7852,6 +8326,17 @@ key "key-34"
 \end_inset
 
 Typy multimedialne MIME, http://tools.ietf.org/html/rfc2046
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-35"
+
+\end_inset
+
+MPEG-4 ISO/IEC 14496-10
 \end_layout
 
 \end_body
