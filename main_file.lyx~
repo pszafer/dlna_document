@@ -5846,16 +5846,6 @@ Framework’i UPnP
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:frameworks"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 W internecie można odnaleźć bardzo dużo framework'ów, które obsługują UPnP
  AV oraz DLNA.
  Przed wyborem języka programowania autor skupił się na poszukiwaniu odpowiednie
@@ -6264,6 +6254,294 @@ video
 \emph default
 .
  Upraszcza to w dużym stopniu sposób kategoryzowania plików.
+ Przykładowy sposób selekcji plików, zgodnie z jego rozszerzeniem został
+ przedstawiona w tabeli 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Katagolowanie-typów-MIME"
+
+\end_inset
+
+.
+ Typ MIME jest rozpoznawany, dzięki rozszerzeniu pliku, dlatego wybór jakiego
+ typu jest plik, należy do aplikacji.
+ Oprogramowanie stworzone na potrzeby niniejszej pracy magisterskiej posiada
+ wbudowany słownik, odwzorowujący rozszerzenie na typ MIME.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Katagolowanie-typów-MIME"
+
+\end_inset
+
+Katagolowanie typów MIME - przykład
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Typ MIME
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rozszerzenie pliku
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Kategoria
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+audio/mpeg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+mp3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Muzyka
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+audio/x-wav
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+wav
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Muzyka
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+image/png
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+png
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zdjęcia
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+image/jpeg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+jpeg, jpg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zdjęcia
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+video/mpeg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+mpeg mpg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wideo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+video/x-matroska
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+mkv
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wideo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+video/x-msvideo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+avi
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wideo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -7186,6 +7464,12 @@ Thumbnail
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Zarządzanie-aplikacją"
+
+\end_inset
+
 Zarządzanie aplikacją
 \end_layout
 
@@ -7589,11 +7873,11 @@ Help
  dołączania załączników do plików (np.
  napisy), opis tworzenia miniatur oraz wymagane oprogramowania do działania
  opisywanej aplikacji.
- Plik pomocy dostępny jest również w postaci PDF.
+ Plik pomocy dostępny jest również w postaci pliku PDF.
 \end_layout
 
 \begin_layout Section
-Budowa wewnętrzna serwera
+Budowa wewnętrzna modułu serwera UPnP AV
 \end_layout
 
 \begin_layout Standard
@@ -7605,24 +7889,28 @@ Coherence DLNA/UPNP Framework for Digital Living
  którego opis znajduje się w rozdziale 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:frameworks"
+reference "sub:Framework’i-UPnP"
 
 \end_inset
 
 .
- 
-\series bold
-Zestaw oprogramowania został podzielony na dwie niezależne aplikacje, serwer
+ Zestaw oprogramowania został podzielony na dwie niezależne aplikacje, serwer
  multimedialny UPnP AV oraz serwer zarządzający.
  Każdy z nich składa się z wielu podmodułów.
+ 
+\emph on
+Dla rozróżnienia modułu serwera UPnP AV od aplikacji głównej, pierwszy moduł
+ w niniejszej pracy będzie nazywany serwerem multimediów.
 \end_layout
 
 \begin_layout Standard
 Serwer multimedialny UPnP AV udostępnia swoje funkcje poprzez protokół UPnP
- w wersji tylko do odczytu, natomiast zarządzanie nim następuję przy pomocy
- poleceń RPC wysyłanych do wewnętrznego serwera RPC.
+ w wersji tylko do odczytu, oznacza to, że nie można modyfikować opcji serwer
+ przy pomocy poleceń protokołu UPnP.
+ Zarządzanie serwerm jest możliwe, poprzez wykorzystanie poleceń RPC wysyłanych
+ do serwera RPC, będącego modułem wewnętrznym (podmodułem) serwer UPnP AV.
  Polecenia do integralnego serwera RPC wysyłane są z drugiej aplikacji,
- z serwera zarządzającego.
+ serwera zarządzającego.
  Poprzez zarządzanie rozumiane są takie funkcje jak:
 \end_layout
 
@@ -7664,6 +7952,18 @@ zmiana loga serwera UPnP, widocznego w odtwarzaczu UPnP AV bądź DLNA.
 \end_layout
 
 \begin_layout Standard
+Dokładny opis funkcjonalny oraz interfejs użytkownika, serwera zarządzającego
+ zostały przedstawione w podrozdziale 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Zarządzanie-aplikacją"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 W całej aplikacji wykorzystywane są bazy danych 
 \emph on
 SQLite 
@@ -7678,6 +7978,19 @@ SQLite
 \emph default
  została stworzona z myślą o przechowywaniu małej ilości rekodordów.
  Obsługuje się ją poprzez zewnętrzną bibliotekę.
+ W wypadku opisywanej aplikacji wykorzystany został framework 
+\emph on
+SQLAlchemy
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-36"
+
+\end_inset
+
+, który dzięki swojej rozbudowanej dokumentacji, mógł zostać stosunkowo
+ szybko i w łatwy sposób wdrożony przez autora.
  Przy dużej ilości danych powoduje to nadmierne obciążenie aplikacji.
  Jednakże w przypadku wielu małych aplikacji, jak i niniejszego serwera
  UPnP, rozwiązanie to eliminuje konieczność instalowania dodatkowego oprogramowa
@@ -7710,7 +8023,18 @@ foreground
 ), w którym wszystkie komunikaty są wyświetlane w oknie wiersza poleceń.
  W pierwszej kolejności aplikacja otwiera pliki baz danych, z których wczytywane
  są ustawienia oraz ścieżki wyszukiwania plików multimedialnych.
- W przypadku poprawnego wczytania wszystkich danych 
+ W przypadku poprawnego wczytania wszystkich danych aplikacja tworzy główny
+ obiekt 
+\emph on
+MediaStore
+\emph default
+, który jest klasą nadrzedną dla wszystkich udostępnianych obiektów 
+\emph on
+MediaItem.
+
+\emph default
+ Ich opis oraz sposób działania został przedstawiony w dalszej części niniejszej
+ pracy.
 \end_layout
 
 \begin_layout Standard
@@ -7726,7 +8050,53 @@ Klasa demona
 \end_layout
 
 \begin_layout Standard
-ewwef
+Zadaniem klasy demona, 
+\emph on
+MediaDaemon
+\emph default
+ jest uruchamianie aplikacji w tle.
+ Nie została ona zaprojektowana jako niezbędna klasa na potrzeby działania
+ aplikacji, aby relatywnie proste było uruchomienie programu, zarówno w
+ tle, jak i w trybie pierwszoplanowym.
+\end_layout
+
+\begin_layout Standard
+Klasa demona przyjmuje następujące parametry linii komend (pierwszy parametr,
+ jest parametrem domyślnym):
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+start
+\emph default
+,
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+stop
+\emph default
+,
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+restart.
+\end_layout
+
+\begin_layout Standard
+Opisywany obiekt jest zabezpieczony przed wielokrotnym uruchomieniem (co
+ mogłoby oznaczać modyfikację tych samych danych i ich uszkodzenie), poprzez
+ tworzenie pliku o nazwie 
+\emph on
+daemon.pid
+\emph default
+, który przechowuje numer identyfikacyjny uruchomionego procesu demona.
+ Wykorzystywany jest on również do ponownego uruchamiania oraz zatrzymywania
+ aplikacji serwera UPnP AV.
 \end_layout
 
 \begin_layout Subsection
@@ -7734,7 +8104,28 @@ Klasa główna serwera UPnP
 \end_layout
 
 \begin_layout Standard
-fewfwe
+Klasa główna, którą jest serwer multimediów, 
+\emph on
+MediaServer
+\emph default
+, jest klasą inicjalizującą działanie w sieci UPnP serwera multimedialnego.
+ 
+\end_layout
+
+\begin_layout Standard
+W pierwszej kolejności wczytywana jest baza danych multimediów, następnie
+ zaś są tworzone obiekt 
+\emph on
+MediaStore
+\emph default
+, który w swoim algorytmie działania ma zaimplementowane przeszukiwanie
+ ścieżek katalogów, wczytywanie ustawień dostarczonych przez opisywaną w
+ niniejszym rozdziale klasę oraz tworzenie obiektów 
+\emph on
+MediaItem
+\emph default
+, które dla użytkownika są kontenerami multimediów bądź docelowymi plikami
+ multimedialnymi.
 \end_layout
 
 \begin_layout Subsubsection
@@ -7742,7 +8133,136 @@ Obiekt MediaStore
 \end_layout
 
 \begin_layout Standard
-ewqedq
+Klasa 
+\emph on
+MediaStore
+\emph default
+ jest pierwszą klasą (w ścieżce uruchamiania aplikacji), która jest dziedziczona
+ po klasach framework'a 
+\emph on
+Coherence
+\emph default
+.
+ Od momentu uruchomienia tego obiektu serwer UPnP AV jest widoczny w odtwarzacza
+ch UPnP oraz DLNA.
+ Otrzymuje ona od klasy nadrzędnej w trakcie uruchamiania parametry działania,
+ wśród nich ścieżki do katalogów, w których mają być wyszukiwane multimedia.
+ Na podstawie otrzymanych danych tworzy następujące kontenery główne:
+\end_layout
+
+\begin_layout Itemize
+kontener 
+\begin_inset Quotes pld
+\end_inset
+
+Muzyka
+\begin_inset Quotes prd
+\end_inset
+
+ (ang.
+ 
+\emph on
+Music
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+kontener 
+\begin_inset Quotes pld
+\end_inset
+
+Wideo
+\begin_inset Quotes prd
+\end_inset
+
+ (ang.
+ 
+\emph on
+Video
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+kontener 
+\begin_inset Quotes pld
+\end_inset
+
+Zdjęcia
+\begin_inset Quotes prd
+\end_inset
+
+ (ang.
+ 
+\emph on
+Images
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+kontener 
+\begin_inset Quotes pld
+\end_inset
+
+Katalogi
+\begin_inset Quotes prd
+\end_inset
+
+ (ang.
+ 
+\emph on
+Directories
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+kontener 
+\begin_inset Quotes pld
+\end_inset
+
+Typy MIME
+\begin_inset Quotes prd
+\end_inset
+
+ (ang.
+ 
+\emph on
+MIMETypes
+\emph default
+) - opcjonalny.
+\end_layout
+
+\begin_layout Standard
+Po utworzeniu powyższych kontenerów, algorytm wczytuje w kolejności wszystkie
+ pliki multimedialne i przydziela je do odpowiednich kategorii.
+ W przypadku wczytywania folderu (wewnątrz którego jest wybrany do udostępniania
+ plik), tworzony jest kolejny kontener, który jest podkontenerem, dla biblioteki
+ 
+\begin_inset Quotes pld
+\end_inset
+
+Katalogi
+\begin_inset Quotes prd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Wczytanie pliku multimedialnego lub tworzenie konteneru, precyzyjnie określając,
+ jest stworzeniem obiektu 
+\emph on
+MediaItem 
+\emph default
+(jeden plik lub kontener, oznacza pojedyńczy obiekt 
+\emph on
+MediaItem
+\emph default
+).
+ Podtyp ten został opisany w kolejnym podrozdziale.
 \end_layout
 
 \begin_layout Subsubsection
@@ -7750,7 +8270,116 @@ Obiekt MediaItem
 \end_layout
 
 \begin_layout Standard
-Metadane dotyczące plików są pobierane przy wykorzystaniu różnych narzędzi.
+Klasa 
+\emph on
+MediaItem
+\emph default
+ przechowuje informacje o pojedyńczym obiekcie schematu UPnP.
+ Wyróżniamy tu takie typy jak:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+container - 
+\emph default
+kontener,
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+VideoItem - 
+\emph default
+obiekt wideo,
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+MusicItem - 
+\emph default
+obiekt audio,
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+ImageItem
+\emph default
+ - obiekt graficzny.
+\end_layout
+
+\begin_layout Standard
+Pierwszy z nich, kontener, odzwierciedla w systemie plików, katalogi.
+ Pozostałe odzwierciedlają odpowiednie, dla swojego typu, pliki.
+\end_layout
+
+\begin_layout Standard
+Opisywany obiekt zawiera informacje niezbędne do jego wyszukania oraz do
+ odtworzenia przez odtwarzacz UPnP AV / DLNA.
+ Posiada takie informacje, jaK
+\end_layout
+
+\begin_layout Itemize
+numer identyfikacyjny obiektu,
+\end_layout
+
+\begin_layout Itemize
+nazwa (przyjazna dla użytkownika - nazwa pliku bez rozszerzenia),
+\end_layout
+
+\begin_layout Itemize
+typ MIME,
+\end_layout
+
+\begin_layout Itemize
+ścieżka do pliku,
+\end_layout
+
+\begin_layout Itemize
+adres URL do pliku (przy jego pomocy odtwarzacz odtwarza materiał),
+\end_layout
+
+\begin_layout Itemize
+nazwę hosta,
+\end_layout
+
+\begin_layout Itemize
+kontenery nadrzędne, 
+\begin_inset Quotes pld
+\end_inset
+
+rodziców
+\begin_inset Quotes prd
+\end_inset
+
+ (o ile istnieją),
+\end_layout
+
+\begin_layout Itemize
+kontenery podrzędne, 
+\begin_inset Quotes pld
+\end_inset
+
+dzieci
+\begin_inset Quotes prd
+\end_inset
+
+ (o ile istnieją),
+\end_layout
+
+\begin_layout Itemize
+miniatura (jeżeli obiekt nie jest kontenerem).
+\end_layout
+
+\begin_layout Standard
+Obiekt 
+\emph on
+MediaItem
+\emph default
+ tworzy dla odtwarzacza i przechowuje metadane dotyczące plików.
+ Są one pobierane przy wykorzystaniu różnych narzędzi.
  Najprostszym przypadkiem jest typ graficzny, dla którego wykorzystywana
  jest wbudowana klasa języka Python - 
 \emph on
@@ -7762,11 +8391,45 @@ i.
 \end_layout
 
 \begin_layout Standard
-Dla plik
+Długość oraz przepływność (ang.
+ 
+\emph on
+bitrate
+\emph default
+)
+\emph on
+ 
+\emph default
+dla plików audio jest pobierana przy pomocy zewnętrznej klasy 
+\emph on
+mutagen.mp3 
+\emph default
+lub 
+\emph on
+wave
+\emph default
+.
 \end_layout
 
 \begin_layout Standard
-Miniatury mogą być tworzone przy pomocy dwóch narzędzi: 
+Dla materiałów wideo aplikacja wykorzystuje dwa sposoby na uzyskanie pomocnych
+ dla siebie informacji.
+ Metadane wbudowane w określony kontener multimedialny, bądź też zewnętrzne
+ narzędzie 
+\emph on
+ffprobe, 
+\emph default
+który w prosty sposób dostarcza informacji o czasie trwania materiału, przepływn
+ości, rozdzielczości oraz ilości kanałów audio w ścieżce dźwiękowej.
+\end_layout
+
+\begin_layout Standard
+Ostatnim zadaniem klasy 
+\emph on
+MediaItem 
+\emph default
+jest tworzenie miniatur.
+ Mogą być tworzone przy pomocy dwóch narzędzi: 
 \emph on
 ffmpegthumbnailer
 \emph default
@@ -7776,7 +8439,37 @@ Image
 \emph default
  języka Python dla plików graficznych (klasa ta posiada specjalną metodę
  do tworzenia miniatur).
- 
+ W przypadku filmu wybierana jest klatka, która stanowi 33% długości materiału.
+ Pliki takie przechowywane są w katalogu domowym użytkownika (zarówno w
+ systemach rodziny Windows, jak i Linux), w ukrytym podkatalogach 
+\emph on
+
+\begin_inset Quotes pld
+\end_inset
+
+thumbnails/dlna
+\begin_inset Quotes prd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Aplikacja 
+\begin_inset Quotes pld
+\end_inset
+
+stara się
+\begin_inset Quotes prd
+\end_inset
+
+ tworzyć miniatury filmów oraz obrazów, na własne potrzeby, jak najrzadziej
+ to możliwe.
+ Jeżeli miniatura danego pliku istnieje w systemie operacyjnym, oprogramowanie
+ potrafi ją zlokalizować, ma prawa do jej odczytu oraz spełnia wymagania
+ co do rozmiaru i typu (rozmiar 120 x 120 pikseli, typ JPEG lub PNG), wówczas
+ do odtwarzacza przekazywana jest wersja miniatury utworzona przez system
+ (uprzednio jest kopiowana do katalogu miniatur programu).
 \end_layout
 
 \begin_layout Subsection
@@ -7784,7 +8477,324 @@ Modyfikacja frameworka UPnP Coherence
 \end_layout
 
 \begin_layout Standard
-ewqewq
+
+\emph on
+Coherence DLNA/UPNP Framework for Digital Living 
+\emph default
+dostarcza programiście zestaw narzędzi, które kompleksowo zapewniają tworzenie
+ komunikatów UPnP (DLNA).
+ Framework może działać zarówno jako klient, jak i serwer.
+ W niniejszej aplikacji wykorzystywana jest tylko część serwerowa zewnętrznego
+ oprogramowania.
+ Teoretycznie programista powinien ograniczyć się do stworzenia biblioteki
+ multimediów, wczytaniu jej do odpowiedniego obiektu serwera, a na końcu
+ uruchomieniu go z odpowiednimi parametrami wejściowymi.
+ Niestety w trakcie testów i implementacji serwera UPnP AV autor napotkał
+ na szereg problemów we współpracy serwera z różnymi urządzeniami.
+ Problemy rozpoczęły się na komunikacji z urządzeniami firm Samsung, LG.
+ O ile z odtwarzaczami drugiej firmy serwer współpracował na akceptowalnym
+ poziomie, o tyle z firmą Samsung nie współpracował w ogóle.
+\end_layout
+
+\begin_layout Standard
+Z tego powodu autor pracy zdecydował się zmodyfikować niektóre klasy framework'a
+, tak aby aplikacja działała z każdym dostepnym dla autora do testowania
+ urządzeniem.
+ Zezwala na to liberalna licencja, na której udostępniany jest program 
+\emph on
+Coherence
+\emph default
+, MIT 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-32"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Niektóre urządzenia (aplikacje) zostały zaprogramowane w sposób absurdalny
+ dla użytkownika.
+ To znaczy tak, aby współpracować tylko z urządzeniami tej samej firmy.
+ Jednym z nich są odtwarzacze firmy 
+\emph on
+Microsoft
+\emph default
+ (
+\emph on
+Microsoft Xbox 360, Windoes Media Player
+\emph default
+), które materiały wideo w jakości 
+\emph on
+HD Ready
+\emph default
+, tylko gdy serwerem również jest urządzenie firmy 
+\emph on
+Microsoft.
+
+\emph default
+ Z tego powodu oprogramowanie musi 
+\begin_inset Quotes pld
+\end_inset
+
+przedstawiać się
+\begin_inset Quotes prd
+\end_inset
+
+ jako serwer multimedialny 
+\emph on
+Windows Media Connect
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Ciekawym wątkiem jest format plików 
+\emph on
+Matroska, 
+\emph default
+w odtwarzaczach DLNA firmy Samsung.
+ Odtwarzacz wbudowany w urządzenie (który odtwarza materiały poprzez złącze
+ USB) potrafi odtworzyć opisywany kontener multimedialny.
+ Urządzenie posiada sprzętowy dekoder H.264, a odtwarzacz DLNA mimo wszystko
+ nie zgadza się na odtworzenie materiału.
+ Autor podejrzewa, że powodem może być brak licencji na odtwarzanie tego
+ typu plików lub zbyt dokładne podążanie za specyfikacją DLNA (lecz z drugiej
+ strony filmy AVI są odtwarzane).
+ W celu rozwiązania problemu autor zaprogramował serwer tak, aby dla niektórych
+ urządzeń pliki 
+\emph on
+MKV 
+\emph default
+były przedstawiane poprzez inny typ MIME - 
+\emph on
+video/x-msvideo
+\emph default
+.
+ W przypadku gdyby, jakiś odtwarzacz nie współpracował z typem MIME 
+\emph on
+video/x-msvideo
+\emph default
+ 
+\emph on
+(
+\emph default
+co w trakcie testów się nie zdarzyło), a użytkownik chciał zmienić ręcznie
+ typ MIME, zmiana ta jest możliwa poprzez edycję tekstowego pliku konfiguracyjne
+go w głównym katalogu aplikacji.
+\end_layout
+
+\begin_layout Standard
+Poza opisanymi w poprzednich akapitach zmianami (i zmianami opisanymi w
+ podrozdziale 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Język-DIDL-Lite"
+
+\end_inset
+
+) autor zmodyfikował metodę przeglądania (
+\emph on
+upnp_Browse
+\emph default
+) oraz metodę wyszukiwania (
+\emph on
+upnp_Search)
+\emph default
+, zgodnie z wymaganiami większości odtwarzaczy DLNA.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Język-DIDL-Lite"
+
+\end_inset
+
+Język DIDL-Lite
+\end_layout
+
+\begin_layout Standard
+DIDL-Lite (ang.
+ 
+\emph on
+Digital Item Declaration Language Lite
+\emph default
+) jest językiem, który dostarcza schemat opisu urządzeń UPnP AV oraz DLNA.
+ Jest to język oparty na schemacie dokumentu XML.
+ W przypadku, gdy druga strona komunikacji nie umie zinterpretować części
+ dokumentu powinna go ignorować, jednakże zazwyczaj odtwarzacze w urządzeniach
+ znanych marek, nie odnajdują serwera, aby uniknąć ewentualnych błędów.
+\end_layout
+
+\begin_layout Standard
+Bardzo ważnym elementem dokumentu w języku DIDL-Lite jest jego nagłówek.
+ Określa on, z jakimi schematami jest zgodny dany plik XML.
+ Przykładowy nagłówek DIDL-Lite został przedstawiony na rysunku 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Przykładowy-nagłówek-dokumentu"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Przykładowy-nagłówek-dokumentu"
+
+\end_inset
+
+Przykładowy nagłówek dokumentu w języku DIDL-Lite
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename didlite_header.png
+	display false
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+W wypadku urządzeń firmy Samsung, wymaganym nagłówkiem, dzięki któremu urządzeni
+e zostanie wyświetlone na liście serwerów odnalezionych jest:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+xmlns:sec="http://www.sec.co.kr/"
+\end_layout
+
+\begin_layout Standard
+Informacja ta została uzyskana na podstawie podsłuchiwania pakietów TCP
+ (wykorzystując narzędzie 
+\emph on
+tcpdump 
+\emph default
+lub 
+\emph on
+Wireshark
+\emph default
+) wymienianych między serwerem DLNA firmy Samsung (aplikacja 
+\emph on
+AllShare
+\emph default
+), a odtwarzaczem DLNA tej samej firmy (również aplikacja 
+\emph on
+AllShare
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+Ponadto autor na potrzeby obsługi urządzeń DLNA zaimplementował tagi zdefiniowan
+e przez konsorcjum DLNA w specyfikacji.
+ Część z parametrów była już zaimplementowana w pierwotnej wersji framework'a,
+ jednakże dla wyjaśnienia ich znaczenia, na poniższej liście zostaną przedstawio
+ne wszystkie dostępne w dołączonym do pracy oprogramowaniu:
+\end_layout
+
+\begin_layout Itemize
+DLNA.ORG_PN - format multimediów zgodny z DLNA (niestety niezgodne z typami
+ MIME, tak jak w UPnP AV),
+\end_layout
+
+\begin_layout Itemize
+DLNA.ORG_OP - wartość '0' lub '1' - definiuje czy serwer obsługuje zaawansowane
+ operacje przesyłania (np.
+ przewijanie),
+\end_layout
+
+\begin_layout Itemize
+DLNA.ORG_PS - wartość dziesiętna - możliwe tempo odtwarzania materiału,
+\end_layout
+
+\begin_layout Itemize
+DLNA.ORG_CI - wartość '0' lub '1' - definiuje czy materiał jest transkodowany,
+\end_layout
+
+\begin_layout Itemize
+DLNA.ORG_FLAGS - dodatkowy ciąg 33 bitowych znaków określające dodatkowe
+ parametry serwera oraz opisywanego pliku.
+\end_layout
+
+\begin_layout Standard
+Przykładowymi formaty multimediów w konwencji DLNA są: MP3 (typ MIME - audio/mpe
+g), WMABASE (typ MIME - audio/ms-wma), JPEG_LRG / JPEG_MED (typ MIME - image/jpe
+g), PNG_LRG / PNG_MED (typ MIME - image/png), MPEG_TS_PAL / MPEG_TS_NTSC
+ (video/mpeg).
+\end_layout
+
+\begin_layout Standard
+Plik 
+\emph on
+DIDL-Lite
+\emph default
+ musi być dla wielu urządzeń specjalnie sformatowany z dokładnie sprecyzowaną
+ ilością parametrów.
+ Parametry nadmiarowe często powodują, że urządzenie uznaje serwer UPnP
+ AV / DLNA za niewłaściwy i nie umożliwia przeglądania jego zawartości.
+ W pierwotnej wersji oprogramowania 
+\emph on
+Coherence
+\emph default
+ programiści przygotowali specjalnie parsowane dokumenty, dla konsol do
+ gier, takich jak 
+\emph on
+Microsoft Xbox 360
+\emph default
+ oraz 
+\emph on
+Sony Playstation 3
+\emph default
+.
+ Autor dodał wsparcie dla urządzeń firm 
+\emph on
+Samsung 
+\emph default
+(telewizory oraz urządzenia mobilne), 
+\emph on
+Philips 
+\emph default
+(telewizory), 
+\emph on
+LG 
+\emph default
+(telewizory oraz odtwarzacze Blu-Ray) oraz dla oprogramowania UPnP AV/DLNA
+ dla komputerów stacjonarnych działających pod kontrolą systemów operacyjnych
+ Windows oraz Linux (środowisko graficzne Gnome).
 \end_layout
 
 \begin_layout Subsection
@@ -7792,15 +8802,453 @@ Klasa serwera RPC
 \end_layout
 
 \begin_layout Standard
-fewfew
-\end_layout
-
-\begin_layout Subsection
-Klasa obsługi zmiany parametrów
+Zewnętrzne oprogramowanie, dołączone do aplikacji, 
+\emph on
+Coherence DLNA/UPNP Framework for Digital Living
+\emph default
+, nie ma zaimplementowanej modyfikacji parametrów serwera poprzez interpretację
+ komunikatów UPnP.
+ Autor podjął decyzję o zaimplementowaniu oddzielnego serwera poleceń RPC,
+ umożliwiającego zmianę opcji poprzez modyfikację rekordów w bazie danych.
+ Było to zdaniem autora prostsze do stworzenia rozwiązanie.
 \end_layout
 
 \begin_layout Standard
-fwfew
+W tym wypadku została napisana klasa, która modyfikuje zmienne definiujące
+ opcje serwera oraz modyfikuje dane wewnątrz bazy danych 
+\emph on
+SQLite
+\emph default
+.
+ Serwer RPC umożliwia nie tylko zmianę parametrów, ale również pobieranie
+ ich wartości, na potrzeby opisywanego już wcześniej drugiego modułu oprogramowa
+nia, serwisu WWW.
+ Informowanie zainteresowanych klas o modyfikacji parametrów odbywa się
+ poprzez zaimplementowany zgodnie z wzorcem projektowym obserwatora.
+\end_layout
+
+\begin_layout Standard
+Parametry możliwe do zmiany zostały przedstawione we wcześniejszym podrozdziale
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Zarządzanie-aplikacją"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Budowa wewnętrzna modułu zarządzającego
+\end_layout
+
+\begin_layout Standard
+Moduł zarządzający jest to aplikacja internetowa, w postaci strony WWW.
+ Zapewnia on graficzny interfejs użytkownika, który umożliwia sprawdzenie
+ statusu serwer UPnP AV / DLNA oraz zmianę istotnych dla użytkownika parametrów.
+\end_layout
+
+\begin_layout Standard
+Aplikacja została napisana we frameworku 
+\emph on
+Django
+\emph default
+, w języku programowania 
+\emph on
+Python.
+
+\emph default
+ Większość zapytań obsługuje poprzez zapytania AJAX (ang.
+ 
+\emph on
+Asynchronous JavaScript and XML
+\emph default
+), dzięki czemu strona WWW nie musi być odświeżana przez użytkownika w celu
+ sprawdzenia stanu pozostałych modułów oprogramowania.
+\end_layout
+
+\begin_layout Standard
+Program napisany we framework'u 
+\emph on
+Django
+\emph default
+ jest zgodny z wzorcem projektowym 
+\emph on
+MVC
+\emph default
+ (Model - Widok - Kontroler, ang.
+ 
+\emph on
+Model - View - Controller
+\emph default
+).
+ Z tego powodu każda z części wzorca została opisana w kolejnych podrozdziałach.
+ Widok oraz kontroler w nomenklaturze 
+\emph on
+Django
+\emph default
+ nazywane są w sposób odwrotny od ogólnie przyjętego schematu, to jest w
+ pliku widoku (ang.
+
+\emph on
+ view
+\emph default
+) zdefiniowana jest obsługa (kontrola) strony, zaś folder szablonów (ang.
+ 
+\emph on
+templates)
+\emph default
+ jest widokiem wzorca MVC.
+\end_layout
+
+\begin_layout Subsection
+Model
+\end_layout
+
+\begin_layout Standard
+Model definiuje strukturę tabel bazy danych aplikacji.
+ Program posiada własną bazę danych (niezależną od bazy danych drugiego
+ modułu).
+ Baza danych, jak wszystkie tego typu struktury w zestawie aplikacji, jest
+ bazą 
+\emph on
+SQLite.
+ 
+\emph default
+Istnieją w niej cztery tabele, takie jak (podlista dla każdego elementu
+ to pola tabeli):
+\end_layout
+
+\begin_layout Enumerate
+Zawartość (ang.
+ 
+\emph on
+Content
+\emph default
+)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ID - numer identyfikacyjny,
+\end_layout
+
+\begin_layout Itemize
+Ścieżka (ang.
+ 
+\emph on
+path
+\emph default
+) - ścieżka przeszukiwania plików do dodania do biblioteki multimediów,
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Parametry (ang.
+ 
+\emph on
+DBContainer
+\emph default
+)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ID - numer identyfikacyjny,
+\end_layout
+
+\begin_layout Itemize
+adres IP,
+\end_layout
+
+\begin_layout Itemize
+port,
+\end_layout
+
+\begin_layout Itemize
+nazwa,
+\end_layout
+
+\begin_layout Itemize
+UUID - identyfikator serwer UPnP AV,
+\end_layout
+
+\begin_layout Itemize
+Utworzony - wartość bool'owska definiująca, czy UUID jest utworzony,
+\end_layout
+
+\begin_layout Itemize
+id sesji - identyfikator sesji WWW,
+\end_layout
+
+\begin_layout Itemize
+kontener MIME - wartość bool'owska określająca czy serwer UPnP AV tworzy
+ biblioteke multimedialną kontenerów MIME,
+\end_layout
+
+\begin_layout Itemize
+transkodowanie - włączenie lub wyłączenie transkodowania materiałów,
+\end_layout
+
+\begin_layout Itemize
+obserwacja zmiany folderów - definiuje czy każda zmiana zawartości folderu,
+ ma być automatycznie aktualizowana
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Adres serwera RPC (ang.
+ 
+\emph on
+DBAddress)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ID - numer identyfikacyjny,
+\end_layout
+
+\begin_layout Itemize
+adres IP,
+\end_layout
+
+\begin_layout Itemize
+port
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Status usługi (ang.
+ 
+\emph on
+ServiceStatus
+\emph default
+)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ID - numer identyfikacyjny,
+\end_layout
+
+\begin_layout Itemize
+nazwa,
+\end_layout
+
+\begin_layout Itemize
+stan - definiuje czy serwer podczas ostatniego sprawdzania był uruchomiony
+ czy nie.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+W powyższym schemacie, zwraca uwagę fakt zdublowania informacji o adresie
+ IP oraz porcie.
+ W tabeli 
+\begin_inset Quotes pld
+\end_inset
+
+Parametry
+\begin_inset Quotes prd
+\end_inset
+
+ adres ip oraz port są to informacje uzyskane na temat serwera UPnP, natomiast
+ druga tabela zawiera dane o adresie IP oraz porcie serwera RPC, umożliwiające
+ uzyskanie danych do tabeli 
+\begin_inset Quotes pld
+\end_inset
+
+Parametry
+\begin_inset Quotes prd
+\end_inset
+
+ oraz synchronizację ustawień między tabelą modułu zarządzającego 
+\begin_inset Quotes pld
+\end_inset
+
+Parametry
+\begin_inset Quotes prd
+\end_inset
+
+, a jej odpowiednikiem w drugim module.
+\end_layout
+
+\begin_layout Subsection
+Widok
+\end_layout
+
+\begin_layout Standard
+Rolę widoku w 
+\emph on
+Django 
+\emph default
+pełni katalog szablonów
+\emph on
+ templates.
+ 
+\emph default
+Udostępniane są w nim szablony stron internetowych napisanych w języku 
+\emph on
+HTML
+\emph default
+, 
+\emph on
+Javascript
+\emph default
+ (wraz z biblioteką 
+\emph on
+jQuery
+\emph default
+) oraz wbudowane, w framework, tagi, które umożliwiają wczytanie danych
+ w trakcie inicjalizacji (pobierania) strony.
+ Dane do wspomnianych tagów udostępniane są przez kontroler aplikacji.
+\end_layout
+
+\begin_layout Standard
+W opisywanej aplikacji oprócz skryptów 
+\emph on
+Javascript 
+\emph default
+oraz stron internetowych, dołączone są pliki kaskadowych arkuszów stylów
+ 
+\emph on
+CSS 
+\emph default
+oraz elementy graficzne interfejsu użytkownika.
+\end_layout
+
+\begin_layout Subsection
+Kontroler
+\end_layout
+
+\begin_layout Standard
+Częścią aplikacji, która zwraca użytkownikowi stronę internetową oraz uzyskuje
+ do niej niezbędne dane (takie jak parametry serwera UPnP), jest kontroler.
+ W nazewnictwie przyjętym w 
+\emph on
+Django, 
+\emph default
+plik nazywa się widokiem (ang.
+ 
+\emph on
+views
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+Pierwsze zapytanie o plik główny jako jedynym nie jest zapytaniem wykonywanym
+ techniką asynchroniczną AJAX
+\emph on
+.
+ 
+\emph default
+Wczytywany jest tu plik szablonu statusu oraz dodawane są do niego dane
+ pobrane z tabeli 
+\begin_inset Quotes pld
+\end_inset
+
+Parametry
+\begin_inset Quotes prd
+\end_inset
+
+.
+ Dalsze informacje o zmianie statusu pobierane są poprzez cykliczne zapytania
+ do serwera, wykonywane w tle.
+ Wszystkie dane przesyłane w komunikatach AJAX są przesyłane w formacie
+ 
+\emph on
+JSON
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-39"
+
+\end_inset
+
+.
+ Pliki 
+\emph on
+JSON
+\emph default
+ tworzone są na dwa sposoby.
+ Pierwszym sposobem jest parsowanie słownika za pomocą bilioteki 
+\emph on
+simplejson
+\emph default
+, która tworzy ciąg znaków w pożądanym formacie.
+ Drugim sposobem jest tworzenie pliku za pomocą 
+\begin_inset Quotes pld
+\end_inset
+
+ręcznego
+\begin_inset Quotes prd
+\end_inset
+
+ wpisywania do ciągu znaków odpowiednio spreparowanych komunikatów.
+ Drugi sposób, pomimo, że prosty i prymitywny, w przypadkach, gdy aplikacja
+ przesyła krótkie komunikaty, takie jak widoczne na rysunku 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Status serwera UPnP w postaci 
+\emph on
+JSON
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+{ 
+\begin_inset Quotes pld
+\end_inset
+
+Status
+\begin_inset Quotes prd
+\end_inset
+
+ : 
+\begin_inset Quotes pld
+\end_inset
+
+Running
+\begin_inset Quotes prd
+\end_inset
+
+ }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+W kontrolerze następuje uruchomienie demona serwer multimediów.
+ Usługa jest uruchamiana w tle poprzez uruchomienie potoku zaimplementowanego
+ w klasie 
+\emph on
+subproocess
+\emph default
+ języka Python.
 \end_layout
 
 \begin_layout Chapter
@@ -7820,7 +9268,19 @@ fewfwe
 \end_layout
 
 \begin_layout Section
-Współpraca z odtwarzaczami w oprogramowaniu telewizorów
+Współpraca z odtwarzaczami DLNA
+\end_layout
+
+\begin_layout Standard
+telefony,
+\end_layout
+
+\begin_layout Standard
+telewizory
+\end_layout
+
+\begin_layout Standard
+Samsung, LG
 \end_layout
 
 \begin_layout Standard
@@ -7829,6 +9289,10 @@ fewfew
 
 \begin_layout Section
 Polecenia UPnP AV i DLNA w praktyce
+\end_layout
+
+\begin_layout Standard
+download
 \end_layout
 
 \begin_layout Section
@@ -8337,6 +9801,51 @@ key "key-35"
 \end_inset
 
 MPEG-4 ISO/IEC 14496-10
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-36"
+
+\end_inset
+
+SQLAlchemy http://www.sqlalchemy.org/
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-37"
+
+\end_inset
+
+ContentDirectory:1, Service Template Version 1.01, 2002, http://upnp.org/specs/av/
+UPnP-av-ContentDirectory-v1-Service.pdf
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-38"
+
+\end_inset
+
+AllShare
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-39"
+
+\end_inset
+
+JSON, http://www.json.org/
 \end_layout
 
 \end_body
