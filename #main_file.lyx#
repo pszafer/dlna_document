@@ -9327,14 +9327,11 @@ wspólnych
  Gdy w jakimkolwiek stopniu zachodzi interakcja między modułami wykonane
  zostało sprawdzenie czy reakcja (np.
  przeszukanie katalogów) jest poprawna.
- Za bezwzględnie konieczny, autor uznał, test w sytuacjach awaryjnych, gdy
- jeden z modułów nie odpowiada.
- Oprogramowanie w sytuacjach awaryjnych musi powiadomić użytkownika o zaistniały
-m błędzie lub samodzielnie spróbować rozwiązać problem.
- Druga sytuacja ma miejsce, tylko w jedną stronę, to znaczy moduł zarządzania
- może ponownie uruchamić (lub wysłać polecenie ponownego odczytu ustawień)
- moduł serwera multimedialnego (jeżeli ten nie obsługuje innych odtwarzaczy
- multimedialnych).
+ Za bezwzględnie konieczne 
+\end_layout
+
+\begin_layout Standard
+fewfwe
 \end_layout
 
 \begin_layout Section

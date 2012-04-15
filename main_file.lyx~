@@ -9190,6 +9190,14 @@ ręcznego
  wpisywania do ciągu znaków odpowiednio spreparowanych komunikatów.
  Drugi sposób, pomimo, że prosty i prymitywny, w przypadkach, gdy aplikacja
  przesyła krótkie komunikaty, takie jak widoczne na rysunku 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:statusUPNPJSON"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -9206,6 +9214,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:statusUPNPJSON"
+
+\end_inset
+
 Status serwera UPnP w postaci 
 \emph on
 JSON
@@ -9256,11 +9270,71 @@ Testy
 \end_layout
 
 \begin_layout Standard
-rerew
+Oprogramowania odtwarzaczy UPnP AV oraz DLNA są bardzo zróżnicowane względem
+ ilości udostępnianych funkcji.
+ Powstają dość duże rozbieżności w sposobie obsługi serwerów, nawet w cechach
+ wspólnych odtwarzaczy, czyli w sposobie wyszukiwania, przeglądania oraz
+ odtwarzania multimediów.
+ Z tego powodu serwer musi wiele urządzeń w różnoraki sposób obsługiwać,
+ to znaczy preparować odpowiedzi przygotowane dla danego typu oprogramowania.
+ W tym przypadku przez typ rozumiany jest producent, wytwórca aplikacji.
+ Z wcześniej przedstawionych powodów oprogramowanie serwera multimedialnego
+ UPnP AV musiało przejść szereg testów współpracy z różnymi urządzeniami.
+ Autor planował stworzyć jednolity sposób testowania aplikacji, lecz w większośc
+i przypadków nie było to możliwe.
+ Każdy z odtwarzaczy wymaga stworzenia własnej procedury wykonania poleceń
+ protokołu UPnP AV / DLNA (odtwarzanie, przewijanie, pokaz slajdów itp.).
 \end_layout
 
 \begin_layout Section
 Sposób testowania aplikacji
+\end_layout
+
+\begin_layout Standard
+Aplikacja została poddana kilkudziesięciu testom użytkowym oraz systemowym
+ (nie zostały zaprogramowane i wykonane testy jednostkowe wytworzonego oprogramo
+wania).
+ Autor stworzył procedury sprawdzania poprawności działania aplikacji dla
+ obu modułów aplikacji, serwera multimedialnego UPnP AV oraz serwera zarządzając
+ego.
+ W przypadku pierwszego modułu testom poddane zostały schematy działania
+ dla większości stosowanych (w praktyce) poleceń specyfikacji UPnP AV oraz
+ DLNA.
+ Z powodu zróżnicowania aplikacji na różnych urządzeniach (oraz programach)
+ odtwarzających multimedia, sprawdzanie zgodności modułu ze zleconymi zadaniami
+ zostało wykonane poprzez praktyczne wykonanie odtwarzania treści multimedialnyc
+h.
+\end_layout
+
+\begin_layout Standard
+W przypadku drugiego modułu, konieczne do wykonania testy, były prostsze
+ oraz mniej skomplikowane.
+ Konieczne było przetestowanie współpracy modułu z kilkoma (najpopularniejszymi)
+ przeglądarkami internetowymi oraz reakcja na wydawanie poleceń, takich
+ jak dodanie katalogu z multimediami czy zmiana ustawień.
+\end_layout
+
+\begin_layout Standard
+Ponadto autor wykonał kilka testów 
+\begin_inset Quotes pld
+\end_inset
+
+wspólnych
+\begin_inset Quotes prd
+\end_inset
+
+ dla obu modułów.
+ Gdy w jakimkolwiek stopniu zachodzi interakcja między modułami wykonane
+ zostało sprawdzenie czy reakcja (np.
+ przeszukanie katalogów) jest poprawna.
+ Za bezwzględnie konieczny, autor uznał, test w sytuacjach awaryjnych, gdy
+ jeden z modułów nie odpowiada.
+ Oprogramowanie w sytuacjach awaryjnych musi powiadomić użytkownika o zaistniały
+m błędzie lub samodzielnie spróbować rozwiązać problem.
+ Druga sytuacja ma miejsce, tylko w jedną stronę, to znaczy moduł zarządzania
+ może ponownie uruchamić (lub wysłać polecenie ponownego odczytu ustawień)
+ moduł serwera multimedialnego (jeżeli ten nie obsługuje innych odtwarzaczy
+ multimedialnych).
 \end_layout
 
 \begin_layout Standard
@@ -9293,6 +9367,14 @@ Polecenia UPnP AV i DLNA w praktyce
 
 \begin_layout Standard
 download
+\end_layout
+
+\begin_layout Standard
+browse
+\end_layout
+
+\begin_layout Standard
+search
 \end_layout
 
 \begin_layout Section
