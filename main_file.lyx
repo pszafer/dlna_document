@@ -9331,14 +9331,194 @@ wspólnych
  jeden z modułów nie odpowiada.
  Oprogramowanie w sytuacjach awaryjnych musi powiadomić użytkownika o zaistniały
 m błędzie lub samodzielnie spróbować rozwiązać problem.
- Druga sytuacja ma miejsce, tylko w jedną stronę, to znaczy moduł zarządzania
- może ponownie uruchamić (lub wysłać polecenie ponownego odczytu ustawień)
+ Druga sytuacja ma miejsce, tylko w jednym przypadku, to znaczy moduł zarządzani
+a może ponownie uruchamiać (lub wysłać polecenie ponownego odczytu ustawień)
  moduł serwera multimedialnego (jeżeli ten nie obsługuje innych odtwarzaczy
  multimedialnych).
 \end_layout
 
+\begin_layout Standard
+W sytuacji wykrycia błędnej współpracy na linii serwer i odtwarzacz multimedialn
+y, po wprowadzeniu niezbędnych poprawek, testy dla wszystkich urządzeń były
+ wykonywane ponownie.
+ Zmiana sposobu działania serwera (np.
+ modyfikacja jednego z nagłówków odpowiedzi) umożliwiała współpracę z jednym
+ odtwarzaczem, natomiast mogła utrudniać działania innych.
+\end_layout
+
+\begin_layout Section
+Polecenia UPnP AV i DLNA
+\end_layout
+
+\begin_layout Standard
+Do poprawnego przetestowania oprogramowania stworzonego na potrzeby niniejszej
+ pracy magisterskiej konieczne było zapoznanie się z poleceniami protokołami
+ UPnP AV / DLNA oraz sposobu w jaki oprogramowanie DLNA ów polecenia wykonuje.
+\end_layout
+
+\begin_layout Standard
+Jedną z newralgicznych operacji jest przeglądanie zawartości serwera multimedial
+nego.
+ Usługa 
+\emph on
+Content Directory
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-37"
+
+\end_inset
+
+ umożliwia klientom przeglądanie zawartości oraz opisuje sposób w jaki mogą
+ ją odczytać.
+ Usługa musi odpowiadać na kilka poleceń wysyłanych przez klienta.
+ Są to takie właściwości jak: sposób przeszukiwania (polecenie 
+\emph on
+GetSearchCapabilities
+\emph default
+), sposób sortowania (polecenie 
+\emph on
+GetSortCapabilities
+\emph default
+), numer identyfikacyjny systemu (
+\emph on
+GetSystemUpdateID
+\emph default
+), przeglądanie (polecenie 
+\emph on
+Browse
+\emph default
+).
+ Istnieje kilka poleceń opcjonalnych (według specyfikacji UPnP AV oraz DLNA),
+ jednakże jedno z poleceń (polecenie przeszukiwania 
+\emph on
+Search
+\emph default
+) musi być udostępniane, gdyż niektóre z odtwarzaczy bez tego rodzaju usługi,
+ nie wykrywają wówczas serwera w sposób poprawny.
+\end_layout
+
 \begin_layout Section
 Współpraca z odtwarzaczami DLNA
+\end_layout
+
+\begin_layout Standard
+Specyfikacja DLNA określa dwa typy odtwarzaczy DLNA:
+\end_layout
+
+\begin_layout Itemize
+odtwarzacze (stacjonarne),
+\end_layout
+
+\begin_layout Itemize
+odtwarzacze mobilne.
+\end_layout
+
+\begin_layout Standard
+Autor, na potrzeby sprawdzenia odtwarzania materiałów z serwera multimedialnego,
+ stworzył następujący podział opisywanego oprogramowania do testowania:
+\end_layout
+
+\begin_layout Itemize
+oprogramowanie dla komputerów klasy PC,
+\end_layout
+
+\begin_layout Itemize
+oprogramowanie w szeroko opojętym sprzęcie 
+\begin_inset Quotes pld
+\end_inset
+
+telewizyjnym
+\begin_inset Quotes prd
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Itemize
+oprogramowanie mobilne.
+\end_layout
+
+\begin_layout Standard
+Powyższy podział powstał w sposób, który można nazwać naturalnym.
+ Aplikacja, która współpracowała ze sprzętem telewizyjnym, we wczesnych
+ fazach, nie działała poprawnie na pozostałych klasach.
+ Sprzętem, na którym autor sprawdzał poprawność aplikacji, w początkowym
+ etapie prac, były:
+\end_layout
+
+\begin_layout Itemize
+telewizor marki Samsung,
+\end_layout
+
+\begin_layout Itemize
+telewizor marki Phillips,
+\end_layout
+
+\begin_layout Itemize
+odtwarzacz Blu-ray marki LG,
+\end_layout
+
+\begin_layout Itemize
+smartfon Samsung Galaxy S2 (system operacyjny Android, oprogramowanie AllShare),
+\end_layout
+
+\begin_layout Itemize
+smartfon Samsung Galaxy S (system operacyjny Android, oprogramowanie AllShare),
+\end_layout
+
+\begin_layout Itemize
+smartfon Sony Ericsson (system operacyjny Android, oprogramowanie inne).
+\end_layout
+
+\begin_layout Standard
+Najnowsze telewizory marki Samsung z oprogramowaniem 
+\emph on
+SMART HUB
+\emph default
+ posiadają oprogramowanie AllShare.
+ Oprogramowanie o tej samej nazwie jest również dostępne dla komputerów
+ PC z systemem operacyjnym Microsoft Windows oraz dla smartfonów z systemem
+ operacyjny Android.
+ Oprogramowanie, mimo tej samej nazwy, działa na każdym z urządzeń w inny
+ sposób.
+ Dokładne porównanie funkcji programów firmy Samsung znajduje się w rozdziale
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Przegląd-oprogramowania-UPnP"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Poza opisanymi powyżej urządzeniami przetestowane zostały pojedyńcze modele
+ (dzięki udostępnieniu sprzętu przez jeden ze znanych marketów elektronicznych)
+ telewizorów firm, takich jak Sony Bravia, Phillips oraz LG Smart TV.
+\end_layout
+
+\begin_layout Standard
+Zadaniami, które na każdym z urządzeń były interpretowane w inny sposób,
+ były:
+\end_layout
+
+\begin_layout Itemize
+przeglądanie zawartości folderów,
+\end_layout
+
+\begin_layout Itemize
+odtwarzanie różnych kontenerów multimedialnych - filmów,
+\end_layout
+
+\begin_layout Itemize
+odtwarzanie napisów,
+\end_layout
+
+\begin_layout Itemize
+przewijanie filmów.
 \end_layout
 
 \begin_layout Standard
@@ -9357,16 +9537,8 @@ Samsung, LG
 fewfew
 \end_layout
 
-\begin_layout Section
-Polecenia UPnP AV i DLNA w praktyce
-\end_layout
-
 \begin_layout Standard
-download
-\end_layout
-
-\begin_layout Standard
-browse
+downlobrowse
 \end_layout
 
 \begin_layout Standard
@@ -9383,6 +9555,16 @@ Wyniki testów
 
 \begin_layout Chapter
 Przegląd oprogramowania UPnP AV i DLNA
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Przegląd-oprogramowania-UPnP"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -9407,6 +9589,14 @@ Porównanie oprogramowania odtwarzaczy DLNA i UPnP AV
 
 \begin_layout Standard
 dqwdwq
+\end_layout
+
+\begin_layout Standard
+AllShare
+\end_layout
+
+\begin_layout Standard
+jakie id
 \end_layout
 
 \begin_layout Subsection
