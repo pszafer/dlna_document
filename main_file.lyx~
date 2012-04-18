@@ -9346,10 +9346,6 @@ y, po wprowadzeniu niezbędnych poprawek, testy dla wszystkich urządzeń były
  odtwarzaczem, natomiast mogła utrudniać działania innych.
 \end_layout
 
-\begin_layout Section
-Współpraca z odtwarzaczami DLNA
-\end_layout
-
 \begin_layout Standard
 Specyfikacja DLNA określa dwa typy odtwarzaczy DLNA:
 \end_layout
@@ -9448,8 +9444,15 @@ Poza opisanymi powyżej urządzeniami przetestowane zostały pojedyńcze modele
 \end_layout
 
 \begin_layout Standard
-Zadaniami, które na każdym z urządzeń były interpretowane w inny sposób,
- były:
+W kolejnych podrozdziałach zostały przedstawione jedynie testy, które zostały
+ dokładnie udokumentowane, tj.
+ telewizora Samsung, odtwarzacz Blu-ray LG oraz telefonu Samsung Galaxy
+ S2.
+\end_layout
+
+\begin_layout Standard
+Zadaniami, (które na każdym z urządzeń były interpretowane w inny sposób),
+ koniecznymi do bardzo dokładnego przetestowania były:
 \end_layout
 
 \begin_layout Itemize
@@ -9469,31 +9472,122 @@ przewijanie filmów.
 \end_layout
 
 \begin_layout Standard
-telefony,
+Serwer w trakcie testów miał już wcześniej zdefiniowane źródła odtwarzanych
+ materiałów oraz udostępniał następujące pliki:
+\end_layout
+
+\begin_layout Itemize
+pliki filmowe - avi, mkv, mp4,
+\end_layout
+
+\begin_layout Itemize
+pliki audio - wav, mp3,
+\end_layout
+
+\begin_layout Itemize
+pliki graficzne - jpg, png, miniatury filmów oraz zdjęć.
+\end_layout
+
+\begin_layout Subsection
+Test wyszukiwania urządzenia
 \end_layout
 
 \begin_layout Standard
-telewizory
+Pierwszym elementem, który umożliwia współpracę urządzenia audio-wideo w
+ protokołach UPnP AV oraz DLNA jest ich wyszukiwanie.
+ W trakcie tego testu sprawdzane jest czy każdy odtwarzacz wykrył serwer
+ multimedialny oraz wyświetlił jego prawidłową nazwę i miniaturę urządzenia.
+\end_layout
+
+\begin_layout Subsection
+Test przeglądania zawartości
 \end_layout
 
 \begin_layout Standard
-Samsung, LG
+Przed otwarciem materiału multimedialnego konieczne jest jego wyszukanie.
+ Odbywa się to poprzez przeglądanie zawartości udostępnianych treści przez
+ serwer multimedialny.
 \end_layout
 
 \begin_layout Standard
-fewfew
-\end_layout
-
-\begin_layout Section
-Polecenia UPnP AV i DLNA w praktyce
+Sprawdzenie poprawności opisywanej operacji odbywało się na urządzeniach
+ w kilku symulowanych sytuacjach.
+ Pierwsza z nich, to uruchomienie serwera oraz przeglądanie zawartości na
+ urządzeniu odtwarzającym.
+ W tym momencie sprawdzane jest czy odtwarzacz wyświetla obecność wszystkich
+ plików, które są współdzielone przez stworzone oprogramowanie.
+ Test obejmuje również kontrolę poprawnego wyświetlania miniatur i prawidłowe
+ wyświetlanie informacji o każdym pliku.
+ Szczególnie ważne dla muzyki i treści wideo jest prawidłowe odczytanie
+ długości materiału, gdyż istnienie tego parametru umożliwia w wielu urządzeniac
+h przewijanie odtwarzanego pliku (w przypadku jego braku przewijanie jest
+ zablokowane).
 \end_layout
 
 \begin_layout Standard
-downlobrowse
+Przeglądanie zawartości umożliwia sprawdzenie czy serwer poprawnie przypisuje
+ pliki do poszczególnych typów MIME oraz do typów odtwarzanych materiałów.
+\end_layout
+
+\begin_layout Subsection
+Test odtwarzania zdjęć
 \end_layout
 
 \begin_layout Standard
-search
+Sprawdzenie odtwarzania
+\end_layout
+
+\begin_layout Subsection
+Polecenia UPnP AV i DLNA
+\end_layout
+
+\begin_layout Standard
+Do poprawnego przetestowania oprogramowania stworzonego na potrzeby niniejszej
+ pracy magisterskiej konieczne było zapoznanie się z poleceniami protokołami
+ UPnP AV / DLNA oraz sposobu w jaki oprogramowanie DLNA ów polecenia wykonuje.
+\end_layout
+
+\begin_layout Standard
+Jedną z newralgicznych operacji jest przeglądanie zawartości serwera multimedial
+nego.
+ Usługa 
+\emph on
+Content Directory
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-37"
+
+\end_inset
+
+ umożliwia klientom przeglądanie zawartości oraz opisuje sposób w jaki mogą
+ ją odczytać.
+ Usługa musi odpowiadać na kilka poleceń wysyłanych przez klienta.
+ Są to takie właściwości jak: sposób przeszukiwania (polecenie 
+\emph on
+GetSearchCapabilities
+\emph default
+), sposób sortowania (polecenie 
+\emph on
+GetSortCapabilities
+\emph default
+), numer identyfikacyjny systemu (
+\emph on
+GetSystemUpdateID
+\emph default
+), przeglądanie (polecenie 
+\emph on
+Browse
+\emph default
+).
+ Istnieje kilka poleceń opcjonalnych (według specyfikacji UPnP AV oraz DLNA),
+ jednakże jedno z poleceń (polecenie przeszukiwania 
+\emph on
+Search
+\emph default
+) musi być udostępniane, gdyż niektóre z odtwarzaczy bez tego rodzaju usługi,
+ nie wykrywają wówczas serwera w sposób poprawny.
 \end_layout
 
 \begin_layout Section
@@ -9502,6 +9596,101 @@ Napotkane problemy
 
 \begin_layout Section
 Wyniki testów
+\end_layout
+
+\begin_layout Standard
+Niniejszy podrozdział zawiera opisane wyniki poszczególnych testów.
+ Ich nazwy pozostałe takie same, jak we wcześniejszym opisie procedur testowania.
+\end_layout
+
+\begin_layout Subsection
+Test wyszukiwania urządzenia
+\end_layout
+
+\begin_layout Standard
+Po uruchomieniu napisanego oprogramowania, wysyła ono pakiety informujące
+ działające już odtwarzacze o swoim istnieniu.
+ Najnowsze oprogramowanie Samsung AllShare w wersji na każde urządzenie
+ momentalnie wyświetlało istnienie serwera.
+ W przypadku innych odtwarzaczy konieczne było wykorzystanie polecenia odświeżaj
+ącego zgormadzoną listę serwerów.
+ Wszystkie testowane urządzenia poprawnie wykryły serwer oraz prawidłowo
+ wyświetlały jego nazwę (również z wykorzystaniem polskich znaków).
+ Miniatura na urządzeniach innych niż mobilne, nie była wyświetlana w ogóle
+ (nie posiadają one funkcji wyświetlania miniatur).
+ Aby miniatura serwera, 
+\begin_inset Quotes pld
+\end_inset
+
+logo
+\begin_inset Quotes prd
+\end_inset
+
+, było poprawnie wyświetlane musi być w wymiarach 50 x 50 pikseli.
+\end_layout
+
+\begin_layout Standard
+Wszystkie przetestowane odtwarzacze, bez dodatkowych problemów, wyświetlały
+ szczegóły urządzenia, taką jak nazwę oprogramowania serwera (użytkownik
+ może nadać swoją nazwę dla serwera udostępniającego, jednakże nazwa serwer
+ 
+\series bold
+UPNP
+\series default
+ pozostaje bez zmian).
+ Zrzut ekranu z aplikacji mobilnej Samsung AllShare widoczny jest na rysunku
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Karta-Szczegóły-serwera"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Karta-Szczegóły-serwera"
+
+\end_inset
+
+Karta Szczegóły serwera DLNA w odtwarzaczu DLNA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename server_description.png
+	display false
+	height 20pheight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Test przeglądania zawartośc
 \end_layout
 
 \begin_layout Chapter
@@ -9544,6 +9733,14 @@ dqwdwq
 
 \begin_layout Standard
 AllShare
+\end_layout
+
+\begin_layout Standard
+rhytmbox plugin
+\end_layout
+
+\begin_layout Standard
+vlc
 \end_layout
 
 \begin_layout Standard
