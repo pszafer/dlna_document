@@ -11467,15 +11467,75 @@ MiniDLNA
 \end_layout
 
 \begin_layout Standard
-fwe
+Oprogramowanie MiniDLNA jest stworzony z myślą o platformie Linux, napisane
+ w języku C++, udostępniane na publicznej licencji GPL (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-40"
+
+\end_inset
+
+).
+ Zostało stworzone na potrzeby urządzenia 
+\emph on
+ReadyNAS
+\emph default
+ firmy 
+\emph on
+Netgear, 
+\emph default
+dzięki czemu ma bardzo małe wymaganie sprzętowe.
+ Jest bardzo popularnym serwerem multimediów, celem jego autora jest pełna
+ współpraca ze wszystkimi urządzeniami UPnP AV oraz DLNA.
+ MiniDLNA nie posiada dokumentacji technicznej, z tego powodu niemożliwe
+ jest podanie możliwych do udostępniania plików.
+ W trakcie testów, autor stwierdził, że wszystkie pliki muzyczne oraz obrazów
+ były poprawnie odtwarzane na używanym sprzęcie.
+ W przypadku filmów, na każdym z urządzeń poprawnie udostępniane były pliki
+ *.avi.
+ W przypadku innych rozszerzeń, takich jak *.mp4 oraz *.mkv, prezentacji treści
+ multimedialnych możliwa była tylko w przypadku oprogramowania dla komputerów
+ stacjonarnych.
+ Odtwarzacze w urządzeniach RTV oraz mobilne nie potrafiły odtworzyć zawartości.
+ MiniDLNA poprawnie przesyła napisy jedynie dla urządzeń firmy Samsung.
+ Muszą one być w formacie SubRIP.
+ W pozostałych urządzeniach autor nie potrafił odtworzyć filmu wraz z funkcją
+ wyświetlania napisów.
+ MiniDLNA konfigurowany jest poprzez modyfikację tekstowych plików modyfikacyjny
+ch, nie posiada dedykowanego interfejsu do obsługi.
+ Jest wbudowany w wiele dystrybucjach oprogramowania alternatywnego dla
+ sprzętu sieciowego, wówczas posiada interfejs strony internetowej stworzony
+ przez deweloperów.
 \end_layout
 
 \begin_layout Subsection
-WildShare
+Wild Media Server
 \end_layout
 
 \begin_layout Standard
-dqwd
+
+\emph on
+Wild Media Server 
+\emph default
+jest płatną aplikacją udostępniającą multimedia w sieci.
+ Użytkownik rozpoczyna udostępnianie multimediów od wyboru profilu urządzenia.
+ Program ma wiele wbudowanych profili np.
+ DLNA wersja 1.5, odtwarzacz blu-ray LG, telewizor LG, telewizor Samsung,
+ telewizor Phillips i wiele innych.
+ Użytkownik może stworzyć swój własny profil.
+ Program umożliwia transkodowanie zawartości oraz wbudowywanie napisów do
+ materiału w locie.
+ Pomimo dostępności tych opcji odtwarzacze, które autor wykorzystywał nie
+ potrafiły w prosty sposób wywołać transkodowania (operację tą udało się
+ wykonać, jednakże sposób był bardzo nieprzyjazny dla użytkownika i nie
+ zostanie tu opisany).
+ Pliki *.mkv, które sprawiają prawdopodobnie najwięcej problemów z odtworzeniem
+ są przedstawiane przez serwer jako pliki *.mpeg.
+ Jednakże nawet ten unik (autor w swoim oprogramowaniu zastosował podobny)
+ nie umożliwia odtwarzania materiałów na urządzeniach mobilnych.
+ Ponadto serwer udostępnia nieprawidłowe informacje o udostępnianych plikach
+ (błędny rozmiar oraz czas trwania materiału wideo), co może wpłynąć na
+ obsługę (lub jej brak) funkcji przewijania.
 \end_layout
 
 \begin_layout Subsection
@@ -11486,8 +11546,12 @@ PS3 Media Server
 weew
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
+Coherence Video
+\end_layout
 
+\begin_layout Standard
+dweew
 \end_layout
 
 \begin_layout Section
@@ -12046,6 +12110,18 @@ key "key-39"
 \end_inset
 
 JSON, http://www.json.org/
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "40"
+key "key-40"
+
+\end_inset
+
+Licencja GPL, http://www.gnu.org/licenses/gpl.html
 \end_layout
 
 \end_body
