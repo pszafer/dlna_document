@@ -8649,10 +8649,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
@@ -9207,10 +9203,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
@@ -9735,6 +9727,10 @@ Napotkane problemy
 
 \begin_layout Standard
 mkv trik
+\end_layout
+
+\begin_layout Standard
+udostępnianie napisy - sec, attachments
 \end_layout
 
 \begin_layout Section
@@ -11314,6 +11310,12 @@ reference "chap:Przegląd-oprogramowania-UPnP"
 .
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+wymyślić inaczej
+\end_layout
+
 \begin_layout Chapter
 Przegląd oprogramowania UPnP AV i DLNA
 \end_layout
@@ -11348,7 +11350,7 @@ ch, a następnie odtwarzaczy multimedialnych.
 \end_layout
 
 \begin_layout Section
-Porównanie oprogramowania serwerów UPnP AV i DLNA
+Przegląd oprogramowania serwerów UPnP AV i DLNA
 \end_layout
 
 \begin_layout Standard
@@ -11564,47 +11566,213 @@ ie transkodował materiał do innego obsługiwanego, zarówno przez odtwarzacz,
 \end_layout
 
 \begin_layout Subsection
-Coherence Video
+Coherence
 \end_layout
 
 \begin_layout Standard
-dweew
+
+\emph on
+Coherence 
+\emph default
+jest framework'iem do działania w sieci UPnP AV i DLNA, lecz może być również
+ oddzielnym programem (przy wykorzystaniu wtyczek) udostępniającym multimedia.
+ Pożądane parametry spełnia wtyczke 
+\emph on
+FSStore
+\emph default
+, która przeszukuje wyznaczone katalogi i udostępnia pliki multimedialne.
+ Umożliwia ona udostępnianie najpopularniejsze formaty obrazów, audio oraz
+ wideo.
+ 
+\emph on
+Coherence
+\emph default
+ w wersji 0.6.2 ma możliwość dołączania napisów, w przypadku gdy mają one
+ tą samą nazwę co plik wideo oraz posiadają rozszerzenie *.srt.
+ Do programu nie została napisana instrukcja obsługi, co w znacznym stopniu
+ utrudnia jego konfigurację.
+ Odbywa się ona poprzez stworzenie pliku tekstowego z odpowiednimi parametrami.
+\end_layout
+
+\begin_layout Standard
+dokończyć?
 \end_layout
 
 \begin_layout Section
-Porównanie oprogramowania odtwarzaczy DLNA i UPnP AV
+Przegląd oprogramowania odtwarzaczy DLNA i UPnP AV
 \end_layout
 
 \begin_layout Standard
-dqwdwq
+W sieci internetowej dostępnych jest bardzo wiele odtwarzaczy multimediów
+ w sieciach lokalnych, zgodnych ze standardem DLNA i/lub UPnP AV.
+ Odtwarzacze są zawarte jako programy w urządzeniach RTV, takich jak telewizory,
+ odtwarzacze DVD, odtwarzacze Blu-ray i inne.
+ Inną grupą odtwarzaczy są przeznaczone do instalacji w systemie operacyjnym.
+ Spośród tych większość jest przeznaczona dla systemu operacyjnego Microsoft
+ Windows, ewentualnie dla systemu MacOS X.
+ Na szczęście dla użytkowników systemów rodziny Linuks, społeczność wolnego
+ oprogramowania, jest na tyle rozwinięta, że i dla tych systemów nie jest
+ większym problemem odnalezienie programu obsługującego opisywane standardy.
+\end_layout
+
+\begin_layout Subsection
+Oprogramowanie dla komputerów klasy PC
 \end_layout
 
 \begin_layout Standard
-AllShare
+Odtwarzaczem DLNA, który autor może z całą pewnością polecić jest program
+ XBMC Media Center, który został stworzony jako alternatywny interfejs graficzny
+ konsoli Microsoft XBOX 360, a w chwili obecnej jest oprogramowaniem również
+ dla systemów operacyjnych Windows, MacOS X oraz Linux.
+ Jego interfejs jest bardzo przyjazny i starannie zaprojektowany, w taki
+ sposób aby można było nim sterować każdym urządzeniem wskazującym np.
+ pilotem telewizora.
+ Jedynym mankamentem jaki odnalazł autor w niniejszym programie jest brak
+ odtwarzania napisów w materiałach filmowych.
+ Odtwarzacz bardzo dobrze prezentuje obrazy, muzykę oraz filmy.
 \end_layout
 
 \begin_layout Standard
-rhytmbox plugin
+Dla systemu Windows warto wymienić odtwarzacze Windows Media Player oraz
+ Samsung AllShare, które potrafią wyszukać serwery DLNA lub UPnP AV i odtworzyć
+ ich zawartość.
+ W przypadku pierwszego niewątpliwą wadą jest brak obsługi napisów.
+ Pozytywnymi cechami drugiego z wymienionych programów jest bardzo duża
+ ilość materiałów możliwych do odtworzenia, obsługa napisów do filmów, niestety
+ w przypadku komputera, na którym był testowany (uproszczona specyfikacja:
+ procesor Intel Core 2 Duo 2.4 GHz, 8 GB Ram, dysk twardy 500 GB) obraz nie
+ był płynnie odtwarzany.
+ Zajmował przy tym około 80% procent zasobów procesora.
 \end_layout
 
 \begin_layout Standard
-vlc
+System operacyjny z rodziny Linux, kontrolowany za pomocą środowiska graficznego
+ Gnome, może mieć zainstalowane programy do odtwarzania muzyki, wideo, obrazów.
+ Po zainstalowaniu odpowiednich wtyczek do wyszukiwania muzyki w sieci lokalnej
+ można wykorzystywać programy Rhythmbox lub Banshee, zaś do materiałów wideo
+ program Totem.
+ Podobnego oprogramowania do pokazu slajdów z obrazów autor nie odnalazł.
+\end_layout
+
+\begin_layout Subsection
+Oprogramowanie w sprzęcie audio-wideo
 \end_layout
 
 \begin_layout Standard
-jakie id
-\end_layout
-
-\begin_layout Subsubsection
-Różnice działania odtwarzaczy różnych producentów
+W przypadku odtwarzaczy dla komputerów stacjonarnych użytkownik nie jest
+ zmuszony do używania jednego rodzaju programu i może odnaleźć taki, który
+ mu bardziej odpowiada.
+ Natomiast w sytuacji odtwarzania materiałów na telewizorze użytkownik jest
+ zobowiązany do wykorzystania programu, który dostarczył producent sprzętu.
+ Autor zdecydował się zamieścić w niniejszym podrozdziale również krótką
+ opinię na temat mobilnego odtwarzacza AllShare (dla smartfonów firmy Samsung),
+ z tego względu, iż oprogramowanie to jest preinstalowane przez producenta.
 \end_layout
 
 \begin_layout Standard
-ffwefe
+Telewizor firmy Samsung, model 
+\series bold
+fbowfbwibweo, 
+\series default
+posiada oprogramowanie Samsung AllShare.
+ Po włączeniu programu wyszukiwane są serwery multimediów.
+ Po wybraniu serwera multimediów na pierwszy rzut oka widoczna jest różnica,
+ pomiędzy innymi implementacjami tego typu odtwarzaczy.
+ Pozwala on na przeglądanie materiałów według trzech kategorii - Wideo,
+ Muzyka, Obrazy.
+ Widok ten nazywany jest widokiem prostym (ang.
+ 
+\emph on
+BasicView
+\emph default
+) i jeżeli serwer multimediów nie udostępnia takiego widoku lub zwraca go
+ błędnie, wówczas AllShare zgłasza błąd i uniemożliwia wyszukanie treści
+ multimedialnej.
+ Warto zwrócić uwagę, że odświeżanie automatyczne (które jest uwzględnione
+ w specyfikacjach UPnP AV oraz DLNA) nie działa w taki sposób jak powinno,
+ odtwarzacz nie potrafi przeglądać zawartości serwera bezpośrednio po jego
+ dołączeniu bez ówczesnego odświeżenia listy serwerów.
+ Testowany sprzęt posiada wbudowany sprzętowy dekoder H.264, a mimo to nie
+ potrafił odtworzyć zawartości kontenera multimedialnego Matroska (*.mkv).
+ W przypadku pliku *.mkv odtwarzanego z pamięci USB problem nie występował.
+ Jak zostało wcześniej wspomniane autor w swoim programie zastosował obejście
+ problemu, którym jest przedstawianie innego typu MIME dla tego rodzaju
+ plików, to jest takiego jak dla plików *.avi - 
+\begin_inset Quotes pld
+\end_inset
+
+video/avi
+\begin_inset Quotes prd
+\end_inset
+
+ lub 
+\begin_inset Quotes pld
+\end_inset
+
+video/ms-video
+\begin_inset Quotes prd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Oprogramowanie Samsung AllShare dla urządzeń mobilnych wyświetla zawartość
+ serwera poprzez przeglądanie katalogów (nie stosuje widoku prostego jak
+ telewizory).
+ Odświeżanie automatyczne listy serwerów zostało zaimplementowane poprawnie
+ i działa zgodnie z oczekiwaniami.
+ Program mobilny nie odtwarza poprawnie napisów do filmów (pobiera je, jednakże
+ bez zgłoszenia żadnego błędu nie odtwarza).
+ W filmach oraz obrazach, które były odtwarzane na urządzeniu występowały
+ problem z dostosowaniem obrazu do wielkości ekranu.
+ Podobnie jak w przypadku telewizorów konieczna jest zmiana typu MIME kontenera
+ wideo.
+\end_layout
+
+\begin_layout Standard
+LG akapit
 \end_layout
 
 \begin_layout Subsection
 Obsługa standardu
+\end_layout
+
+\begin_layout Standard
+Technologia DLNA została opracowana, aby umożliwić współdzielenie multimediów.
+ Jej poprzedniczką jest UPnP AV, którą można określić jako bardziej liberalną.
+ DLNA jest bardziej restrykcyjna, jednakże mimo bardziej ścisłego określenia
+ współpracy różnice w implementacjach oraz funkcjonalność odtwarzaczy są
+ dość znaczne.
+ Utrudnia to prace zarówno programistom serwerów multimedialnych, a co istotniej
+sze zwykłym użytkownikom, którzy w prosty sposób nie mogą prezentować na
+ każdym urządzeniu wszystkich rodzajów materiałów multimedialnych.
+\end_layout
+
+\begin_layout Standard
+Różnice można podzielić na według grup, które mogą być współdzielone.
+ W przypadku plików muzycznych, na podstawie przeprowadzonych badań, można
+ stwierdzić, że ich obsługa jest najbardziej zaawansowana.
+ Autor nie odnalazł żadnych negatywnych cech, które by utrudniały udostępniane
+ tego typu danych.
+ Można wyobrazić sobie sytuację, gdy użytkownik chce udostępnić audiobooka
+ lub materiał muzyczny z kilkoma ścieżkami dźwiękowymi, jednakże w chwili
+ obecnej funkcje te (zawarte w specyfikacji DLNA) nie są wykorzystywane,
+ zarówno na poziomie odtwarzaczy, jak i serwerów.
+\end_layout
+
+\begin_layout Standard
+Obrazy sprawiają wielu odtwarzaczom problem, gdy nie posiadają dostosowanej
+ rozdzielczości do ekranu urządzenia.
+ Odtwarzacz może źle dopasować plik graficzny do ekranu lub powiększyć go
+ w taki sposób, że obraz jest przycięty (nawet gdy nie jest to konieczne).
+ Problemy występują również w sposobie odtwarzania pokazu slajdów.
+ Niektóre z odtwarzaczy nie buforują kolejnego zdjęcia, co powoduje iż na
+ pliki graficzne większych rozmiarów użytkownik musi oczekiwać.
+\end_layout
+
+\begin_layout Standard
+Filmy akapit
 \end_layout
 
 \begin_layout Chapter*
