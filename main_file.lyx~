@@ -8649,10 +8649,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
@@ -9205,10 +9201,6 @@ reference "fig:statusUPNPJSON"
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -11774,13 +11766,51 @@ Obrazy sprawiają wielu odtwarzaczom problem, gdy nie posiadają dostosowanej
  rozdzielczości do ekranu urządzenia.
  Odtwarzacz może źle dopasować plik graficzny do ekranu lub powiększyć go
  w taki sposób, że obraz jest przycięty (nawet gdy nie jest to konieczne).
+ Spowodowane to jest z góry zdefiniowanymi przez DLNA profilami, które nie
+ uwzględniają niektórych rozdzielczości obrazów.
  Problemy występują również w sposobie odtwarzania pokazu slajdów.
- Niektóre z odtwarzaczy nie buforują kolejnego zdjęcia, co powoduje iż na
- pliki graficzne większych rozmiarów użytkownik musi oczekiwać.
+ Niektóre z odtwarzaczy nie buforują kolejnego zdjęcia, co powoduje iż pliki
+ graficzne większych rozmiarów są dłużej ładowane na urządzeniu (użytkownik
+ musi na nie oczekiwać).
 \end_layout
 
 \begin_layout Standard
-Filmy akapit
+Standard DLNA nie wymusza na producentach obsługi wszystkich rodzajów kodowania
+ materiałów wideo, obsługi napisów, obsługi wielu ścieżek dźwiękowych i
+ innych.
+ Niestety dla użytkowników, w specyfikacji zabrakło wielu w chwili obecnej
+ wręcz niezbędnych formatów.
+ Przykładami są, dla ścieżki dźwiękowej brak formatów DTS lub HD (to akapit
+ wcześniej!!!!).
+ Obsługiwane kontenery przez DLNA to MP4 oraz ASF.
+ Są to kontenery multimedialne bardzo rzadko spotykane, posiadające wiele
+ ograniczeń.
+ Bardzo odczuwalnym w erze filmów HD jest maknament konetenera MP4, który
+ przyjmuję rozdzielczość 720 x 576 pikseli jako maksymalną.
+ W takim przypadku o film w rozdzielczości full HD, zgodnie ze standardem,
+ nie może zostać przesłany.
+ Podobna sytuacja występuję w coraz powszechniejszych filmach 3D.
+ W standardzie pominięto bardzo popularne kontenery multimedialne, którymi
+ są MKV oraz AVI.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-41"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Z powyższych względów każdy z producentów tworzy własną wersję implementacyjną
+ odtwarzacza DLNA, odbiegającą od standardu, z myślą o użytkownikach.
+ Większość producentów nie tworzy oprogramowania serwerów multimedialnych
+ na komputery klasy PC.
+ Jeżeli jednak takie powstają, są one zgodne w pełni jedynie z urządzeniami
+ tegoż producenta.
+ Testy przedstawione w niniejszej pracy przeczą jednak teorii pełnej zgodności
+ (przykład aplikacji Samsung AllShare) serwera i odtwarzacza tej samej firmy.
 \end_layout
 
 \begin_layout Chapter*
@@ -12315,6 +12345,18 @@ key "key-40"
 \end_inset
 
 Licencja GPL, http://www.gnu.org/licenses/gpl.html
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "41"
+key "key-41"
+
+\end_inset
+
+http://www.digitalversus.com/tv-television/dlna-standard-real-mess-a971.html
 \end_layout
 
 \end_body
