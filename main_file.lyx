@@ -11755,10 +11755,21 @@ Różnice można podzielić na według grup, które mogą być współdzielone.
  stwierdzić, że ich obsługa jest najbardziej zaawansowana.
  Autor nie odnalazł żadnych negatywnych cech, które by utrudniały udostępniane
  tego typu danych.
+ Jako mankament, bardziej zauważalny w przypadku filmów, jest brak zagwarantowan
+ia w standardzie obsługi ścieżek dźwiękowych DTS oraz HD, które zapewniają
+ lepszą jakość dźwięku niż obsługiwane rodzaje ścieżek (np.
+ AC3 lub MP3).
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-41"
+
+\end_inset
+
  Można wyobrazić sobie sytuację, gdy użytkownik chce udostępnić audiobooka
  lub materiał muzyczny z kilkoma ścieżkami dźwiękowymi, jednakże w chwili
  obecnej funkcje te (zawarte w specyfikacji DLNA) nie są wykorzystywane,
  zarówno na poziomie odtwarzaczy, jak i serwerów.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -11772,6 +11783,17 @@ Obrazy sprawiają wielu odtwarzaczom problem, gdy nie posiadają dostosowanej
  Niektóre z odtwarzaczy nie buforują kolejnego zdjęcia, co powoduje iż pliki
  graficzne większych rozmiarów są dłużej ładowane na urządzeniu (użytkownik
  musi na nie oczekiwać).
+ Innym problemem w przypadku obrazów jest ograniczenie tylko do dwóch formatów
+ JPEG oraz PNG.
+ Każdy inny, powołując się na standard DLNA, nie musi być obsługiwany.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-41"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -11780,8 +11802,6 @@ Standard DLNA nie wymusza na producentach obsługi wszystkich rodzajów kodowani
  innych.
  Niestety dla użytkowników, w specyfikacji zabrakło wielu w chwili obecnej
  wręcz niezbędnych formatów.
- Przykładami są, dla ścieżki dźwiękowej brak formatów DTS lub HD (to akapit
- wcześniej!!!!).
  Obsługiwane kontenery przez DLNA to MP4 oraz ASF.
  Są to kontenery multimedialne bardzo rzadko spotykane, posiadające wiele
  ograniczeń.
