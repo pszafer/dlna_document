@@ -342,7 +342,7 @@ key "key-9"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -5095,7 +5095,7 @@ name "tab:Porównanie-formatów-AVI"
 
 \end_inset
 
-Porównanie formatów AVI i MKV
+Porównanie kontenerów AVI i MKV
 \end_layout
 
 \end_inset
@@ -5106,10 +5106,10 @@ Porównanie formatów AVI i MKV
 \begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="5">
-<features tabularvalignment="middle">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
-<column alignment="left" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <row>
@@ -5131,7 +5131,7 @@ Rozdziały
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5173,16 +5173,7 @@ AVI
 \begin_inset Text
 
 \begin_layout Plain Layout
-Tak
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Nie (poza standardem tak)
+TAK
 \end_layout
 
 \end_inset
@@ -5191,7 +5182,46 @@ Nie (poza standardem tak)
 \begin_inset Text
 
 \begin_layout Plain Layout
-MPEG-1, MPEG-2, WMV, RealVideo
+NIE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MPEG-1, MPEG-2,
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+WMV, RealVideo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -5200,7 +5230,37 @@ MPEG-1, MPEG-2, WMV, RealVideo
 \begin_inset Text
 
 \begin_layout Plain Layout
-MP3, WMA, AAC, AC-3, DTS, PCM
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP3, WMA, AAC, 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AC-3, DTS, PCM
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -5220,16 +5280,16 @@ MKV
 \begin_inset Text
 
 \begin_layout Plain Layout
-Tak
+TAK
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Tak
+TAK
 \end_layout
 
 \end_inset
@@ -5247,7 +5307,37 @@ MPEG-1, MPEG-2,
 \begin_inset Text
 
 \begin_layout Plain Layout
-MP3, WMA, AAC, AC-3, 
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP3, WMA,
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AAC, AC-3,
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
 \end_layout
 
 \end_inset
@@ -5258,6 +5348,15 @@ MP3, WMA, AAC, AC-3,
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+dopisać coś tu
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -5285,7 +5384,37 @@ MP3, WMA, AAC, AC-3,
 \begin_inset Text
 
 \begin_layout Plain Layout
-MPEG-4 AVC, WMV, RealVideo
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MPEG-4 AVC,
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+WMV, RealVideo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -5294,7 +5423,37 @@ MPEG-4 AVC, WMV, RealVideo
 \begin_inset Text
 
 \begin_layout Plain Layout
-DTS, PCM, RealAudio, Vorbis, APE, Flac, DTS-HD
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DTS, PCM, RealAudio,
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vorbis, APE, Flac, DTS-HD
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -9637,8 +9796,16 @@ dwie ścieżki audio: stereo oraz AC3,
 \end_layout
 
 \begin_layout Itemize
-plik widoe ....
- 3D,
+plik wideo w formacie 3D SBS (ang.
+ 
+\emph on
+3D Side by Side
+\series bold
+\emph default
+, 
+\series default
+co oznacza film, który ma 2 obrazy obok siebie, konieczne do zinterpretowania
+ przez odtwarzacz, celem odtworzenia go w wersji 3D),
 \end_layout
 
 \begin_layout Itemize
@@ -11574,9 +11741,13 @@ Coherence
 \emph on
 Coherence 
 \emph default
-jest framework'iem do działania w sieci UPnP AV i DLNA, lecz może być również
- oddzielnym programem (przy wykorzystaniu wtyczek) udostępniającym multimedia.
- Pożądane parametry spełnia wtyczke 
+jest framework'iem wykorzystywanym do działania w sieci UPnP AV i DLNA.
+ Funkcjonuje jako warstwa tworząca komunikaty UPnP.
+ Może być również uruchomiony jako samoodzielny program wykorzystujący wtyczki
+ do zdefiniowania celu działania.
+ Jedną z wtyczek jest udostępnianie multimediów w sieci lokalnej, zgodnie
+ z protokołem UPnP AV.
+ Pożądane parametry spełnia wtyczka o nazwie 
 \emph on
 FSStore
 \emph default
@@ -11592,10 +11763,21 @@ Coherence
  Do programu nie została napisana instrukcja obsługi, co w znacznym stopniu
  utrudnia jego konfigurację.
  Odbywa się ona poprzez stworzenie pliku tekstowego z odpowiednimi parametrami.
-\end_layout
-
-\begin_layout Standard
-dokończyć?
+ Autorowi udało się uruchomić jedynie starą wersję programu 
+\emph on
+Coherence
+\emph default
+.
+ Dostarczała ona podstawowe funkcje tzn.
+ wyszukiwała ona katalogi z multimediami, a następnie mapowała je dla odtwarzacz
+a.
+ Nie posiada funkcji przydzielania plików do kategorii zgodnych z typem
+ zawartości (np.
+ Muzyka) oraz nie posiada specjalnie przygotowanych profili, aby współpracować
+ z możliwie dużą ilością urządzeń.
+ Wyjątek stanowi specjalne reguły dla konsoli do gier Microsoft Xbox 360,
+ wobec którego autorzy wtyczki zrobili wyjątek i przygotowali specjalne
+ komunikaty celem udostępniania treści dla wymienionego produktu.
 \end_layout
 
 \begin_layout Section
@@ -11651,7 +11833,8 @@ System operacyjny z rodziny Linux, kontrolowany za pomocą środowiska graficzne
  Po zainstalowaniu odpowiednich wtyczek do wyszukiwania muzyki w sieci lokalnej
  można wykorzystywać programy Rhythmbox lub Banshee, zaś do materiałów wideo
  program Totem.
- Podobnego oprogramowania do pokazu slajdów z obrazów autor nie odnalazł.
+ Podobnego oprogramowania specjalizującego się w wyświetlaniu obrazów oraz
+ wyświetlającego pokaz slajdów z obrazów autor nie odnalazł.
 \end_layout
 
 \begin_layout Subsection
@@ -11670,9 +11853,9 @@ W przypadku odtwarzaczy dla komputerów stacjonarnych użytkownik nie jest
 \end_layout
 
 \begin_layout Standard
-Telewizor firmy Samsung, model 
+Telewizor firmy Samsung, model UE46D6750WS
 \series bold
-fbowfbwibweo, 
+, 
 \series default
 posiada oprogramowanie Samsung AllShare.
  Po włączeniu programu wyszukiwane są serwery multimediów.
@@ -11731,7 +11914,44 @@ Oprogramowanie Samsung AllShare dla urządzeń mobilnych wyświetla zawartość
 \end_layout
 
 \begin_layout Standard
-LG akapit
+Inna sytuacja występuję w przypadku odtwarza firmy LG.
+ Nie trzeba stosować żadnych sztuczek, aby odtworzył dowolny materiał.
+ W przypadku formatu kontenera Matroska wyświetla jedynie komunikat o możliwych
+ problemach z prezentacją filmu (autor jednak żadnych problemów w odtwarzaniu
+ nie odnalazł).
+ Odtwarzacz LG, dzięki temu komunikatowi odtwarza bardzo dużo formatów wideo
+ oraz audio.
+ Wadami oprogramowania, na które warto zwrócić uwagę to brak automatycznego
+ odświeżania listy serwerów oraz zawartości multimedialnej serwera.
+ Innymi mankamentami, które zostały wykryte to brak opisu obsługi napisów.
+ Oznacza to, że napisy mogą być odtwarzane (również przy pomocy zawartości
+ udostępnianej przez serwer multimedialny stworzony przez autora pracy),
+ jednakże z niewiadomych względów niekiedy odtwarzacz nie potrafi wczytać
+ napisów.
+ Jedną z sytuacji jest, gdy film posiada dwie wersje napisów (np.
+ napisy w dwóch językach, czyli dwa pliki z napisami).
+ 
+\end_layout
+
+\begin_layout Standard
+Pliki MKV w opisywanym urządzeniu firmy LG są odtwarzane, dzięki certyfikatowi
+ DivX HD, co powinno oznaczać pełne wsparcie dla rozdziałów, napisów oraz
+ wielu ścieżek audio.
+ Niestety wymagania certyfikatu nie zostały w pełni spełnione w odtwarzaniu
+ filmów poprzez DLNA.
+ Podobnie jak w wielu urządzeniach odtwarzacz Blu-ray nie potrafi poprawnie
+ skalować wyświetlanych obrazów.
+ Ma to jednak miejsce nie tylko w odtwarzaczu multimediów zgodnych z DLNA,
+ ale również w 
+\begin_inset Quotes pld
+\end_inset
+
+tradycyjnym
+\begin_inset Quotes prd
+\end_inset
+
+ odtwarzaczu, który wczytuje pliki graficzne z nośnika danych np.
+ pamięci USB lub płyty CD.
 \end_layout
 
 \begin_layout Subsection
