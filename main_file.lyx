@@ -222,6 +222,19 @@ Technologie udostępniania multimediów w sieciach, zarówno lokalnych, jak
  Co gorsza odtworzenie 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+wstęp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Part
 Opis technologii
 \end_layout
@@ -4427,11 +4440,12 @@ dc:language
 \end_layout
 
 \begin_layout Itemize
-dc:relation - ......?,
+dc:relation - dowiązania (powiązania) do innych utworów,
 \end_layout
 
 \begin_layout Itemize
-dc:rights - .........?
+dc:rights - informacje o prawach własności (m.in.
+ intelektualnej),
 \end_layout
 
 \begin_layout Standard
@@ -4511,7 +4525,8 @@ upnp:playlist
 \emph on
 upnp:storageMedium
 \emph default
- - rodzaj pamięci??,
+ - rodzaj pamięci (np.
+ płyta CD),
 \end_layout
 
 \begin_layout Itemize
@@ -4519,13 +4534,15 @@ upnp:storageMedium
 \emph on
 dc:contributor - 
 \emph default
-?????
+podmiot odpowiedzialny za zasób,
 \end_layout
 
 \begin_layout Itemize
 
 \emph on
-dc:date - data???????
+dc:date - 
+\emph default
+data związana z zasobem,
 \end_layout
 
 \begin_layout Standard
@@ -4540,39 +4557,43 @@ res
 \end_layout
 
 \begin_layout Itemize
-upnp:region 
+upnp:region - region związany z zasobem (np.
+ Europa, Ameryka),
 \end_layout
 
 \begin_layout Itemize
-upnp:radioCallSign 
+upnp:radioCallSign - nazwa radio,
 \end_layout
 
 \begin_layout Itemize
-upnp:radioStationID 
+upnp:radioStationID - identyfikator stacji (np.
+ częstotliwość nadawania),
 \end_layout
 
 \begin_layout Itemize
-upnp:radioBand 
+upnp:radioBand - pasmo nadawania (np.
+ AM, FM),
 \end_layout
 
 \begin_layout Itemize
-upnp:channelNr 
+upnp:channelNr - powiązania kanału z numerem stacji w odbiorniku,
 \end_layout
 
 \begin_layout Itemize
-upnp:signalStrength 
+upnp:signalStrength - siła sygnału , 
 \end_layout
 
 \begin_layout Itemize
-upnp:signalLocked 
+upnp:signalLocked - informacja czy częstotliwość odbioru została zablokowana
+ (możliwość odbioru jednego kanału),
 \end_layout
 
 \begin_layout Itemize
-upnp:tuned 
+upnp:tuned - informacja czy źródło jest odpowiednio ustawione,
 \end_layout
 
 \begin_layout Itemize
-upnp:recordable .??????????????????????????
+upnp:recordable - informacja czy materiał może być nagrywany.
 \end_layout
 
 \begin_layout Standard
@@ -4587,19 +4608,20 @@ res
 \end_layout
 
 \begin_layout Itemize
-upnp:storageMedium,
+upnp:storageMedium - rodzaj pamięci (np.
+ płyta CD),
 \end_layout
 
 \begin_layout Itemize
-upnp:producer,
+upnp:producer - wydawca,
 \end_layout
 
 \begin_layout Itemize
-dc:contributor, 
+dc:contributor - podmiot odpowiedzialny za zasób,
 \end_layout
 
 \begin_layout Itemize
-dc:date .????????
+dc:date - data związana z zasobem.
 \end_layout
 
 \begin_layout Subsection
@@ -4657,71 +4679,74 @@ res
 \end_layout
 
 \begin_layout Itemize
+upnp:genre - gatunek pliku wideo,
+\end_layout
+
+\begin_layout Itemize
+upnp:genre@id - identyfikator gatunku, zgodny ze schematem definiującym
+ możliwe gatunki wykorzystywane w 
+\emph on
 upnp:genre,
 \end_layout
 
 \begin_layout Itemize
-upnp:genre@id,
+upnp:genre@extended - dodatkowe informacje o gatunku wideo,
 \end_layout
 
 \begin_layout Itemize
-upnp:genre@type,
+upnp:longDescription - długi opis,
 \end_layout
 
 \begin_layout Itemize
-upnp:longDescription,
+upnp:producer - producent
 \end_layout
 
 \begin_layout Itemize
-upnp:producer,
+upnp:rating - ocena,
 \end_layout
 
 \begin_layout Itemize
-upnp:rating,
+upnp:actor - obsada aktorów,
 \end_layout
 
 \begin_layout Itemize
-upnp:actor,
+upnp:director - reżyser,
 \end_layout
 
 \begin_layout Itemize
-upnp:director,
+dc:description - opis,
 \end_layout
 
 \begin_layout Itemize
-dc:description,
+dc:publisher - wydawca,
 \end_layout
 
 \begin_layout Itemize
-dc:publisher,
+dc:language - język wideo,
 \end_layout
 
 \begin_layout Itemize
-dc:language,
+dc:relation - adres URL z powiązanymi materiałami,
 \end_layout
 
 \begin_layout Itemize
-dc:relation,
+upnp:playbackCount - ilość odtworzeń materiału,
 \end_layout
 
 \begin_layout Itemize
-upnp:playbackCount,
+upnp:lastPlaybackTime - data ostatniego odtwarzania,
 \end_layout
 
 \begin_layout Itemize
-upnp:lastPlaybackTime,
+upnp:lastPlaybackPosition - ostatnia pozycja odtwarzania,
 \end_layout
 
 \begin_layout Itemize
-upnp:lastPlaybackPosition,
+upnp:recordedDayOfWeek - dzień tygodnia, w którym nagranie zostało wykonane,
 \end_layout
 
 \begin_layout Itemize
-upnp:recordedDayOfWeek,
-\end_layout
-
-\begin_layout Itemize
-upnp:srsRecordScheduleID.?????????
+upnp:srsRecordScheduleID - identyfikator nagrania w harmonogramie nagrań.
 \end_layout
 
 \begin_layout Standard
@@ -4906,12 +4931,25 @@ Najpopularniejszym formatem audio dla przechowywania muzyki wśród końcowych
 MPEG-1/MPEG-2 Audio Layer 3
 \emph default
 ).
- Jest standardem RFC....
+ Jest standardem zdefiniowanym przez organizację IETF (ang.
+ 
+\emph on
+Internet Engineering Task Force
+\emph default
+) w dokumencie RFC 5219 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-43"
+
+\end_inset
+
+.
  W swojej pierwotnej, a zarazem najpopularniejszej wersji pozwala na zapis
  muzyki w postaci dźwięku jednokanałowego (mono) lub dwukanałowego (stereo)
  i oferuje najwyższy stopień kompresji, przy zachowaniu dobrej jakości dźwięku.
  W przypadku ścieżek dźwiękowych do filmów czętsze zastosowanie ma standard
- AC3 [wikipedia]
+ AC3 lub DTS (standard DLNA zapewnia wsparcie jedynie dla dźwięku AC3).
+ Górują one nad MP3 możliwością przechowywania dźwięku przestrzennego.
 \end_layout
 
 \begin_layout Standard
@@ -4925,7 +4963,367 @@ Muzyka
 \end_layout
 
 \begin_layout Standard
+Muzyke w kontekście udostępniania UpNP AV oraz DLNA można rozumieć jako
+ pliki audio zawierające utwory muzyczne lub ścieżki dźwiękowe.
+ Ilość formatów kompresji danych audio jest bardzo wiele.
+ Niektóre służą do przesyłania głosu (np.
+ format GSM), jednak te dla udostępniania treści nie są istotne.
+ Najpopularniejszymi formatami audio, bez względu czy jest to utwór muzyczny
+ czy ścieżka dźwiękowa, są:
+\end_layout
+
+\begin_layout Itemize
+AAC (ang.
+ 
+\emph on
+Advanced Audio Coding
+\emph default
+) oraz AAC+,
+\end_layout
+
+\begin_layout Itemize
+AC3 (pełna nazwa - 
+\emph on
+Dolby Digital Audio Compression-3
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+FLAC (ang.
+ 
+\emph on
+Free Lossless Audio Codec
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+MP2 (ang.
+ 
+\emph on
+MPEG-1 Audio Layer-2)
+\emph default
+,
+\end_layout
+
+\begin_layout Itemize
+MP3 (ang.
+ 
+\emph on
+MPEG Audio Layer-
+\emph default
+3),
+\end_layout
+
+\begin_layout Itemize
+RealAudio,
+\end_layout
+
+\begin_layout Itemize
+WAV (ang.
+ 
+\emph on
+Waveform Audio File Format
+\emph default
+),
+\end_layout
+
+\begin_layout Itemize
+WMA (ang.
+ 
+\emph on
+Windows Media Audio).
+\end_layout
+
+\begin_layout Subsection
 Obrazy
+\end_layout
+
+\begin_layout Standard
+Pośród plików graficznych istnieje podział na pliki grafiki rastrowej oraz
+ pliki grafiki wektorowej.
+ Na potrzeby tworzenia zdjęć wykorzystywany jest pierwszy z wymienionych
+ typów.
+ Typy te posiadają, kolejny podział.
+ Pełne zobrazowanie ów podziału jest widoczne w tabeli 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Podział-formatów-plików"
+
+\end_inset
+
+.
+ Jak już zostało wcześniej wspomniane ilość wymaganych formatów do obsługi
+ w specyfikacji DLNA jest mały (w porównaniu z ilością przykładowych formatów
+ plików graficznych wymienionych w tabeli).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Podział-formatów-plików"
+
+\end_inset
+
+Podział formatów plików graficznych (wiki)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Format
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Podział
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Przykłady plików graficznych
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Grafika rastrowa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+używające kompresji stratnej
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+używające kompresji bezstratnej
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bez kompresji
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+JBIG, JBIG2, JNG, JPEG, JPEG LS, JPEG 2000, JPEG XR, DjVu, TIFF, WebP, WMF
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+APNG, BMP, GIF, LWF, MNG, PCX, PNG, TGA, TIFF, WMF
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+BMP, DNG, PNM, PSD, RAW, TGA, TIFF, WBMP, WMF, XCF, XPM
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Grafika wektorowa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nie dotyczy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Al, CDR, EPS, DXF, DWF, DWG, SVG, SWF, WMF
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pliki graficzne zawierające zdjęcia, najczęściej przechowywane są w formacie
+ JPEG, ewentualnie PNG.
+ Pierwszy z nich przeznaczony jest do zapisów obrazów naturalnych, w którym
+ nie ma konieczności dokładnego odwzorowania ostrych krawędzi oraz uwydatniania
+ szczegółów.JPEG jest standardem organizacji ISO o nazwie ISO/IEC IS 10918-1
+ oraz ITU-T Recommendation T.81 (standard dwuczęściowy).
+ Drugi z nich, format PNG (ang.
+ 
+\emph on
+Portable Network Graphics
+\emph default
+), został stworzony do wykorzystywania w sieci Internet, jako pliki graficzne
+ stron www.
+ Znalazł jednakże zastosowanie w fotografii, dzięki możliwości zapisu w
+ formacie kompresji bezstratnej.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-44"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -4933,7 +5331,7 @@ Filmy
 \end_layout
 
 \begin_layout Standard
-Film można rozumieć zgodnie z następującym schematem:
+Film można podzielić zgodnie z następującym schematem:
 \end_layout
 
 \begin_layout Itemize
@@ -5105,7 +5503,7 @@ Porównanie kontenerów AVI i MKV
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="5">
+<lyxtabular version="3" rows="3" columns="5">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -5267,16 +5665,16 @@ AC-3, DTS, PCM
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-MKV
+MKV*
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5285,7 +5683,7 @@ TAK
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5294,100 +5692,36 @@ TAK
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-MPEG-1, MPEG-2, 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="1">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0pt">
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-MP3, WMA,
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-AAC, AC-3,
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-dopisać coś tu
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="1">
+<lyxtabular version="3" rows="4" columns="1">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MPEG-1, 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MPEG-2,
+\end_layout
+
+\end_inset
+</cell>
+</row>
 <row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
@@ -5419,14 +5753,36 @@ WMV, RealVideo
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="1">
+<lyxtabular version="3" rows="4" columns="1">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP3, WMA,
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AAC, AC-3,
+\end_layout
+
+\end_inset
+</cell>
+</row>
 <row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
@@ -5453,54 +5809,7 @@ Vorbis, APE, Flac, DTS-HD
 
 \end_inset
 
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+ 
 \end_layout
 
 \end_inset
@@ -5511,6 +5820,10 @@ Vorbis, APE, Flac, DTS-HD
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+* - kontener MKV wirtualnie może zawierać dowolną zawartość wideo oraz audio
 \end_layout
 
 \end_inset
@@ -9549,27 +9862,30 @@ Powyższy podział powstał w sposób, który można nazwać naturalnym.
 \end_layout
 
 \begin_layout Itemize
-telewizor marki Samsung,
+telewizor marki Samsung UE46D6750WS,
 \end_layout
 
 \begin_layout Itemize
-telewizor marki Phillips,
+telewizor marki Phillips 32PFL8404H,
 \end_layout
 
 \begin_layout Itemize
-odtwarzacz Blu-ray marki LG,
+odtwarzacz Blu-ray marki LG BD-390,
 \end_layout
 
 \begin_layout Itemize
-smartfon Samsung Galaxy S2 (system operacyjny Android, oprogramowanie AllShare),
+smartfon Samsung Galaxy S2 I9100 (system operacyjny Android 4, oprogramowanie
+ AllShare),
 \end_layout
 
 \begin_layout Itemize
-smartfon Samsung Galaxy S (system operacyjny Android, oprogramowanie AllShare),
+smartfon Samsung Galaxy S I9000 (system operacyjny Android 2.3, oprogramowanie
+ AllShare),
 \end_layout
 
 \begin_layout Itemize
-smartfon Sony Ericsson (system operacyjny Android, oprogramowanie inne).
+smartfon Sony Ericsson Xperia X10 (system operacyjny Android 2.3, oprogramowanie
+ inne).
 \end_layout
 
 \begin_layout Standard
@@ -9598,12 +9914,10 @@ reference "chap:Przegląd-oprogramowania-UPnP"
 Poza opisanymi powyżej urządzeniami przetestowane zostały pojedyńcze modele
  (dzięki udostępnieniu sprzętu przez jeden ze znanych marketów elektronicznych)
  telewizorów firm, takich jak Sony Bravia, Phillips oraz LG Smart TV.
-\end_layout
-
-\begin_layout Standard
-W kolejnych podrozdziałach zostały przedstawione jedynie testy, które zostały
- dokładnie udokumentowane, tj.
- telewizora Samsung, odtwarzacz Blu-ray LG oraz telefonu Samsung Galaxy
+ W kolejnych podrozdziałach zostały przedstawione jedynie wyniki testów,
+ które zostały dokładnie udokumentowane, to jest na urządzeniach, do których
+ autor miał najdłuższy dostęp.
+ Były to telewizor Samsung, odtwarzacz Blu-ray LG oraz telefon Samsung Galaxy
  S2.
 \end_layout
 
@@ -9772,11 +10086,21 @@ jedna ścieżka audio AC3,
 \end_layout
 
 \begin_layout Itemize
-plik wideo 
+plik wideo H.264
 \series bold
-dkwijwefijw,
+,
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+rozdzielczość 1280x720,
+\end_layout
+
+\begin_layout Itemize
+24 klatki na sekundęm
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 napisy wewnątrz kontenera,
 \end_layout
@@ -9792,7 +10116,7 @@ plik MATROSKA 16GB,
 
 \begin_deeper
 \begin_layout Itemize
-dwie ścieżki audio: stereo oraz AC3,
+dwie ścieżki audio: stereo oraz DTS (dźwięk 5.1),
 \end_layout
 
 \begin_layout Itemize
@@ -9805,9 +10129,19 @@ plik wideo w formacie 3D SBS (ang.
 , 
 \series default
 co oznacza film, który ma 2 obrazy obok siebie, konieczne do zinterpretowania
- przez odtwarzacz, celem odtworzenia go w wersji 3D),
+ przez odtwarzacz, celem odtworzenia go w wersji 3D), kodowanie H.264,
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+rozdzielczość 1920x1080,
+\end_layout
+
+\begin_layout Itemize
+24 klatki na sekundę.
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 napisy zewnętrzne.
 \end_layout
@@ -9819,22 +10153,72 @@ plik AVI
 
 \begin_deeper
 \begin_layout Itemize
-ścieżka audio mp3,
+ścieżka audio mp3 stereo,
 \end_layout
 
 \begin_layout Itemize
-wideo mpeg...
+plik wideo XVID MPEG-4
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+rozdzielczość 576x432,
+\end_layout
+
+\begin_layout Itemize
+24 klatki na sekundę
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Itemize
 plik WMV
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-plik MP4.
+plik wideo Windows Media Video 9,
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+rozdzielczość 1280x720
+\end_layout
+
+\begin_layout Itemize
+24 klatki na sekundę
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+ścieżka audio Windows Media Audio 9 5.1.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+plik MP4
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+plik wideo H.264
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+rozdzielczość 1280x720
+\end_layout
+
+\begin_layout Itemize
+25 klatek na sekundę
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+ścieżka audio MPEG-4 AAC stereo.
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 Polecenia UPnP AV i DLNA
 \end_layout
@@ -9893,11 +10277,111 @@ Napotkane problemy
 \end_layout
 
 \begin_layout Standard
-mkv trik
+W trakcie pierwszych testów autor napotkał wiele problemów z poprawnym odtwarzan
+iem plików na urządzeniach posiadających certyfikat DLNA.
+ Gdy jedno potrafiło zaprezentować materiał, drugie wyświetlało błędy (najczęści
+ej nienaprowadzające na genezę problemu).
 \end_layout
 
 \begin_layout Standard
-udostępnianie napisy - sec, attachments
+Głównym problemem był brak możliwości otworzenia plików MKV.
+ Problem ten występował w urządzeniach Samsung.
+ W urządzeniu LG wyświetlany był komunikat o możliwych nieprawidłowościach
+ w odtwarzaniu.
+ Jak się okazało, po wielu godzinach szukania rozwiązania metodą prób i
+ błędów, konieczne było przedstawienie typu MIME jako AVI, aby odtwarzacz
+ poprawnie otwierał plik MKV (potrafił otworzyć nawet wbudowane napisy w
+ kontener Matroska).
+ Sytuacja opisana pozwala poprawnie odtwarzać materiały na telewizorach
+ Samsung.
+ W przypadku telefonów Samsung z aplikacją AllShare konieczne jest również
+ 
+\begin_inset Quotes pld
+\end_inset
+
+oszukanie
+\begin_inset Quotes prd
+\end_inset
+
+ odtwarzacza poprzez podanie rozszerzenia pliku jako inne niż *.mkv (np.
+ *.tmp).
+ W drugim przypadku odtwarzacz nie potrafi otworzyć napisów znajdujących
+ się w kontenerze multimedialnym.
+\end_layout
+
+\begin_layout Standard
+Aplikacja AllShare firmy Samsung podobnie jak w przypadku plików MKV, postępuje
+ z plikami muzycznymi.
+ Pomimo możliwości jej odtworzenia wyświetla komunikat o nieobsługiwanym
+ formacie audio.
+ W tym celu, niektóre z plików trzeba przedstawiać jako typ mp3.
+\end_layout
+
+\begin_layout Standard
+Kolejnym napotkanym tematem do rozwiązania był brak wyświetlania miniatur
+ materiałów w niektórych urządzeniach (dotyczy odtwarzacz Blu-ray LG).
+ W celu rozwiązania sprawy dodany został specjalny nagłówek, zawierający
+ informację o dokumentacji LG.
+\end_layout
+
+\begin_layout Standard
+Urządzenia Samsung również wymagają załączenia nagłówka z adresem URL do
+ swojej dokumentacji.
+ Nagłówek ten nazywa się 
+\emph on
+sec
+\emph default
+ i w przypadku serwera multimedialnego UPnP AV napisanego przez autora,
+ wykorzystywany jest do dołączania napisów w filmach.
+ Innym sposobem dołączania napisów do filmu jest zawarcie, w pliku XML,
+ elementu załącznika 
+\emph on
+(
+\emph default
+ang.
+
+\emph on
+ attachments).
+ 
+\emph default
+W elemencie tym powinny znajdować się adresy URL z możliwymi do pobrania
+ napisami.
+ Istotnym elementem w przypadku urządzenia LG jest podanie typu MIME napisów
+ jako 
+\emph on
+text/srt, 
+\emph default
+nawet w przypadku gdy napisy są innego typu.
+ Do otworzenia napisów wszystkie urządzenia wymagają zawarcia w elemencie
+ schematu XML rozmiaru pliku w bajtach.
+\end_layout
+
+\begin_layout Standard
+W przypadku oprogramowania firmy 
+\emph on
+Microsoft
+\emph default
+, znajdującego się w konsoli
+\emph on
+ Xbox 360
+\emph default
+ oraz programu 
+\emph on
+Windows Media Player
+\emph default
+ (od wersji 12 wzwyż), konieczne jest by serwer multimedialny symulował
+ urządzenie 
+\emph on
+Windows Media Connect
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Problemów w trakcie pisania oprogramowania wystąpiło dużo więcej, jednakże
+ autor wybrał te, które pozwolą czytelnikowi zauważyć, jak pomimo ustandaryzowan
+ia sposoby udostępniania multimediów w sieci, różni producenci tworzą własne
+ schematy, całkiem odrębne od specyfikacji.
 \end_layout
 
 \begin_layout Section
@@ -10045,48 +10529,128 @@ Test odtwarzania materiałów
 Opisywany test skupił się na najważniejszej funkcji zaprojektowanej aplikacji,
  czyli odtwarzaniu treści multimedialnych.
  Poza główną funkcją, w trakcie testu sprawdzane zostały takie parametry
- jak:
-\end_layout
-
-\begin_layout Enumerate
-możliwość przewijania materiału,
-\end_layout
-
-\begin_layout Enumerate
-podgląd miniatur,
-\end_layout
-
-\begin_layout Enumerate
-przegląd atrybutów udostępnianego pliku,
-\end_layout
-
-\begin_layout Enumerate
-umożliwienie rozszerzania widoku (głównie działanie funkcji pełnego ekranu),
-\end_layout
-
-\begin_layout Enumerate
-odtwarzanie napisów,
-\end_layout
-
-\begin_layout Enumerate
-wybór ścieżki dźwiękowej,
-\end_layout
-
-\begin_layout Enumerate
-zapamiętanie i wznawianie odtwarzania od ostatniej pozycji.
+ jak: możliwość przewijania materiału, podgląd miniatur, przegląd atrybutów
+ udostępnianego pliku, umożliwienie rozszerzania widoku (głównie działanie
+ funkcji pełnego ekranu), odtwarzanie napisów, wybór ścieżki dźwiękowej,
+ zapamiętanie i wznawianie odtwarzania od ostatniej pozycji.
+ Ponadto dla wszystkich plików zostało sprawdzone obciążenie procesora urządzeni
+a (na którym działa serwer) w trakcie odtwarzania.
 \end_layout
 
 \begin_layout Standard
-Ponadto dla wszystkich plików zostało sprawdzone obciążenie procesora urządzenia
- (na którym działa serwer) w trakcie odtwarzania,
+Kwestie techniczne oraz ograniczenia oprogramowania odtwarzaczy multimedialnych
+ zostały przedstawione w rozdziale 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Przegląd-oprogramowania-UPnP"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Serwer w pełni poprawnie udostępnia materiały, tylko odtwarzaczowi w telewizorze
+ Samsunga.
+ Wszystkie pliki udostępniane przez serwer, odtwarzacz telewizyjny AllShare
+ potrafił odtworzyć.
+ Sprzęt ten, powołując się na instrukcję obsługi, potrafi odtworzyć formaty
+ wideo zamieszczone w tabeli 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Obsługiwane-formaty-wideo"
+
+\end_inset
+
+ oraz formaty audio znajdujące się wymienione w tabeli 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Obsługiwane-kodeki-audio"
+
+\end_inset
+
+.
+ Ostatnia z tabel 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Obsługiwane-napisy-przez"
+
+\end_inset
+
+ przedstawia obsługiwane napisy przez opisywany sprzęt.
+ Wszystkie znajdują się w rozdziale 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Oprogramowanie-w-sprzęcie"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+W rzeczywistości możliwości odtwarzania przez sieć są dużo mniejsza, niż
+ lista w tabeli.
+ Odtwarzacz poprawnie otworzył materiał AVI.
+ Pozostałe formaty sprawiały problemy w odtwarzaniu.
+ W przypadku telewizorów Samsung, wystarczy jednak informować odtwarzacz,
+ że wysyłany materiał ma rozszerzenie *.avi i wówczas pełna zawartość tabeli
+ jest spełniona.
+ Odtwarzacz nie pozwolił otworzyć plików audio *.FLAC, *.M4A, bez podania
+ nieprawdziwego typu MIME (podany został typ MIME pliku MP3 - 
+\emph on
+audio/mpeg
+\emph default
+).
+ W przypadku innych plików aplikacja nie załadowała napisów w formacie innym
+ niż MicroDVD z rozszerzeniem *.txt.
+\end_layout
+
+\begin_layout Standard
+Drugie z urządzeń, czyli odtwarzacz Blu-ray firmy LG, model BD-390, nie
+ posiada ogólnodostępnej, dokładnej specyfikacji odtwarzanych materiałów,
+ jak to ma miejsce w przypadku wcześniej opisanego urządzenia.
+ Jednakże testy wykazały, że z dużo większą łatwością obsługuje wszystkie
+ z przygotowanych plików muzycznych i wideo.
+ W przypadku obrazów obsługuje tylko formaty wymagane przez specyfikację
+ DLNA, czyli format JPEG oraz PNG.
+ Spośród testowanych plików, jedynie plików tekstowych serwer multimedialny,
+ nie udostępnia w sposób poprawny dla sprzętu.
+ Autor jednakże nie znalazł jednoznacznego sposobu, aby wszystkie napisy
+ urządzenie LG zawsze załadowało (w niektórych przypadkach urządzenie pobiera
+ napisy, lecz ich nie ładuje).
+\end_layout
+
+\begin_layout Standard
+Ostatnie z urządzeń, urządzenie mobilne Samsung Galaxy S2 I9100, poprawnie
+ otwiera wszystkie pliki graficzne.
+ W przypadku dużych plików graficznych występuje problem skalowania obrazu.
+ Autor poprawnie odtworzył poprawnie plik AVI oraz MKV o rozmiarze 4 GB.
+ W przypadku pliku MKV o rozmiarze 16 GB, połączenie bezprzewodowe telefonu
+ w technologii 802.11n było zbyt wolny, aby efektywnie buforować zawartość.
+ Dodatki do plików, takie jak wiele ścieżek audio lub napisy nie są rozpoznawane
+ przez aplikację mobilną AllShare.
+ Podobnie jak w telewizorze marki Samsung, typ MIME muzyki musi być podawany
+ jako 
+\emph on
+audio/mpeg
+\emph default
+ by plik mógł być odtwarzany (można nazwać to pośrednią obsługą plików *.FLAC,
+ *.M4A, *.WAV).
 \end_layout
 
 \begin_layout Standard
 Nie wszystkie odtwarzacze posiadają każdą z opisywanych funkcji.
- W celu zobrazowania wyników testów powstała tabela zestawiająca wszystkie
- funkcje dla każdego odtwarzacza.
- Kolumna A określa możliwość odtwarzania plików audio, O - plików graficznych,
- zaś W - plików wideo.
+ W celu zobrazowania wyników testów powstała tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Możliwości-testowanych-odtwarzac"
+
+\end_inset
+
+ zestawiająca wszystkie funkcje dla każdego odtwarzacza.
+ Nie zostały w niej uwzględnione obsługiwane kodeki audio, wideo oraz graficzne.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -10099,6 +10663,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Możliwości-testowanych-odtwarzac"
+
+\end_inset
+
 Możliwości testowanych odtwarzaczy
 \end_layout
 
@@ -10109,7 +10679,7 @@ Możliwości testowanych odtwarzaczy
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="13" columns="11">
+<lyxtabular version="3" rows="12" columns="11">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -10228,7 +10798,7 @@ W
 \begin_inset Text
 
 \begin_layout Plain Layout
-Samsung TV
+telewizor Samsung
 \end_layout
 
 \end_inset
@@ -10392,7 +10962,7 @@ Samsung I9000
 \begin_inset Text
 
 \begin_layout Plain Layout
-?
+p
 \end_layout
 
 \end_inset
@@ -10493,7 +11063,7 @@ Samsung I9100
 \begin_inset Text
 
 \begin_layout Plain Layout
-?
+p
 \end_layout
 
 \end_inset
@@ -10733,7 +11303,7 @@ Phillips TV
 \begin_inset Text
 
 \begin_layout Plain Layout
-LG BD390
+LG BD-390
 \end_layout
 
 \end_inset
@@ -10834,7 +11404,7 @@ LG BD390
 \begin_inset Text
 
 \begin_layout Plain Layout
-XBOX
+Microsoft XBOX
 \end_layout
 
 \end_inset
@@ -11234,7 +11804,7 @@ Totem
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11243,7 +11813,7 @@ VLC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11252,7 +11822,7 @@ VLC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11261,7 +11831,7 @@ VLC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11270,7 +11840,7 @@ VLC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11279,7 +11849,7 @@ VLC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11288,7 +11858,7 @@ VLC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11297,7 +11867,7 @@ VLC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11306,7 +11876,7 @@ VLC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11315,112 +11885,11 @@ VLC
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 -
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \end_inset
@@ -11429,7 +11898,7 @@ VLC
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+-
 \end_layout
 
 \end_inset
@@ -11443,44 +11912,84 @@ VLC
 \end_layout
 
 \begin_layout Plain Layout
+\align left
 '+' - funkcja istnieje, 
 \end_layout
 
 \begin_layout Plain Layout
+\align left
 '-' - brak funkcji,
 \end_layout
 
 \begin_layout Plain Layout
-
-\series bold
-? - it's complicated
+\align left
+p - problematyczne,
 \end_layout
 
 \begin_layout Plain Layout
+\align left
 nd - nie dotyczy
 \end_layout
 
+\begin_layout Plain Layout
+\align left
+Znaczenie kolumn:
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+A - pliki audio,
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+O - pliki graficzne,
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+W - pliki wideo,
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+1 - możliwość przewijania materiału,
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+2 - podgląd miniatur,
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+3 - przegląd atrybutów udostępnianego pliku,
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+4 - umożliwienie rozszerzania widoku (głównie działanie funkcji pełnego
+ ekranu),
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+5 - odtwarzanie napisów,
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+6 - wybór ścieżki dźwiękowej,
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+7 - zapamiętanie i wznawianie odtwarzania od ostatniej pozycji.
+\end_layout
+
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Dokładne objaśnienie kwestii technicznych (w tym błędów) dotyczących odtwarzaczó
-w została przedstawiona w rozdziale 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Przegląd-oprogramowania-UPnP"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-wymyślić inaczej
 \end_layout
 
 \begin_layout Chapter
@@ -11838,6 +12347,12 @@ System operacyjny z rodziny Linux, kontrolowany za pomocą środowiska graficzne
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Oprogramowanie-w-sprzęcie"
+
+\end_inset
+
 Oprogramowanie w sprzęcie audio-wideo
 \end_layout
 
@@ -11897,6 +12412,1419 @@ video/ms-video
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Obsługiwane-formaty-wideo"
+
+\end_inset
+
+Obsługiwane formaty wideo przez telewizor Samsung UE46D6750WS
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Format
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Kodek wideo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Maksymalna rozdzielczość
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AVI
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MKV
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DivX 3.11 - 6.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+XviD
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+H.264
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MPEG4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Motion JPEG
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ASF
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DivX 3.11 - 6.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+XviD
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+H.264
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MPEG4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Motion JPEG
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+800x600
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+WMV
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Windows Media
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Video 9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+H.264
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MPEG4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+XviD
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3GPP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+H.264
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MPEG4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+VRO
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+VOB
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MPEG1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MPEG2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+352x288
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PS (*.mpg, *.mpeg)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MPEG1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MPEG2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+H.264
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+352x288
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MPEG2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+H.264
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+VC1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1920x1080
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Źródło: instrukcja telewizora Samsung
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-42"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Obsługiwane-kodeki-audio"
+
+\end_inset
+
+Obsługiwane kodeki audio przez telewizor Samsung UE46D6750WS
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Kodek audio
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AC3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LPCM
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ADPCM
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DTS Core
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+WMA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AAC
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HEAAC
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DD+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MPEG
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Źródło: instrukcja telewizora Samsung
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-42"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Obsługiwane-napisy-przez"
+
+\end_inset
+
+Obsługiwane napisy przez telewizor Samsung UE46D6750WS
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nazwa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rozszerzenie pliku
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Format
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MPEG-4 ze znacznikami czasowymi
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+*txt
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+XML
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SAMI
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+*.smi
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HTML
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SubRip
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+*.srt
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+tekst
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SubViewer
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+*.sub
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+tekst
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MicroDVD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+*.sub / *.txt
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+tekst
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -12065,6 +13993,19 @@ status open
 
 \backslash
 addcontentsline{toc}{chapter}{Podsumowanie}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+podsumowanie
 \end_layout
 
 \end_inset
@@ -12599,6 +14540,42 @@ key "key-41"
 \end_inset
 
 http://www.digitalversus.com/tv-television/dlna-standard-real-mess-a971.html
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "42"
+key "key-42"
+
+\end_inset
+
+Instrukcja obsługi telewizora Samsung UE46D6750WS
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "43"
+key "key-43"
+
+\end_inset
+
+RFC 5219, http://tools.ietf.org/html/rfc5219
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "44"
+key "key-44"
+
+\end_inset
+
+PNG, http://pl.wikipedia.org/wiki/Portable_Network_Graphics
 \end_layout
 
 \end_body
