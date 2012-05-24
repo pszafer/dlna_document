@@ -244,41 +244,63 @@ Standardy UPnP i DLNA
 \end_layout
 
 \begin_layout Standard
-Technologia UPnP, której skrót rozwijany jest jako Universal Plug and Play,
- co w łatwy sposób można zrozumieć jako podłącz i graj (lub odtwarzaj) jest
- zbiorem protokołów sieciowych, których celem powstania była możliwość wzajemneg
-o wykrywania się przez urządzenia sieciowe takie jak komputery PC, drukarki,
- punkty dostępu WiFi, routery czy urządzenia mobilne.
+Technologia UPnP, to skrót od pełnej nazwy Universal Plug and Play, która
+ w dosłowny sposób oznacza podłącz i graj (lub odtwarzaj).
+ Jest zbiorem protokołów sieciowych, których zadaniem jest umożliwienie
+ wzajemnego wykrywania się urządzeń sieciowych takich jak komputery PC,
+ drukarki, punkty dostępu sieci bezprzewodowej WiFi, routery czy urządzenia
+ mobilne.
  
 \end_layout
 
 \begin_layout Standard
-UPnP ma za zadanie umożliwić użytkownikowi na łatwe wykrywanie urządzeń
- sieciowych oraz wykorzystywanie ich możliwości.
+UPnP umożliwia użytkownikowi w łatwy sposób wykrywać urządzenia sieciowe
+ oraz wykorzystywać możliwości, które udostępniają.
  Jest ono dedykowane dla małych sieci domowych w celach takich jak udostępnianie
  danych, komunikacja, drukowanie czy szeroko pojęta rozrywka.
- Niniejsza praca jest poświęcona w głównej mierze ostatniemu zagadnień (rozrywka
-), którego specyfikacja nazywana UPnP A/V (ang.
- UPnP Audio/Video) jest rozszerzeniem podstawowego standardu UPnP.
- UPNP AV została stworzona do odtwarzania plików multimedialnych.
+ Niniejsza praca skupia się głównie ostatniemu z zagadnień (rozrywka).
+ Posiada ono rozszerzenie,w oddzielnej specyfikacji, nazwanej UPnP A/V (ang.
+ UPnP Audio/Video).
+ Jest rozwinięciem podstawowego standardu UPnP.
+ 
+\end_layout
+
+\begin_layout Standard
+UPNP A/V została stworzona do odtwarzania plików multimedialnych.
  Definiuje ona takie pojęcia jak serwery multimedialne (ang.
- Media Servers), Media Renderers??, odtwarzacze multimediów (ang.
+ Media Servers) oraz odtwarzacze multimedialne (ang.
  Media Players).
- Określone zostały w bardzo elastyczny sposób metodyt przesyłania multimediów.
- Z tego powodu UPNP AV nie rozpowszechniło się w swojej powszechnej wersji
- wśród producentów sprzętu elektronicznego.
- Każdy programista i każda firma mogła zaimplementować odtwarzacz lub serwer
- w taki sposób, że mogły one ze sobą nie współpracować (pomimo spełnienia
- wymogów standardu) lub powinny być nad wyrost skomplikowane.
- DLNA (ang.
+ Zostały w niej określone bardzo elastyczne metody przesyłania multimediów.
+ Uniwersalność sprawiła, że UPnP A/V nie rozpowszechniło się na szeroką
+ skalę wśród producentów sprzętu elektronicznego oraz użytkowników domowych.
+ 
+\end_layout
+
+\begin_layout Standard
+Każdy programista (każda firma) mogła zaimplementować odtwarzacz lub serwer
+ multimedialny na wiele sposób, co mogło skutkować brakiem współpracy pomiędzy
+ dwoma urządzaniami (pomimo spełnienia wymogów standardu).
+ 
+\end_layout
+
+\begin_layout Standard
+DLNA (ang.
  Digital Living Network Alliance) jest międzynarodową organizacją, powstałą
  w 2003 roku z inicjatywy firmy Sony.
  Stworzyła ona standard o tej samej nazwie (DLNA), który korzysta z protokołu
- UPNP A/V.
+ UPNP A/V jako wzorca.
  Standard ten jest jednak bardziej restrykcyjny (np w postaci określenia
- formatów multimediów odtwarzanych przez urządzenia), dzięki czemu łatwiejszy
- do implementacji w większości urządzeń, a ponadto wprowadził kilka innowacyjnyc
-h cech takich jak ochrona DRM (ochrona przed kopiowaniem).
+ formatów multimediów odtwarzanych przez urządzenia).
+ W ten sposób zamieniono uniwersalność na łatwość współpracy urządzeń.
+ oraz uproszczono jego implementację w większości typów urządzeń.
+ Ponadto ogranizacja wprowadziła kilka innowacyjnych cech.
+ Jedną z nich jest ochrona DRM (ochrona przed kopiowaniem - ang.
+ 
+\emph on
+Digital Rights Management
+\emph default
+).
+ DLNA jest specyfikacją zamkniętą, dostępną jedynie dla członków organizacji.
 \end_layout
 
 \begin_layout Section
@@ -286,35 +308,39 @@ Opis standardu UPNP
 \end_layout
 
 \begin_layout Standard
-W 1999 została założona, w głównej mierze dzięki dotacjom firmy Microsoft,
- fundacja UPnP.
+Fundacja UPnP została założona w 1999 roku, w głównej mierze dzięki dotacjom
+ firmy Microsoft.
  Powołana została w celu stworzenia standardu, który umożliwi intergację
- urządzeń oraz usług w obrębie sieci lokalnej oraz proste określanie ich
- możliwości (np.
- drukowanie).
- 
+ urządzeń oraz usług w obrębie sieci lokalnej.
+ Urządzenia, w założeniu, miały rozsyłać informacje o oferowanych usługach,
+ co miało umożliwić proste określanie ich możliwości (np.
+ drukowanie) i ich wykorzystanie.
 \end_layout
 
 \begin_layout Standard
 UPnP jest oparty o architekturę klient - serwer, gdzie urządzenia - serwery
- , oferują swoje usługi dla klientów (UPnP Control Points).
- UPnP główny nacisk kładzie na brak konfiguracji urządzeń przez użytkownika,
+ , oferują swoje usługi dla klientów - punktów kontrolnych (z ang.
+ 
+\emph on
+UPnP Control Points
+\emph default
+).
+ W UPnP główny nacisk położono na brak konfiguracji urządzeń przez użytkownika,
  zgodnie z częścią nazwy zarówno fundacji, jak i standardu - plug and play
  (podłącz i działaj).
  Opisywana fundacja ustandaryzowała sposób komunikacji szeregu urządzeń,
  począwszy od włączników światła, drukarkach, kończąc na odtwarzaczach audio-wid
 eo.
- Architektura UPNP AV została stworzona do przesyłania materiałów multimedialnyc
-h.
- UPNP AV określa sposób komunikacji, między serwerem multimediów, a odtwarzaczem.
- Zbiór protokołów został zaprojektowany tak, aby być niezależny od rodzaju
- urządzenia, odtwarzanej treści i sposobu przesyłania danych.
+ 
 \end_layout
 
 \begin_layout Standard
-UPNP AV określa sposób komunikacji, między serwerem multimediów, a odtwarzaczem.
- Zbiór protokołów został zaprojektowany tak, aby być niezależny od rodzaju
- urządzenia, odtwarzanej treści i sposobu przesyłania danych.
+Architektura UPnP A/V została stworzona do przesyłania materiałów multimedialnyc
+h.
+ UPnP A/V określa sposób komunikacji, między serwerami, a odtwarzaczami
+ multimedialnymi.
+ Zbiór protokołów UPnP A/V został zaprojektowany tak, aby być niezależnym
+ od rodzaju urządzenia, odtwarzanej treści i sposobu przesyłania danych.
 \end_layout
 
 \begin_layout Section
@@ -322,16 +348,25 @@ Stos protokołów UPnP
 \end_layout
 
 \begin_layout Standard
-Głównym wymaganiem UPnP jest działanie w obrębie sieci IP, niezależnie od
- sposobu komunikacji.
+W pierwszej kolejności w specyfikacji UPnP zapisano wymaganie, aby urządzenie
+ działało w obrębie sieci IP, niezależnie od sposobu komunikacji.
  Połączenie może zostać zrealizowane poprzez sieć Ethernet, połączenia bezprzewo
 dowe takie jak WiFi 802.11abgn, Bluetooth (pomijany jest tu fakt braku możliwości
  technicznych niektórych protokołów do szybkiego przesyłania danych, co
- w przypadku niektórych typów multimediów, takich jak filmy czy muzyka,
- jest niezbędne).
+ w przypadku niektórych typów multimediów, takich jak materiały wideo czy
+ muzyka, może być niezbędne lub znacznie wydłużyć czas buforowania treści).
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+link bibliograficzny
+\end_layout
+
+\end_inset
+
 Raport techniczny UPnP definiuje jedynie sposoby działania w obrębie sieci
  obsługiwanej przez protokół IPv4.
  Aneks 
@@ -341,7 +376,7 @@ key "key-9"
 
 \end_inset
 
- do głównego raportu określa różnice jakie występują, gdy urządzenie działa
+ do głównego raportu określa różnice występujące, gdy urządzenie działa
  w obrębie sieci IPv6.
  Jeżeli nie napisano inaczej, w niniejszej pracy autor jako pierwszą pozycje
  określa przypadek sieci IPv4, natomiast drugi przypadek to sieć zgodna
@@ -361,7 +396,13 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Protokoły
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Stos-protokołół-specyfikacji"
+
+\end_inset
+
+Stos protokołół specyfikacji UPnP
 \end_layout
 
 \end_inset
@@ -407,6 +448,12 @@ name "test"
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Komunikacja"
+
+\end_inset
+
 Komunikacja
 \end_layout
 
@@ -433,15 +480,15 @@ Komunikacja
 \end_layout
 
 \begin_layout Standard
-Urządzenia UPnP można sklasyfikować w dwóch kategoriach, punktów kontrolnych
- (ang.
- Control Points) oraz urządzeń kontrolowanych (ang.
- Controlled Devices).
- 
-\end_layout
+W protokole UPnP definiujemy następujące czynności wykonywane przez urządzenia
+ (rysunek 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Stos-protokołół-specyfikacji"
 
-\begin_layout Standard
-W protokole UPnP definiujemy następujące czynności wykonywane przez urządzenia:
+\end_inset
+
+):
 \end_layout
 
 \begin_layout Itemize
@@ -475,12 +522,38 @@ prezentacja (ang.
 \end_layout
 
 \begin_layout Standard
+Urządzenia UPnP są klasyfikowane w dwóch, głównych kategoriach, punktów
+ kontrolnych (ang.
+ Control Points) oraz urządzeń kontrolowanych (ang.
+ Controlled Devices).
+ 
+\end_layout
+
+\begin_layout Standard
+Polecenia protokołu oraz przykłady urządzeń są widoczne na rysunku 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Komunikacja"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 (http://www.upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.0-20080424.pdf)
 \end_layout
 
 \begin_layout Standard
 Architektura protokołu wykorzystuje stos protokołów przedstawiony w tabeli
  
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Test-tabeli"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -493,7 +566,13 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Test tabeli
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Test-tabeli"
+
+\end_inset
+
+Stos protokołu UPnP, jaki?
 \end_layout
 
 \end_inset
@@ -750,9 +829,12 @@ IP
 \end_layout
 
 \begin_layout Standard
-Pierwsza, najwyższa warstwa są to wiadomości zawierające specyficzne informacje
- dostarczane przez producenta urządzenia dotyczące jego funkcjonalności
- czy możliwości.
+Pierwsza, najwyższa warstwa, 
+\emph on
+UPnP Vendor
+\emph default
+, składa się z wiadomości zawierających specyficzne informacje dostarczane
+ przez producenta urządzenia dotyczące jego funkcjonalności oraz możliwości.
  Kolejnym elementem są informacje zdefiniowane przez organizację UPnP Forum.
  Wszystkie te informacje są przekazywane poprzez następujące protokoły:
  
@@ -2670,7 +2752,7 @@ Po zakończeniu działania zamknij połączenia z serwerem multimediów.
 \end_layout
 
 \begin_layout Subsection
-Odmiany mobilne
+Klasy mobilne
 \end_layout
 
 \begin_layout Standard
@@ -2743,7 +2825,7 @@ Odmiany mobilne urządzeń i usług nie są wyróżnione w dokumentacji UPnP.
 \end_layout
 
 \begin_layout Chapter
-Multimedia w UPnP AV/DLNA
+Multimedia w UPnP A/V i DLNA
 \end_layout
 
 \begin_layout Standard
@@ -3432,7 +3514,7 @@ playlist
 \end_layout
 
 \begin_layout Section
-Klasy multimediów UPnP
+Klasy multimediów UPnP A/V
 \end_layout
 
 \begin_layout Standard
@@ -4973,23 +5055,47 @@ Muzyke w kontekście udostępniania UpNP AV oraz DLNA można rozumieć jako
 \end_layout
 
 \begin_layout Itemize
-AAC oraz AAC+,
+AAC (ang.
+ 
+\emph on
+Advanced Audio Coding
+\emph default
+) oraz AAC+,
 \end_layout
 
 \begin_layout Itemize
-AC3,
+AC3 (pełna nazwa - 
+\emph on
+Dolby Digital Audio Compression-3
+\emph default
+),
 \end_layout
 
 \begin_layout Itemize
-FLAC,
+FLAC (ang.
+ 
+\emph on
+Free Lossless Audio Codec
+\emph default
+),
 \end_layout
 
 \begin_layout Itemize
-MP2,
+MP2 (ang.
+ 
+\emph on
+MPEG-1 Audio Layer-2)
+\emph default
+,
 \end_layout
 
 \begin_layout Itemize
-MP3,
+MP3 (ang.
+ 
+\emph on
+MPEG Audio Layer-
+\emph default
+3),
 \end_layout
 
 \begin_layout Itemize
@@ -4997,11 +5103,19 @@ RealAudio,
 \end_layout
 
 \begin_layout Itemize
-WAV,
+WAV (ang.
+ 
+\emph on
+Waveform Audio File Format
+\emph default
+),
 \end_layout
 
 \begin_layout Itemize
-WMA.
+WMA (ang.
+ 
+\emph on
+Windows Media Audio).
 \end_layout
 
 \begin_layout Subsection
@@ -5854,7 +5968,7 @@ i w wielu przypadkach we własnym zakresie zapewniają ich wsparcie.
 tować do obsługiwanego formatu).
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Kodowanie i kompresja filmów
 \end_layout
 
