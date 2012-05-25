@@ -1783,18 +1783,6 @@ advertising
  Pobierane informacje nazywane są opisem usługi (ang.
  
 \emph on
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-?
-\end_layout
-
-\end_inset
-
 service description
 \emph default
 ).
@@ -1837,18 +1825,6 @@ services
 Opis urządzenia zawiera informacje o fizycznych i logicznych kontenerach
  
 \series bold
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-kontener
-\end_layout
-
-\end_inset
-
 (opisać termin kontener).
  
 \series default
@@ -1861,7 +1837,7 @@ Natomiast opis usług określa w sposób bardzo dokładny oferowane prze urządz
 root device
 \emph default
 ).
- Ponadto każde urządzenie logiczne może oferować jedną lub więcej usług.
+ Ponadto każde urządzenie logiczne może oferować jedną lub wiele usług.
 \end_layout
 
 \begin_layout Standard
@@ -1906,8 +1882,8 @@ Schemat pobierania opisu usługi
 
 \begin_layout Standard
 Opis urządzenia/usługi jest napisany przez dostawcę oprogramowania.
- Jest napisany w języku XML i powinien być zgodny z wytycznymi przedstawionymi
- w szablonie opisu urządzenia.
+ Jest napisany w języku XML i zalecane jest, aby był zgodny z wytycznymi
+ przedstawionymi w szablonie opisu urządzenia.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1915,10 +1891,10 @@ key "key-10"
 
 \end_inset
 
- Najważniejszym elementem, z punktu widzenia autora, jest sposób opisu usługi.
- Powinien być stworzony tak, aby punkty kontrolne jak największej liczby
- producentów (stan idealny - wszystkich producentów) sprzętu i oprogramowania
- potrafiły uzyskać przydatne dla nich informacje.
+ Najważniejszym elementem z punktu widzenia autora jest sposób opisu usługi,
+ który powinien być stworzony tak, aby punkty kontrolne jak największej
+ liczby producentów (stan idealny - wszystkich producentów) sprzętu i oprogramow
+ania potrafiły uzyskać przydatne dla nich informacje.
 \end_layout
 
 \begin_layout Standard
@@ -1935,8 +1911,8 @@ Kontrola
 \begin_layout Standard
 Po uzyskaniu opisu urządzenia oraz usługi, punkt kontrolny może wywołać
  akcje, które mogą wykonywać dostawcy usług.
- Wywoływanie usługi, przez punkt kontrolny, można porównać do zdalnych wywołań
- RPC (ang.
+ Wywoływanie usługi przez punkt kontrolny można określić jako rodzaj wywołań
+ zdalnych RPC (ang.
  
 \emph on
 Remote Procedure Call

@@ -858,16 +858,23 @@ SOAP (ang.
 
 \begin_layout Standard
 Do wzajemnego wykrywania się urządzeń UPnP wykorzystuje protokół SSDP.
- Urządzenia kontrolowane, które można nazwać serwerami usług wykorzystują
- SSDP do rozgłaszania swojego istnienia.
- W przypadku punktów kontrolnych SSDP jest wykorzystywany do wykrywania
- urządzeń pierwszego typu.
+ Urządzenia kontrolowane, które można nazwać serwerami usług wysyłają pakiety
+ SSDP, co oznacza rozgłaszanie dołączenia do sieci.
+ W przypadku punktów kontrolnych SSDP jest wykorzystywany do wykrywania,
+ którymi mogą zarządzać.
  
 \end_layout
 
 \begin_layout Standard
-W protokole SSDP wykorzystuje się rozgłaszanie HTTP typu unicast lub multicast,
- z wykorzystaniem UDP (ang.
+W protokole SSDP wykorzystuje się rozgłaszanie HTTP typu unicast (
+\emph on
+HTTPU
+\emph default
+) lub multicast (
+\emph on
+HTTPMU)
+\emph default
+, z wykorzystaniem UDP (ang.
  User Datagram Protocol) jako protokołu transportu.
  Standardowo adresem multicast jest adres 239.255.255.255 oraz port numer 1900.
 \begin_inset CommandInset citation
@@ -880,8 +887,21 @@ key "key-1"
 \end_layout
 
 \begin_layout Standard
-Drugi protokół transmisji tj.
- GENA wykorzystywany jest do przekazywania powiadomień o zdarzeniach.
+Drugi protokół transmisji, którym jest GENA (ang.
+ 
+\emph on
+General Event Notification Architecture), 
+\emph default
+wykorzystywany jest do przekazywania powiadomień o zdarzeniach.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+co może być zdarzeniem
+\end_layout
+
+\end_inset
+
  W tym przypadku typowo wykorzystywany jest protokół HTTP w sposób “tradycyjny”
  (z wykorzystaniem protokołu TCP) oraz transmisja UDP typu multicast.
  
@@ -903,18 +923,29 @@ Zarówno serwer, jak i klient UPnP musi komunikować się z wykorzystaniem
  wymagania specyfikacji musi posiadać oprogramowanie serwera lub klienta
  protkołu DHCP (ang.
  Dynamic Host Configuration Protocol).
- Podczas podłączania się do sieci podejmuje próbę uzyskania adresu IP od
- serwera DHCP (jeżeli urządzenie nie jest serwerem DHCP).
+ Podczas podłączania się do sieci, urządzenie podejmuje próbę uzyskania
+ adresu IP od serwera DHCP (jeżeli urządzenie nie jest serwerem DHCP).
  Jeżeli urządzenie nie otrzyma adresu IP powinno wykorzystać tzw.
  autoadresowanie IP (urządzenie wybiera adres z określonej puli np.
  169.254/16 lub w przypadku IPv6 FE80::/64).
  Raport techinczny stworzony przez organizację UPnP Forum określa dokładnie
  w jaki sposób urządzenie przydziela automatycznie adres IP, tak aby uniknąć
  kolizji.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Celem zapoznania się z ...
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Zarówno w praktyce w większości urządzeń, jak i w aplikacji, którą opisuje
+Zarówno w praktyce w większości urządzeń, jak i w aplikacjach, którą opisuje
  niniejsza praca problem adresowania nie jest najważniejszy, gdyż jest rozwiązyw
 any przez oprogramowanie dołączone do sprzętu, bądź systemu operacyjnego.
 \end_layout
@@ -945,7 +976,20 @@ Proces wykrywania polega na rozgłaszaniu przez nowo podłączone urządzenia
 Na potrzeby protokołu UPnP wyróżniane są następujące komunikaty SSDP 
 \series bold
 \bar under
-(rys nr 2.3)
+(rys nr 2.3
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\bar under
+?
+\end_layout
+
+\end_inset
+
+)
 \series default
 \bar default
 :
@@ -982,7 +1026,12 @@ ang.
 Punkty kontrolne nasłuchują urządzeń na porcie 1900 lub rozgłaszają pakiet
  z danymi o typie, identyfikatorze pożądanego urządzenia lub usługi.
  Urządzenia oferujące swoje usługi wysyłają na wcześniej wspomniany adres
- (239.255.255.250:1900) pakiety SSDP przy pomocy rozgłaszania typu 
+ (239.255.255.250:1900) pakiety SSDP, z komunikatami rozgłaszającymi (ang.
+ 
+\emph on
+advertise
+\emph default
+) przy pomocy rozgłaszania typu 
 \emph on
 multicast
 \emph default
@@ -999,9 +1048,11 @@ unicast
 \end_layout
 
 \begin_layout Standard
-Urządzenie nowo dołączone do sieci wysyła rozgłoszenie o swoim istnieniu,
- urządzenia wbudowane w nie również wysyłają rozgłoszenie o sobie oraz o
- usługach, które świadczą.
+Urządzenie nowo dołączone do sieci wysyła rozgłoszenie o swoim istnieniu
+ oraz dodatkowe rozgłoszenie informujące o urządzeniach wbudowanych i zarządzany
+ch usługach.
+ Urządzenia lub usługi wbudowane mogą wysyłać ogłoszenie o istnieniu samodzielni
+e.
  Kontrolowane odłączenie od sieci wiążę się z obowiązkiem ogłoszenia zdarzenia
  przez urządzenie.
  Przyjęta jest w tym przypadku zasada, że powinno ono wysłać tyle komunikatów
@@ -1009,13 +1060,14 @@ Urządzenie nowo dołączone do sieci wysyła rozgłoszenie o swoim istnieniu,
 \end_layout
 
 \begin_layout Standard
-Rozgłaszanie wiąże się niestety z obciążaniem sieci, często niepotrzebnym.
- W tym celu zalecany czas życia pakietu (
+Rozgłaszanie wiąże się, niestety, z obciążaniem sieci, często niepotrzebnym.
+ Jednym ze sposobów zapobiegawczych, które wybrali autorzy specyfikacji,
+ jest określony zalecany czas życia pakietu (
 \emph on
 TTL - ang.
  time-to-live
 \emph default
-) dla każdej wiadomości wynosi 4 (powinna istnieć możliwość modyfikacji
+), który dla każdej wiadomości wynosi 4 (powinna istnieć możliwość modyfikacji
  tej wartości).
 \end_layout
 
@@ -1060,9 +1112,9 @@ Wykrywanie: Ogłaszanie
 \begin_layout Standard
 W głównej części tego podrozdziału został opisany zarys sposobu ogłaszania
  się urządzeń w sieci.
- Jest to jednak bardzo newralgiczna cecha tego protokołu, gdyż bez możliwości
- wzajemnego wykrywania nie ma możliwości, aby urządzenia efektywnie się
- ze sobą komunikowały.
+ Ogłaszanie jest bardzo newralgiczną cechą tego protokołu, gdyż bez możliwości
+ wzajemnego wykrywania nie ma możliwości, aby urządzenia się ze sobą skomunikowa
+ły.
  Każde urządzenie/usług wysyła pakiety ogłaszające (
 \emph on
 advertise
@@ -1070,9 +1122,9 @@ advertise
 ) swoje działanie na adres 239.255.255.250:1900.
  Punkty kontrolne nasłuchują na porcie 1900, oczekując na komunikaty wysyłane
  przez urządzenia.
- Opisywane komunikaty muszą być wysyłane często oraz co określony interwał
- czasowy, gdyż zarówno urządzenie, jak i punkt kontrolny mogą zostać dołączone
- do sieci w różnym czasie.
+ Opisywane komunikaty muszą być wysyłane często, co określony interwał czasowy,
+ gdyż zarówno urządzenie, jak i punkt kontrolny mogą zostać dołączone do
+ sieci w różnym czasie.
  
 \end_layout
 
@@ -1085,19 +1137,20 @@ ogłaszająca
 \begin_inset Quotes erd
 \end_inset
 
- zawiera możiwości urządzenia (np.
+ zawiera informacje o możliwościach urządzenia (np.
  odtwarzanie muzyki).
  Ilość wiadomości jest zależna od ilości wbudowanych urządzeń/usług w główne
  urządzenie.
  Urządzenia wbudowane w komunikatach dołączają informacje o urządzeniu nadrzędny
 m (np.
- informacja o systemie operacyjnym).
+ informacja o systemie operacyjnym, który dla programu jest urządzeniem
+ nadrzędnym).
  Oprócz wcześniej przedstawionych cech, komunikaty powinny zawierać czas
  do wygaśnięcia ogłoszenia (jeżeli po czasie wygaśnięcia urządzenie nadal
- chce oferować swoje usługi, wówczas powinno wysłać nowy komunikat z nowym
- czasem wygaśnięcia).
+ chce oferować swoje usługi, powinno wysłać nowy komunikat z nowym czasem
+ wygaśnięcia).
  Dzięki takiemu podejściu, pomimo, że urządzenia powinny ogłaszać swoje
- odłączenie od sieci, to nawet, gdy komunikat wyłączenie nie może zostać
+ odłączenie od sieci, to nawet, gdy komunikat wyłączenia nie może zostać
  wysłany, wiadomość rozgłaszająca wygaśnie i nie zostanie przedłużona.
  Ogranicza to możliwość istnienia w sieci usług już nie działających.
 \end_layout
@@ -1134,6 +1187,18 @@ name "tab:Stos-protokołu-UPnP"
 Stos protokołu UPnP w przypadku rozgłaszania -- 
 \series bold
 do poprawienia
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1242,17 +1307,18 @@ IP
 \begin_layout Standard
 Pierwsza warstwa opisywanego stosu zawiera informacje specyficzne dla dostawcy
  urządzenia.
- Najczęściej producenci dołączają w tym miejscu adres URL do opisu urządzenia,
- bądź też identyfikator urządzenia (UUID - 
+ Najczęściej producenci dołączają w tym miejscu adres URL, przekierowujący
+ zainteresowanych do opisu urządzenia, bądź też identyfikator urządzenia
+ (UUID - 
 \emph on
 ang.
  Universally unique identifier
 \emph default
 ).
- Kolejną warstwą stosu są informacje dostarczane przez organizację UPnP
- Forum, np.
+ Kolejną warstwą tego stosu są informacje dostarczane przez organizację
+ UPnP Forum, np.
  typ urządzenia.
- Kolejnym dwie warstwy zostaną dokładnie opisane w niniejszym dokumencie,
+ Kolejne dwie warstwy zostaną dokładnie opisane w niniejszym dokumencie,
  a ich pełen opis znajduje się w specyfikacji protokołu UPnP.
 \end_layout
 
@@ -1260,7 +1326,7 @@ ang.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -1269,7 +1335,7 @@ status collapsed
 
 \series bold
 \bar under
-Przykładowy komunikat przyłączający do sieci:
+Przykładowy komunikat informujący o przyłączeniu do sieci:
 \end_layout
 
 \end_inset
@@ -1419,11 +1485,11 @@ Opisywana metoda protokołu HTTP (NOTIFY) wykorzystywana jest przy ogłaszaniu
 \emph on
 NTS
 \emph default
- jest podtypu 
+ może mieć wartość 
 \emph on
 ssdp:alive
 \emph default
-, natomiast rozłączenie cechuje podtyp 
+, natomiast rozłączenie cechuje wartość 
 \emph on
 ssdp:byebye.
 \end_layout
@@ -1431,11 +1497,23 @@ ssdp:byebye.
 \begin_layout Standard
 Organizacja stanowiąca zasady protokołu UPnP w przypadku wykrywania urządzeń,
  poza wzajemnym informowaniem się o obecności (bądź też nieobecności), zagwarant
-owała również szukanie się wzajemne urządzeń UPnP.
+owała również wyszukiwanie się wzajemne urządzeń UPnP.
  Do wyszukiwania służy metoda M-SEARCH, której ogólny format przedstawia
  
 \series bold
-tabela nr.
+tabela nr
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+tabela?
+\end_layout
+
+\end_inset
+
+.
  
 \series default
 Pola 
@@ -1509,24 +1587,49 @@ urn:domain-name:device:serviceType:v - takie jak przeszukiwanie urządzenia
 \begin_layout Standard
 Bezpośrednio powiązana z komunikatem M-SEARCH jest odpowiedź na nią, którą
  urządzenie odpowiadające wysyła na adres źródłowy wcześniejszego pakietu.
- Odpowiedź jest zgoda z protokołem HTTP.
- Jej schemat widnieje w 
+ Odpowiedź jest zgodna z protokołem HTTP.
+ Jej schemat znajduje się w 
 \series bold
-tabeli nr 4.
+tabeli nr 4
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+etykieta
+\end_layout
+
+\end_inset
+
+.
  
 \series default
-Odpowiedź nie zawiera treści (
+Odpowiedź nie zawiera treści, lecz musi posiadać jedną pustą linię poniżej
+ nagłówka (
 \emph on
 HTTP BODY
 \emph default
-), lecz musi posiadać jedną pustą linię poniżej nagłówka.
+).
  Zarówno dla metody 
 \emph on
 M-SEARCH, 
 \emph default
 jak i odpowiedzi na nią nie ma potrzeby określania czasu życia pakietu 
 \emph on
-TTL.
+TTL
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+jaki TTL?
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1651,6 +1754,16 @@ Opis urządzeń i usług
 Po udanym wyszukaniu urządzenia, punkt kontrolny posiada jedynie podstawowe
  informacje o urządzeniu, które zostały zawarte we wcześniejszych komunikatach
  (
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+rozdział 
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand nameref
 reference "sub:Wykrywanie"
@@ -1658,8 +1771,8 @@ reference "sub:Wykrywanie"
 \end_inset
 
 ).
- Do interakcji z urządzeniem punkt kontrolny potrzebuje więcej danych, niż
- te zawarte w pierwszych komunikatach.
+ Do interakcji z urządzeniem, punkt kontrolny potrzebuje więcej danych,
+ niż już posiadane.
  W tym celu może pobrać dokładne informacje z adresu URL przesyłanego wraz
  z komunikatem o przyłączeniu do sieci (ang.
  
@@ -1667,10 +1780,22 @@ reference "sub:Wykrywanie"
 advertising
 \emph default
 ).
- Pobiera informacje nazywane są opisem usługi (ang.
+ Pobierane informacje nazywane są opisem usługi (ang.
  
 \emph on
-description
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+?
+\end_layout
+
+\end_inset
+
+service description
 \emph default
 ).
 \end_layout
@@ -1712,6 +1837,18 @@ services
 Opis urządzenia zawiera informacje o fizycznych i logicznych kontenerach
  
 \series bold
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+kontener
+\end_layout
+
+\end_inset
+
 (opisać termin kontener).
  
 \series default
@@ -1724,7 +1861,7 @@ Natomiast opis usług określa w sposób bardzo dokładny oferowane prze urządz
 root device
 \emph default
 ).
- Ponadto każde urządzenie logiczne może oferować jedną lub wiele usług.
+ Ponadto każde urządzenie logiczne może oferować jedną lub więcej usług.
 \end_layout
 
 \begin_layout Standard
@@ -1769,8 +1906,8 @@ Schemat pobierania opisu usługi
 
 \begin_layout Standard
 Opis urządzenia/usługi jest napisany przez dostawcę oprogramowania.
- Jest napisany w języku XML i zalecane jest, aby był zgodny z wytycznymi
- przedstawionymi w szablonie opisu urządzenia.
+ Jest napisany w języku XML i powinien być zgodny z wytycznymi przedstawionymi
+ w szablonie opisu urządzenia.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1778,10 +1915,10 @@ key "key-10"
 
 \end_inset
 
- Najważniejszym elementem z punktu widzenia autora jest sposób opisu usługi,
- który powinien być stworzony tak, aby punkty kontrolne jak największej
- liczby producentów (stan idealny - wszystkich producentów) sprzętu i oprogramow
-ania potrafiły uzyskać przydatne dla nich informacje.
+ Najważniejszym elementem, z punktu widzenia autora, jest sposób opisu usługi.
+ Powinien być stworzony tak, aby punkty kontrolne jak największej liczby
+ producentów (stan idealny - wszystkich producentów) sprzętu i oprogramowania
+ potrafiły uzyskać przydatne dla nich informacje.
 \end_layout
 
 \begin_layout Standard
@@ -1798,20 +1935,22 @@ Kontrola
 \begin_layout Standard
 Po uzyskaniu opisu urządzenia oraz usługi, punkt kontrolny może wywołać
  akcje, które mogą wykonywać dostawcy usług.
- Wywoływanie usługi przez punkt kontrolny można określić jako rodzaj wywołań
- zdalnych RPC (ang.
+ Wywoływanie usługi, przez punkt kontrolny, można porównać do zdalnych wywołań
+ RPC (ang.
  
 \emph on
 Remote Procedure Call
 \emph default
 ).
- Każde polecenie, niezależnie czy wywoływane przez punkt kontrolny czy jako
- odpowiedź zwrotna od usługi, jest enkapsulowane w komunikatach SOAP (ang.
+ Każde polecenie, niezależnie czy jest wywoływane przez punkt kontrolny
+ czy jest odpowiedzią zwrotną, od usługi, jest enkapsulowane w komunikatach
+ SOAP (ang.
  
 \emph on
 Simple Object Access Procotol
 \emph default
-) poprzez wywołania protokołu HTTP.
+).
+ Wywołania są zgodne z komunikatami protokołu HTTP.
  Wywoływanie procedur przez punkt kontrolny może (lecz nie musi) być przedstawio
 ne poprzez modyfikację zmiennych określających stan usługi.
  O każdym takim zdarzeniu powinny zostać poinformowane wszystkie zainteresowane
