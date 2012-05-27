@@ -210,7 +210,7 @@ Technologie udostępniania multimediów w sieciach, zarówno lokalnych, jak
  Jednakże wykorzystywane do dzisiaj protokoły udostępniania plików nie zostały
  zaprojektowane do odtwarzania multimediów i do ich oddzielnego rozpoznawania.
  Odtwarzacz sieciowy DLNA potrafi odtworzyć film, muzykę, obraz, jednak
- w większości przypadków nie poradzi sobie skuteczine z dokumentami, arkuszami
+ w większości przypadków nie poradzi sobie skutecznie z dokumentami, arkuszami
  kalkulacyjnymi i innymi nietypowymi dla niego plikami.
  Natomiast użytkownik takiego odtwarzacza w przypadku filmów oczekuje możliwości
  wyboru ścieżki dźwiękowej, napisów oraz tak jak w przypadku odtwarzaczy
@@ -304,7 +304,7 @@ Digital Rights Management
 \end_layout
 
 \begin_layout Section
-Opis standardu UPNP
+Opis standardu UPnP
 \end_layout
 
 \begin_layout Standard
@@ -2082,8 +2082,8 @@ Punkt kontrolny w celu otrzymywania subskrypcji wysyła zgłoszenie subskrypcji
 subscription message
 \emph default
 ).
- Jeżeli zgłoszenie jest zaakecptowane wydawca zwraca potwierdzenie w postaci
- czasu ważności sybksrypcji.
+ Jeżeli zgłoszenie jest zaakceptowane wydawca zwraca potwierdzenie w postaci
+ czasu ważności subskrypcji.
  Subskrypcja musi być odnawiana przez subskrybenta poprzez wysłanie kolejnych
  zgłoszeń.
  Punkt kontrolny, który otrzymuje informacje o zmianie stanu zmiennych może
@@ -2117,16 +2117,16 @@ event message
 Extensible Markup Language
 \emph default
 ).
- Pierwsza wiadomość wysłana do subskrybenta jest nazywana wiadomością inicjująca
+ Pierwsza wiadomość wysłana do subskrybenta jest nazywana wiadomością inicjującą
  (ang.
  
 \emph on
 initial event message
 \emph default
 ) i zawiera wszystkie zmienne (wraz z ich wartościami).
- Wydawca rozsyła zawsze wszystkie zmienione wersje do każdego punktu kontrolnego
-, który zgłosił chęć otrzymywania powiadomień (nie ma możliwości przesyłania
- jedynie niektórych zmiennych).
+ Wydawca rozsyła zawsze wszystkie zmienione wartości zmiennych do każdego
+ punktu kontrolnego, który zgłosił chęć otrzymywania powiadomień (nie ma
+ możliwości przesyłania jedynie niektórych zmiennych).
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2140,11 +2140,11 @@ key "key-11"
 \begin_layout Standard
 Zmienne, których wartości są zbyt duże lub których wartości ulega bardzo
  często zmianie, przez co ich wysłanie w komunikacie zdarzenia jest bezcelowe
- lub niemożliwe, wydawca może oznaczyć jako tagiem 
+ lub niemożliwe, wydawca może oznaczyć tagiem 
 \emph on
 non-evented
 \emph default
-, czyli jako niezgłaszane w rozsłyanych pakietach.
+, czyli jako niezgłaszane w rozsyłanych pakietach.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2152,7 +2152,8 @@ key "key-1"
 
 \end_inset
 
- Rozmiar (wielkość) zmiennych jest zgodna ze schematem dokumentu XML 
+ Możliwy typ oraz rozmiar (wielkość) zmiennych jest zgodna ze schematem
+ dokumentu XML 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-14"
@@ -2163,12 +2164,12 @@ key "key-14"
 \end_layout
 
 \begin_layout Standard
-Przykładem zdarzeń może być zmiana poziomu głośności urządzenia UPnP, które
- to zdarzenie jest wysyłane do zainteresowanego punktu kontrolnego.
+Przykładem zdarzeń może być zmiana poziomu głośności urządzenia UPnP.
+ Informacja o zdarzeniu jest wysyłana do zainteresowanych punktów kontrolnych.
  Innym przykładem, dotyczącym multimediów, jest dodanie pliku, bądź plików
  multimedialnych i wysłanie powiadomienia o tym fakcie do subskrybentów.
  Dzięki temu punkty kontrolne mogą wykonać natychmiastową aktualizacje listy
- plików w sposób wygodny i nie wymagający interwencji użytkownika.
+ plików w tle, w sposób nie wymagający interwencji użytkownika.
 \end_layout
 
 \begin_layout Standard
@@ -2176,10 +2177,6 @@ Przykładem zdarzeń może być zmiana poziomu głośności urządzenia UPnP, kt
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -2230,14 +2227,31 @@ Warstwa prezentacji jest ostatnią w stosie protokołu UPnP.
  kontrolę i sprawdzanie statusu urządzenia oraz usług wbudowanych w to urządzeni
 e.
  Dostęp do interfejsu użytkownika urządzenia umożliwia adres URL, dostarczany
- wraz z opisem urządzenia (warstwa opisu) 
+ wraz z opisem urządzenia (informacje w podrozdziale 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes pld
+\end_inset
+
+
+\begin_inset Quotes prd
+\end_inset
+
+tytuł
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Opis-urządzeń-i"
 
 \end_inset
 
-.
+).
  Dostarczanie prezentacji nie jest obowiązkowe i wiele urządzeń takiego
  interfejsu nie zapewnia.
  Uzyskanie opisywanej strony HTML urządzenia odbywa się zgodnie ze standardem
@@ -2252,10 +2266,10 @@ key "key-1"
 \end_layout
 
 \begin_layout Standard
-Wygląd prezentacji nie jest narzucowny w żaden sposób przez zrzeszenie UPnP
- Forum i jest zależna w pełni od preferencji producenta urządzenia.
- Wymanage jest jednakże, aby strona była zgodna ze standardem HTML i powinna
- być w wersji 3.0 lub późniejszej.
+Wygląd prezentacji nie jest narzucony w żaden sposób przez zrzeszenie UPnP
+ Forum i jest zależny w pełni od preferencji producenta urządzenia.
+ Wymagane jest jednakże, aby strona była zgodna ze standardem HTML w wersji
+ 3.0 lub nowszej.
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -2269,7 +2283,17 @@ key "key-1"
 Często do kontroli urządzenia poprzez warstwę prezentacji wykorzystywane
  są pozostałe wartwy stosu UPnP.
  Jednakże nie każdy interfejs UPnP umożliwia modyfikację wszystkich danych
- (rozdział dotyczący warstwy zdarzeń 
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+poprawić nawias
+\end_layout
+
+\end_inset
+
+(rozdział dotyczący warstwy zdarzeń 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Zdarzenia"
@@ -2337,6 +2361,16 @@ Specyfikacja UPnP definiuje kilka rodzajów urządzeń, które dotyczą protoko�
 Audio / Video
 \emph default
 ).
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ze specyfikacja subtype
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2349,10 +2383,10 @@ zaczerpnęła
 \emph on
  
 \emph default
-mutlimedialne rodzaje urządzeń ze specyfikacji UPnP oraz dodała elementy
- wyróżniające DLNA (np drukarkę multimediów).
+mutlimedialne rodzaje urządzeń ze specyfikacji UPnP A/V oraz dodała elementy,
+ które wyróżniają DLNA (np drukarkę multimediów).
  W niniejszym rozdziale zostaną przedstawione zarówno nazwy urządzeń DLNA,
- jak i multimedialnych urządzeń UPnP AV.
+ jak i multimedialnych urządzeń UPnP A/V.
 \end_layout
 
 \begin_layout Standard
@@ -2373,7 +2407,15 @@ urządzenia.
 \end_layout
 
 \begin_layout Standard
-Urządzenia multimedialne podzielone zostały na następujące kategorie:
+Urządzenia multimedialne podzielone zostały na kilka kategorii.
+ W poniższej liście pierwsza nazwa jest nazwą nadaną przez organizację UPnP,
+ druga przez organizację DLNA.
+ W przypadku, gdy odpowiednik, w którymś z protokołów nie występuje, na
+ miejscu nazwy usługi lub urządzenia znajduje się znak myślnika.
+\end_layout
+
+\begin_layout Standard
+Podział urządzeń według kategorii jest następujący:
 \end_layout
 
 \begin_layout Itemize
@@ -2391,7 +2433,7 @@ Digital Media Server
 \end_layout
 
 \begin_layout Itemize
-* / cyfrowy odtwarzacz multimediów DMP (ang.
+- / cyfrowy odtwarzacz multimediów DMP (ang.
  
 \emph on
 Digital Media Player
@@ -2423,17 +2465,10 @@ Digital Media Controller
 \end_layout
 
 \begin_layout Itemize
-drukarka multimediów DMPr (ang.
+- / drukarka multimediów DMPr (ang.
  
 \emph on
 Digital Media Printer).
-\end_layout
-
-\begin_layout Standard
-W powyższej liście pierwsza nazwa jest nazwą nadaną przez organizację UPnP,
- druga przez organizację DLNA.
- W przypadku, gdy odpowiednik, w którymś z protokołów nie występuje, na
- miejscu nazwy usługi lub urządzenia znajduje się znak myślnika.
 \end_layout
 
 \begin_layout Standard
@@ -2489,15 +2524,16 @@ Serwer multimedialny
 \end_layout
 
 \begin_layout Standard
-Serwer multimediów w protokołach UPNP AV oraz DLNA jest niezbędnym elementem
+Serwer multimediów w protokołach UPNP A/V oraz DLNA jest niezbędnym elementem
  sieci.
- Serwer udostępnia stworzone, pobrane, nagrane pliki multimedialne.
+ Serwer udostępnia stworzone, pobrane lub nagrane pliki multimedialne.
  Jest to jego główne zadanie.
- W protokole DLNA jego rolą jest również zapewnienie ochrony treści (praw
- autorskich).
- Serwer multimediów UPnP AV nie zapewnia ochrony treści.
+ W protokole DLNA jego dodatkową rolą jest również zapewnienie ochrony treści
+ DRM (praw autorskich).
+ Serwer multimediów UPnP A/V nie zapewnia ochrony treści.
  Serwer multimedialny jest to zazwyczaj oprogramowanie zainstalowane na
- urządzeniach podłączonych do sieci Ethernet, takich jak:
+ urządzeniach podłączonych do sieci IP (poprzez połączenie Ethernet), takich
+ jak:
 \end_layout
 
 \begin_layout Itemize
@@ -2521,7 +2557,8 @@ odtwarzacz BluRay / DVD.
 \end_layout
 
 \begin_layout Standard
-Na urządzenie lub oprogramowanie serwera UPnP składają się następujące usługi:
+Na urządzenie lub oprogramowanie serwera UPnP A/V składają się następujące
+ usługi:
 \end_layout
 
 \begin_layout Itemize
@@ -2556,16 +2593,20 @@ Pierwsza z usług, dotycząca zarządzania treścią umożliwia punktom kontroln
 \emph on
 ContentDirectory:::Browse(), 
 \emph default
-która po
+która pozwala
 \emph on
-zwala 
+ 
 \emph default
-uzyskać informacje uzyskać informacje o pliku wraz z jego metadanymi - nazwa,
- artysta itd.
- W metadanych mogą również być zawarte informacje o kodowaniu, transporcie,
- dzięki którym punkt kontrolny potrafi określić czy dany odtwarzacz ma możliwość
- odtworzenia zawartości.
- Druga z usług wykorzystywana jest do zarządzania ustanowionych już połączeń.
+uzyskać informacje uzyskać informacje o pliku wraz z jego metadanymi, takimi
+ jak nazwa, artysta, rok wydania itd.
+ W metadanych mogą również być zawarte informacje o kodowaniu, sposobie
+ transportu, dzięki którym punkt kontrolny potrafi określić czy dany odtwarzacz
+ ma możliwość odtworzenia pożądanej zawartości.
+ Druga z usług, usługa 
+\emph on
+ConnectionManager
+\emph default
+ wykorzystywana jest do zarządzania ustanowionych już połączeń.
  Ostatnia z opisywanych usług, służy do zarządzania odtwarzanym materiałem.
  Umożliwia wydawanie poleceń takich jak: odtwarzaj, pauza, stop, przewiń
  wprzód, przewiń w tył itd.
@@ -2596,14 +2637,23 @@ Odtwarzacz multimediów oraz odtwarzacz renderujący
 \end_layout
 
 \begin_layout Standard
-W przypadku opisywanego oprogramowania różnica, między standardami UPnP,
- a DLNA jest najbardziej widoczna.
+W przypadku opisywanego oprogramowania 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+widoczne w tytule
+\end_layout
+
+\end_inset
+
+ różnica, między standardami UPnP A/V, a DLNA jest największa.
  Zróżnicowanie te polega głównie na rozdzieleniu ogólnie pojętego zadania
  odtwarzania materiałów multimedialnych na mniejsze, pośrednie zadania.
 \end_layout
 
 \begin_layout Standard
-W przypadku UPnP AVw odtwarzaniu treści multimedialnych uczestniczy punk
+W przypadku UPnP A/V, w odtwarzaniu treści multimedialnych uczestniczy punkt
  kontrolny, który wyszukuje materiały udostępniane przez serwer multimediów
  oraz zleca ich odtworzenie.
  Polecenie odtworzenia może zostać wykonane w postaci dwóch metod.
@@ -2739,12 +2789,23 @@ komputer PC.
 \end_layout
 
 \begin_layout Standard
-Podobnie, jak w przypadku serwera UPnP, odtwarzacz posiada intergralne usługi,
- które musi, bądź powinien mieć zaimplementowane:
+Podobnie, jak w przypadku serwera UPnP A/V, odtwarzacz posiada intergralne
+ usługi, które musi, bądź powinien mieć zaimplementowane:
 \end_layout
 
 \begin_layout Itemize
-usługa kontroli renderowania,
+usługa kontroli renderowania (ang.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+),
 \end_layout
 
 \begin_layout Itemize
@@ -2767,16 +2828,36 @@ AVTransport Service
 
 \begin_layout Standard
 Dwie ostatnie usługi komunikują się ze swoimi odpowiednikami w implementacji
- serwera multimedialnego (ich funkcje się uzupełniają).
+ serwera multimedialnego (ich funkcje się uzupełniają)
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+odnośnik do 1.3.1 UPnP A/V
+\end_layout
+
+\end_inset
+
+.
  Usługa kontroli renderowania pozwala punktowi kontrolnemu sterować sposobem
  przetwarzania treści przez odtwarzacz renderujący.
- Oznacza to zmianę takich funkcji jak: jasność, kontrast, głośność, wyciszenie
- itd.
+ Oznacza to możliwość zmiany takich funkcji jak: jasność, kontrast, głośność,
+ wyciszenie itd.
  Usługa kontroli renderowania może obsługiwać wiele odtwarzaczy renderujących,
- co umożliwia jednoczesną zmianę ustawień w wielu urządzeniach UPnP.
+ co umożliwia jednoczesną zmianę ustawień w wielu urządzeniach UPnP A/V.
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-19"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+sprawdzić?
+\end_layout
 
 \end_inset
 
@@ -2790,11 +2871,12 @@ Punkt kontrolny oraz kontroler multimedialny
 \begin_layout Standard
 W przypadku UPnP A/V nie wyspecyfikowano oddzielnej usługi / urządzenia
  do kontroli odtwarzacza.
- Taką rolę spełnia punkt kontrolny w obrębie całej specyfikacji UPnP.
- Punkt kontrolny w UPnP koordynuje działania serwera multimediów i odtwarzacza.
+ Taką rolę spełnia punkt kontrolny w obrębie całej specyfikacji UPnP A/V.
+ Punkt kontrolny w UPnP A/V koordynuje działania serwera multimediów i odtwarzac
+za.
  Zazwyczaj wysyłanie poleceń jest efektem interakcji z użytkownikiem poprzez
  interfejs użytkownika.
- Punktu kontrolnego, w opisywanej roli, specyfikacja UPnP AV nie określa
+ Punktu kontrolnego, w opisywanej roli, specyfikacja UPnP A/V nie określa
  jako pełnoprawnego urządzenia UPnP (nie dostarcza żadnych usług UPnP oraz
  nie jest widoczny jako urządzenie UPnP w sieci), lecz jest niezbędnym pośrednik
 iem, między użytkownikiem, a urządzeniami UPnP.
@@ -2889,6 +2971,16 @@ Wybierz opcję: powtórz odtworzenie lub kolejny materiał.
 
 \begin_layout Enumerate
 Po zakończeniu działania zamknij połączenia z serwerem multimediów.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ładniej
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2901,10 +2993,10 @@ Specyfikacja DLNA dla większości typów urządzeń (wyjątkiem jest drukarka
 \emph on
 DMPr
 \emph default
-) przewiduje możliwość ich odmiany mobilnej.
- Spełniają one te same funkcje co typy główne.
+) przewiduje możliwość istnienia ich odmiany mobilnej.
+ Spełniają one, w większości przypadków, te same funkcje co typy główne.
  Rozróżnienie dużej ilości typów zostało wprowadzone dla ułatwionej orientacji
- konsumentów, pośród różnych produktów.
+ konsumentów, pośród różnych rodzajów produktów.
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-20"
@@ -2945,9 +3037,28 @@ key "key-20"
 \begin_layout Standard
 Pierwszy typ służy do wysłania (całości) materiału do serwera multimediów
  (mobilnej wersji bądź standardowej) poprzez sieć bezprzewodową.
- Przykładem takich urządzeń mogą być: cyfrowy aparat fotograficzny, kamera
- wideo, smartfon.
- Menedżer pobierania multimediów, również jest urządzeniem działającym w
+ 
+\end_layout
+
+\begin_layout Standard
+Przykładem takich urządzeń mogą być: 
+\end_layout
+
+\begin_layout Itemize
+cyfrowy aparat fotograficzny, 
+\end_layout
+
+\begin_layout Itemize
+kamera wideo, 
+\end_layout
+
+\begin_layout Itemize
+smartfon.
+ 
+\end_layout
+
+\begin_layout Standard
+Menedżer pobierania multimediów, również jest urządzeniem działającym w
  obrębie sieci bezprzewodowej, które pobiera materiały udostępniane przez
  serwer DLNA (niezależnie od wersji mobilnej, bądź standardowej).
  Menedżerem pobierania może być smartfon lub przenośny odtwarzacz muzyki.
@@ -2961,7 +3072,7 @@ key "key-20"
 \end_layout
 
 \begin_layout Standard
-Odmiany mobilne urządzeń i usług nie są wyróżnione w dokumentacji UPnP.
+Odmiany mobilne urządzeń i usług nie są wyróżnione w dokumentacji UPnP A/V.
 \end_layout
 
 \begin_layout Chapter
@@ -2969,22 +3080,33 @@ Multimedia w UPnP A/V i DLNA
 \end_layout
 
 \begin_layout Standard
-Specyfikacja UPnP AV została stworzona do umożliwienia oraz ustandaryzowania
- sposobu komunikacji ze sobą urządzeń multimedialnych w obrębie sieci lokalnej
- oraz zapewnienie współpracy między produktami różnych dostawców.
- Cel ten w specyfikacji UPnP AV został w dużej mierze osiągnięty.
- Specyfikacja UPnP AV pozostawia jednak swobodę w możliwościach obsługiwanych
+Specyfikacja UPnP A/V została stworzona do umożliwienia oraz ustandaryzowania
+ sposobu komunikacji ze sobą urządzeń multimedialnych w obrębie sieci lokalnej.
+ Ponadto miała zapewnić współpracę między produktami różnych dostawców.
+ Cel ten w specyfikacji UPnP A/V został osiągnięty w niepełnym wymiarze.
+ Specyfikacja UPnP A/V pozostawia swobodę w możliwościach obsługiwanych
  formatów danych.
- Oznacza to, że pomimo komunikowania się ze sobą różnych urządzeń, cel dla
- użytkownika końcowego, czyli odtworzenie treści, nie zawsze może być spełniony.
- Liberalność w kwestii wspieranych formatów zadziałał w tym przypadku na
- niekorzyść specyfikacji UPnP AV.
+ Oznacza to, że pomimo komunikowania się ze sobą urządzeń różnego typu,
+ cel dla użytkownika końcowego, czyli odtworzenie treści, nie zawsze może
+ być spełniony (strona odtwarzająca może nie potrafić odtworzyć materiału).
+ Liberalność w kwestii wspieranych formatów zadziałała, w tym przypadku,
+ na niekorzyść specyfikacji UPnP A/V.
 \end_layout
 
 \begin_layout Standard
-Z powyżej opisanego powodu producenci urządzeń powołali konsorcjum DLNA.
- W specyfikacji DLNA autorzy skupili się w również na formatach odtwarzanych
- plików.
+Z powyżej opisanego powodu producenci sprzętu elektronicznego powołali konsorcju
+m DLNA.
+ W specyfikacji DLNA autorzy skupili się w 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+również
+\end_layout
+
+\end_inset
+
+ na formatach odtwarzanych plików.
  Natomiast ze specyfikacji UPnP zapożyczyli między innymi w prawidłowy sposób
  działającą komunikację między urządzeniami.
  Jako format definiuje się możliwy sposób zakodowania pliku.
@@ -2992,13 +3114,16 @@ Z powyżej opisanego powodu producenci urządzeń powołali konsorcjum DLNA.
 
 \begin_layout Standard
 Certyfikacja DLNA jest stosowana przez większość producentów urządzeń multimedia
-lnych, a spośród w chwili obecnej najprawdopodobniej najpopularniejszego
- przeznaczenia DLNA (odtwarzanie filmów), większość producentów nowoczesnych
- telewizorów wyposaża je w oprogramowanie odtwarzacza DLNA.
+lnych.
+ Większość producentów nowoczesnych telewizorów wyposaża je w oprogramowanie
+ odtwarzacza DLNA.
+ W chwili obecnej najprawdopodobniej najpopularniejszym przeznaczeniem DLNA
+ jest odtwarzanie filmów.
+ 
 \end_layout
 
 \begin_layout Standard
-Zgodnie ze standardem UPnP AV oraz DLNA plik multimedialny można zaklasyfikować
+Zgodnie ze standardem UPnP A/V oraz DLNA plik multimedialny można zaklasyfikować
  do jednego z następujących formatów:
 \end_layout
 
@@ -3029,7 +3154,7 @@ AV / audio-video).
 
 \begin_layout Standard
 W niniejszym rozdziale zostaną opisane obsługiwane typy multimediów, ich
- klasyfikacje w opisywanych specyfikacjach oraz formaty kodowania plików,
+ klasyfikacje w opisywanych specyfikacjach, formaty kodowania plików, technika
  przechowywania oraz sposób ich obsługi.
 \end_layout
 
@@ -3042,7 +3167,17 @@ reference "tab:Typy-obsługiwanych-plików"
 
 \end_inset
 
-, .
+, 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+tab 2.2 oraz w drugiej tabeli mobilne
+\end_layout
+
+\end_inset
+
+.
  Objaśnienia do niniejszej tabeli znajdują się w rozdziałach poświęconym
  poszczególnym klasom multimediów.
 \end_layout
@@ -3465,10 +3600,10 @@ Odtwarzanie multimediów
 \end_layout
 
 \begin_layout Standard
-W odtwarzaniu multimediów w DLNA (analogicznie w UPnP AV) muszą brać udział
+W odtwarzaniu multimediów w DLNA (analogicznie w UPnP A/V) muszą brać udział
  minimum dwa urządzenia.
  Jedno to serwer multimediów udostępniający materiał, drugie to odtwarzacz
- DLNA (rysunek 
+ multimedialny (rysunek 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Uproszczony-schemat-komunikacji"
@@ -3476,7 +3611,7 @@ reference "fig:Uproszczony-schemat-komunikacji"
 \end_inset
 
 ).
- Istnieje również schemat w którym udział bierze więcej urządzeń, a trzecim
+ Istnieje również możliwość udziału większej liczby urządzeń, gdzie trzecim
  urządzeniem jest kontroler multimedialny pełniący rolę 
 \begin_inset Quotes pld
 \end_inset
@@ -3485,7 +3620,8 @@ pilota
 \begin_inset Quotes prd
 \end_inset
 
- zarządzającego, co ma być odtwarzane oraz zarządzać odtwarzaniem (
+ zarządzającego, który decyduje co ma być odtwarzane oraz zarządzać odtwarzaniem
+ (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:2Uproszczony-schemat-komunikacji"
@@ -3576,8 +3712,8 @@ Uproszczony schemat komunikacji 3 urządzeń
 \end_layout
 
 \begin_layout Standard
-Pierwsze dwa kroki w celu odtwarzania materiału to podłączenie urządzenia
- do sieci:
+Pierwszą czynnością jest podłączenie urządzenia do sieci, które wykonywane
+ jest w następujących krokach:
 \end_layout
 
 \begin_layout Enumerate
@@ -3606,7 +3742,7 @@ Serwer multimedialny odsyła opis urządzenia i usługi (usług) w postaci pliku
 \end_layout
 
 \begin_layout Enumerate
-Punkt kontrolny za pomocą komunikat SOAP wysyła do serwera akcje, którą
+Punkt kontrolny za pomocą komunikatów SOAP wysyła do serwera akcje, którą
  chce wykonać.
  W przypadku odtwarzania mogą być to komunikaty przeglądania multimediów
  (ang.
@@ -3614,31 +3750,41 @@ Punkt kontrolny za pomocą komunikat SOAP wysyła do serwera akcje, którą
 \emph on
 browse
 \emph default
-), ich wyszukiwania (ang.
+)lub ich wyszukiwania (ang.
  
 \emph on
 search
 \emph default
 ).
- Ilość komunikatów jest zależna od drzewa wyszukiwania pożądanego pliku
- przez użytkownika.
+ Ilość wymienionych komunikatów jest zależna od drzewa wyszukiwania pożądanego
+ pliku przez użytkownika.
 \end_layout
 
 \begin_layout Enumerate
-Wyszukiwanie kończy się wyborem pliku z wykorzystaniem metod protokołu HTTP
- np.
+Wyszukiwanie kończy się wraz z wyborem pliku z wykorzystaniem metod protokołu
+ HTTP np.
  HTTP GET.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+,?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Odtwarzacz mutimedialny ma możliwość, działania w typowy sposób dla tradycyjnego
  odtwarzacza muzyki lub wideo/DVD.
  Może przewijać materiał w przód, w tył.
- Przewijanie jest wykonywane przez podawania pożądanych bajtów pliku (np.
+ Przewijanie jest wykonywane przez podawanie pożądanych bajtów pliku (np.
  bajt 50 000 - 150 000) przez odtwarzacz multimedialny.
  Wykonywanie przewijania i skoków w filmie jest możliwe tylko wtedy gdy
- serwer multimedialny udostępnia rozmiar pliku lub długość pliku (niektóre
- odtwarzacze pożądają jednostek w minutach dla długości muzyki czy filmu,
+ serwer multimedialny udostępnia rozmiar pliku lub długość nagrania (niektóre
+ odtwarzacze wymagają jednostek w minutach dla długości muzyki czy filmu,
  pomimo, że prawdiłowo wykorzystują pobieranie tzn.
  pobierają okresloną ilość bajtów).
 \end_layout
@@ -3650,7 +3796,9 @@ Odtwarzacz multimedialny zgodnie z przytaczanymi specyfikacjami mają możliwoś
 \emph on
 playlist
 \emph default
-), jednakże autor nie odnalazł odtwarzacza, który umożliwiałby jej utworzenie.
+).
+ Jednakże autor nie odnalazł odtwarzacza, który umożliwiałby utworzenie
+ takiej listy.
 \end_layout
 
 \begin_layout Section
@@ -3658,11 +3806,12 @@ Klasy multimediów UPnP A/V
 \end_layout
 
 \begin_layout Standard
-Klasą główną urządzeń UPnP jest 
+Klasą główną urządzeń UPnP A/V jest 
 \emph on
-item, 
+item.
+ 
 \emph default
-w którym są zawarte następujące podtypy:
+Zawarte są w niej następujące podtypy:
 \end_layout
 
 \begin_layout Itemize
@@ -3771,9 +3920,9 @@ key "key-21"
 \end_layout
 
 \begin_layout Standard
-Każdy z powyższych typów, może posiadać podtypy określone przez wystawcę
+Każdy z powyższych typów, może posiadać podtypy zdefiniowane przez producenta
  oprogramowania.
- Schemat typów został dodatkowo przedstawiony na rysunku nr 
+ Schemat typów został przedstawiony na rysunku nr 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Schemat-typu-item"
@@ -3832,7 +3981,7 @@ upnp_av_contentdirectory_service:2
 \end_layout
 
 \begin_layout Standard
-Poza typowymi 
+Poza obiektami typu 
 \series bold
 \emph on
 item 
@@ -3851,39 +4000,35 @@ containers
 \end_layout
 
 \begin_layout Standard
-W przypadku DLNA zrezygnowano w materiałach z przyrostka 
+W przypadku DLNA zrezygnowano w specyfikacji z przyrostka 
 \emph on
 item
 \emph default
- i pozostały nazwy takie jak: 
+ i w nazwach typów, powstały nazwy takie jak: 
 \emph on
 audio, AV, image
 \emph default
 .
- Jednakże w implementacji DLNA (w postaci XML) pozostawiono nazwy, takie
- jak w UPnP AV, dlatego w niniejszej pracy autor używa nazw pochodzących
- z UPnP AV.
+ Jednakże w części DLNA dotyczącej implementacji (w postaci XML) pozostawiono
+ wcześniej znane nazwy, takie jak w UPnP A/V.
+ Z tego powodu w niniejszej pracy autor używa nazw pochodzących z UPnP A/V.
  Wyjątek stanowi sytuacja, gdy nazwa została zdefiniowana jedynie w specyfikacji
  DLNA, a w specyfikacji autorstwa UPnP Forum jej odpowiednik nie występuje.
 \end_layout
 
 \begin_layout Standard
-Typ pliku jest określany poprzez opcję 
+Typ pliku jest określany w opisie zasobu, który znajduje się w znaczniku
 \emph on
-res (ang.
+ res (ang.
  resource
 \emph default
-).
+) pliku XML.
 \end_layout
 
 \begin_layout Subsection
 Klasa 
 \emph on
-object 
-\emph default
-oraz klasa 
-\emph on
-item
+object
 \end_layout
 
 \begin_layout Standard
@@ -3891,13 +4036,13 @@ Wyróżniamy dwie klasy główne:
 \emph on
 object 
 \emph default
-i 
+oraz 
 \emph on
 item.
 
 \emph default
  Pierwsza z nich to klasa główna , w której znajduje się cała udostępniana
- odtwarzaczowi UPnP lub DLNA treść multimedialna (ang.
+ odtwarzaczowi UPnP A/V lub DLNA treść multimedialna (ang.
  
 \emph on
 ContentDirectory
@@ -3921,7 +4066,7 @@ object
 \end_layout
 
 \begin_layout Itemize
-@restricted - ...???
+@restricted - określa czy właściwości obiektu mogą zostać zmienione,
 \end_layout
 
 \begin_layout Itemize
@@ -3944,15 +4089,15 @@ Dodatkowymi właściwościami opisywanej klasy są:
 \end_layout
 
 \begin_layout Itemize
-dc:creator - ...?
+dc:creator - twórca obiektu,
 \end_layout
 
 \begin_layout Itemize
-res - URL ????
+res - zasób / zasoby,
 \end_layout
 
 \begin_layout Itemize
-upnp:writeStatus - ?????????????.
+upnp:writeStatus - określa czy dany obiekt może być modyfikowany.
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-21"
@@ -3960,6 +4105,12 @@ key "key-21"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Klasa 
+\emph on
+item
 \end_layout
 
 \begin_layout Standard
@@ -3993,7 +4144,17 @@ oraz wprowadza następujące właściwości (wszystkie są opcjonalne):
 \end_layout
 
 \begin_layout Itemize
-upnp:bookmarkID - ..........?
+upnp:bookmarkID - 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+..........?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -4016,6 +4177,7 @@ object
 object
 \emph default
 ).
+ Jest odpowiednikiem katalogu w systemie plików.
  Nie określa ona żadnych obowiązkowych właściwości, które trzeba dostarczyć
  drugiej stronie komunikacji.
  Opcjami dodatkowymi są natomiast pola:
@@ -4026,19 +4188,59 @@ object
 \end_layout
 
 \begin_layout Itemize
-upnp:CreateClass - ........?
+upnp:CreateClass - 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+........?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-upnp:SearchClass - ...........?
+upnp:SearchClass - 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+...........?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-@searchable - wartość 0 lub 1????????
+@searchable - wa
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+rtość 0 lub 1????????
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-@neverPlayable - ????????????
+@neverPlayable - ?
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+???????????
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -4099,7 +4301,17 @@ dc:date - data powstania obrazu,
 \end_layout
 
 \begin_layout Itemize
-dc:rights - prawa do obrazu (???) 
+dc:rights - prawa do o
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+brazu (???) 
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-21"
@@ -6682,7 +6894,7 @@ szablony
  filmów itd.
  Niestety testy oprogramowania wykazały, że sposób implementacji protokołu
  nie zapewnia komunikacji z wieloma urządzeniami (w tym mobilnymi).
- Autor zdecydowal się wykorzystać w swoim oprogramowaniu opisywany framework
+ Autor zdecydował się wykorzystać w swoim oprogramowaniu opisywany framework
  oraz wprowadzić w nim niezbędne modyfikacje, co dzięki liberalnej licencji
  MIT było w kwestiach prawnych możliwe.
 \end_layout
@@ -6701,7 +6913,7 @@ Zaprojektowana aplikacja do udostępniania materiałów multimedialnych, jest
 \begin_inset Quotes pld
 \end_inset
 
-techincznymi
+technicznymi
 \begin_inset Quotes prd
 \end_inset
 
@@ -6733,7 +6945,7 @@ serwer UPnP AV,
 \end_layout
 
 \begin_layout Itemize
-aplikacji zarządającej.
+aplikacji zarządzającej.
 \end_layout
 
 \begin_layout Standard
@@ -6979,7 +7191,7 @@ name "tab:Katagolowanie-typów-MIME"
 
 \end_inset
 
-Katagolowanie typów MIME - przykład
+Katalogowanie typów MIME - przykład
 \end_layout
 
 \end_inset
@@ -8344,7 +8556,7 @@ wzorzec ignorowania - np.
 \end_layout
 
 \begin_layout Itemize
-stwórz oddzielny konterer typów MIME (domyślnie włączona),
+stwórz oddzielny kontener typów MIME (domyślnie włączona),
 \end_layout
 
 \begin_layout Itemize
@@ -8356,7 +8568,7 @@ własna ikona serwera,
 \end_layout
 
 \begin_layout Itemize
-maksymalna ilość przeszukania rekursywnego (domyślnie nieorganiczona) -
+maksymalna ilość przeszukania rekursywnego (domyślnie nieograniczona) -
  ile folderów 
 \begin_inset Quotes pld
 \end_inset
@@ -8491,8 +8703,8 @@ Przeglądaj
 Browse
 \emph default
 ) i wybranie folderu, który zostanie przeszukany.
- W drugim przypadku ściezka do folderu zostanie dodana do linii absolutnej
- ściezki do katalogu (jest to opcja wygodniejsza dla niektórych użytkowników).
+ W drugim przypadku ścieżka do folderu zostanie dodana do linii absolutnej
+ ścieżki do katalogu (jest to opcja wygodniejsza dla niektórych użytkowników).
 \end_layout
 
 \begin_layout Standard
@@ -8601,7 +8813,7 @@ Dla rozróżnienia modułu serwera UPnP AV od aplikacji głównej, pierwszy modu
 Serwer multimedialny UPnP AV udostępnia swoje funkcje poprzez protokół UPnP
  w wersji tylko do odczytu, oznacza to, że nie można modyfikować opcji serwer
  przy pomocy poleceń protokołu UPnP.
- Zarządzanie serwerm jest możliwe, poprzez wykorzystanie poleceń RPC wysyłanych
+ Zarządzanie serwerem jest możliwe, poprzez wykorzystanie poleceń RPC wysyłanych
  do serwera RPC, będącego modułem wewnętrznym (podmodułem) serwer UPnP AV.
  Polecenia do integralnego serwera RPC wysyłane są z drugiej aplikacji,
  serwera zarządzającego.
@@ -8642,7 +8854,7 @@ alnych,
 \end_layout
 
 \begin_layout Itemize
-zmiana loga serwera UPnP, widocznego w odtwarzaczu UPnP AV bądź DLNA.
+zmiana loga serwera UPnP, widocznego w odtwarzaczu UPnP A/V bądź DLNA.
 \end_layout
 
 \begin_layout Standard
