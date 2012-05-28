@@ -210,7 +210,7 @@ Technologie udostępniania multimediów w sieciach, zarówno lokalnych, jak
  Jednakże wykorzystywane do dzisiaj protokoły udostępniania plików nie zostały
  zaprojektowane do odtwarzania multimediów i do ich oddzielnego rozpoznawania.
  Odtwarzacz sieciowy DLNA potrafi odtworzyć film, muzykę, obraz, jednak
- w większości przypadków nie poradzi sobie skuteczine z dokumentami, arkuszami
+ w większości przypadków nie poradzi sobie skutecznie z dokumentami, arkuszami
  kalkulacyjnymi i innymi nietypowymi dla niego plikami.
  Natomiast użytkownik takiego odtwarzacza w przypadku filmów oczekuje możliwości
  wyboru ścieżki dźwiękowej, napisów oraz tak jak w przypadku odtwarzaczy
@@ -304,7 +304,7 @@ Digital Rights Management
 \end_layout
 
 \begin_layout Section
-Opis standardu UPNP
+Opis standardu UPnP
 \end_layout
 
 \begin_layout Standard
@@ -6894,7 +6894,7 @@ szablony
  filmów itd.
  Niestety testy oprogramowania wykazały, że sposób implementacji protokołu
  nie zapewnia komunikacji z wieloma urządzeniami (w tym mobilnymi).
- Autor zdecydowal się wykorzystać w swoim oprogramowaniu opisywany framework
+ Autor zdecydował się wykorzystać w swoim oprogramowaniu opisywany framework
  oraz wprowadzić w nim niezbędne modyfikacje, co dzięki liberalnej licencji
  MIT było w kwestiach prawnych możliwe.
 \end_layout
@@ -6913,7 +6913,7 @@ Zaprojektowana aplikacja do udostępniania materiałów multimedialnych, jest
 \begin_inset Quotes pld
 \end_inset
 
-techincznymi
+technicznymi
 \begin_inset Quotes prd
 \end_inset
 
@@ -6945,7 +6945,7 @@ serwer UPnP AV,
 \end_layout
 
 \begin_layout Itemize
-aplikacji zarządającej.
+aplikacji zarządzającej.
 \end_layout
 
 \begin_layout Standard
@@ -7191,7 +7191,7 @@ name "tab:Katagolowanie-typów-MIME"
 
 \end_inset
 
-Katagolowanie typów MIME - przykład
+Katalogowanie typów MIME - przykład
 \end_layout
 
 \end_inset
@@ -8556,7 +8556,7 @@ wzorzec ignorowania - np.
 \end_layout
 
 \begin_layout Itemize
-stwórz oddzielny konterer typów MIME (domyślnie włączona),
+stwórz oddzielny kontener typów MIME (domyślnie włączona),
 \end_layout
 
 \begin_layout Itemize
@@ -8568,7 +8568,7 @@ własna ikona serwera,
 \end_layout
 
 \begin_layout Itemize
-maksymalna ilość przeszukania rekursywnego (domyślnie nieorganiczona) -
+maksymalna ilość przeszukania rekursywnego (domyślnie nieograniczona) -
  ile folderów 
 \begin_inset Quotes pld
 \end_inset
@@ -8703,8 +8703,8 @@ Przeglądaj
 Browse
 \emph default
 ) i wybranie folderu, który zostanie przeszukany.
- W drugim przypadku ściezka do folderu zostanie dodana do linii absolutnej
- ściezki do katalogu (jest to opcja wygodniejsza dla niektórych użytkowników).
+ W drugim przypadku ścieżka do folderu zostanie dodana do linii absolutnej
+ ścieżki do katalogu (jest to opcja wygodniejsza dla niektórych użytkowników).
 \end_layout
 
 \begin_layout Standard
@@ -8813,7 +8813,7 @@ Dla rozróżnienia modułu serwera UPnP AV od aplikacji głównej, pierwszy modu
 Serwer multimedialny UPnP AV udostępnia swoje funkcje poprzez protokół UPnP
  w wersji tylko do odczytu, oznacza to, że nie można modyfikować opcji serwer
  przy pomocy poleceń protokołu UPnP.
- Zarządzanie serwerm jest możliwe, poprzez wykorzystanie poleceń RPC wysyłanych
+ Zarządzanie serwerem jest możliwe, poprzez wykorzystanie poleceń RPC wysyłanych
  do serwera RPC, będącego modułem wewnętrznym (podmodułem) serwer UPnP AV.
  Polecenia do integralnego serwera RPC wysyłane są z drugiej aplikacji,
  serwera zarządzającego.
@@ -8854,7 +8854,7 @@ alnych,
 \end_layout
 
 \begin_layout Itemize
-zmiana loga serwera UPnP, widocznego w odtwarzaczu UPnP AV bądź DLNA.
+zmiana loga serwera UPnP, widocznego w odtwarzaczu UPnP A/V bądź DLNA.
 \end_layout
 
 \begin_layout Standard
