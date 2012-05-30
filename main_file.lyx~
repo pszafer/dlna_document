@@ -1323,19 +1323,20 @@ ang.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
+\begin_inset Float table
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
-\series bold
-\bar under
-Przykładowy komunikat informujący o przyłączeniu do sieci:
+Przykładowy komunikat informujący o przyłączeniu do sieci
 \end_layout
 
 \end_inset
@@ -1636,7 +1637,7 @@ jaki TTL?
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -1890,7 +1891,7 @@ Schemat pobierania opisu usługi
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename get_decription.png
+	filename get_description.png
 	display false
 	width 70page%
 
@@ -2355,7 +2356,7 @@ Specyfikacja UPnP definiuje kilka rodzajów urządzeń, które dotyczą protoko�
  ze szczególnym ukierunkowaniem na rodzaje przeznaczone do współpracy z
  materiałami multimedialnymi.
  Urządzenia te są zgodne z jedną z kategorii opisywanego protokołu nazywanego
- UPnP AV (od ang.
+ UPnP A/V (od ang.
  
 \emph on
 Audio / Video
@@ -2491,7 +2492,7 @@ name "fig:Schemat-odtwarzania-w"
 
 \end_inset
 
-Schemat odtwarzania w UPnP AV
+Schemat odtwarzania w UPnP A/V
 \end_layout
 
 \end_inset
@@ -2700,7 +2701,7 @@ name "fig:Architektura-odtwarzania-UPnP"
 
 \end_inset
 
-Architektura odtwarzania UPnP AV
+Architektura odtwarzania UPnP A/V
 \end_layout
 
 \end_inset
@@ -5216,7 +5217,7 @@ musicVideoClip:videoItem
 \begin_layout Standard
 Klasa film reprezentuje materiały filmowe i umożliwia załączenie dodatkowych
  danych odnośnie filmu w wyspecyfikowanych, przez autorów dokumentacji UPnP
- AV, atrybutach.Na atrybuty składają się:
+ A/V, atrybutach.Na atrybuty składają się:
 \end_layout
 
 \begin_layout Itemize
@@ -5397,7 +5398,7 @@ Muzyka
 \end_layout
 
 \begin_layout Standard
-Muzyke w kontekście udostępniania UpNP AV oraz DLNA można rozumieć jako
+Muzyke w kontekście udostępniania UPnP A/V oraz DLNA można rozumieć jako
  pliki audio zawierające utwory muzyczne lub ścieżki dźwiękowe.
  Ilość formatów kompresji danych audio jest bardzo wiele.
  Niektóre służą do przesyłania głosu (np.
@@ -5519,7 +5520,7 @@ Podział formatów plików graficznych (wiki)
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="3">
+<lyxtabular version="3" rows="3" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -5558,7 +5559,37 @@ Przykłady plików graficznych
 \begin_inset Text
 
 \begin_layout Plain Layout
-Grafika rastrowa
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Grafika
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+rastrowa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -5572,29 +5603,98 @@ Grafika rastrowa
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-używające kompresji stratnej
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+używające
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-używające kompresji bezstratnej
+kompresji stratnej
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+używające
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kompresji bezstratnej
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5604,6 +5704,27 @@ bez kompresji
 \end_inset
 </cell>
 </row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
 </lyxtabular>
 
 \end_inset
@@ -5622,33 +5743,123 @@ bez kompresji
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-JBIG, JBIG2, JNG, JPEG, JPEG LS, JPEG 2000, JPEG XR, DjVu, TIFF, WebP, WMF
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DjVu, JBIG, JBIG2, JNG, JPEG, JPEG LS,
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-APNG, BMP, GIF, LWF, MNG, PCX, PNG, TGA, TIFF, WMF
+JPEG 2000, JPEG XR, TIFF, WebP, WMF
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-BMP, DNG, PNM, PSD, RAW, TGA, TIFF, WBMP, WMF, XCF, XPM
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+APNG, BMP, GIF, LWF, MNG,
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PCX, PNG, TGA, TIFF, WMF
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+BMP, DNG, PNM, PSD, RAW, TGA,
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ TIFF, WBMP, WMF, XCF, XPM
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -5665,16 +5876,46 @@ BMP, DNG, PNM, PSD, RAW, TGA, TIFF, WBMP, WMF, XCF, XPM
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Grafika wektorowa
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Grafika
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+wektorowa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5683,39 +5924,40 @@ nie dotyczy
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Al, CDR, EPS, DXF, DWF, DWG, SVG, SWF, WMF
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Al, CDR, EPS, DXF, DWF,
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+ DWG, SVG, SWF, WMF
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
+</row>
+</lyxtabular>
 
 \end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
 
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -6304,8 +6546,8 @@ Istnieje wiele standardów napisów do filmów, które mogą być w prosty spos�
  i nie specyfikuje jakie rodzaje napisów powinny być obsługiwane oraz w
  jaki sposób.
  Informacje o sposobie udostępniania napisów zostały określone jedynie w
- specyfikacji UPnP AV dla urządzeń renderujących [http://www.upnp.org/specs/av/UPn
-P-av-RenderingControl-v3-Service-20101231.pdf].
+ specyfikacji UPnP A/V dla urządzeń renderujących [http://www.upnp.org/specs/av/UP
+nP-av-RenderingControl-v3-Service-20101231.pdf].
 \end_layout
 
 \begin_layout Standard
@@ -6366,27 +6608,28 @@ Urządzenia DLNA (i nie tylko) posiadają wbudowane dekodery formatów wideo.
 \end_layout
 
 \begin_layout Part
-Implementacja serwera UPnP
+Implementacja serwera UPnP A/V
 \end_layout
 
 \begin_layout Chapter
-Oprogramowanie serwera UPnP AV
+Oprogramowanie serwera UPnP A/V
 \end_layout
 
 \begin_layout Standard
-Większość współczesnych odtwarzaczy Blu-ray, telewizorów, dekoderów i tym
- podobnych urządzeń RTV, posiada złącze Ethernet (lub moduł 
+Większość współczesnych odtwarzaczy Blu-ray, telewizorów, dekoderów i podobnych
+ urządzeń RTV posiada złącze Ethernet (lub moduł 
 \emph on
 WiFi
 \emph default
-) i umożliwia podłączenie urządzenia do sieci lokalnej i Internetu.
+).
+ Umożliwia ono podłączenie urządzenia do sieci lokalnej i Internetu.
  Takie urządzenia posiadają oprogramowanie umożliwiające wyszukiwać oraz
- odtwarzać materiały udostępniane przez serwery UPnP AV oraz DLNA.
+ odtwarzać materiały udostępniane przez serwery UPnP A/V oraz DLNA.
  Autor na potrzeby niniejszej pracy stworzył w pełni funkcjonalny serwer
- UPnP AV współpracujący z urządzeniami UPnP i DLNA.
+ UPnP A/V współpracujący z urządzeniami UPnP A/V i DLNA.
  Głównym celem aplikacji było umożliwenie kooperacji dwóch urządzeń ze sobą,
  w taki sposób, aby odtwarzacz potrafił wykorzystać jak największą możliwą
- ilość funkcji określoną w specyfikacjach UPnP AV i DLNA.
+ ilość funkcji określoną w specyfikacjach UPnP A/V oraz DLNA.
 \end_layout
 
 \begin_layout Section
@@ -6396,26 +6639,27 @@ Wymagania wstępne
 \begin_layout Standard
 Zdefiniowanie środowiska do implementacji oprogramowania było bardzo ważnym
  wyborem.
- Autor do codziennej pracy używa systemu operacyjnego z rodziny Linux, jednakże
- większość użytkowników komputerów typu PC używa systemu operacyjnego Microsoft
- Windows.
- Dlatego też środowisko implementacji ma zapewniać kompatybilność z oboma
- systemami operacyjnymi.
- Pierwszym wyborem ze względu na biegłą znajomość języka było środowisko
- programistyczne języka Java.
+ Autor do codziennej pracy używa systemu operacyjnego z rodziny Linux.
+ Jednakże większość użytkowników komputerów typu PC używa systemu operacyjnego
+ Microsoft Windows.
+ Są to istotne argumenty by środowisko implementacji zapewniało kompatybilność
+ z oboma systemami operacyjnymi.
+ Pierwszym wyborem, ze względu na biegłą znajomość języka programistycznego
+ przez autora, było środowisko języka Java.
 \end_layout
 
 \begin_layout Standard
 W dzisiejszych czasach coraz więcej urządzeń sieci lokalnej nie jest oparta
- o architekturę PC.
- Przykładami takich urządzeń mogą być routery lub smartfony.
+ o architekturę PC (architekturę x86 lub amd64).
+ Przykładami takich urządzeń mogą być routery lub smartfony (np.
+ architektura ARM).
  Pierwsze z nich, coraz częściej są wyposażone w złącza USB oraz posiadają
  załączone oprogramowanie do udostępniania multimediów.
  Z doświadczeń własnych autora, wynika jednak, że zakres możliwości oraz
  wydajność takiego oprogramowania pozostawia wiele do życzenia.
  Skutecznie udostępniane są jedynie zdjęcia, natomiast użytkownicy natrafiają
- na problemy w kwestii odtwarzania filmów oraz muzyki.
- 
+ na problemy w kwestii odtwarzania filmów oraz muzyki (trend coraz wyraźniej
+ odwraca się w przypadku smartfonów).
 \end_layout
 
 \begin_layout Standard
@@ -6426,7 +6670,8 @@ reference "tab:Platformy-obsługiwane-przez"
 
 \end_inset
 
- zostały zdefiniowane platformy konieczne do obsługiwania przez serwer UPnP.
+ zostały zdefiniowane platformy konieczne do obsługiwania przez serwer UPnP
+ A/V.
 \end_layout
 
 \begin_layout Standard
@@ -6449,7 +6694,7 @@ name "tab:Platformy-obsługiwane-przez"
 
 \end_inset
 
-Platformy obsługiwane przez serwer UPnP AV
+Platformy obsługiwane przez serwer UPnP A/V
 \end_layout
 
 \end_inset
@@ -6578,19 +6823,20 @@ Linux
 \begin_layout Standard
 W przypadku środowiska Java wymienione we wcześniejszych akapitach wymagania
  mogą być z łatwością realizowane.
- Jednakże obciążenie procesora (ystem operacyjny Ubuntu 10.10) dla prostej
- aplikacji UPnP wynosiło około 5%.
+ Jednakże obciążenie procesora (system operacyjny Ubuntu 11.10) dla prostej
+ aplikacji UPnP A/V wynosiło około 5%.
  Analiza materiałów udostępnianych w Internecie oraz doświadczenie z użytkowania
  aplikacji Java, poddawała w wątpliwość wydajną pracę serwera zaprojektowanego
  w tym języku na mało wydajnych urządzeniach (np.
  routery).
  Po kilku próbah uruchomienia serwera Tomcat na routerze firmy Linksys E3000,
- autor podjął decyzję o dalszym szukaniu środowiska do stworzenia aplikacji.
- Ostateczny wybór padł na język Python do realizacji oprogramowania.
+ autor podjął decyzję o zaprzestaniu dalszych prób i poszukiwaniu odpowiedniego
+ środowiska do stworzenia aplikacji.
+ Wybór padł na język Python do realizacji oprogramowania.
 \end_layout
 
 \begin_layout Standard
-Pozostałe wymagania zostały narzucone przez standardy UPnP AV i DLNA, co
+Pozostałe wymagania zostały narzucone przez standardy UPnP A/V i DLNA, co
  prosto można określić jako wymaganie pełnej współpracy z certyfikowanymi
  urządzeniami DLNA lub UPnP.
  Głównymi wymaganiami są:
@@ -6598,13 +6844,13 @@ Pozostałe wymagania zostały narzucone przez standardy UPnP AV i DLNA, co
 
 \begin_layout Itemize
 współpraca z podstawowymi urządzeniami DLNA - telewizorami, odtwarzaczami
- BluRay itd.,
+ Blu-ray, odtwarzaczami DVD itd.,
 \end_layout
 
 \begin_layout Itemize
 odtwarzanie (o ile podstawowy odtwarzacz urządzenia ma taką możliwość) konteneró
 w muzycznych i filmowych np.
- plików Matroska - MKV,
+ kontener Matroska - pliki MKV,
 \end_layout
 
 \begin_layout Itemize
@@ -6614,11 +6860,11 @@ odtwarzanie napisów w filmach i muzyce (np.
 \end_layout
 
 \begin_layout Itemize
-przewijanie materiału,
+przewijanie materiałów,
 \end_layout
 
 \begin_layout Itemize
-udostępnianie materiału w pełnej jakości,
+udostępnianie materiałów w najlepszej jakości,
 \end_layout
 
 \begin_layout Itemize
@@ -6627,27 +6873,41 @@ dodawanie / usuwanie udostępnianej zawartości bez konieczności ponownego
 \end_layout
 
 \begin_layout Itemize
-tworzenie albumów, klasyfikacji treści w logicznych katalogach.
+tworzenie albumów, klasyfikacji treści w logicznych katalogach,
+\end_layout
+
+\begin_layout Itemize
+opcjonalne - transkodowanie.
 \end_layout
 
 \begin_layout Standard
 W oprogramowaniu autor jako opcjonalne wymaganie zdefiniował renderowanie
  filmów do gorszej jakości w locie.
  W chwili obecnej większość nowoczesnego sprzętu na rynku obsługuje dużą
- ilość formatów i mimo swoich możliwości to oprogramowanie odtwarzacza DLNA
- jest przestarzałe lub stworzone z minimalnymi wymaganiami certyfikacji,
+ ilość formatów i mimo możliwości sprzętowych, to oprogramowanie odtwarzacza
+ DLNA nie potrafi prawidłowo wynegocjować jakości transmisji.
+ Bardzo często odtwarzacze są stworzone z minimalnymi wymaganiami certyfikacji,
  co powoduje komunikat o niekompatybilności materiału, pomimo, że w rzeczywistoś
 ci taka sytuacja nie ma miejsca.
  Z tego powodu autor skupił się podczas tworzenia oprogramowania serwera
- na ominięciu przeszkód postawionych przez większość producentów i wymuszenie
- odtwarzania materiałów na każdym urządzeniu.
+ na ominięciu 
+\begin_inset Quotes pld
+\end_inset
+
+przeszkód
+\begin_inset Quotes prd
+\end_inset
+
+ postawionych przez większość producentów i wymuszenie odtwarzania materiałów
+ na każdym urządzeniu.
 \end_layout
 
 \begin_layout Standard
-Nie wszystkie urządzenia posiadają interfejs graficzny użytkownika.
- Interfejs użytkownika w serwerze UPnP AV/DLNA jest dostarczane wraz z oprogramo
-waniem serwera www i interfejsem strony internetowej do zarządzania serwerem
- oraz uruchamiania go.
+Nie wszystkie urządzenia, na których ma być uruchomiony serwer multimedialny,
+ muszą posiadać interfejs graficzny użytkownika.
+ Serwerze UPnP A/V/DLNA jest dostarczany wraz z oprogramowaniem serwera
+ www i interfejsem strony internetowej jako interfejsem użytkownika, wykorzystyw
+anym do zarządzania serwerem oraz uruchamiania go.
 \end_layout
 
 \begin_layout Section
@@ -6655,7 +6915,7 @@ Wykorzystane narzędzia
 \end_layout
 
 \begin_layout Standard
-Aplikacja serwera UPnP AV została napisana w języku Python.
+Aplikacja serwera UPnP A/V została napisana w języku Python (wersja 2.7).
  Jej szkielet został oparty o zmodyfikowaną wersję framework'a 
 \emph on
 Coherence, 
@@ -6691,13 +6951,31 @@ platforma Eclipse 3.6,
 
 \begin_deeper
 \begin_layout Itemize
-języki programowania: Python, HTML, Javascript, 
-\series bold
-Django, 
-\series default
+języki programowania: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Python 2.7, 
+\end_layout
+
+\begin_layout Itemize
+HTML 4, 
+\end_layout
+
+\begin_layout Itemize
+Javascript, 
+\end_layout
+
+\begin_layout Itemize
+Django 1.3.1, 
+\end_layout
+
+\begin_layout Itemize
 T-SQL,
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 framework'i
 \end_layout
@@ -6712,7 +6990,7 @@ Coherence DLNA,
 \begin_layout Itemize
 
 \emph on
-Django, 
+Django 1.3.1, 
 \end_layout
 
 \begin_layout Itemize
@@ -6730,11 +7008,11 @@ Storm.
 \end_deeper
 \end_deeper
 \begin_layout Itemize
-GIMP do tworzenia grafiki aplikacji
+GIMP 2.8 do tworzenia grafiki aplikacji
 \end_layout
 
 \begin_layout Itemize
-odtwarzacze UPnP AV / DLNA do testów
+odtwarzacze UPnP A/V / DLNA do testów
 \end_layout
 
 \begin_layout Itemize
@@ -6753,23 +7031,23 @@ Framework’i UPnP
 
 \begin_layout Standard
 W internecie można odnaleźć bardzo dużo framework'ów, które obsługują UPnP
- AV oraz DLNA.
+ A/V oraz DLNA.
  Przed wyborem języka programowania autor skupił się na poszukiwaniu odpowiednie
-go środowiska, który wspiera komunikację w sieci multimedialnej, posiada
- darmową, otwartą do modyfikacji licencję oraz nie obciąża w znaczący sposób
- systemu operacyjnego.
+go środowiska (framework'a), który wspiera komunikację w sieci multimedialnej,
+ posiada darmową, otwartą do modyfikacji licencję oraz nie obciąża w znaczący
+ sposób systemu operacyjnego.
  Autor nie odnalazł framework'a, który natywnie wspierałby specyfikację
  DLNA.
  Jest to spowodowane prawdopodobnie koniecznością ponoszenia kosztów licencji
  DLNA.
- Liczba framework'ów, które wspierają protokół UPnP oraz UPnP AV, pomimo
+ Liczba framework'ów, które wspierają protokół UPnP oraz UPnP A/V, pomimo
  że nie jest duża, to jest w zadowalający sposób zaimplementowana, dzięki
  czemu autor nie musiał zaprogramować niższych warstw opisywanego protokołu.
 \end_layout
 
 \begin_layout Standard
-Pierwszym, prawdopodobnie najnowszym i najczęściej aktualizowanym jest oprogramo
-wanie 
+Pierwszym framework'iem, prawdopodobnie najnowszym i najczęściej aktualizowanym
+ jest oprogramowanie 
 \emph on
 Cling
 \emph default
@@ -6786,8 +7064,8 @@ key "key-27"
  protokołu UPnP.
  Nie implementuje zmian wprowadzonych przez zrzeszenie DLNA.
  Jest napisana w języku Java, możliwe jest jej wykorzystanie zarówno w oprogramo
-waniu PC, jak i oprogramowaniu Javy dla smartfonów z systemem operacyjnym
- Android.
+waniu dla komputerów klasy PC, jak i oprogramowaniu Java dla smartfonów
+ z systemem operacyjnym Android.
  Autor odrzucił jej wykorzystanie, gdyż w ówczesnym stadium rozwoju implementowa
 ła zbyt małą liczbę koniecznych do komunikacji funkcji oraz niemożliwe byłoby
  jej wykorzystanie na urządzeniach o bardzo małych możliwościach wydajnościowych
@@ -6796,8 +7074,8 @@ waniu PC, jak i oprogramowaniu Javy dla smartfonów z systemem operacyjnym
 \end_layout
 
 \begin_layout Standard
-Drugim branym pod uwagę jako podstawę do aplikacji serwera UPnP framework'iem
- był 
+Drugim branym pod uwagę jako podstawę do aplikacji serwera UPnP A/V framework'ie
+m był 
 \emph on
 CyberLink for Java 
 \begin_inset CommandInset citation
@@ -6816,8 +7094,8 @@ Jest to pakiet oprogramowania umożliwiający twórcom aplikacji komunikację
  Niestety w chwili porównywania możliwości framework'ów opisywany projekt
  nie był rozwijany i jego ostatnia aktualizacja datowana była na 2003 rok.
  Natomiast w trakcie pisania niniejszej pracy (już po stworzeniu oprogramowania)
- autor zauważył wznowienie projektu poprzez dodanie wsparcia dla pisania
- aplikacji UPnP do obsługi urządzeń mobilnych z systemem operacyjnym Android.
+ projektu został wznowiony poprzez dodanie wsparcia dla pisania aplikacji
+ UPnP do obsługi urządzeń mobilnych z systemem operacyjnym Android.
  
 \emph on
 CyberLink for Java
@@ -6846,8 +7124,8 @@ key "key-30"
 \end_inset
 
 .
- Niestety oba umożliwiają wykorzystanie we własnym oprogramowaniu bibliotek
- klienckich, a celem projektu było stworzenie serwera UPnP AV.
+ Niestety oba umożliwiają wykorzystanie we własnym oprogramowaniu udostępnionych
+ bibliotek klienckich, a celem projektu było stworzenie serwera UPnP A/V.
 \end_layout
 
 \begin_layout Standard
@@ -6863,14 +7141,16 @@ key "key-31"
 .
  
 \emph default
-Pomimo, że ostatni to spełnił najwięcej wymagań stawianych przez autora
- i dlatego został przez niego wybrany jako szkielet napisanej aplikacji.
+Pomimo, że opisywany jako ostatni to spełnił najwięcej wymagań stawianych
+ przez autora i dlatego został przez niego wybrany jako szkielet napisanej
+ aplikacji.
  
 \emph on
 Coherence 
 \emph default
 jest zarówno programem udostępniającym prosty serwer multimediów, serwer
- renderujący, posiada wiele wtyczek do popularnych programów (np.
+ renderujący.
+ Posiada wiele wtyczek do popularnych programów (np.
  Rhytmbox, Totem, Picasa).
  Jest na bieżąco rozwijany, zaś jego licencja - MIT 
 \begin_inset CommandInset citation
@@ -6879,7 +7159,7 @@ key "key-32"
 
 \end_inset
 
-,zezwala na dowolną modyfikację.
+,zezwala na swobodną modyfikację.
  Jest napisany w języku Python.
  Dla deweloperów najważniejsze jest, że oprogramowanie zapewnia komunikację
  (wykrywanie, ogłaszanie urządzeń) oraz posiada 
@@ -6896,7 +7176,7 @@ szablony
  nie zapewnia komunikacji z wieloma urządzeniami (w tym mobilnymi).
  Autor zdecydował się wykorzystać w swoim oprogramowaniu opisywany framework
  oraz wprowadzić w nim niezbędne modyfikacje, co dzięki liberalnej licencji
- MIT było w kwestiach prawnych możliwe.
+ MIT było możliwe.
 \end_layout
 
 \begin_layout Section
@@ -6905,9 +7185,9 @@ Opis programu
 
 \begin_layout Standard
 Zaprojektowana aplikacja do udostępniania materiałów multimedialnych, jest
- to w rzeczywistości zestaw dwóch niezależnych od siebie programów.
- Pierwsza aplikacja jest serwerem UPnP AV który komunikuje się bezpośrednio
- z odtwarzaczami DLNA oraz UPnP AV.
+ w rzeczywistości zestawem dwóch niezależnych od siebie programów.
+ Pierwsza aplikacja jest serwerem UPnP A/V który komunikuje się bezpośrednio
+ z odtwarzaczami DLNA oraz UPnP A/V.
  Natomiast druga aplikacja służy do zarządzania współdzielonymi zasobami
  oraz ustawieniami 
 \begin_inset Quotes pld
@@ -6924,12 +7204,12 @@ technicznymi
 Aplikacja posiada wbudowane wyszukiwanie multimediów różnych rodzajów w
  lokalizacjach, które użytkownik wcześniej zdefiniował.
  W przypadku podkatalogów stosowane jest przeszukiwanie rekursywne.
- Serwer UPnP AV interpretuje zawartość katalogów i określa te pliki, które
+ Serwer UPnP A/V interpretuje zawartość katalogów i określa te pliki, które
  są filmami, plikami tekstowymi (które są napisami do filmów), muzycznymi
  oraz zdjęciami.
  Pliki w odtwarzaczu mogą być przeglądane w katalogach oddających strukturę
- w systemie plików serwera oraz w kategoriach (wirtualnych katalogach) zdefiniow
-anych przez użytkownika.
+ w systemie plików serwera oraz w kategoriach (wirtualnych katalogach) predefini
+owanych oraz zdefiniowanych przez użytkownika.
 \end_layout
 
 \begin_layout Section
@@ -6941,7 +7221,7 @@ Aplikacja składa się z dwóch modułów:
 \end_layout
 
 \begin_layout Itemize
-serwer UPnP AV,
+serwer UPnP A/V,
 \end_layout
 
 \begin_layout Itemize
@@ -6997,16 +7277,17 @@ Zdjęcia.
 \end_deeper
 \end_deeper
 \begin_layout Itemize
-udostępnianie w językach:
+udostępnianie w językach (wyboru należy dokonać w ustawieniach lub jest
+ zgodny z językiem deklarowanym przez odtwarzacz multimedialny):
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-angielski,
+angielskim,
 \end_layout
 
 \begin_layout Itemize
-polski,
+polskim,
 \end_layout
 
 \end_deeper
@@ -7054,13 +7335,13 @@ Biblioteka multimediów
 
 \begin_layout Standard
 Biblioteka multimediów jest zbiorem plików udostępnianych przez serwer UPnP
- AV.
+ A/V.
  W opisywanej aplikacji biblioteka została podzielona na kilka głównych
  kategorii.
  Pierwszą z nich jest odwzorowanie zgodnie z położeniem w systemie plików
  (gdy to możliwe wyświetlana jest tylko nazwa katalogu nadrzędnego, w którym
  znajduje bądź znajdują się pliki multimedialne).
- Oznacza to, że przy pomocy odtwarzacza UPnP AV lub DLNA użytkownik może
+ Oznacza to, że przy pomocy odtwarzacza UPnP A/V lub DLNA użytkownik może
  nawigować do przeglądania zawartości serwera i do sekcji 
 \begin_inset Quotes pld
 \end_inset
@@ -7087,7 +7368,7 @@ Directories
 \end_layout
 
 \begin_layout Standard
-Kolejnym krokiem nawigacji może być 
+Kolejnym krokiem nawigacji może być pozycja o tytule 
 \begin_inset Quotes pld
 \end_inset
 
@@ -7159,9 +7440,9 @@ audio
 video
 \emph default
 .
- Upraszcza to w dużym stopniu sposób kategoryzowania plików.
+ Umożliwia to kategoryzowanie plików.
  Przykładowy sposób selekcji plików, zgodnie z jego rozszerzeniem został
- przedstawiona w tabeli 
+ przedstawiony w tabeli 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Katagolowanie-typów-MIME"
@@ -7456,8 +7737,8 @@ Dla każdego odnalezionego katalogu oraz pliku multimedialnego tworzony jest
 \emph on
 MediaItem
 \emph default
-, który przechowuje niezbędne informacje dla serwera UPnP AV.
- Dzięki odczytaniu informacji o obiekcie możliwy jest zwrócenie odtwarzaczom
+, który przechowuje niezbędne informacje o obiekcie dla serwera UPnP A/V.
+ Dzięki odczytaniu informacji o obiekcie możliwe jest zwrócenie odtwarzaczom
  posiadanych informacje o pliku, katalogu lub katalogu wirtualnym.
 \end_layout
 
@@ -8345,7 +8626,7 @@ Miniatury multimediów
 
 \begin_layout Standard
 Miniatury multimediów nie są obowiązkową treścią, którą musi udostępniać
- serwer DLNA.
+ serwer UPnP A/V oraz DLNA.
  Jednakże sposób udostępniania ich nie odbiega znacząco od sposobu udostępniania
  innych materiałów, dlatego autor uznał, że warto tą funkcje również zaimplement
 ować.
@@ -8356,9 +8637,9 @@ Większość współczesnych systemów operacyjnych tworzy miniatury filmów ora
  obrazów na własne potrzeby oraz często pobiera okładki albumów muzycznych
  z Internetu.
  Autor zdecydował się w pierwszej kolejności korzystać z miniatur stworzonych
- przez system operacyjny, zaś w dalszej kolejności z miniatur tworzonych
- przez aplikację (w przypadku gdy miniatura systemu operacyjnego nie istnieje
- lub nie spełnia wymogów co do rozmiarów).
+ przez system operacyjny, zaś w dalszej kolejności na tworzenie miniatur
+ przez jedną z klas serwera multimedialnego (w przypadku gdy miniatura systemu
+ operacyjnego nie istnieje lub nie spełnia wymogów co do rozmiarów).
  Miniatura tworzona przez aplikację ma rozmiar 120 x 120 pikseli i jest
  zapisana w standardzie JPEG z tą samą nazwą pliku jaką posiada główny plik
  multimedialny, z przedrostkiem TH (od ang.
@@ -8380,7 +8661,7 @@ Zarządzanie aplikacją
 \end_layout
 
 \begin_layout Standard
-Serwer zarządzający serwerem multimediów DLNA jest to aplikacja internetowa
+Serwer zarządzający serwerem multimediów UPnP A/V jest to aplikacja internetowa
  przygotowana w oparciu o framework 
 \emph on
 Django.
@@ -8403,13 +8684,13 @@ Django
 Apache
 \emph default
 ).
- Aplikacja zarządzająca podobnie, jak serwer UPnP AV, jest dostępna w dwóch
- wersjach językowych: polskim i angielskim.
+ Aplikacja zarządzająca podobnie, jak serwer UPnP A/V, jest dostępna w dwóch
+ wersjach językowych: polskiej i angielskiej.
 \end_layout
 
 \begin_layout Standard
 Do zarządzania opcjami aplikacji konieczne jest wykorzystanie przeglądarki
- WWW i otworzyć stronę np.
+ WWW i nawigowanie do udotępnianej strony WWW np.
  
 \begin_inset Flex URL
 status collapsed
@@ -8470,9 +8751,9 @@ reference "fig:Status-serwera-UPnP"
 
 \end_inset
 
- wyświetla status serwera UPnP oraz serwera RPC.
+ wyświetla status serwera UPnP A/V oraz serwera RPC.
  Serwer RPC jest niezbędny do zmiany jakichkolwiek opcji, natomiast serwer
- UPnP AV jest niezbędny do udostępniania multimediów w sieciach UPnP AV
+ UPnP A/V jest niezbędny do udostępniania multimediów w sieciach UPnP A/V
  oraz DLNA.
  Obie usługi mogą działać niezależnie, jednakże autor dla uproszczenia sposobu
  używania aplikacji uniemożliwił selektywne uruchamianie usług.
@@ -8495,7 +8776,7 @@ name "fig:Status-serwera-UPnP"
 
 \end_inset
 
-Status serwera UPnP AV
+Status serwera UPnP A/V
 \end_layout
 
 \end_inset
@@ -8533,21 +8814,21 @@ Ustawienia
 \emph on
 settings
 \emph default
-) umożliwia modyfikację podstawowych funkcji serwer UPnP AV.
+) umożliwia modyfikację podstawowych funkcji serwera UPnP A/V.
  W niniejszej sekcji możliwa jest zmiana następujących opcji:
 \end_layout
 
 \begin_layout Itemize
-nazwa serwera UPnP AV,
+nazwa serwera UPnP A/V,
 \end_layout
 
 \begin_layout Itemize
-adres IP serwera UPnP AV (domyślnie serwer działa na wszystkich adresach
- sieci lokalnej),
+adres IP serwera UPnP A/V (domyślnie serwer działa na wszystkich ustanowionych
+ adresach aktywnych kart sieciowych),
 \end_layout
 
 \begin_layout Itemize
-port serwera UPnP AV (domyślnie losowy),
+port serwera UPnP A/V (domyślnie losowy),
 \end_layout
 
 \begin_layout Itemize
@@ -8581,7 +8862,7 @@ w dół
 \end_layout
 
 \begin_layout Standard
-Opisywana opcja została przedstawiona na rysunku 
+Opisywane opcje zostały przedstawione na rysunku 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Ustawienia-serwera-UPnP"
@@ -8607,7 +8888,7 @@ name "fig:Ustawienia-serwera-UPnP"
 
 \end_inset
 
-Ustawienia serwera UPnP AV
+Ustawienia serwera UPnP A/V
 \end_layout
 
 \end_inset
@@ -8633,7 +8914,7 @@ Ustawienia serwera UPnP AV
 
 \begin_layout Standard
 Kolejną opcją jest wybieranie katalogów do wyszukiwania multimediów.
- Została ona przez autora przedstawiona w wersji skróconej jako 
+ Została ona przez autora zatytułowana w wersji skróconej jako 
 \begin_inset Quotes pld
 \end_inset
 
@@ -8708,13 +8989,13 @@ Browse
 \end_layout
 
 \begin_layout Standard
-W przypadku braku katalogu lub innych problemów serwer WWW wykonuje sprawdzenie
+W przypadku braku katalogu lub innych problemów, serwer WWW wykonuje sprawdzenie
  poprawności wpisanych danych.
  W przypadku braku katalogu (lub innego błędu wyszukania folderu) obok wiersza
  ze ścieżką pojawia się czerwony znak 'X'.
  Jednakże aplikacja zarządzająca zezwoli na dodanie ścieżki do bazy danych
- i wyszukanie jej przez serwer UPnP AV i to do niego należy ewentualne zadanie
- ignorowania niepoprawnych ścieżek.
+ i wyszukanie jej przez serwer UPnP A/V i to do niego należy ewentualne
+ zadanie ignorowania niepoprawnych ścieżek.
 \end_layout
 
 \begin_layout Standard
@@ -8733,7 +9014,7 @@ name "fig:Wybieranie-multimediów-dla"
 
 \end_inset
 
-Wybieranie multimediów dla serwera UPnP AV
+Wybieranie multimediów dla serwera UPnP A/V
 \end_layout
 
 \end_inset
@@ -8758,7 +9039,7 @@ Wybieranie multimediów dla serwera UPnP AV
 \end_layout
 
 \begin_layout Standard
-Ostatni z dostępnych ekranów, to jest 
+Ostatni z dostępnych ekranów, 
 \begin_inset Quotes pld
 \end_inset
 
@@ -8771,26 +9052,34 @@ Pomoc
 \emph on
 Help
 \emph default
-).
- Znajduje się w nim opis wszystkich opcji dostępnych w serwerze WWW, przybliżony
- sposób wyszukiwania serwera w odtwarzaczu DLNA oraz uproszczona specyfikacja
- serwera DLNA.
- Istnieją w niej informacje o wyszukiwanych plikach multimedialnych, sposobie
- dołączania załączników do plików (np.
+) zawiera opis wszystkich opcji dostępnych w serwerze WWW, przybliżony sposób
+ wyszukiwania serwera w odtwarzaczu UPnP A/V lub DLNA oraz uproszczoną specyfika
+cję serwera UPnP A/V.
+ Istnieją w niej informacje o rozszerzeniach wyszukiwanych plików multimedialnyc
+h, sposobie dołączania załączników do plików (np.
  napisy), opis tworzenia miniatur oraz wymagane oprogramowania do działania
  opisywanej aplikacji.
  Plik pomocy dostępny jest również w postaci pliku PDF.
+ Odnośnik do niego znajduje się w głównej sekcji strony 
+\begin_inset Quotes pld
+\end_inset
+
+Pomoc
+\begin_inset Quotes prd
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
-Budowa wewnętrzna modułu serwera UPnP AV
+Budowa wewnętrzna modułu serwera UPnP A/V
 \end_layout
 
 \begin_layout Standard
-Serwer multimedialny UPnP AV / DLNA został wykonany w języku Python.
+Serwer multimedialny UPnP A/V / DLNA został wykonany w języku Python.
  Do jego realizacji wykorzystany został framework 
 \emph on
-Coherence DLNA/UPNP Framework for Digital Living
+Coherence DLNA/UPNP Framework for Digital Living,
 \emph default
  którego opis znajduje się w rozdziale 
 \begin_inset CommandInset ref
@@ -8801,27 +9090,27 @@ reference "sub:Framework’i-UPnP"
 
 .
  Zestaw oprogramowania został podzielony na dwie niezależne aplikacje, serwer
- multimedialny UPnP AV oraz serwer zarządzający.
+ multimedialny UPnP A/V oraz serwer zarządzający.
  Każdy z nich składa się z wielu podmodułów.
  
 \emph on
-Dla rozróżnienia modułu serwera UPnP AV od aplikacji głównej, pierwszy moduł
- w niniejszej pracy będzie nazywany serwerem multimediów.
+Dla rozróżnienia modułu serwera UPnP A/V od aplikacji głównej, pierwszy
+ moduł w niniejszej pracy będzie nazywany serwerem multimediów.
 \end_layout
 
 \begin_layout Standard
-Serwer multimedialny UPnP AV udostępnia swoje funkcje poprzez protokół UPnP
- w wersji tylko do odczytu, oznacza to, że nie można modyfikować opcji serwer
- przy pomocy poleceń protokołu UPnP.
+Serwer multimedialny UPnP A/V udostępnia swoje funkcje poprzez protokół
+ UPnP w wersji tylko do odczytu, oznacza to, że nie można modyfikować opcji
+ serwer przy pomocy poleceń protokołu UPnP.
  Zarządzanie serwerem jest możliwe, poprzez wykorzystanie poleceń RPC wysyłanych
- do serwera RPC, będącego modułem wewnętrznym (podmodułem) serwer UPnP AV.
+ do serwera RPC, będącego modułem wewnętrznym (podmodułem) serwer UPnP A/V.
  Polecenia do integralnego serwera RPC wysyłane są z drugiej aplikacji,
  serwera zarządzającego.
  Poprzez zarządzanie rozumiane są takie funkcje jak:
 \end_layout
 
 \begin_layout Itemize
-uruchomienie / zatrzymanie serwera UPnP,
+uruchomienie / zatrzymanie serwera UPnP A/V,
 \end_layout
 
 \begin_layout Itemize
@@ -8833,7 +9122,7 @@ zatrzymanie / uruchomienie ponowne serwera zarządzającego,
 \end_layout
 
 \begin_layout Itemize
-zmiana interfejsu sieciowego serwera UPnP, bądź RPC,
+zmiana interfejsu sieciowego serwera UPnP A/V, bądź RPC,
 \end_layout
 
 \begin_layout Itemize
@@ -8845,7 +9134,7 @@ dodawanie, modyfikacja, usuwanie ścieżek, z których są udostępniane multime
 \end_layout
 
 \begin_layout Itemize
-tworzenie, modyfikacja, usuwanie wirtualnych bibliotek UPnP AV,
+tworzenie, modyfikacja, usuwanie wirtualnych bibliotek UPnP A/V,
 \end_layout
 
 \begin_layout Itemize
@@ -8854,12 +9143,12 @@ alnych,
 \end_layout
 
 \begin_layout Itemize
-zmiana loga serwera UPnP, widocznego w odtwarzaczu UPnP A/V bądź DLNA.
+zmiana loga serwera UPnP A/V, widocznego w odtwarzaczu UPnP A/V bądź DLNA.
 \end_layout
 
 \begin_layout Standard
-Dokładny opis funkcjonalny oraz interfejs użytkownika, serwera zarządzającego
- zostały przedstawione w podrozdziale 
+Dokładny opis funkcjonalny oraz opis interfejsu użytkownika, serwera zarządzając
+ego zostały przedstawione w podrozdziale 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Zarządzanie-aplikacją"
@@ -8874,6 +9163,10 @@ W całej aplikacji wykorzystywane są bazy danych
 \emph on
 SQLite 
 \emph default
+w wersji 3
+\emph on
+ 
+\emph default
 (zawierającymi np.
  ścieżki do przeszukiwania).
  Jest to wybór stosunkowo oczywisty w kontekście umożliwienia działania
@@ -8886,9 +9179,9 @@ SQLite
  Obsługuje się ją poprzez zewnętrzną bibliotekę.
  W wypadku opisywanej aplikacji wykorzystany został framework 
 \emph on
-SQLAlchemy
+SQLAlchemy 
 \emph default
- 
+(wersja 0.6) 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-36"
@@ -8899,8 +9192,8 @@ key "key-36"
  szybko i w łatwy sposób wdrożony przez autora.
  Przy dużej ilości danych powoduje to nadmierne obciążenie aplikacji.
  Jednakże w przypadku wielu małych aplikacji, jak i niniejszego serwera
- UPnP, rozwiązanie to eliminuje konieczność instalowania dodatkowego oprogramowa
-nia bazodanowego (np.
+ UPnP A/V, rozwiązanie to eliminuje konieczność instalowania dodatkowego
+ oprogramowania bazodanowego (np.
  
 \emph on
 MySQL
@@ -8918,10 +9211,10 @@ key "key-33"
 \end_layout
 
 \begin_layout Standard
-Główna aplikacja, która udostępnia multimedia w sieci UPnP AV i/lub DLNA
- ma możliwość uruchomienia w tle (w trybie demona zgodnie z nazewnictwem
- systemu Linux lub usługi, zgodnie z nazewnictwem systemu Windows) lub w
- trybie pierwszoplanowym (ang.
+Główna aplikacja, która udostępnia multimedia w sieci UPnP A/V i DLNA ma
+ możliwość uruchomienia w tle (w trybie demona zgodnie z nazewnictwem systemu
+ Linux lub usługi, zgodnie z nazewnictwem systemu Windows) lub w trybie
+ pierwszoplanowym (ang.
  
 \emph on
 foreground
@@ -8947,7 +9240,19 @@ MediaItem.
 Jej uogólniony schemat działania widoczny jest na diagramach stanów oraz
  komunikacji (
 \series bold
-rysunku ).
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+rysunku -- diagramy
+\end_layout
+
+\end_inset
+
+ ).
  
 \end_layout
 
@@ -9002,11 +9307,11 @@ daemon.pid
 \emph default
 , który przechowuje numer identyfikacyjny uruchomionego procesu demona.
  Wykorzystywany jest on również do ponownego uruchamiania oraz zatrzymywania
- aplikacji serwera UPnP AV.
+ aplikacji serwera UPnP A/V.
 \end_layout
 
 \begin_layout Subsection
-Klasa główna serwera UPnP
+Klasa główna serwera UPnP A/V
 \end_layout
 
 \begin_layout Standard
@@ -9014,13 +9319,13 @@ Klasa główna, którą jest serwer multimediów,
 \emph on
 MediaServer
 \emph default
-, jest klasą inicjalizującą działanie w sieci UPnP serwera multimedialnego.
+, jest klasą inicjalizującą działanie serwera multimedialnego w sieci UPnP.
  
 \end_layout
 
 \begin_layout Standard
 W pierwszej kolejności wczytywana jest baza danych multimediów, następnie
- zaś są tworzone obiekt 
+ zaś tworzony jest obiekt 
 \emph on
 MediaStore
 \emph default
@@ -9030,7 +9335,7 @@ MediaStore
 \emph on
 MediaItem
 \emph default
-, które dla użytkownika są kontenerami multimediów bądź docelowymi plikami
+, które dla użytkownika są kontenerami multimediów, bądź docelowymi plikami
  multimedialnymi.
 \end_layout
 
@@ -9049,9 +9354,9 @@ MediaStore
 Coherence
 \emph default
 .
- Od momentu uruchomienia tego obiektu serwer UPnP AV jest widoczny w odtwarzacza
-ch UPnP oraz DLNA.
- Otrzymuje ona od klasy nadrzędnej w trakcie uruchamiania parametry działania,
+ Od momentu uruchomienia tego obiektu serwer UPnP A/V jest widoczny w odtwarzacz
+ach UPnP A/V oraz DLNA.
+ Otrzymuje ona od klasy nadrzędnej, w trakcie uruchamiania, parametry działania,
  wśród nich ścieżki do katalogów, w których mają być wyszukiwane multimedia.
  Na podstawie otrzymanych danych tworzy następujące kontenery główne:
 \end_layout
@@ -9144,9 +9449,9 @@ MIMETypes
 \begin_layout Standard
 Po utworzeniu powyższych kontenerów, algorytm wczytuje w kolejności wszystkie
  pliki multimedialne i przydziela je do odpowiednich kategorii.
- W przypadku wczytywania folderu (wewnątrz którego jest wybrany do udostępniania
- plik), tworzony jest kolejny kontener, który jest podkontenerem, dla biblioteki
- 
+ W przypadku wczytywania folderu (wewnątrz którego jest plik możliwy do
+ udostępnienia), tworzony jest kolejny kontener, który jest podkontenerem,
+ dla biblioteki 
 \begin_inset Quotes pld
 \end_inset
 
@@ -9158,8 +9463,8 @@ Katalogi
 \end_layout
 
 \begin_layout Standard
-Wczytanie pliku multimedialnego lub tworzenie konteneru, precyzyjnie określając,
- jest stworzeniem obiektu 
+Wczytanie pliku multimedialnego lub tworzenie konteneru, precyzyjnie określając
+ od strony implementacyjnej, jest stworzeniem obiektu 
 \emph on
 MediaItem 
 \emph default
@@ -9223,8 +9528,8 @@ Pierwszy z nich, kontener, odzwierciedla w systemie plików, katalogi.
 
 \begin_layout Standard
 Opisywany obiekt zawiera informacje niezbędne do jego wyszukania oraz do
- odtworzenia przez odtwarzacz UPnP AV / DLNA.
- Posiada takie informacje, jaK
+ odtworzenia przez odtwarzacze UPnP A/V i DLNA.
+ Posiada takie informacje, jak:
 \end_layout
 
 \begin_layout Itemize
@@ -9375,7 +9680,7 @@ stara się
  potrafi ją zlokalizować, ma prawa do jej odczytu oraz spełnia wymagania
  co do rozmiaru i typu (rozmiar 120 x 120 pikseli, typ JPEG lub PNG), wówczas
  do odtwarzacza przekazywana jest wersja miniatury utworzona przez system
- (uprzednio jest kopiowana do katalogu miniatur programu).
+ operacyjny (uprzednio jest kopiowana do katalogu miniatur programu).
 \end_layout
 
 \begin_layout Subsection
@@ -9388,16 +9693,17 @@ Modyfikacja frameworka UPnP Coherence
 Coherence DLNA/UPNP Framework for Digital Living 
 \emph default
 dostarcza programiście zestaw narzędzi, które kompleksowo zapewniają tworzenie
- komunikatów UPnP (DLNA).
+ komunikatów UPnP A/V, zgodnych również ze specyfikacją DLNA.
  Framework może działać zarówno jako klient, jak i serwer.
  W niniejszej aplikacji wykorzystywana jest tylko część serwerowa zewnętrznego
  oprogramowania.
  Teoretycznie programista powinien ograniczyć się do stworzenia biblioteki
  multimediów, wczytaniu jej do odpowiedniego obiektu serwera, a na końcu
  uruchomieniu go z odpowiednimi parametrami wejściowymi.
- Niestety w trakcie testów i implementacji serwera UPnP AV autor napotkał
+ Niestety w trakcie testów i implementacji serwera UPnP A/V autor napotkał
  na szereg problemów we współpracy serwera z różnymi urządzeniami.
- Problemy rozpoczęły się na komunikacji z urządzeniami firm Samsung, LG.
+ Problemy rozpoczęły się na etapie komunikacji z urządzeniami firm Samsung,
+ LG.
  O ile z odtwarzaczami drugiej firmy serwer współpracował na akceptowalnym
  poziomie, o tyle z firmą Samsung nie współpracował w ogóle.
 \end_layout
@@ -9421,8 +9727,8 @@ key "key-32"
 \end_layout
 
 \begin_layout Standard
-Niektóre urządzenia (aplikacje) zostały zaprogramowane w sposób absurdalny
- dla użytkownika.
+Niektóre urządzenia (aplikacje) zostały zaprogramowane w sposób absurdalny,
+ zarówno dla programisty, jak i użytkownika końcowego.
  To znaczy tak, aby współpracować tylko z urządzeniami tej samej firmy.
  Jednym z nich są odtwarzacze firmy 
 \emph on
@@ -9430,7 +9736,7 @@ Microsoft
 \emph default
  (
 \emph on
-Microsoft Xbox 360, Windoes Media Player
+Microsoft Xbox 360, Windows Media Player
 \emph default
 ), które materiały wideo w jakości 
 \emph on
@@ -9467,14 +9773,14 @@ w odtwarzaczach DLNA firmy Samsung.
  Urządzenie posiada sprzętowy dekoder H.264, a odtwarzacz DLNA mimo wszystko
  nie zgadza się na odtworzenie materiału.
  Autor podejrzewa, że powodem może być brak licencji na odtwarzanie tego
- typu plików lub zbyt dokładne podążanie za specyfikacją DLNA (lecz z drugiej
- strony filmy AVI są odtwarzane).
+ typu plików lub zbyt dokładne podążanie za specyfikacją DLNA, która tego
+ formatu nie wspiera (lecz z drugiej strony filmy AVI są odtwarzane).
  W celu rozwiązania problemu autor zaprogramował serwer tak, aby dla niektórych
  urządzeń pliki 
 \emph on
 MKV 
 \emph default
-były przedstawiane poprzez inny typ MIME - 
+były przedstawiane poprzez inny typ MIME, taki jak dla plików avi - 
 \emph on
 video/x-msvideo
 \emph default
@@ -9528,11 +9834,12 @@ DIDL-Lite (ang.
 \emph on
 Digital Item Declaration Language Lite
 \emph default
-) jest językiem, który dostarcza schemat opisu urządzeń UPnP AV oraz DLNA.
+) jest językiem, który dostarcza schemat opisu urządzeń UPnP A/V oraz DLNA.
  Jest to język oparty na schemacie dokumentu XML.
- W przypadku, gdy druga strona komunikacji nie umie zinterpretować części
+ W przypadku, gdy druga strona komunikacji nie potrafi zinterpretować części
  dokumentu powinna go ignorować, jednakże zazwyczaj odtwarzacze w urządzeniach
- znanych marek, nie odnajdują serwera, aby uniknąć ewentualnych błędów.
+ RTV, nie wyświetlają serwera na liście urządzeń, aby uniknąć ewentualnych
+ błędów.
 \end_layout
 
 \begin_layout Standard
@@ -9589,8 +9896,19 @@ Przykładowy nagłówek dokumentu w języku DIDL-Lite
 \end_layout
 
 \begin_layout Standard
-W wypadku urządzeń firmy Samsung, wymaganym nagłówkiem, dzięki któremu urządzeni
-e zostanie wyświetlone na liście serwerów odnalezionych jest:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+entery w pow.
+ nagłówku
+\end_layout
+
+\end_inset
+
+W wypadku urządzeń firmy Samsung, wymaganym dodatkowym nagłówkiem, dzięki
+ któremu urządzenie zostanie wyświetlone na liście serwerów odnalezionych
+ jest:
 \end_layout
 
 \begin_layout Itemize
@@ -9630,7 +9948,7 @@ ne wszystkie dostępne w dołączonym do pracy oprogramowaniu:
 
 \begin_layout Itemize
 DLNA.ORG_PN - format multimediów zgodny z DLNA (niestety niezgodne z typami
- MIME, tak jak w UPnP AV),
+ MIME, tak jak w UPnP A/V),
 \end_layout
 
 \begin_layout Itemize
@@ -9653,10 +9971,27 @@ DLNA.ORG_FLAGS - dodatkowy ciąg 33 bitowych znaków określające dodatkowe
 \end_layout
 
 \begin_layout Standard
-Przykładowymi formaty multimediów w konwencji DLNA są: MP3 (typ MIME - audio/mpe
-g), WMABASE (typ MIME - audio/ms-wma), JPEG_LRG / JPEG_MED (typ MIME - image/jpe
-g), PNG_LRG / PNG_MED (typ MIME - image/png), MPEG_TS_PAL / MPEG_TS_NTSC
- (video/mpeg).
+Przykładowymi formaty multimediów w konwencji DLNA są: 
+\end_layout
+
+\begin_layout Itemize
+MP3 (typ MIME - audio/mpeg), 
+\end_layout
+
+\begin_layout Itemize
+WMABASE (typ MIME - audio/ms-wma), 
+\end_layout
+
+\begin_layout Itemize
+JPEG_LRG / JPEG_MED (typ MIME - image/jpeg), 
+\end_layout
+
+\begin_layout Itemize
+PNG_LRG / PNG_MED (typ MIME - image/png), 
+\end_layout
+
+\begin_layout Itemize
+MPEG_TS_PAL / MPEG_TS_NTSC (video/mpeg).
 \end_layout
 
 \begin_layout Standard
@@ -9667,7 +10002,7 @@ DIDL-Lite
  musi być dla wielu urządzeń specjalnie sformatowany z dokładnie sprecyzowaną
  ilością parametrów.
  Parametry nadmiarowe często powodują, że urządzenie uznaje serwer UPnP
- AV / DLNA za niewłaściwy i nie umożliwia przeglądania jego zawartości.
+ A/V lub DLNA za niewłaściwy i nie umożliwia przeglądania jego zawartości.
  W pierwotnej wersji oprogramowania 
 \emph on
 Coherence
@@ -9688,15 +10023,15 @@ Samsung
 \emph default
 (telewizory oraz urządzenia mobilne), 
 \emph on
-Philips 
+Phillips 
 \emph default
 (telewizory), 
 \emph on
 LG 
 \emph default
-(telewizory oraz odtwarzacze Blu-Ray) oraz dla oprogramowania UPnP AV/DLNA
- dla komputerów stacjonarnych działających pod kontrolą systemów operacyjnych
- Windows oraz Linux (środowisko graficzne Gnome).
+(telewizory oraz odtwarzacze Blu-Ray) oraz dla oprogramowania UPnP A/V i
+ DLNA dla komputerów stacjonarnych działających pod kontrolą systemów operacyjny
+ch Windows oraz Linux (środowisko graficzne Gnome).
 \end_layout
 
 \begin_layout Subsection
@@ -9717,7 +10052,7 @@ Coherence DLNA/UPNP Framework for Digital Living
 
 \begin_layout Standard
 W tym wypadku została napisana klasa, która modyfikuje zmienne definiujące
- opcje serwera oraz modyfikuje dane wewnątrz bazy danych 
+ opcje serwera oraz modyfikuje dane wewnątrz baz danych 
 \emph on
 SQLite
 \emph default
@@ -9748,7 +10083,7 @@ Budowa wewnętrzna modułu zarządzającego
 \begin_layout Standard
 Moduł zarządzający jest to aplikacja internetowa, w postaci strony WWW.
  Zapewnia on graficzny interfejs użytkownika, który umożliwia sprawdzenie
- statusu serwer UPnP AV / DLNA oraz zmianę istotnych dla użytkownika parametrów.
+ statusu serwera UPnP A/V oraz zmianę istotnych dla użytkownika parametrów.
 \end_layout
 
 \begin_layout Standard
@@ -9761,7 +10096,7 @@ Django
 Python.
 
 \emph default
- Większość zapytań obsługuje poprzez zapytania AJAX (ang.
+ Większość zapytań obsługiwana jest poprzez zapytania AJAX (ang.
  
 \emph on
 Asynchronous JavaScript and XML
@@ -9828,7 +10163,7 @@ Zawartość (ang.
 \emph on
 Content
 \emph default
-)
+),
 \end_layout
 
 \begin_deeper
@@ -9852,7 +10187,7 @@ Parametry (ang.
 \emph on
 DBContainer
 \emph default
-)
+),
 \end_layout
 
 \begin_deeper
@@ -9873,11 +10208,11 @@ nazwa,
 \end_layout
 
 \begin_layout Itemize
-UUID - identyfikator serwer UPnP AV,
+UUID - identyfikator serwer UPnP A/V,
 \end_layout
 
 \begin_layout Itemize
-Utworzony - wartość bool'owska definiująca, czy UUID jest utworzony,
+utworzony - wartość bool'owska definiująca, czy UUID jest utworzony,
 \end_layout
 
 \begin_layout Itemize
@@ -9885,7 +10220,7 @@ id sesji - identyfikator sesji WWW,
 \end_layout
 
 \begin_layout Itemize
-kontener MIME - wartość bool'owska określająca czy serwer UPnP AV tworzy
+kontener MIME - wartość bool'owska określająca czy serwer UPnP A/V tworzy
  biblioteke multimedialną kontenerów MIME,
 \end_layout
 
@@ -9895,7 +10230,7 @@ transkodowanie - włączenie lub wyłączenie transkodowania materiałów,
 
 \begin_layout Itemize
 obserwacja zmiany folderów - definiuje czy każda zmiana zawartości folderu,
- ma być automatycznie aktualizowana
+ ma być automatycznie aktualizowana,
 \end_layout
 
 \end_deeper
@@ -9903,7 +10238,7 @@ obserwacja zmiany folderów - definiuje czy każda zmiana zawartości folderu,
 Adres serwera RPC (ang.
  
 \emph on
-DBAddress)
+DBAddress),
 \end_layout
 
 \begin_deeper
@@ -9916,7 +10251,7 @@ adres IP,
 \end_layout
 
 \begin_layout Itemize
-port
+port,
 \end_layout
 
 \end_deeper
@@ -9926,7 +10261,7 @@ Status usługi (ang.
 \emph on
 ServiceStatus
 \emph default
-)
+),
 \end_layout
 
 \begin_deeper
@@ -9955,9 +10290,9 @@ Parametry
 \begin_inset Quotes prd
 \end_inset
 
- adres ip oraz port są to informacje uzyskane na temat serwera UPnP, natomiast
- druga tabela zawiera dane o adresie IP oraz porcie serwera RPC, umożliwiające
- uzyskanie danych do tabeli 
+ adres ip oraz port są to informacje uzyskane na temat serwera UPnP A/V,
+ natomiast druga tabela zawiera dane o adresie IP oraz porcie serwera RPC,
+ umożliwiające uzyskanie danych do tabeli 
 \begin_inset Quotes pld
 \end_inset
 
@@ -10026,7 +10361,7 @@ Kontroler
 
 \begin_layout Standard
 Częścią aplikacji, która zwraca użytkownikowi stronę internetową oraz uzyskuje
- do niej niezbędne dane (takie jak parametry serwera UPnP), jest kontroler.
+ do niej niezbędne dane (takie jak parametry serwera UPnP A/V), jest kontroler.
  W nazewnictwie przyjętym w 
 \emph on
 Django, 
@@ -10040,7 +10375,7 @@ views
 \end_layout
 
 \begin_layout Standard
-Pierwsze zapytanie o plik główny jako jedynym nie jest zapytaniem wykonywanym
+Pierwsze zapytanie o plik główny jako jedyne nie jest zapytaniem wykonywanym
  techniką asynchroniczną AJAX
 \emph on
 .
@@ -10080,7 +10415,7 @@ JSON
 \emph on
 simplejson
 \emph default
-, która tworzy ciąg znaków w pożądanym formacie.
+ (wersja 2.5.2), która tworzy ciąg znaków w pożądanym formacie.
  Drugim sposobem jest tworzenie pliku za pomocą 
 \begin_inset Quotes pld
 \end_inset
@@ -10090,7 +10425,7 @@ ręcznego
 \end_inset
 
  wpisywania do ciągu znaków odpowiednio spreparowanych komunikatów.
- Drugi sposób, pomimo, że prosty i prymitywny, w przypadkach, gdy aplikacja
+ Drugi sposób, pomimo, że stosunkowo prymitywny, w przypadkach, gdy aplikacja
  przesyła krótkie komunikaty, takie jak widoczne na rysunku 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -10098,7 +10433,7 @@ reference "fig:statusUPNPJSON"
 
 \end_inset
 
-.
+, jest najprostszy.
  
 \end_layout
 
@@ -10158,7 +10493,7 @@ W kontrolerze następuje uruchomienie demona serwer multimediów.
  Usługa jest uruchamiana w tle poprzez uruchomienie potoku zaimplementowanego
  w klasie 
 \emph on
-subproocess
+subprocess
 \emph default
  języka Python.
 \end_layout
@@ -10168,20 +10503,21 @@ Testy
 \end_layout
 
 \begin_layout Standard
-Oprogramowania odtwarzaczy UPnP AV oraz DLNA są bardzo zróżnicowane względem
+Oprogramowanie odtwarzaczy UPnP A/V oraz DLNA są bardzo zróżnicowane względem
  ilości udostępnianych funkcji.
- Powstają dość duże rozbieżności w sposobie obsługi serwerów, nawet w cechach
- wspólnych odtwarzaczy, czyli w sposobie wyszukiwania, przeglądania oraz
- odtwarzania multimediów.
- Z tego powodu serwer musi wiele urządzeń w różnoraki sposób obsługiwać,
- to znaczy preparować odpowiedzi przygotowane dla danego typu oprogramowania.
+ Powstają dość duże rozbieżności w sposobie obsługi serwerów multimedialnych,
+ nawet w cechach wspólnych odtwarzaczy, czyli w sposobie wyszukiwania, przegląda
+nia oraz odtwarzania multimediów.
+ Z tego powodu serwer musi obsługiwać wiele urządzeń, w różnoraki sposób.
+ Niesie to za sobą konieczność preparowania odpowiedzi przygotowanej dla
+ danego typu oprogramowania.
  W tym przypadku przez typ rozumiany jest producent, wytwórca aplikacji.
  Z wcześniej przedstawionych powodów oprogramowanie serwera multimedialnego
- UPnP AV musiało przejść szereg testów współpracy z różnymi urządzeniami.
+ UPnP A/V musiało przejść szereg testów współpracy z różnymi urządzeniami.
  Autor planował stworzyć jednolity sposób testowania aplikacji, lecz w większośc
 i przypadków nie było to możliwe.
  Każdy z odtwarzaczy wymaga stworzenia własnej procedury wykonania poleceń
- protokołu UPnP AV / DLNA (odtwarzanie, przewijanie, pokaz slajdów itp.).
+ protokołów UPnP A/V i DLNA (odtwarzanie, przewijanie, pokaz slajdów itp.).
 \end_layout
 
 \begin_layout Section
@@ -10199,10 +10535,10 @@ Aplikacja została poddana kilkudziesięciu testom użytkowym oraz systemowym
  (nie zostały zaprogramowane i wykonane testy jednostkowe wytworzonego oprogramo
 wania).
  Autor stworzył procedury sprawdzania poprawności działania aplikacji dla
- obu modułów aplikacji, serwera multimedialnego UPnP AV oraz serwera zarządzając
-ego.
- W przypadku pierwszego modułu testom poddane zostały schematy działania
- dla większości stosowanych (w praktyce) poleceń specyfikacji UPnP AV oraz
+ obu modułów aplikacji, serwera multimedialnego UPnP A/V oraz serwera zarządzają
+cego.
+ W przypadku pierwszego modułu, testom poddane zostały schematy działania
+ dla większości stosowanych (w praktyce) poleceń specyfikacji UPnP A/V oraz
  DLNA.
  Z powodu zróżnicowania aplikacji na różnych urządzeniach (oraz programach)
  odtwarzających multimedia, sprawdzanie zgodności modułu ze zleconymi zadaniami
@@ -10272,15 +10608,8 @@ oprogramowanie dla komputerów klasy PC,
 \end_layout
 
 \begin_layout Itemize
-oprogramowanie w szeroko opojętym sprzęcie 
-\begin_inset Quotes pld
-\end_inset
-
-telewizyjnym
-\begin_inset Quotes prd
-\end_inset
-
-,
+oprogramowanie w szeroko pojętym sprzęcie elektronicznym (telewizory, odtwarzacz
+e Blu-ray itd.),
 \end_layout
 
 \begin_layout Itemize
@@ -10288,7 +10617,8 @@ oprogramowanie mobilne.
 \end_layout
 
 \begin_layout Standard
-Powyższy podział powstał w sposób, który można nazwać naturalnym.
+Powyższy podział powstał w wyniku różnic w implementacji technologii DLNA
+ w wymienionych klasach urządzeń.
  Aplikacja, która współpracowała ze sprzętem telewizyjnym, we wczesnych
  fazach, nie działała poprawnie na pozostałych klasach.
  Sprzętem, na którym autor sprawdzał poprawność aplikacji, w początkowym
@@ -10330,7 +10660,7 @@ SMART HUB
  posiadają oprogramowanie AllShare.
  Oprogramowanie o tej samej nazwie jest również dostępne dla komputerów
  PC z systemem operacyjnym Microsoft Windows oraz dla smartfonów z systemem
- operacyjny Android.
+ operacyjnym Android (tylko sprzęt firmy Samsung).
  Oprogramowanie, mimo tej samej nazwy, działa na każdym z urządzeń w inny
  sposób.
  Dokładne porównanie funkcji programów firmy Samsung znajduje się w rozdziale
@@ -10349,8 +10679,8 @@ Poza opisanymi powyżej urządzeniami przetestowane zostały pojedyńcze modele
  (dzięki udostępnieniu sprzętu przez jeden ze znanych marketów elektronicznych)
  telewizorów firm, takich jak Sony Bravia, Phillips oraz LG Smart TV.
  W kolejnych podrozdziałach zostały przedstawione jedynie wyniki testów,
- które zostały dokładnie udokumentowane, to jest na urządzeniach, do których
- autor miał najdłuższy dostęp.
+ które zostały dokładnie udokumentowane.
+ Były urządzenia, do których autor miał pełen dostęp.
  Były to telewizor Samsung, odtwarzacz Blu-ray LG oraz telefon Samsung Galaxy
  S2.
 \end_layout
@@ -10365,7 +10695,7 @@ przeglądanie zawartości folderów,
 \end_layout
 
 \begin_layout Itemize
-odtwarzanie różnych kontenerów multimedialnych - filmów,
+odtwarzanie różnych kontenerów multimedialnych - filmowych oraz muzycznych,
 \end_layout
 
 \begin_layout Itemize
@@ -10378,7 +10708,8 @@ przewijanie filmów.
 
 \begin_layout Standard
 Serwer w trakcie testów miał już wcześniej zdefiniowane źródła odtwarzanych
- materiałów oraz udostępniał następujące pliki:
+ materiałów.
+ Udostępniał następujące pliki:
 \end_layout
 
 \begin_layout Itemize
@@ -10398,8 +10729,8 @@ Test wyszukiwania urządzenia
 \end_layout
 
 \begin_layout Standard
-Pierwszym elementem, który umożliwia współpracę urządzenia audio-wideo w
- protokołach UPnP AV oraz DLNA jest ich wyszukiwanie.
+Pierwszym elementem, który umożliwia współpracę urządzeń audio-wideo w protokoła
+ch UPnP A/V oraz DLNA jest ich wyszukiwanie.
  W trakcie tego testu sprawdzane jest czy każdy odtwarzacz wykrył serwer
  multimedialny oraz wyświetlił jego prawidłową nazwę i miniaturę urządzenia.
 \end_layout
@@ -10409,7 +10740,7 @@ Test przeglądania zawartości
 \end_layout
 
 \begin_layout Standard
-Przed otwarciem materiału multimedialnego konieczne jest jego wyszukanie.
+Przed otwarciem materiału multimedialnego konieczne jest jego odnalezienie.
  Odbywa się to poprzez przeglądanie zawartości udostępnianych treści przez
  serwer multimedialny.
 \end_layout
@@ -10443,11 +10774,22 @@ W celu sprawdzenia materiałów autor przygotował kilkanaście plików muzyczny
  graficznych oraz wideo.
  Każdy z innym rozszerzeniem, aby sprawdzenie odtwarzania było wykonane
  w jak najszerszym zakresie.
- Niniejszy test został wykonany na zasadzie porównywania serwera UPnP AV,
- z innym oprogramowaniem pełniącym rolę serwera UPnP AV (DLNA).
+ Niniejszy test został wykonany na zasadzie porównywania serwera UPnP A/V,
+ z innym oprogramowaniem pełniącym rolę serwera UPnP A/V (DLNA).
  Umożliwiło to określenie możliwości odtwarzaczy oraz w przypadku problemów
- z odtwarzaniem materiałów udostępnianych przez aplikację 
+ z odtwarzaniem materiałów udostępnianych przez zaprojektowaną aplikację
+ 
 \series bold
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+upnp
+\end_layout
+
+\end_inset
+
 UPNP, 
 \series default
 wykrycie różnic, które powodują, iż inny serwer udostępnia materiały poprawnie.
@@ -10459,23 +10801,23 @@ Autor przygotował następujące pliki graficzne (rozszerzenie jest równoznaczn
 \end_layout
 
 \begin_layout Itemize
-plik z rozszerzeniem *.JPEG,
+plik z rozszerzeniem JPEG,
 \end_layout
 
 \begin_layout Itemize
-plik z rozszerzeniem *.JPG,
+plik z rozszerzeniem JPG,
 \end_layout
 
 \begin_layout Itemize
-plik z rozszerzeniem *.PNG,
+plik z rozszerzeniem PNG,
 \end_layout
 
 \begin_layout Itemize
-plik z rozszerzeniem *.GIF,
+plik z rozszerzeniem GIF,
 \end_layout
 
 \begin_layout Itemize
-plik z rozszerzeniem *.BMP.
+plik z rozszerzeniem BMP.
 \end_layout
 
 \begin_layout Standard
@@ -10483,27 +10825,27 @@ Na potrzeby testów zostały przygotowane następujące pliki audio:
 \end_layout
 
 \begin_layout Itemize
-plik z rozszerzeniem *.MP3,
+plik z rozszerzeniem MP3,
 \end_layout
 
 \begin_layout Itemize
-plik z rozszerzeniem *.WAV,
+plik z rozszerzeniem WAV,
 \end_layout
 
 \begin_layout Itemize
-plik z rozszerzeniem *.WMA,
+plik z rozszerzeniem WMA,
 \end_layout
 
 \begin_layout Itemize
-plik z rozszerzeniem *.AAC,
+plik z rozszerzeniem AAC,
 \end_layout
 
 \begin_layout Itemize
-plik z rozszerzeniem *.FLAC,
+plik z rozszerzeniem FLAC,
 \end_layout
 
 \begin_layout Itemize
-plik z rozszerzeniem *.M4A.
+plik z rozszerzeniem M4A.
 \end_layout
 
 \begin_layout Standard
@@ -10511,7 +10853,7 @@ Ostatnimi przygotwanymi plikami były pliki wideo, o następujących parametrach
 \end_layout
 
 \begin_layout Itemize
-plik MATROSKA, 4GB
+plik MATROSKA, z rozszerzeniem MKV, rozmiar 4GB
 \end_layout
 
 \begin_deeper
@@ -10545,7 +10887,7 @@ napisy zewnętrzne (test odbył się z napisami i bez),
 
 \end_deeper
 \begin_layout Itemize
-plik MATROSKA 16GB,
+plik MATROSKA, z rozszerzeniem MKV, rozmiar 16GB,
 \end_layout
 
 \begin_deeper
@@ -10654,13 +10996,13 @@ rozdzielczość 1280x720
 
 \end_deeper
 \begin_layout Subsection
-Polecenia UPnP AV i DLNA
+Polecenia UPnP A/V i DLNA
 \end_layout
 
 \begin_layout Standard
 Do poprawnego przetestowania oprogramowania stworzonego na potrzeby niniejszej
  pracy magisterskiej konieczne było zapoznanie się z poleceniami protokołami
- UPnP AV / DLNA oraz sposobu w jaki oprogramowanie DLNA ów polecenia wykonuje.
+ UPnP A/V i DLNA oraz sposobu w jaki oprogramowanie DLNA ów polecenia wykonuje.
 \end_layout
 
 \begin_layout Standard
@@ -10697,17 +11039,25 @@ GetSystemUpdateID
 Browse
 \emph default
 ).
- Istnieje kilka poleceń opcjonalnych (według specyfikacji UPnP AV oraz DLNA),
- jednakże jedno z poleceń (polecenie przeszukiwania 
+ Istnieje kilka poleceń opcjonalnych (według specyfikacji UPnP A/V oraz
+ DLNA).
+ Jednym z takich poleceń jest polecenie przeszukiwania 
 \emph on
 Search
 \emph default
-) musi być udostępniane, gdyż niektóre z odtwarzaczy bez tego rodzaju usługi,
- nie wykrywają wówczas serwera w sposób poprawny.
+, które musi być udostępniane, gdyż niektóre z odtwarzaczy bez tego rodzaju
+ usługi, nie wykrywają wówczas serwera w sposób poprawny.
 \end_layout
 
 \begin_layout Section
 Napotkane problemy
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Napotkane-problemy"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -10719,13 +11069,14 @@ ej nienaprowadzające na genezę problemu).
 
 \begin_layout Standard
 Głównym problemem był brak możliwości otworzenia plików MKV.
- Problem ten występował w urządzeniach Samsung.
+ Problem ten występował w urządzeniach firmy Samsung.
  W urządzeniu LG wyświetlany był komunikat o możliwych nieprawidłowościach
  w odtwarzaniu.
- Jak się okazało, po wielu godzinach szukania rozwiązania metodą prób i
- błędów, konieczne było przedstawienie typu MIME jako AVI, aby odtwarzacz
- poprawnie otwierał plik MKV (potrafił otworzyć nawet wbudowane napisy w
- kontener Matroska).
+ Pomimo komunikatu materiał był odtwarzany.
+ Jak się okazało, po wielu godzinach poszukiwań sposobu odtworzenia pliku
+ na pierwszym wymienionym urządzeniu, konieczne było przedstawienie typu
+ MIME jako AVI, aby odtwarzacz poprawnie otwierał plik MKV (potrafił otworzyć
+ nawet wbudowane napisy w kontener Matroska).
  Sytuacja opisana pozwala poprawnie odtwarzać materiały na telewizorach
  Samsung.
  W przypadku telefonów Samsung z aplikacją AllShare konieczne jest również
@@ -10746,7 +11097,7 @@ oszukanie
 \begin_layout Standard
 Aplikacja AllShare firmy Samsung podobnie jak w przypadku plików MKV, postępuje
  z plikami muzycznymi.
- Pomimo możliwości jej odtworzenia wyświetla komunikat o nieobsługiwanym
+ Pomimo możliwości ich odtworzenia wyświetla komunikat o nieobsługiwanym
  formacie audio.
  W tym celu, niektóre z plików trzeba przedstawiać jako typ mp3.
 \end_layout
@@ -10765,7 +11116,7 @@ Urządzenia Samsung również wymagają załączenia nagłówka z adresem URL do
 \emph on
 sec
 \emph default
- i w przypadku serwera multimedialnego UPnP AV napisanego przez autora,
+ i w przypadku serwera multimedialnego UPnP A/V napisanego przez autora,
  wykorzystywany jest do dołączania napisów w filmach.
  Innym sposobem dołączania napisów do filmu jest zawarcie, w pliku XML,
  elementu załącznika 
@@ -10778,6 +11129,16 @@ ang.
  attachments).
  
 \emph default
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+przykład attachments i sec dla napisów
+\end_layout
+
+\end_inset
+
 W elemencie tym powinny znajdować się adresy URL z możliwymi do pobrania
  napisami.
  Istotnym elementem w przypadku urządzenia LG jest podanie typu MIME napisów
@@ -10839,8 +11200,9 @@ Test wyszukiwania urządzenia
 \end_layout
 
 \begin_layout Standard
-Po uruchomieniu napisanego oprogramowania, wysyła ono pakiety informujące
- działające już odtwarzacze o swoim istnieniu.
+Po uruchomieniu testowanego oprogramowania, wysyła ono (poprzez rozgłaszanie)
+ pakiety informujące, o swoim istnieniu, do działających już urządzeń (urządzeni
+ami docelowymi są odtwarzacze).
  Najnowsze oprogramowanie Samsung AllShare w wersji na każde urządzenie
  momentalnie wyświetlało istnienie serwera.
  W przypadku innych odtwarzaczy konieczne było wykorzystanie polecenia odświeżaj
@@ -10896,7 +11258,7 @@ name "fig:Karta-Szczegóły-serwera"
 
 \end_inset
 
-Karta Szczegóły serwera DLNA w odtwarzaczu DLNA
+Karta Szczegóły serwera DLNA w odtwarzaczu mobilnym DLNA - Samsung AllShare
 \end_layout
 
 \end_inset
@@ -10927,12 +11289,12 @@ Test przeglądania zawartości
 \begin_layout Standard
 W większości przetestowanych modeli odtwarzaczy DLNA przeglądanie zawartości
  odbywa się w sposób podobny do wyboru plików w eksploratorach plików.
- Aby znaleźć pożądany plik wybieramy odpowiedni katalog (który również służy
- za rodzaj materiału) np.
+ Aby znaleźć pożądany plik wybieramy odpowiedni katalog (który również pełni
+ rolę kategorii materiału) np.
  Muzyka i wyszukujemy plik.
  Opisywana funkcjonalność została w zupełnie inny sposób zaimplementowana
  w najnowszych telewizorach firmy Samsung.
- W tym sprzęcie oprogramowanie wysyła żądanie od serwera o udostępnienie
+ W tym sprzęcie oprogramowanie wysyła żądanie do serwera o udostępnienie
  listy wszystkich filmów, zdjęć i muzyki i wyświetla wszystkie elementy
  w jednej liście zgodnie z kategoriami (Wideo, Muzyka, Obrazy), nie zważając
  na strukturę katalogów, którą udostępnia serwer.
@@ -10942,16 +11304,16 @@ W większości przetestowanych modeli odtwarzaczy DLNA przeglądanie zawartości
 Udostępniana zawartość od początkowych wersji aplikacji była w sposób poprawny
  wyświetlana na wszystkich sprawdzanych urządzeniach oraz oprogramowaniu
  dla komputerów klasy PC z systemami operacyjnymi Microsoft Windows oraz
- Ubuntu 11.10.
+ Ubuntu od wersji 10.10 do 11.10.
 \end_layout
 
 \begin_layout Standard
-Po dodaniu zawartości pakiet, informujący o konieczności aktualizacji listy
+Po dodaniu zawartości, pakiet informujący o konieczności aktualizacji listy
  plików, został spreparowany poprawnie i wszystkie zasubskrybowane urządzenia
  go otrzymały.
- Jednakże niektóre programy klienckie UPnP AV (np.
+ Jednakże niektóre programy klienckie UPnP A/V (np.
  Samsung AllShare) nie reagują żądaniem odświeżenia listy plików, przez
- co lista plików nie aktualizuje się w sposób zautomatyzowany bez ingerencji
+ co lista plików nie aktualizuje się w sposób zautomatyzowany, bez ingerencji
  użytkownika.
 \end_layout
 
@@ -10960,8 +11322,8 @@ Test odtwarzania materiałów
 \end_layout
 
 \begin_layout Standard
-Opisywany test skupił się na najważniejszej funkcji zaprojektowanej aplikacji,
- czyli odtwarzaniu treści multimedialnych.
+Test odtwarzania treści multimedialnych pozwolił sprawdzić najważniejszą
+ funkcję zaprojektowanej aplikacji.
  Poza główną funkcją, w trakcie testu sprawdzane zostały takie parametry
  jak: możliwość przewijania materiału, podgląd miniatur, przegląd atrybutów
  udostępnianego pliku, umożliwienie rozszerzania widoku (głównie działanie
@@ -10985,7 +11347,7 @@ reference "chap:Przegląd-oprogramowania-UPnP"
 
 \begin_layout Standard
 Serwer w pełni poprawnie udostępnia materiały, tylko odtwarzaczowi w telewizorze
- Samsunga.
+ firmy Samsung.
  Wszystkie pliki udostępniane przez serwer, odtwarzacz telewizyjny AllShare
  potrafił odtworzyć.
  Sprzęt ten, powołując się na instrukcję obsługi, potrafi odtworzyć formaty
@@ -11023,12 +11385,12 @@ reference "sub:Oprogramowanie-w-sprzęcie"
 \end_layout
 
 \begin_layout Standard
-W rzeczywistości możliwości odtwarzania przez sieć są dużo mniejsza, niż
- lista w tabeli.
+W rzeczywistości możliwości odtwarzania przez sieć są dużo mniejsze, niż
+ lista wymieniona w tabelach.
  Odtwarzacz poprawnie otworzył materiał AVI.
  Pozostałe formaty sprawiały problemy w odtwarzaniu.
  W przypadku telewizorów Samsung, wystarczy jednak informować odtwarzacz,
- że wysyłany materiał ma rozszerzenie *.avi i wówczas pełna zawartość tabeli
+ że wysyłany materiał ma rozszerzenie avi i wówczas pełna zawartość tabeli
  jest spełniona.
  Odtwarzacz nie pozwolił otworzyć plików audio *.FLAC, *.M4A, bez podania
  nieprawdziwego typu MIME (podany został typ MIME pliku MP3 - 
@@ -11052,7 +11414,7 @@ Drugie z urządzeń, czyli odtwarzacz Blu-ray firmy LG, model BD-390, nie
  nie udostępnia w sposób poprawny dla sprzętu.
  Autor jednakże nie znalazł jednoznacznego sposobu, aby wszystkie napisy
  urządzenie LG zawsze załadowało (w niektórych przypadkach urządzenie pobiera
- napisy, lecz ich nie ładuje).
+ napisy, lecz ich nie wyświetla.
 \end_layout
 
 \begin_layout Standard
@@ -11069,8 +11431,8 @@ Ostatnie z urządzeń, urządzenie mobilne Samsung Galaxy S2 I9100, poprawnie
 \emph on
 audio/mpeg
 \emph default
- by plik mógł być odtwarzany (można nazwać to pośrednią obsługą plików *.FLAC,
- *.M4A, *.WAV).
+ by plik mógł być odtwarzany (można nazwać tą sytuację, pośrednią obsługą
+ plików *.FLAC, *.M4A, *.WAV).
 \end_layout
 
 \begin_layout Standard
@@ -12427,7 +12789,7 @@ W - pliki wideo,
 \end_layout
 
 \begin_layout Chapter
-Przegląd oprogramowania UPnP AV i DLNA
+Przegląd oprogramowania UPnP A/V i DLNA
 \end_layout
 
 \begin_layout Standard
@@ -12441,34 +12803,44 @@ name "chap:Przegląd-oprogramowania-UPnP"
 \end_layout
 
 \begin_layout Standard
-Oprogramowanie UPnP AV oraz DLNA umożliwia w bardzo prosty sposób odtwarzać
+Oprogramowanie UPnP A/V oraz DLNA umożliwia w bardzo prosty sposób odtwarzać
  materiały multimedialne w sieci lokalnej.
  Serwerów multimedialnych w sieci internetowej można znaleźć stosunkowo
  dużo.
- Natomiast odtwarzacze UPnP AV / DLNA są zazwyczaj wbudowane w większość
+ Natomiast odtwarzacze UPnP A/V i DLNA są zazwyczaj wbudowane w większość
  standardowych odtwarzaczy dostarczanych wraz z systemem operacyjnym urządzenia.
 \end_layout
 
 \begin_layout Standard
 W niniejszym rozdziale zostały zestawione, przetestowane przez autora, programy
- zgodne ze standardem UPnP AV lub DLNA.
+ zgodne ze standardem UPnP A/V lub DLNA.
  W kolejnych podrozdziałach wyróżnione zostały możliwości serwerów mutlimedialny
 ch, a następnie odtwarzaczy multimedialnych.
  Drugi z podrozdziałów zawiera zestawienie zarówno oprogramowania dla komputerów
- typu PC, jak i odtwarzaczy sprawdzanych w sprzęcie telewizyjnym, tj.
- telewizorach i odtwarzaczach Blu-ray.
+ typu PC, jak i odtwarzaczy sprawdzanych w sprzęcie elektronicznym, czyli
+ w tym wypadku telewizorach i odtwarzaczu Blu-ray.
 \end_layout
 
 \begin_layout Section
-Przegląd oprogramowania serwerów UPnP AV i DLNA
+Przegląd oprogramowania serwerów UPnP A/V i DLNA
 \end_layout
 
 \begin_layout Standard
-Ilość aplikacji udostępniających multimedia jest bardzo dużo.
+Ilość aplikacji udostępniających multimedia jest bardzo duża.
  Prawdopodobnie zbyt duża, aby zwykły użytkownik był w stanie podjąć prosty
- i zarazem dobry wybór.
- Ich ilość jest spowodowana jakością wykonania oraz nie spełnieniem warunku,
- którym jest odtwarzanie treści na urządzeniach różnych producentów.
+ i zarazem dobry wybór, który z programów spełni jego oczekiwania.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Ich ilość jest spowodowana jakością wykonania oraz nie spełnieniem warunku,
+ którym jest odtwarzanie treści na urządzeniach różnych producentów - poprawić
+\end_layout
+
+\end_inset
+
+.
  Warunkiem prawdopodobnie niemożliwym do spełnienia.
  W przypadku, gdy sieć domowa posiada odtwarzacze tylko jednego producenta
  (czyli teoretycznie powinny być zgodne), wystarczy odnaleźć serwer, który
@@ -12492,21 +12864,44 @@ wane są dwa urządzenia.
 Aplikacja udostępnia wszystkie rodzaje multimediów ujęte w specyfikacji
  DLNA, czyli obrazy, muzykę oraz filmy.
  Ma możliwość kodowania materiałów w locie, udostępniania napisów w postaci
- SubRip to jest z rozszerzeniem *.srt.
+ SubRip to jest z rozszerzeniem srt.
  Napisy muszą mieć taką samą nazwę plików jak film.
 \end_layout
 
 \begin_layout Standard
 Program, w wersji dla systemu Microsoft Windows, umożliwia dodanie następujących
- plików wideo do listy odtwarzania: *.3GP, *.ASF, *.AVI, *.DIVX, *.F4V, *.FLV,
- *.M1V, *.M2TS, *.M4V, *.MKV, *.MOV, *.MP4, *.MPEG, *.MPG, *.MPGV, *.MPV, *.MTS, *.PS,
- *.QT, *.RM, *.RMVB, *.SVI, *.TP, *.TRP, *.TS, *.VOB, *.VRO, *.WMV.
- Pliki zdjęć mogą posiadać rozszerzenia: *.BMP, *.GIF, *.JPEG, *.JPG, *.MPO,
- *.PNG.
- Ostatnie pliki, audio, mogą zostać dodane spełniające następujące parametry
- rozszerzenia: *.3GA, *.AAC, *.AC3, *.AU, *.AMR, *.APE, *.DAT, *.FLAC, *.LPCM, *.M4A,
- *.MP2, *.MP3, *.MPA, *.OGG, *.PCM, *.RA, *.VOX, *.WAV, *.WMA.
- Przedstawione listy są bardzo długie i wydaje się, że spełniają wszystkie
+ plików wideo do listy odtwarzania: 
+\end_layout
+
+\begin_layout Itemize
+*.3GP, *.ASF, *.AVI, *.DIVX, *.F4V, *.FLV, *.M1V, *.M2TS, *.M4V, *.MKV, *.MOV, *.MP4,
+ *.MPEG, *.MPG, *.MPGV, *.MPV, *.MTS, *.PS, *.QT, *.RM, *.RMVB, *.SVI, *.TP, *.TRP,
+ *.TS, *.VOB, *.VRO, *.WMV.
+ 
+\end_layout
+
+\begin_layout Standard
+Pliki zdjęć mogą posiadać rozszerzenia:
+\end_layout
+
+\begin_layout Itemize
+*.BMP, *.GIF, *.JPEG, *.JPG, *.MPO, *.PNG.
+ 
+\end_layout
+
+\begin_layout Standard
+Ostatnie rodzajów plików, pliki audio, mogą zostać dodane spełniające następując
+e parametry rozszerzenia: 
+\end_layout
+
+\begin_layout Itemize
+*.3GA, *.AAC, *.AC3, *.AU, *.AMR, *.APE, *.DAT, *.FLAC, *.LPCM, *.M4A, *.MP2, *.MP3,
+ *.MPA, *.OGG, *.PCM, *.RA, *.VOX, *.WAV, *.WMA.
+ 
+\end_layout
+
+\begin_layout Standard
+Przedstawione listy są bardzo długie i wydaje się, że spełniają wszystkie
  możliwe wymaganie, jednakże pomimo iż tak dużą ilość rodzajów plików można
  dodać, to większość z nich jest udostępniana w taki sposób, że odtwarzacz
  nie umie ich zaprezentować użytkownikowi (pojawia się komunikat niepoprawny
@@ -12518,7 +12913,29 @@ Program, w wersji dla systemu Microsoft Windows, umożliwia dodanie następując
 
 \begin_layout Standard
 Oprogramowanie mobilne, dla systemu Android, nie ma możliwości przekazywania
- napisów dla urządzeń innych niż Samsung.
+ napisów dla urządzeń innych niż Samsung (do udostępniania napisów wykorzystywan
+y jest znacznik 
+\emph on
+sec
+\emph default
+ opisany w rozdziale 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Napotkane-problemy"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+więcej rozdziałów o sec?
+\end_layout
+
+\end_inset
+
+).
  Autor nie odnalazł listy z rodzajami plików do udostępnienia, lecz jest
  ona prawdopodobnie taka sama jak dla wersji PC serwera.
  Jednakże serwer mobilny, pliki które współdzieli, udostępnia w wyraźnie
@@ -12535,23 +12952,57 @@ Nero MediaHome 4
 Nero MediaHome 4 jest to płatne oprogramowanie (do testów wykorzysywana
  była wersja próbna) udostępniające multimedia, podobnie jak większość aplikacji
 , takie które są wyspecyfikowane w technologii DLNA.
- W pliku pomocy programu zostały przedstawione obsługiwane rozszerzenia.
- Dla plików audio są to: *.AIFF, *.AIF, *.MP1, *.MP2, *.MP3, *.MPA, *.MP4, *.AC3,
- *.AAC, *.M4A, *.MP4, *.WAV, *.WAVE, *.WMA, *.OGG, OGM, *.LPCM, *.PCM, *.L16.
+ 
+\end_layout
+
+\begin_layout Standard
+W pliku pomocy programu zostały przedstawione obsługiwane rozszerzenia.
+ 
+\end_layout
+
+\begin_layout Standard
+Dla plików audio są to: 
+\end_layout
+
+\begin_layout Itemize
+*.AIFF, *.AIF, *.MP1, *.MP2, *.MP3, *.MPA, *.MP4, *.AC3, *.AAC, *.M4A, *.MP4, *.WAV,
+ *.WAVE, *.WMA, *.OGG, OGM, *.LPCM, *.PCM, *.L16.
  Dla plików obrazów: *.BMP, *.GIF, *.JPEG, *.JPG, *.JPE, *.PNG, *.TIFF, *.TIF, *.WMF.
- Dla plików wideo: *.3GP, *.AVI, *.DIVX, *.ASF, *.DV, *.MPEG, *.MPG, *.MPE, *.M1V,
- *.DAT, *.MPEG2, *.MPG2, *.M2V, *.PVA, *.MOD, *.TOD, *.VOB, *.MP2P, *.PS, *.MP2T, *.TS,
- MP4, *.M4P, *.MOV, *.QT, *.WMV, *.DVR-MS, *.FLV, *.MP4.
- Wszystkie z wymienionych formatów mogą być transkodowane do innych formatów
+ 
+\end_layout
+
+\begin_layout Standard
+Dla plików wideo: 
+\end_layout
+
+\begin_layout Itemize
+*.3GP, *.AVI, *.DIVX, *.ASF, *.DV, *.MPEG, *.MPG, *.MPE, *.M1V, *.DAT, *.MPEG2, *.MPG2,
+ *.M2V, *.PVA, *.MOD, *.TOD, *.VOB, *.MP2P, *.PS, *.MP2T, *.TS, MP4, *.M4P, *.MOV,
+ *.QT, *.WMV, *.DVR-MS, *.FLV, *.MP4.
+ 
+\end_layout
+
+\begin_layout Standard
+Wszystkie z wymienionych formatów mogą być transkodowane do innych formatów
  znajdujących się na liście.
- Lista plików dość długa, jednakże w trakcie sprawdzania programu autor
- wykrył fakt, że w rzeczywistości odtwarzanie materiału zależy od pakietu
- kodeków zainstalowanych w komputerze.
+ Lista obsługiwanych plików jest bardzo duża.
+ Jednakże w trakcie sprawdzania programu autor wykrył fakt, że w rzeczywistości
+ odtwarzanie materiału zależy od pakietu kodeków zainstalowanych w komputerze.
  Program prawdopodobnie dostarcza kodeki, które odtwarzają wspomniane wyżej
  formaty, jednakże jeżeli są zainstalowane kodeki, które odtwarzają inne
  formaty, wówczas aplikacja również je wspiera.
- Jest to zachowanie o tyle dziwne, że w przypadku braku transkodowania,
- dekoder formatu multimedialnego nie jest wykorzystywany.
+ Jest to zachowanie o tyle dziwne, że nawet w przypadku braku transkodowania,
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+wtf? ->
+\end_layout
+
+\end_inset
+
+dekoder formatu multimedialnego nie jest wykorzystywany.
 \end_layout
 
 \begin_layout Standard
@@ -12562,14 +13013,24 @@ zych formatów, którymi w tym wypadku są SubRip lub MicroDVD.
 \end_layout
 
 \begin_layout Standard
-Materiały udostępniane przez opisywany serwer poprawnie odtwarzają wszystkie
- przetestowane urządzenia.
+Materiały udostępniane przez opisywany serwer multimedialny wszystkie przetestow
+ane urządzenia odtwarzają poprawnie.
  Serwer ten potrafi również strumieniować materiał telewizyjny z tunera
  DVB-T na żywo do innych urządzeń (funkcja nie została przetestowana).
  Można stwierdzić, że jest to kompletny odtwarzacz multimediów, z jedną
  wadą, którą jest brak wieloplatformowości.
  Drugą cechą, która może odstraszyć przeciętnego użytkownika jest cena oprogramo
-wania.
+wania
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+cena w Euro
+\end_layout
+
+\end_inset
+
+.
  Biorąc pod uwagę, że większośc odtwarzaczy jest darmowych, jest to niewątpliwie
  wada.
 \end_layout
@@ -12580,7 +13041,8 @@ MiniDLNA
 
 \begin_layout Standard
 Oprogramowanie MiniDLNA jest stworzony z myślą o platformie Linux, napisane
- w języku C++, udostępniane na publicznej licencji GPL (
+ w języku C++.
+ Udostępniane jest w ramach publicznej licencji GPL (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-40"
@@ -12597,15 +13059,16 @@ ReadyNAS
 Netgear, 
 \emph default
 dzięki czemu ma bardzo małe wymaganie sprzętowe.
- Jest bardzo popularnym serwerem multimediów, celem jego autora jest pełna
- współpraca ze wszystkimi urządzeniami UPnP AV oraz DLNA.
+ Jest bardzo popularnym serwerem multimediów.
+ Celem autora projektu jest pełna współpraca ze wszystkimi urządzeniami
+ UPnP A/V oraz DLNA.
  MiniDLNA nie posiada dokumentacji technicznej, z tego powodu niemożliwe
  jest podanie możliwych do udostępniania plików.
  W trakcie testów, autor stwierdził, że wszystkie pliki muzyczne oraz obrazów
  były poprawnie odtwarzane na używanym sprzęcie.
  W przypadku filmów, na każdym z urządzeń poprawnie udostępniane były pliki
  *.avi.
- W przypadku innych rozszerzeń, takich jak *.mp4 oraz *.mkv, prezentacji treści
+ W przypadku innych rozszerzeń, takich jak mp4 oraz mkv, prezentacji treści
  multimedialnych możliwa była tylko w przypadku oprogramowania dla komputerów
  stacjonarnych.
  Odtwarzacze w urządzeniach RTV oraz mobilne nie potrafiły odtworzyć zawartości.
@@ -12616,8 +13079,9 @@ dzięki czemu ma bardzo małe wymaganie sprzętowe.
  MiniDLNA konfigurowany jest poprzez modyfikację tekstowych plików modyfikacyjny
 ch, nie posiada dedykowanego interfejsu do obsługi.
  Jest wbudowany w wiele dystrybucjach oprogramowania alternatywnego dla
- sprzętu sieciowego, wówczas posiada interfejs strony internetowej stworzony
- przez deweloperów.
+ sprzętu sieciowego, w których zazwyczaj posiada interfejs strony internetowej
+ stworzony przez deweloperów (np.
+ alternatywne oprogramowanie routerów DD-WRT).
 \end_layout
 
 \begin_layout Subsection
@@ -12631,9 +13095,9 @@ Wild Media Server
 \emph default
 jest płatną aplikacją udostępniającą multimedia w sieci.
  Użytkownik rozpoczyna udostępnianie multimediów od wyboru profilu urządzenia.
- Program ma wiele wbudowanych profili np.
- DLNA wersja 1.5, odtwarzacz blu-ray LG, telewizor LG, telewizor Samsung,
- telewizor Phillips i wiele innych.
+ Program ma wiele wbudowanych profili, wśród nich między innymi: DLNA wersja
+ 1.5, odtwarzacz Blu-ray LG, telewizor LG, telewizor Samsung, telewizor Phillips
+ i wiele innych.
  Użytkownik może stworzyć swój własny profil.
  Program umożliwia transkodowanie zawartości oraz wbudowywanie napisów do
  materiału w locie.
@@ -12643,8 +13107,9 @@ jest płatną aplikacją udostępniającą multimedia w sieci.
  zostanie tu opisany).
  Pliki *.mkv, które sprawiają prawdopodobnie najwięcej problemów z odtworzeniem
  są przedstawiane przez serwer jako pliki *.mpeg.
- Jednakże nawet ten unik (autor w swoim oprogramowaniu zastosował podobny)
- nie umożliwia odtwarzania materiałów na urządzeniach mobilnych.
+ Jednakże nawet ten unik (autor w swoim oprogramowaniu zastosował podobny,
+ lecz przedstawiał pliki jako materiał AVI) nie umożliwia odtwarzania materiałów
+ na urządzeniach mobilnych.
  Ponadto serwer udostępnia nieprawidłowe informacje o udostępnianych plikach
  (błędny rozmiar oraz czas trwania materiału wideo), co może wpłynąć na
  obsługę (lub jej brak) funkcji przewijania.
@@ -12660,19 +13125,28 @@ PS3 Media Server
 PS3 Media Server 
 \emph default
 jest serwerem multimedialnym stworzonym z myślą o konsoli PlayStation 3
- firmy Sony i zarówno zdaniem użytkowników, jak i autora programu, w pełni
- z nią współpracuje (autor niniejszej pracy nie testował aplikacji z konsolą).
+ firmy Sony.
+ Zarówno zdaniem użytkowników, jak i autora programu, w pełni z nią współpracuje
+ (autor niniejszej pracy nie testował aplikacji z konsolą).
  Serwer podobnie, jak pozostałe potrafi udostępniać obrazy, muzykę oraz
  filmy.
  Ma możliwość transkodowania materiałów audio i wideo.
  Umożliwia odtwarzanie napisów w postaci MicroDVD oraz SubRIP.
  Testowane przez autora pracy urządzenia nie potrafiły odtworzyć materiałów
- kodowanych przy pomocy H.264.
+ kodowanych przy pomocy 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+kodeka?
+\end_layout
+
+\end_inset
+
+kodeka H.264.
  Pozytywną cechą niniejszego serwera jest fakt, iż w takim przypadku automatyczn
 ie transkodował materiał do innego obsługiwanego, zarówno przez odtwarzacz,
  jak i serwer formatu.
- Urządzenia w przypadku innych odtwarzaczy (w tym aplikacji stworzonej na
- potrzeby niniejszej pracy magisterskiej) potrafiły odtwarzać materiał H.264.
 \end_layout
 
 \begin_layout Subsection
@@ -12684,12 +13158,12 @@ Coherence
 \emph on
 Coherence 
 \emph default
-jest framework'iem wykorzystywanym do działania w sieci UPnP AV i DLNA.
+jest framework'iem wykorzystywanym do działania w sieci UPnP A/V i DLNA.
  Funkcjonuje jako warstwa tworząca komunikaty UPnP.
  Może być również uruchomiony jako samoodzielny program wykorzystujący wtyczki
  do zdefiniowania celu działania.
  Jedną z wtyczek jest udostępnianie multimediów w sieci lokalnej, zgodnie
- z protokołem UPnP AV.
+ z protokołem UPnP A/V.
  Pożądane parametry spełnia wtyczka o nazwie 
 \emph on
 FSStore
@@ -12702,8 +13176,12 @@ FSStore
 Coherence
 \emph default
  w wersji 0.6.2 ma możliwość dołączania napisów, w przypadku gdy mają one
- tą samą nazwę co plik wideo oraz posiadają rozszerzenie *.srt.
- Do programu nie została napisana instrukcja obsługi, co w znacznym stopniu
+ tą samą nazwę co plik wideo oraz posiadają rozszerzenie srt.
+ 
+\end_layout
+
+\begin_layout Standard
+Do programu nie została napisana instrukcja obsługi, co w znacznym stopniu
  utrudnia jego konfigurację.
  Odbywa się ona poprzez stworzenie pliku tekstowego z odpowiednimi parametrami.
  Autorowi udało się uruchomić jedynie starą wersję programu 
@@ -12723,19 +13201,26 @@ a.
  komunikaty celem udostępniania treści dla wymienionego produktu.
 \end_layout
 
+\begin_layout Standard
+Nowsze wersje aplikacji (od wersji 0.6.5) nie działają poprawnie w środowisku
+ systemu operacyjnego Ubuntu 11.04 oraz 11.10.
+ Jest to spowodowane nowszymi wersjami, wykorzystywanych przez program,
+ bibliotek systemowych.
+\end_layout
+
 \begin_layout Section
-Przegląd oprogramowania odtwarzaczy DLNA i UPnP AV
+Przegląd oprogramowania odtwarzaczy DLNA i UPnP A/V
 \end_layout
 
 \begin_layout Standard
 W sieci internetowej dostępnych jest bardzo wiele odtwarzaczy multimediów
- w sieciach lokalnych, zgodnych ze standardem DLNA i/lub UPnP AV.
+ w sieciach lokalnych, zgodnych ze standardem DLNA i/lub UPnP A/V.
  Odtwarzacze są zawarte jako programy w urządzeniach RTV, takich jak telewizory,
  odtwarzacze DVD, odtwarzacze Blu-ray i inne.
- Inną grupą odtwarzaczy są przeznaczone do instalacji w systemie operacyjnym.
+ Inną grupą odtwarzaczy te są przeznaczone do instalacji w systemie operacyjnym.
  Spośród tych większość jest przeznaczona dla systemu operacyjnego Microsoft
  Windows, ewentualnie dla systemu MacOS X.
- Na szczęście dla użytkowników systemów rodziny Linuks, społeczność wolnego
+ Na szczęście dla użytkowników systemów rodziny Linux, społeczność wolnego
  oprogramowania, jest na tyle rozwinięta, że i dla tych systemów nie jest
  większym problemem odnalezienie programu obsługującego opisywane standardy.
 \end_layout
@@ -12749,8 +13234,13 @@ Odtwarzaczem DLNA, który autor może z całą pewnością polecić jest program
  XBMC Media Center, który został stworzony jako alternatywny interfejs graficzny
  konsoli Microsoft XBOX 360, a w chwili obecnej jest oprogramowaniem również
  dla systemów operacyjnych Windows, MacOS X oraz Linux.
- Jego interfejs jest bardzo przyjazny i starannie zaprojektowany, w taki
- sposób aby można było nim sterować każdym urządzeniem wskazującym np.
+ Jego interfejs graficzny użytkownika (GUI - ang.
+ 
+\emph on
+Graphical User Interface
+\emph default
+) jest bardzo przyjazny i starannie zaprojektowany, w taki sposób aby można
+ było nim sterować każdym urządzeniem wskazującym np.
  pilotem telewizora.
  Jedynym mankamentem jaki odnalazł autor w niniejszym programie jest brak
  odtwarzania napisów w materiałach filmowych.
@@ -12759,15 +13249,15 @@ Odtwarzaczem DLNA, który autor może z całą pewnością polecić jest program
 
 \begin_layout Standard
 Dla systemu Windows warto wymienić odtwarzacze Windows Media Player oraz
- Samsung AllShare, które potrafią wyszukać serwery DLNA lub UPnP AV i odtworzyć
+ Samsung AllShare, które potrafią wyszukać serwery DLNA lub UPnP A/V i odtworzyć
  ich zawartość.
- W przypadku pierwszego niewątpliwą wadą jest brak obsługi napisów.
+ W przypadku pierwszego niewątpliwą wadą jest całkowity brak obsługi napisów.
  Pozytywnymi cechami drugiego z wymienionych programów jest bardzo duża
  ilość materiałów możliwych do odtworzenia, obsługa napisów do filmów, niestety
  w przypadku komputera, na którym był testowany (uproszczona specyfikacja:
  procesor Intel Core 2 Duo 2.4 GHz, 8 GB Ram, dysk twardy 500 GB) obraz nie
  był płynnie odtwarzany.
- Zajmował przy tym około 80% procent zasobów procesora.
+ Zajmował przy tym około 80% zasobów procesora.
 \end_layout
 
 \begin_layout Standard
@@ -12793,9 +13283,9 @@ Oprogramowanie w sprzęcie audio-wideo
 \begin_layout Standard
 W przypadku odtwarzaczy dla komputerów stacjonarnych użytkownik nie jest
  zmuszony do używania jednego rodzaju programu i może odnaleźć taki, który
- mu bardziej odpowiada.
+ mu najbardziej odpowiada.
  Natomiast w sytuacji odtwarzania materiałów na telewizorze użytkownik jest
- zobowiązany do wykorzystania programu, który dostarczył producent sprzętu.
+ zobligowany do wykorzystania programu, który dostarczył producent sprzętu.
  Autor zdecydował się zamieścić w niniejszym podrozdziale również krótką
  opinię na temat mobilnego odtwarzacza AllShare (dla smartfonów firmy Samsung),
  z tego względu, iż oprogramowanie to jest preinstalowane przez producenta.
@@ -12808,8 +13298,8 @@ Telewizor firmy Samsung, model UE46D6750WS
 \series default
 posiada oprogramowanie Samsung AllShare.
  Po włączeniu programu wyszukiwane są serwery multimediów.
- Po wybraniu serwera multimediów na pierwszy rzut oka widoczna jest różnica,
- pomiędzy innymi implementacjami tego typu odtwarzaczy.
+ Po wybraniu serwera multimediów już na pierwszym ekranie, widoczna jest
+ różnica, względem innych implementacjami tego typu odtwarzaczy.
  Pozwala on na przeglądanie materiałów według trzech kategorii - Wideo,
  Muzyka, Obrazy.
  Widok ten nazywany jest widokiem prostym (ang.
@@ -12819,10 +13309,10 @@ BasicView
 \emph default
 ) i jeżeli serwer multimediów nie udostępnia takiego widoku lub zwraca go
  błędnie, wówczas AllShare zgłasza błąd i uniemożliwia wyszukanie treści
- multimedialnej.
+ multimedialnych.
  Warto zwrócić uwagę, że odświeżanie automatyczne (które jest uwzględnione
- w specyfikacjach UPnP AV oraz DLNA) nie działa w taki sposób jak powinno,
- odtwarzacz nie potrafi przeglądać zawartości serwera bezpośrednio po jego
+ w specyfikacjach UPnP A/V oraz DLNA) nie działa w oczekiwany sposób.
+ Odtwarzacz nie potrafi przeglądać zawartości serwera bezpośrednio po jego
  dołączeniu bez ówczesnego odświeżenia listy serwerów.
  Testowany sprzęt posiada wbudowany sprzętowy dekoder H.264, a mimo to nie
  potrafił odtworzyć zawartości kontenera multimedialnego Matroska (*.mkv).
@@ -14263,27 +14753,27 @@ tekst
 
 \begin_layout Standard
 Oprogramowanie Samsung AllShare dla urządzeń mobilnych wyświetla zawartość
- serwera poprzez przeglądanie katalogów (nie stosuje widoku prostego jak
- telewizory).
+ serwera poprzez przeglądanie katalogów (nie stosuje widoku prostego, tak
+ jak w telewizorach tej firmy).
  Odświeżanie automatyczne listy serwerów zostało zaimplementowane poprawnie
  i działa zgodnie z oczekiwaniami.
- Program mobilny nie odtwarza poprawnie napisów do filmów (pobiera je, jednakże
- bez zgłoszenia żadnego błędu nie odtwarza).
+ Program mobilny nie odtwarza poprawnie napisów do filmów (pobiera je, ale
+ nie wyświetla żadnego błędu o braku możliwości ich załadowania).
  W filmach oraz obrazach, które były odtwarzane na urządzeniu występowały
- problem z dostosowaniem obrazu do wielkości ekranu.
+ problemy z dostosowaniem obrazu do wielkości ekranu.
  Podobnie jak w przypadku telewizorów konieczna jest zmiana typu MIME kontenera
  wideo.
 \end_layout
 
 \begin_layout Standard
-Inna sytuacja występuję w przypadku odtwarza firmy LG.
+Inna sytuacja występuję w przypadku odtwarzacza firmy LG.
  Nie trzeba stosować żadnych sztuczek, aby odtworzył dowolny materiał.
  W przypadku formatu kontenera Matroska wyświetla jedynie komunikat o możliwych
- problemach z prezentacją filmu (autor jednak żadnych problemów w odtwarzaniu
- nie odnalazł).
- Odtwarzacz LG, dzięki temu komunikatowi odtwarza bardzo dużo formatów wideo
- oraz audio.
- Wadami oprogramowania, na które warto zwrócić uwagę to brak automatycznego
+ problemach z prezentacją filmu (autor jednak na żadne problemy w odtwarzaniu
+ nie natrafił).
+ Odtwarzacz LG, pomimo wyświetlania komunikatu z ostrzeżeniem, odtwarza
+ bardzo dużo formatów wideo oraz audio.
+ Wadami oprogramowania, na które warto zwrócić uwagę jest brak automatycznego
  odświeżania listy serwerów oraz zawartości multimedialnej serwera.
  Innymi mankamentami, które zostały wykryte to brak opisu obsługi napisów.
  Oznacza to, że napisy mogą być odtwarzane (również przy pomocy zawartości
@@ -14317,12 +14807,12 @@ tradycyjnym
 \end_layout
 
 \begin_layout Subsection
-Obsługa standardu
+Obsługa standardu DLNA
 \end_layout
 
 \begin_layout Standard
 Technologia DLNA została opracowana, aby umożliwić współdzielenie multimediów.
- Jej poprzedniczką jest UPnP AV, którą można określić jako bardziej liberalną.
+ Jej poprzedniczką jest UPnP A/V, którą można określić jako bardziej liberalną.
  DLNA jest bardziej restrykcyjna, jednakże mimo bardziej ścisłego określenia
  współpracy różnice w implementacjach oraz funkcjonalność odtwarzaczy są
  dość znaczne.
@@ -14332,14 +14822,16 @@ sze zwykłym użytkownikom, którzy w prosty sposób nie mogą prezentować na
 \end_layout
 
 \begin_layout Standard
-Różnice można podzielić na według grup, które mogą być współdzielone.
+Różnice można podzielić na grupy, według których materiały mogą być współdzielon
+e.
  W przypadku plików muzycznych, na podstawie przeprowadzonych badań, można
  stwierdzić, że ich obsługa jest najbardziej zaawansowana.
  Autor nie odnalazł żadnych negatywnych cech, które by utrudniały udostępniane
  tego typu danych.
- Jako mankament, bardziej zauważalny w przypadku filmów, jest brak zagwarantowan
-ia w standardzie obsługi ścieżek dźwiękowych DTS oraz HD, które zapewniają
- lepszą jakość dźwięku niż obsługiwane rodzaje ścieżek (np.
+ Jako mankament, bardziej zauważalny w przypadku filmów, można wymienić
+ brak zagwarantowania w standardzie obsługi ścieżek dźwiękowych DTS oraz
+ HD.
+ Zapewniają one lepszą jakość dźwięku, niż obsługiwane rodzaje ścieżek (np.
  AC3 lub MP3).
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -14382,18 +14874,16 @@ key "key-41"
 Standard DLNA nie wymusza na producentach obsługi wszystkich rodzajów kodowania
  materiałów wideo, obsługi napisów, obsługi wielu ścieżek dźwiękowych i
  innych.
- Niestety dla użytkowników, w specyfikacji zabrakło wielu w chwili obecnej
+ Niestety dla użytkowników, w specyfikacji zabrakło wielu, w chwili obecnej,
  wręcz niezbędnych formatów.
  Obsługiwane kontenery przez DLNA to MP4 oraz ASF.
- Są to kontenery multimedialne bardzo rzadko spotykane, posiadające wiele
- ograniczeń.
- Bardzo odczuwalnym w erze filmów HD jest maknament konetenera MP4, który
- przyjmuję rozdzielczość 720 x 576 pikseli jako maksymalną.
+ Są to kontenery multimedialne rzadziej spotykane, niż AVI oraz MKV.
+ Obsługiwane kontenery posiadają wiele ograniczeń.
+ Jednym z ograniczeń, bardzo odczuwalnym w erze filmów HD, jest cecha konetenera
+ MP4, który przyjmuje maksymalną rozdzielczość 720 x 576 pikseli jako maksymalną.
  W takim przypadku o film w rozdzielczości full HD, zgodnie ze standardem,
  nie może zostać przesłany.
  Podobna sytuacja występuję w coraz powszechniejszych filmach 3D.
- W standardzie pominięto bardzo popularne kontenery multimedialne, którymi
- są MKV oraz AVI.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -14415,6 +14905,16 @@ Z powyższych względów każdy z producentów tworzy własną wersję implement
  (przykład aplikacji Samsung AllShare) serwera i odtwarzacza tej samej firmy.
  Powodów takiej sytuacji, w artykułach oraz prasie (zarówno polskiej, jak
  i zagranicznej), nie sposób odnaleźć.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+DRM - brak obsługi przez serwer
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter*

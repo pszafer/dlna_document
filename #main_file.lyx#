@@ -11054,16 +11054,6 @@ Napotkane problemy
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Napotkane-problemy"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 W trakcie pierwszych testów autor napotkał wiele problemów z poprawnym odtwarzan
 iem plików na urządzeniach posiadających certyfikat DLNA.
  Gdy jedno potrafiło zaprezentować materiał, drugie wyświetlało błędy (najczęści
@@ -11072,14 +11062,13 @@ ej nienaprowadzające na genezę problemu).
 
 \begin_layout Standard
 Głównym problemem był brak możliwości otworzenia plików MKV.
- Problem ten występował w urządzeniach firmy Samsung.
+ Problem ten występował w urządzeniach Samsung.
  W urządzeniu LG wyświetlany był komunikat o możliwych nieprawidłowościach
  w odtwarzaniu.
- Pomimo komunikatu materiał był odtwarzany.
- Jak się okazało, po wielu godzinach poszukiwań sposobu odtworzenia pliku
- na pierwszym wymienionym urządzeniu, konieczne było przedstawienie typu
- MIME jako AVI, aby odtwarzacz poprawnie otwierał plik MKV (potrafił otworzyć
- nawet wbudowane napisy w kontener Matroska).
+ Jak się okazało, po wielu godzinach szukania rozwiązania metodą prób i
+ błędów, konieczne było przedstawienie typu MIME jako AVI, aby odtwarzacz
+ poprawnie otwierał plik MKV (potrafił otworzyć nawet wbudowane napisy w
+ kontener Matroska).
  Sytuacja opisana pozwala poprawnie odtwarzać materiały na telewizorach
  Samsung.
  W przypadku telefonów Samsung z aplikacją AllShare konieczne jest również
@@ -11100,7 +11089,7 @@ oszukanie
 \begin_layout Standard
 Aplikacja AllShare firmy Samsung podobnie jak w przypadku plików MKV, postępuje
  z plikami muzycznymi.
- Pomimo możliwości ich odtworzenia wyświetla komunikat o nieobsługiwanym
+ Pomimo możliwości jej odtworzenia wyświetla komunikat o nieobsługiwanym
  formacie audio.
  W tym celu, niektóre z plików trzeba przedstawiać jako typ mp3.
 \end_layout
@@ -11132,16 +11121,6 @@ ang.
  attachments).
  
 \emph default
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-przykład attachments i sec dla napisów
-\end_layout
-
-\end_inset
-
 W elemencie tym powinny znajdować się adresy URL z możliwymi do pobrania
  napisami.
  Istotnym elementem w przypadku urządzenia LG jest podanie typu MIME napisów
@@ -11203,9 +11182,8 @@ Test wyszukiwania urządzenia
 \end_layout
 
 \begin_layout Standard
-Po uruchomieniu testowanego oprogramowania, wysyła ono (poprzez rozgłaszanie)
- pakiety informujące, o swoim istnieniu, do działających już urządzeń (urządzeni
-ami docelowymi są odtwarzacze).
+Po uruchomieniu napisanego oprogramowania, wysyła ono pakiety informujące
+ działające już odtwarzacze o swoim istnieniu.
  Najnowsze oprogramowanie Samsung AllShare w wersji na każde urządzenie
  momentalnie wyświetlało istnienie serwera.
  W przypadku innych odtwarzaczy konieczne było wykorzystanie polecenia odświeżaj
@@ -11261,7 +11239,7 @@ name "fig:Karta-Szczegóły-serwera"
 
 \end_inset
 
-Karta Szczegóły serwera DLNA w odtwarzaczu mobilnym DLNA - Samsung AllShare
+Karta Szczegóły serwera DLNA w odtwarzaczu DLNA
 \end_layout
 
 \end_inset
@@ -11292,12 +11270,12 @@ Test przeglądania zawartości
 \begin_layout Standard
 W większości przetestowanych modeli odtwarzaczy DLNA przeglądanie zawartości
  odbywa się w sposób podobny do wyboru plików w eksploratorach plików.
- Aby znaleźć pożądany plik wybieramy odpowiedni katalog (który również pełni
- rolę kategorii materiału) np.
+ Aby znaleźć pożądany plik wybieramy odpowiedni katalog (który również służy
+ za rodzaj materiału) np.
  Muzyka i wyszukujemy plik.
  Opisywana funkcjonalność została w zupełnie inny sposób zaimplementowana
  w najnowszych telewizorach firmy Samsung.
- W tym sprzęcie oprogramowanie wysyła żądanie do serwera o udostępnienie
+ W tym sprzęcie oprogramowanie wysyła żądanie od serwera o udostępnienie
  listy wszystkich filmów, zdjęć i muzyki i wyświetla wszystkie elementy
  w jednej liście zgodnie z kategoriami (Wideo, Muzyka, Obrazy), nie zważając
  na strukturę katalogów, którą udostępnia serwer.
@@ -11307,16 +11285,16 @@ W większości przetestowanych modeli odtwarzaczy DLNA przeglądanie zawartości
 Udostępniana zawartość od początkowych wersji aplikacji była w sposób poprawny
  wyświetlana na wszystkich sprawdzanych urządzeniach oraz oprogramowaniu
  dla komputerów klasy PC z systemami operacyjnymi Microsoft Windows oraz
- Ubuntu od wersji 10.10 do 11.10.
+ Ubuntu 11.10.
 \end_layout
 
 \begin_layout Standard
-Po dodaniu zawartości, pakiet informujący o konieczności aktualizacji listy
+Po dodaniu zawartości pakiet, informujący o konieczności aktualizacji listy
  plików, został spreparowany poprawnie i wszystkie zasubskrybowane urządzenia
  go otrzymały.
  Jednakże niektóre programy klienckie UPnP A/V (np.
  Samsung AllShare) nie reagują żądaniem odświeżenia listy plików, przez
- co lista plików nie aktualizuje się w sposób zautomatyzowany, bez ingerencji
+ co lista plików nie aktualizuje się w sposób zautomatyzowany bez ingerencji
  użytkownika.
 \end_layout
 
@@ -11325,8 +11303,8 @@ Test odtwarzania materiałów
 \end_layout
 
 \begin_layout Standard
-Test odtwarzania treści multimedialnych pozwolił sprawdzić najważniejszą
- funkcję zaprojektowanej aplikacji.
+Opisywany test skupił się na najważniejszej funkcji zaprojektowanej aplikacji,
+ czyli odtwarzaniu treści multimedialnych.
  Poza główną funkcją, w trakcie testu sprawdzane zostały takie parametry
  jak: możliwość przewijania materiału, podgląd miniatur, przegląd atrybutów
  udostępnianego pliku, umożliwienie rozszerzania widoku (głównie działanie
@@ -11350,7 +11328,7 @@ reference "chap:Przegląd-oprogramowania-UPnP"
 
 \begin_layout Standard
 Serwer w pełni poprawnie udostępnia materiały, tylko odtwarzaczowi w telewizorze
- firmy Samsung.
+ Samsunga.
  Wszystkie pliki udostępniane przez serwer, odtwarzacz telewizyjny AllShare
  potrafił odtworzyć.
  Sprzęt ten, powołując się na instrukcję obsługi, potrafi odtworzyć formaty
@@ -11388,12 +11366,12 @@ reference "sub:Oprogramowanie-w-sprzęcie"
 \end_layout
 
 \begin_layout Standard
-W rzeczywistości możliwości odtwarzania przez sieć są dużo mniejsze, niż
- lista wymieniona w tabelach.
+W rzeczywistości możliwości odtwarzania przez sieć są dużo mniejsza, niż
+ lista w tabeli.
  Odtwarzacz poprawnie otworzył materiał AVI.
  Pozostałe formaty sprawiały problemy w odtwarzaniu.
  W przypadku telewizorów Samsung, wystarczy jednak informować odtwarzacz,
- że wysyłany materiał ma rozszerzenie avi i wówczas pełna zawartość tabeli
+ że wysyłany materiał ma rozszerzenie *.avi i wówczas pełna zawartość tabeli
  jest spełniona.
  Odtwarzacz nie pozwolił otworzyć plików audio *.FLAC, *.M4A, bez podania
  nieprawdziwego typu MIME (podany został typ MIME pliku MP3 - 
@@ -11417,7 +11395,7 @@ Drugie z urządzeń, czyli odtwarzacz Blu-ray firmy LG, model BD-390, nie
  nie udostępnia w sposób poprawny dla sprzętu.
  Autor jednakże nie znalazł jednoznacznego sposobu, aby wszystkie napisy
  urządzenie LG zawsze załadowało (w niektórych przypadkach urządzenie pobiera
- napisy, lecz ich nie wyświetla.
+ napisy, lecz ich nie ładuje).
 \end_layout
 
 \begin_layout Standard
@@ -11434,8 +11412,8 @@ Ostatnie z urządzeń, urządzenie mobilne Samsung Galaxy S2 I9100, poprawnie
 \emph on
 audio/mpeg
 \emph default
- by plik mógł być odtwarzany (można nazwać tą sytuację, pośrednią obsługą
- plików *.FLAC, *.M4A, *.WAV).
+ by plik mógł być odtwarzany (można nazwać to pośrednią obsługą plików *.FLAC,
+ *.M4A, *.WAV).
 \end_layout
 
 \begin_layout Standard
@@ -12810,7 +12788,7 @@ Oprogramowanie UPnP A/V oraz DLNA umożliwia w bardzo prosty sposób odtwarzać
  materiały multimedialne w sieci lokalnej.
  Serwerów multimedialnych w sieci internetowej można znaleźć stosunkowo
  dużo.
- Natomiast odtwarzacze UPnP A/V i DLNA są zazwyczaj wbudowane w większość
+ Natomiast odtwarzacze UPnP A/V / DLNA są zazwyczaj wbudowane w większość
  standardowych odtwarzaczy dostarczanych wraz z systemem operacyjnym urządzenia.
 \end_layout
 
@@ -12820,8 +12798,8 @@ W niniejszym rozdziale zostały zestawione, przetestowane przez autora, programy
  W kolejnych podrozdziałach wyróżnione zostały możliwości serwerów mutlimedialny
 ch, a następnie odtwarzaczy multimedialnych.
  Drugi z podrozdziałów zawiera zestawienie zarówno oprogramowania dla komputerów
- typu PC, jak i odtwarzaczy sprawdzanych w sprzęcie elektronicznym, czyli
- w tym wypadku telewizorach i odtwarzaczu Blu-ray.
+ typu PC, jak i odtwarzaczy sprawdzanych w sprzęcie telewizyjnym, tj.
+ telewizorach i odtwarzaczach Blu-ray.
 \end_layout
 
 \begin_layout Section
@@ -12829,21 +12807,11 @@ Przegląd oprogramowania serwerów UPnP A/V i DLNA
 \end_layout
 
 \begin_layout Standard
-Ilość aplikacji udostępniających multimedia jest bardzo duża.
+Ilość aplikacji udostępniających multimedia jest bardzo dużo.
  Prawdopodobnie zbyt duża, aby zwykły użytkownik był w stanie podjąć prosty
- i zarazem dobry wybór, który z programów spełni jego oczekiwania.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Ich ilość jest spowodowana jakością wykonania oraz nie spełnieniem warunku,
- którym jest odtwarzanie treści na urządzeniach różnych producentów - poprawić
-\end_layout
-
-\end_inset
-
-.
+ i zarazem dobry wybór.
+ Ich ilość jest spowodowana jakością wykonania oraz nie spełnieniem warunku,
+ którym jest odtwarzanie treści na urządzeniach różnych producentów.
  Warunkiem prawdopodobnie niemożliwym do spełnienia.
  W przypadku, gdy sieć domowa posiada odtwarzacze tylko jednego producenta
  (czyli teoretycznie powinny być zgodne), wystarczy odnaleźć serwer, który
@@ -12867,7 +12835,7 @@ wane są dwa urządzenia.
 Aplikacja udostępnia wszystkie rodzaje multimediów ujęte w specyfikacji
  DLNA, czyli obrazy, muzykę oraz filmy.
  Ma możliwość kodowania materiałów w locie, udostępniania napisów w postaci
- SubRip to jest z rozszerzeniem srt.
+ SubRip to jest z rozszerzeniem *.srt.
  Napisy muszą mieć taką samą nazwę plików jak film.
 \end_layout
 
@@ -12916,29 +12884,7 @@ Przedstawione listy są bardzo długie i wydaje się, że spełniają wszystkie
 
 \begin_layout Standard
 Oprogramowanie mobilne, dla systemu Android, nie ma możliwości przekazywania
- napisów dla urządzeń innych niż Samsung (do udostępniania napisów wykorzystywan
-y jest znacznik 
-\emph on
-sec
-\emph default
- opisany w rozdziale 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Napotkane-problemy"
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-więcej rozdziałów o sec?
-\end_layout
-
-\end_inset
-
-).
+ napisów dla urządzeń innych niż Samsung.
  Autor nie odnalazł listy z rodzajami plików do udostępnienia, lecz jest
  ona prawdopodobnie taka sama jak dla wersji PC serwera.
  Jednakże serwer mobilny, pliki które współdzieli, udostępnia w wyraźnie
@@ -12988,24 +12934,14 @@ Dla plików wideo:
 \begin_layout Standard
 Wszystkie z wymienionych formatów mogą być transkodowane do innych formatów
  znajdujących się na liście.
- Lista obsługiwanych plików jest bardzo duża.
- Jednakże w trakcie sprawdzania programu autor wykrył fakt, że w rzeczywistości
- odtwarzanie materiału zależy od pakietu kodeków zainstalowanych w komputerze.
+ Lista plików dość długa, jednakże w trakcie sprawdzania programu autor
+ wykrył fakt, że w rzeczywistości odtwarzanie materiału zależy od pakietu
+ kodeków zainstalowanych w komputerze.
  Program prawdopodobnie dostarcza kodeki, które odtwarzają wspomniane wyżej
  formaty, jednakże jeżeli są zainstalowane kodeki, które odtwarzają inne
  formaty, wówczas aplikacja również je wspiera.
- Jest to zachowanie o tyle dziwne, że nawet w przypadku braku transkodowania,
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-wtf? ->
-\end_layout
-
-\end_inset
-
-dekoder formatu multimedialnego nie jest wykorzystywany.
+ Jest to zachowanie o tyle dziwne, że w przypadku braku transkodowania,
+ dekoder formatu multimedialnego nie jest wykorzystywany.
 \end_layout
 
 \begin_layout Standard
@@ -13016,24 +12952,14 @@ zych formatów, którymi w tym wypadku są SubRip lub MicroDVD.
 \end_layout
 
 \begin_layout Standard
-Materiały udostępniane przez opisywany serwer multimedialny wszystkie przetestow
-ane urządzenia odtwarzają poprawnie.
+Materiały udostępniane przez opisywany serwer poprawnie odtwarzają wszystkie
+ przetestowane urządzenia.
  Serwer ten potrafi również strumieniować materiał telewizyjny z tunera
  DVB-T na żywo do innych urządzeń (funkcja nie została przetestowana).
  Można stwierdzić, że jest to kompletny odtwarzacz multimediów, z jedną
  wadą, którą jest brak wieloplatformowości.
  Drugą cechą, która może odstraszyć przeciętnego użytkownika jest cena oprogramo
-wania
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-cena w Euro
-\end_layout
-
-\end_inset
-
-.
+wania.
  Biorąc pod uwagę, że większośc odtwarzaczy jest darmowych, jest to niewątpliwie
  wada.
 \end_layout
@@ -13044,8 +12970,7 @@ MiniDLNA
 
 \begin_layout Standard
 Oprogramowanie MiniDLNA jest stworzony z myślą o platformie Linux, napisane
- w języku C++.
- Udostępniane jest w ramach publicznej licencji GPL (
+ w języku C++, udostępniane na publicznej licencji GPL (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-40"
@@ -13062,16 +12987,15 @@ ReadyNAS
 Netgear, 
 \emph default
 dzięki czemu ma bardzo małe wymaganie sprzętowe.
- Jest bardzo popularnym serwerem multimediów.
- Celem autora projektu jest pełna współpraca ze wszystkimi urządzeniami
- UPnP A/V oraz DLNA.
+ Jest bardzo popularnym serwerem multimediów, celem jego autora jest pełna
+ współpraca ze wszystkimi urządzeniami UPnP A/V oraz DLNA.
  MiniDLNA nie posiada dokumentacji technicznej, z tego powodu niemożliwe
  jest podanie możliwych do udostępniania plików.
  W trakcie testów, autor stwierdził, że wszystkie pliki muzyczne oraz obrazów
  były poprawnie odtwarzane na używanym sprzęcie.
  W przypadku filmów, na każdym z urządzeń poprawnie udostępniane były pliki
  *.avi.
- W przypadku innych rozszerzeń, takich jak mp4 oraz mkv, prezentacji treści
+ W przypadku innych rozszerzeń, takich jak *.mp4 oraz *.mkv, prezentacji treści
  multimedialnych możliwa była tylko w przypadku oprogramowania dla komputerów
  stacjonarnych.
  Odtwarzacze w urządzeniach RTV oraz mobilne nie potrafiły odtworzyć zawartości.
@@ -13082,9 +13006,8 @@ dzięki czemu ma bardzo małe wymaganie sprzętowe.
  MiniDLNA konfigurowany jest poprzez modyfikację tekstowych plików modyfikacyjny
 ch, nie posiada dedykowanego interfejsu do obsługi.
  Jest wbudowany w wiele dystrybucjach oprogramowania alternatywnego dla
- sprzętu sieciowego, w których zazwyczaj posiada interfejs strony internetowej
- stworzony przez deweloperów (np.
- alternatywne oprogramowanie routerów DD-WRT).
+ sprzętu sieciowego, wówczas posiada interfejs strony internetowej stworzony
+ przez deweloperów.
 \end_layout
 
 \begin_layout Subsection
@@ -13098,9 +13021,9 @@ Wild Media Server
 \emph default
 jest płatną aplikacją udostępniającą multimedia w sieci.
  Użytkownik rozpoczyna udostępnianie multimediów od wyboru profilu urządzenia.
- Program ma wiele wbudowanych profili, wśród nich między innymi: DLNA wersja
- 1.5, odtwarzacz Blu-ray LG, telewizor LG, telewizor Samsung, telewizor Phillips
- i wiele innych.
+ Program ma wiele wbudowanych profili np.
+ DLNA wersja 1.5, odtwarzacz blu-ray LG, telewizor LG, telewizor Samsung,
+ telewizor Phillips i wiele innych.
  Użytkownik może stworzyć swój własny profil.
  Program umożliwia transkodowanie zawartości oraz wbudowywanie napisów do
  materiału w locie.
@@ -13110,9 +13033,8 @@ jest płatną aplikacją udostępniającą multimedia w sieci.
  zostanie tu opisany).
  Pliki *.mkv, które sprawiają prawdopodobnie najwięcej problemów z odtworzeniem
  są przedstawiane przez serwer jako pliki *.mpeg.
- Jednakże nawet ten unik (autor w swoim oprogramowaniu zastosował podobny,
- lecz przedstawiał pliki jako materiał AVI) nie umożliwia odtwarzania materiałów
- na urządzeniach mobilnych.
+ Jednakże nawet ten unik (autor w swoim oprogramowaniu zastosował podobny)
+ nie umożliwia odtwarzania materiałów na urządzeniach mobilnych.
  Ponadto serwer udostępnia nieprawidłowe informacje o udostępnianych plikach
  (błędny rozmiar oraz czas trwania materiału wideo), co może wpłynąć na
  obsługę (lub jej brak) funkcji przewijania.
@@ -13128,28 +13050,19 @@ PS3 Media Server
 PS3 Media Server 
 \emph default
 jest serwerem multimedialnym stworzonym z myślą o konsoli PlayStation 3
- firmy Sony.
- Zarówno zdaniem użytkowników, jak i autora programu, w pełni z nią współpracuje
- (autor niniejszej pracy nie testował aplikacji z konsolą).
+ firmy Sony i zarówno zdaniem użytkowników, jak i autora programu, w pełni
+ z nią współpracuje (autor niniejszej pracy nie testował aplikacji z konsolą).
  Serwer podobnie, jak pozostałe potrafi udostępniać obrazy, muzykę oraz
  filmy.
  Ma możliwość transkodowania materiałów audio i wideo.
  Umożliwia odtwarzanie napisów w postaci MicroDVD oraz SubRIP.
  Testowane przez autora pracy urządzenia nie potrafiły odtworzyć materiałów
- kodowanych przy pomocy 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-kodeka?
-\end_layout
-
-\end_inset
-
-kodeka H.264.
+ kodowanych przy pomocy H.264.
  Pozytywną cechą niniejszego serwera jest fakt, iż w takim przypadku automatyczn
 ie transkodował materiał do innego obsługiwanego, zarówno przez odtwarzacz,
  jak i serwer formatu.
+ Urządzenia w przypadku innych odtwarzaczy (w tym aplikacji stworzonej na
+ potrzeby niniejszej pracy magisterskiej) potrafiły odtwarzać materiał H.264.
 \end_layout
 
 \begin_layout Subsection
@@ -13179,12 +13092,8 @@ FSStore
 Coherence
 \emph default
  w wersji 0.6.2 ma możliwość dołączania napisów, w przypadku gdy mają one
- tą samą nazwę co plik wideo oraz posiadają rozszerzenie srt.
- 
-\end_layout
-
-\begin_layout Standard
-Do programu nie została napisana instrukcja obsługi, co w znacznym stopniu
+ tą samą nazwę co plik wideo oraz posiadają rozszerzenie *.srt.
+ Do programu nie została napisana instrukcja obsługi, co w znacznym stopniu
  utrudnia jego konfigurację.
  Odbywa się ona poprzez stworzenie pliku tekstowego z odpowiednimi parametrami.
  Autorowi udało się uruchomić jedynie starą wersję programu 
@@ -13204,13 +13113,6 @@ a.
  komunikaty celem udostępniania treści dla wymienionego produktu.
 \end_layout
 
-\begin_layout Standard
-Nowsze wersje aplikacji (od wersji 0.6.5) nie działają poprawnie w środowisku
- systemu operacyjnego Ubuntu 11.04 oraz 11.10.
- Jest to spowodowane nowszymi wersjami, wykorzystywanych przez program,
- bibliotek systemowych.
-\end_layout
-
 \begin_layout Section
 Przegląd oprogramowania odtwarzaczy DLNA i UPnP A/V
 \end_layout
@@ -13220,7 +13122,7 @@ W sieci internetowej dostępnych jest bardzo wiele odtwarzaczy multimediów
  w sieciach lokalnych, zgodnych ze standardem DLNA i/lub UPnP A/V.
  Odtwarzacze są zawarte jako programy w urządzeniach RTV, takich jak telewizory,
  odtwarzacze DVD, odtwarzacze Blu-ray i inne.
- Inną grupą odtwarzaczy te są przeznaczone do instalacji w systemie operacyjnym.
+ Inną grupą odtwarzaczy są przeznaczone do instalacji w systemie operacyjnym.
  Spośród tych większość jest przeznaczona dla systemu operacyjnego Microsoft
  Windows, ewentualnie dla systemu MacOS X.
  Na szczęście dla użytkowników systemów rodziny Linux, społeczność wolnego
@@ -13237,13 +13139,8 @@ Odtwarzaczem DLNA, który autor może z całą pewnością polecić jest program
  XBMC Media Center, który został stworzony jako alternatywny interfejs graficzny
  konsoli Microsoft XBOX 360, a w chwili obecnej jest oprogramowaniem również
  dla systemów operacyjnych Windows, MacOS X oraz Linux.
- Jego interfejs graficzny użytkownika (GUI - ang.
- 
-\emph on
-Graphical User Interface
-\emph default
-) jest bardzo przyjazny i starannie zaprojektowany, w taki sposób aby można
- było nim sterować każdym urządzeniem wskazującym np.
+ Jego interfejs jest bardzo przyjazny i starannie zaprojektowany, w taki
+ sposób aby można było nim sterować każdym urządzeniem wskazującym np.
  pilotem telewizora.
  Jedynym mankamentem jaki odnalazł autor w niniejszym programie jest brak
  odtwarzania napisów w materiałach filmowych.
@@ -13254,13 +13151,13 @@ Graphical User Interface
 Dla systemu Windows warto wymienić odtwarzacze Windows Media Player oraz
  Samsung AllShare, które potrafią wyszukać serwery DLNA lub UPnP A/V i odtworzyć
  ich zawartość.
- W przypadku pierwszego niewątpliwą wadą jest całkowity brak obsługi napisów.
+ W przypadku pierwszego niewątpliwą wadą jest brak obsługi napisów.
  Pozytywnymi cechami drugiego z wymienionych programów jest bardzo duża
  ilość materiałów możliwych do odtworzenia, obsługa napisów do filmów, niestety
  w przypadku komputera, na którym był testowany (uproszczona specyfikacja:
  procesor Intel Core 2 Duo 2.4 GHz, 8 GB Ram, dysk twardy 500 GB) obraz nie
  był płynnie odtwarzany.
- Zajmował przy tym około 80% zasobów procesora.
+ Zajmował przy tym około 80% procent zasobów procesora.
 \end_layout
 
 \begin_layout Standard
@@ -13286,9 +13183,9 @@ Oprogramowanie w sprzęcie audio-wideo
 \begin_layout Standard
 W przypadku odtwarzaczy dla komputerów stacjonarnych użytkownik nie jest
  zmuszony do używania jednego rodzaju programu i może odnaleźć taki, który
- mu najbardziej odpowiada.
+ mu bardziej odpowiada.
  Natomiast w sytuacji odtwarzania materiałów na telewizorze użytkownik jest
- zobligowany do wykorzystania programu, który dostarczył producent sprzętu.
+ zobowiązany do wykorzystania programu, który dostarczył producent sprzętu.
  Autor zdecydował się zamieścić w niniejszym podrozdziale również krótką
  opinię na temat mobilnego odtwarzacza AllShare (dla smartfonów firmy Samsung),
  z tego względu, iż oprogramowanie to jest preinstalowane przez producenta.
@@ -13301,8 +13198,8 @@ Telewizor firmy Samsung, model UE46D6750WS
 \series default
 posiada oprogramowanie Samsung AllShare.
  Po włączeniu programu wyszukiwane są serwery multimediów.
- Po wybraniu serwera multimediów już na pierwszym ekranie, widoczna jest
- różnica, względem innych implementacjami tego typu odtwarzaczy.
+ Po wybraniu serwera multimediów na pierwszy rzut oka widoczna jest różnica,
+ pomiędzy innymi implementacjami tego typu odtwarzaczy.
  Pozwala on na przeglądanie materiałów według trzech kategorii - Wideo,
  Muzyka, Obrazy.
  Widok ten nazywany jest widokiem prostym (ang.
@@ -13312,10 +13209,10 @@ BasicView
 \emph default
 ) i jeżeli serwer multimediów nie udostępnia takiego widoku lub zwraca go
  błędnie, wówczas AllShare zgłasza błąd i uniemożliwia wyszukanie treści
- multimedialnych.
+ multimedialnej.
  Warto zwrócić uwagę, że odświeżanie automatyczne (które jest uwzględnione
- w specyfikacjach UPnP A/V oraz DLNA) nie działa w oczekiwany sposób.
- Odtwarzacz nie potrafi przeglądać zawartości serwera bezpośrednio po jego
+ w specyfikacjach UPnP A/V oraz DLNA) nie działa w taki sposób jak powinno,
+ odtwarzacz nie potrafi przeglądać zawartości serwera bezpośrednio po jego
  dołączeniu bez ówczesnego odświeżenia listy serwerów.
  Testowany sprzęt posiada wbudowany sprzętowy dekoder H.264, a mimo to nie
  potrafił odtworzyć zawartości kontenera multimedialnego Matroska (*.mkv).
@@ -14756,27 +14653,27 @@ tekst
 
 \begin_layout Standard
 Oprogramowanie Samsung AllShare dla urządzeń mobilnych wyświetla zawartość
- serwera poprzez przeglądanie katalogów (nie stosuje widoku prostego, tak
- jak w telewizorach tej firmy).
+ serwera poprzez przeglądanie katalogów (nie stosuje widoku prostego jak
+ telewizory).
  Odświeżanie automatyczne listy serwerów zostało zaimplementowane poprawnie
  i działa zgodnie z oczekiwaniami.
- Program mobilny nie odtwarza poprawnie napisów do filmów (pobiera je, ale
- nie wyświetla żadnego błędu o braku możliwości ich załadowania).
+ Program mobilny nie odtwarza poprawnie napisów do filmów (pobiera je, jednakże
+ bez zgłoszenia żadnego błędu nie odtwarza).
  W filmach oraz obrazach, które były odtwarzane na urządzeniu występowały
- problemy z dostosowaniem obrazu do wielkości ekranu.
+ problem z dostosowaniem obrazu do wielkości ekranu.
  Podobnie jak w przypadku telewizorów konieczna jest zmiana typu MIME kontenera
  wideo.
 \end_layout
 
 \begin_layout Standard
-Inna sytuacja występuję w przypadku odtwarzacza firmy LG.
+Inna sytuacja występuję w przypadku odtwarza firmy LG.
  Nie trzeba stosować żadnych sztuczek, aby odtworzył dowolny materiał.
  W przypadku formatu kontenera Matroska wyświetla jedynie komunikat o możliwych
- problemach z prezentacją filmu (autor jednak na żadne problemy w odtwarzaniu
- nie natrafił).
- Odtwarzacz LG, pomimo wyświetlania komunikatu z ostrzeżeniem, odtwarza
- bardzo dużo formatów wideo oraz audio.
- Wadami oprogramowania, na które warto zwrócić uwagę jest brak automatycznego
+ problemach z prezentacją filmu (autor jednak żadnych problemów w odtwarzaniu
+ nie odnalazł).
+ Odtwarzacz LG, dzięki temu komunikatowi odtwarza bardzo dużo formatów wideo
+ oraz audio.
+ Wadami oprogramowania, na które warto zwrócić uwagę to brak automatycznego
  odświeżania listy serwerów oraz zawartości multimedialnej serwera.
  Innymi mankamentami, które zostały wykryte to brak opisu obsługi napisów.
  Oznacza to, że napisy mogą być odtwarzane (również przy pomocy zawartości
@@ -14810,7 +14707,7 @@ tradycyjnym
 \end_layout
 
 \begin_layout Subsection
-Obsługa standardu DLNA
+Obsługa standardu
 \end_layout
 
 \begin_layout Standard
@@ -14825,16 +14722,14 @@ sze zwykłym użytkownikom, którzy w prosty sposób nie mogą prezentować na
 \end_layout
 
 \begin_layout Standard
-Różnice można podzielić na grupy, według których materiały mogą być współdzielon
-e.
+Różnice można podzielić na według grup, które mogą być współdzielone.
  W przypadku plików muzycznych, na podstawie przeprowadzonych badań, można
  stwierdzić, że ich obsługa jest najbardziej zaawansowana.
  Autor nie odnalazł żadnych negatywnych cech, które by utrudniały udostępniane
  tego typu danych.
- Jako mankament, bardziej zauważalny w przypadku filmów, można wymienić
- brak zagwarantowania w standardzie obsługi ścieżek dźwiękowych DTS oraz
- HD.
- Zapewniają one lepszą jakość dźwięku, niż obsługiwane rodzaje ścieżek (np.
+ Jako mankament, bardziej zauważalny w przypadku filmów, jest brak zagwarantowan
+ia w standardzie obsługi ścieżek dźwiękowych DTS oraz HD, które zapewniają
+ lepszą jakość dźwięku niż obsługiwane rodzaje ścieżek (np.
  AC3 lub MP3).
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -14877,16 +14772,18 @@ key "key-41"
 Standard DLNA nie wymusza na producentach obsługi wszystkich rodzajów kodowania
  materiałów wideo, obsługi napisów, obsługi wielu ścieżek dźwiękowych i
  innych.
- Niestety dla użytkowników, w specyfikacji zabrakło wielu, w chwili obecnej,
+ Niestety dla użytkowników, w specyfikacji zabrakło wielu w chwili obecnej
  wręcz niezbędnych formatów.
  Obsługiwane kontenery przez DLNA to MP4 oraz ASF.
- Są to kontenery multimedialne rzadziej spotykane, niż AVI oraz MKV.
- Obsługiwane kontenery posiadają wiele ograniczeń.
- Jednym z ograniczeń, bardzo odczuwalnym w erze filmów HD, jest cecha konetenera
- MP4, który przyjmuje maksymalną rozdzielczość 720 x 576 pikseli jako maksymalną.
+ Są to kontenery multimedialne bardzo rzadko spotykane, posiadające wiele
+ ograniczeń.
+ Bardzo odczuwalnym w erze filmów HD jest maknament konetenera MP4, który
+ przyjmuję rozdzielczość 720 x 576 pikseli jako maksymalną.
  W takim przypadku o film w rozdzielczości full HD, zgodnie ze standardem,
  nie może zostać przesłany.
  Podobna sytuacja występuję w coraz powszechniejszych filmach 3D.
+ W standardzie pominięto bardzo popularne kontenery multimedialne, którymi
+ są MKV oraz AVI.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -14908,16 +14805,6 @@ Z powyższych względów każdy z producentów tworzy własną wersję implement
  (przykład aplikacji Samsung AllShare) serwera i odtwarzacza tej samej firmy.
  Powodów takiej sytuacji, w artykułach oraz prasie (zarówno polskiej, jak
  i zagranicznej), nie sposób odnaleźć.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-DRM - brak obsługi przez serwer
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Chapter*
