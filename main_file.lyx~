@@ -2819,7 +2819,7 @@ ConnectionManager Service
 \end_layout
 
 \begin_layout Itemize
-opcjonalna: usługa transportu AV (ang.
+opcjonalna: usługa transportu A/V (ang.
  
 \emph on
 AVTransport Service
@@ -11051,6 +11051,9 @@ Search
 
 \begin_layout Section
 Napotkane problemy
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Napotkane-problemy"
@@ -14935,16 +14938,87 @@ addcontentsline{toc}{chapter}{Podsumowanie}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-podsumowanie
+Certyfikat DLNA posiada większość urządzeń elektronicznych dostępnych powszechni
+e na rynku.
+ DLNA umożliwia centralizowanie danych i pozwala zmienić telewizor w ramkę
+ do zdjęć lub odtwarzacz muzyki, bez konieczności podłączania dodatkowych
+ urządzeń.
+ W gospodarstwie domowym użytkownicy mogą wyświetlać różne materiały z tego
+ samego źródła w wygodny sposób.
+ Technologia DLNA oraz wcześniejsza UPnP A/V może ułatwić współczesnym ludziom
+ życie w znacznym stopniu i wyeliminować konieczność posiadania kilku urządzeń
+ do różnych rodzajów materiałów multimedialnych.
+ Wystarczy wyobrazić sobie sprzęt komputerowy z odtwarzaczem Blu-ray, tunerem
+ telewizyjnym, pamięcią masową, który udostępnia wszystkie usługi dla sprzętu
+ podłączonego do sieci lokalnej.
+ W tym wypadku, nie byłoby konieczności podłączania odtwarzacza do telewizora
+ (lub posiadanie kilku odtwarzaczy przy kilku telewizorach), a telewizor
+ nie musiałby posiadać nawet tunera telewizyjnego.
+ Wystarczyłby jedynie sprzętowy dekoder obrazu Full HD, który obsługiwałby
+ dużą liczbę kodowań.
+ Z wcześniejszego opisu, jasno wynika, że kres możliwości technologii DLNA
+ jest jeszcze daleki i nie wiadomo, jaką przyszłość czeka ta technologia.
 \end_layout
 
-\end_inset
+\begin_layout Standard
+Większość produktów RTV posiada obecnie odtwarzacz DLNA.
+ Pomimo tego oraz faktu, że nowoczesny sprzęt elektroniczny jest coraz bardziej
+ powszechny, serwerów multimedialnych DLNA jest bardzo mało.
+ Ich funkcjonalność również jest dość mocno ograniczona i zbyt skomplikowana
+ dla przeciętnego użytkownika.
+ Proces podłączania powinien zakończyć się gdzieś pomiędzy instalacją okablowani
+a sieci lokalnej, a instalacją oprogramowania serwera.
+ Niestety, w praktyce, każdy serwer działa inaczej oraz nie współpracuje
+ z każdym urządzeniem.
+ 
+\end_layout
 
+\begin_layout Standard
+Odnalezienie uniwersalnego oprogramowania serwera multimedialnego jest prawdopod
+obnie niemożliwe.
+ Autor podjął próbę zaprzeczenia wcześniejszej opinii.
+ Zaprojektował serwer multimedialny UPnP A/V, który współpracuje z bardzo
+ dużą ilością odtwarzaczy sieciowych.
+ Jednym z zadań było zachowanie prostoty konfiguracji.
+ Użytkownik nie powinien być zmuszany do wyboru różnych profili działania
+ aplikacji, których nie musi rozumieć.
+ Nie powinien poszukiwać metodą prób i błędów, który profil będzie dla niego
+ odpowiedni.
+ 
+\end_layout
 
+\begin_layout Standard
+Aplikacja spełnia wszystkie przedstawione wymagania.
+ Testy zostały przeprowadzone bardzo żmudnie i dokładnie.
+ Każda z obowiązkowych funkcji została dokładnie sprawdzona.
+ Dzięki przeprowadzonym testom, autor ma pewność, że użytkownik, który uruchomi
+ serwer multimedialny odtworzy pożądany materiał na odtwarzaczu UPnP A/V
+ oraz DLNA, i o ile to możliwe załaduje dodatkowe napisy lub odtworzy inną
+ ścieżkę dźwiękową.
+ Spełnienie obsługi tych funkcji (przy zachowaniu braku profili dla różnych
+ urządzeń) było czasochłonne do osiągnięcia.
+ Cecha opcjonalna, którą było kodowanie materiałów w locie nie została zaimpleme
+ntowana.
+ Kolejnymi krokami, które mogłyby wyróżniać niniejszy serwer multimedialny
+ są praca nad obsługą tunerów telewizyjnych i bardziej zautomatyzowany proces
+ konfiguracji.
+ Cechą negatywną odtwarzaczy DLNA jest ich różnica działania.
+ W trakcie pisania aplikacji oraz pisania niniejszej pracy magisterskiej,
+ firma LG wydała kilka uaktualnień oprogramowania.
+ W każdym z nich odtwarzacz DLNA zmieniał sposób obsługi napisów do filmów.
+\end_layout
+
+\begin_layout Standard
+DLNA jest technologią przyszłości i ma szansę, aby zaistnieć jako standard
+ na rynku sprzętu elektronicznego.
+ Obecnie każdy nowy sprzęt posiada odtwarzacz DLNA.
+ Jednakże, odtwarzacze nie mogą egzystować, bez udziału drugiej strony komunikac
+ji, czyli serwerów multimedialnych, których wybór jest wciąż mocno ograniczony.
+ Prawdopodobnie, w przyszłości, już w system operacyjny będzie wbudowany
+ serwer multimedialny.
+ Tak jak powszechnie wbudowane są usługi udostępniania i wyszukiwania plików,
+ drukarek (często również oparte o protokół UPnP), tak serwer DLNA powinien
+ być w przyszłości dostępny na tym samym poziomie.
 \end_layout
 
 \begin_layout Bibliography
