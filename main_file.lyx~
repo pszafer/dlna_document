@@ -34,7 +34,7 @@ dcs
 \graphics default
 \default_output_format pdf2
 \output_sync 0
-\bibtex_command default
+\bibtex_command bibtex
 \index_command default
 \float_placement H
 \paperfontsize default
@@ -9145,23 +9145,7 @@ MediaItem.
 \end_layout
 
 \begin_layout Standard
-Jej uogólniony schemat działania widoczny jest na diagramach stanów oraz
- komunikacji (
-\series bold
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-rysunku -- diagramy
-\end_layout
-
-\end_inset
-
- ).
- 
+Na rysunku widoczny jest ogólny diagram sekwencji modułu serwera UPnP A/V.
 \end_layout
 
 \begin_layout Subsection
@@ -9384,6 +9368,59 @@ MediaItem
  Podtyp ten został opisany w kolejnym podrozdziale.
 \end_layout
 
+\begin_layout Standard
+Diagram stanów opisywanego obiektu znajduje się na rysunku 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagram-stanów-obiektu"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagram-stanów-obiektu"
+
+\end_inset
+
+Diagram stanów obiektu 
+\emph on
+MediaStore
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename diagram_stanow_mediastore.png
+	display false
+	width 80page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Obiekt MediaItem
 \end_layout
@@ -9589,6 +9626,67 @@ stara się
  co do rozmiaru i typu (rozmiar 120 x 120 pikseli, typ JPEG lub PNG), wówczas
  do odtwarzacza przekazywana jest wersja miniatury utworzona przez system
  operacyjny (uprzednio jest kopiowana do katalogu miniatur programu).
+\end_layout
+
+\begin_layout Standard
+Diagram stanów obiektu 
+\emph on
+MediaItem
+\emph default
+ znajduje się na rysunku poniżej, nr 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:MediaItemDiagram-stanów-obiektu"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:MediaItemDiagram-stanów-obiektu"
+
+\end_inset
+
+Diagram stanów obiektu 
+\emph on
+MediaItem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename diagram_stanow_mediaitem.png
+	display false
+	width 80page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
