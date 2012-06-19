@@ -533,15 +533,15 @@ key "key-1"
 
  definiuje jedynie sposoby działania w obrębie sieci obsługiwanej przez
  protokół IPv4.
- Aneks 
+ Aneks do głównego raportu określa różnice występujące, gdy urządzenie działa
+ w obrębie sieci IPv6 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-9"
+key "key-2"
 
 \end_inset
 
- do głównego raportu określa różnice występujące, gdy urządzenie działa
- w obrębie sieci IPv6.
+.
  Jeżeli nie napisano inaczej, w niniejszej pracy autor jako pierwszą pozycje
  określa przypadek sieci IPv4, natomiast drugi przypadek to sieć zgodna
  z protokołem IPv6.
@@ -5350,7 +5350,7 @@ Internet Engineering Task Force
 ) w dokumencie RFC 5219 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-43"
+key "key-33"
 
 \end_inset
 
@@ -5967,7 +5967,14 @@ Pliki graficzne zawierające zdjęcia, najczęściej przechowywane są w formaci
  Pierwszy z nich przeznaczony jest do zapisów obrazów naturalnych, w którym
  nie ma konieczności dokładnego odwzorowania ostrych krawędzi oraz uwydatniania
  szczegółów.JPEG jest standardem organizacji ISO o nazwie ISO/IEC IS 10918-1
- oraz ITU-T Recommendation T.81 (standard dwuczęściowy).
+ oraz ITU-T Recommendation T.81 (standard dwuczęściowy) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-39"
+
+\end_inset
+
+.
  Drugi z nich, format PNG (ang.
  
 \emph on
@@ -5980,7 +5987,7 @@ Portable Network Graphics
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-44"
+key "key-38"
 
 \end_inset
 
@@ -14566,7 +14573,7 @@ VC1
 Źródło: instrukcja telewizora Samsung
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-42"
+key "key-31"
 
 \end_inset
 
@@ -14739,7 +14746,7 @@ MPEG
 Źródło: instrukcja telewizora Samsung
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-42"
+key "key-31"
 
 \end_inset
 
@@ -15052,7 +15059,7 @@ e.
  AC3 lub MP3).
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-41"
+key "key-30"
 
 \end_inset
 
@@ -15080,7 +15087,7 @@ Obrazy sprawiają wielu odtwarzaczom problem, gdy nie posiadają dostosowanej
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-41"
+key "key-30"
 
 \end_inset
 
@@ -15106,7 +15113,7 @@ e wideo, każdy o rozdzielczości 1920 x 1080 pikseli (każde oko powinno mieć
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-41"
+key "key-30"
 
 \end_inset
 
@@ -15276,7 +15283,7 @@ key "key-1"
 
 \end_inset
 
-UPnP Device Architecture 1.0, UPnP Forum, 2008, 
+UPnP Device Architecture 1.0; UPnP Forum; 2008; 
 \begin_inset CommandInset href
 LatexCommand href
 target "http://www.upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.0-20080424.pdf"
@@ -15294,7 +15301,7 @@ key "key-2"
 
 \end_inset
 
-UPnP Device Architecture V1.1 Annex A – IP Version 6 Support, 2011, 
+UPnP Device Architecture V1.1 Annex A – IP Version 6 Support; 2011; 
 \begin_inset CommandInset href
 LatexCommand href
 target "http://upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.1-AnnexA.pdf"
@@ -15308,11 +15315,11 @@ target "http://upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.1-AnnexA.pdf"
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-3-1"
+key "key-3"
 
 \end_inset
 
-MediaServer:2 Device Template Version 1.01, UPnP Forum, 2006, 
+MediaServer:2 Device Template Version 1.01; UPnP Forum; 2006; 
 \begin_inset CommandInset href
 LatexCommand href
 target "http://upnp.org/specs/av/UPnP-av-MediaServer-v2-Device.pdf"
@@ -15326,99 +15333,14 @@ target "http://upnp.org/specs/av/UPnP-av-MediaServer-v2-Device.pdf"
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-4-1"
-
-\end_inset
-
-UPnP Forum UPnP AV Architecture:2, 2010
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-8"
-
-\end_inset
-
-ContentDirectory:1, Service Template Version 1.01, 2002, http://upnp.org/specs/av/
-UPnP-av-ContentDirectory-v1-Service.pdf
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-22"
-
-\end_inset
-
-ContentDirectory service:2 Service Template Version 1.01 – Document Version
- 1.00, 2006
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-17"
-
-\end_inset
-
-http://www.upnp.org/specs/av/UPnP-av-RenderingControl-v3-Service-20101231.pdf
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-3"
-
-\end_inset
-
-Digital Living Network Alliance Home Networked Device Interoperability Guideline
-s Version: 1.0, Digital Living Network Alliance, 2004
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
 key "key-4"
 
 \end_inset
 
-Digital Living Network Alliance Home Networked Device Interoperability Guideline
-s Version: 1.0 Errata Version 2.0, Digital Living Network Alliance, 2005
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-6"
-
-\end_inset
-
-DLNA Overview and Vision Whitepaper 2007 
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-7"
-
-\end_inset
-
-
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-http://www.upnp.org/specs/gw/UPnP-gw-DeviceProtection-v1-Service-20110224.pdf
-\end_layout
+UPnP Forum UPnP AV Architecture:2; UPnP Forum; 2010; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.upnp.org/specs/av/UPnP-av-AVArchitecture-v2-20101231.pdf"
 
 \end_inset
 
@@ -15433,21 +15355,14 @@ key "key-5"
 
 \end_inset
 
-
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-http://www.google.com/url?q=http%3A%2F%2Fwww.pervasive.jku.at%2FResearch%2FPublicatio
-ns%2F_Documents%2F2011_Online%2520UPnP%2520AV%2520Device%2520Database%2520for%25
-20Quick%2520and%2520Easy%2520Capability%2520Checking_Riener.pdf&sa=D&sntz=1&usg=A
-FQjCNEMLLsCjydhx6Qy1L30d4wZ5HgUVA
-\end_layout
+ContentDirectory:1 Service Template Version 1.01; UPnP Forum; 2002; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://upnp.org/specs/av/UPnP-av-ContentDirectory-v1-Service.pdf"
 
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Bibliography
@@ -15458,16 +15373,11 @@ key "key-6"
 
 \end_inset
 
-
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-http://www.google.com/url?q=http%3A%2F%2Fwww.territorioscuola.com%2Fwikipedia%2Fen.wi
-kipedia.php%3Ftitle%3DTalk%3ADigital_Living_Network_Alliance&sa=D&sntz=1&usg=AFQj
-CNFB10Qj3jNXfAqwV_NNQaRlBOk5zg
-\end_layout
+ContentDirectory:2 Service Service Template Version 1.01 – Document Version
+ 1.00; UPnP Forum; 2006; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://upnp.org/specs/av/UPnP-av-ContentDirectory-v2-Service.pdf"
 
 \end_inset
 
@@ -15482,16 +15392,10 @@ key "key-7"
 
 \end_inset
 
-
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-http://www.google.com/url?q=http%3A%2F%2Fsuperuser.com%2Fquestions%2F226636%2Fwhat-
-is-the-difference-between-dlna-and-upnp&sa=D&sntz=1&usg=AFQjCNHUjlpiufrZlgM_YLSN
-ohaL355J_g
-\end_layout
+RenderingControl:3 Service; UPnP Forum; 2010; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.upnp.org/specs/av/UPnP-av-RenderingControl-v3-Service-20101231.pdf"
 
 \end_inset
 
@@ -15506,15 +15410,10 @@ key "key-8"
 
 \end_inset
 
-
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-http://www.google.com/url?q=http%3A%2F%2Fjan.newmarch.name%2Fpublications%2Fjini_upn
-p.isng05.pdf&sa=D&sntz=1&usg=AFQjCNEZCczU2XK8hGsmHe7wU1mAbQpeKA
-\end_layout
+DeviceProtection:1 Service; UPnP Forum; 2011; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.upnp.org/specs/gw/UPnP-gw-DeviceProtection-v1-Service-20110224.pdf"
 
 \end_inset
 
@@ -15529,8 +15428,32 @@ key "key-9"
 
 \end_inset
 
-Abul Ahsan Md.
- Mahmudul Haque, UPnP Networking: Architecture and Security Issues, 2007
+Digital Living Network Alliance Home Networked Device Interoperability Guideline
+s Version: 1.0; Digital Living Network Alliance; 2004
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-10"
+
+\end_inset
+
+Digital Living Network Alliance Home Networked Device Interoperability Guideline
+s Version: 1.0 Errata Version 2.0; Digital Living Network Alliance; 2005
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-11"
+
+\end_inset
+
+DLNA Overview and Vision Whitepaper 2007; Digital Living Network Alliance;
+ 2007 
 \end_layout
 
 \begin_layout Bibliography
@@ -15541,8 +15464,9 @@ key "key-12"
 
 \end_inset
 
-Networked Digital Media Standards A UPnP / DLNA Overview, Allegro Software
- Development Corporation, 2006.
+Online UPnP A/V Device Database for Quick and Easy Capability Checking;
+ Andreas Riener, Martin Gutenbrunner, Johannes Kepler; University, Institute
+ for Pervasive Computing, Linz/Austria; 2011 
 \end_layout
 
 \begin_layout Bibliography
@@ -15553,8 +15477,8 @@ key "key-13"
 
 \end_inset
 
-RFC 2616 Hypertext Transfer Protocol -- HTTP/1.1, Internet Engineering Task
- Force, 1999
+UPnP Services and Jini Clients ; Jan Newmarch; School of Network Computing
+ Monash University
 \end_layout
 
 \begin_layout Bibliography
@@ -15565,7 +15489,16 @@ key "key-14"
 
 \end_inset
 
-SOAP Simple Object Access Protocol, W3C, 2007
+Abul Ahsan Md.
+ Mahmudul Haque; UPnP Networking: Architecture and Security Issues; 2007;
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.tml.tkk.fi/Publications/C/25/papers/Haque_final.pdf"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -15576,7 +15509,15 @@ key "key-15"
 
 \end_inset
 
-Extensible Markup Language (XML) 1.0 (Fifth Edition), W3C, 2008
+Networked Digital Media Standards A UPnP / DLNA Overview; Allegro Software
+ Development Corporation; 2006; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.allegrosoft.com/UPnP_DLNA_White_Paper.pdf"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -15587,7 +15528,7 @@ key "key-16"
 
 \end_inset
 
-Overview of UPnP AV Architecture, Intel Corporation, 2003
+Overview of UPnP AV Architecture; Intel Corporation; 2003
 \end_layout
 
 \begin_layout Bibliography
@@ -15598,7 +15539,7 @@ key "key-17"
 
 \end_inset
 
-Abusing Universal Plug and Play, Armijn Hemel, 2008
+DLNA 1.5 Requirements Overview; Tony Dou; Intel Corporation; 2006
 \end_layout
 
 \begin_layout Bibliography
@@ -15609,9 +15550,14 @@ key "key-18"
 
 \end_inset
 
-Design and Implementation of home network systems using UPnP middleware
- for networked appliances, Dong-Sung Kim, Jae-Min Lee, Wook Hyun Kwon, Kwan
- You, 2002
+Abusing Universal Plug and Play; Armijn Hemel; 2008; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.upnp-hacks.org/elce-presentatie.pdf"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -15622,8 +15568,21 @@ key "key-19"
 
 \end_inset
 
+Design and Implementation of Home Network Systems using UPnP middleware
+ for Networked appliances; Dong-Sung Kim, Jae-Min Lee, Wook Hyun Kwon, Kwan
+ You; 2002
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-20"
+
+\end_inset
+
 UPnP Design by Example: A Software Developers's Guide to Universal Plug
- and Play, Michael Jeromino, Jack Weast, 2003
+ and Play; Michael Jeromino, Jack Weast; 2003
 \end_layout
 
 \begin_layout Bibliography
@@ -15634,7 +15593,43 @@ key "key-21"
 
 \end_inset
 
-Network Media Content Aggregator for DLNA Server, Jan Kubový, 2011
+Network Media Content Aggregator for DLNA Server; Jan Kubový; 2011
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-22"
+
+\end_inset
+
+Cling Framework; Christian Bauer; 2012; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://4thline.org/projects/cling"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-23"
+
+\end_inset
+
+Cyberlink for Java; Satoshi Konno; 2012; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.cybergarage.org/twiki/bin/view/Main/CyberLinkForJava"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -15645,209 +15640,14 @@ key "key-24"
 
 \end_inset
 
-http://brage.bibsys.no/hia/bitstream/URN:NBN:no-bibsys_brage_9695/1/andreas-haber-
-phone-based-upnp-control.pdf
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-27"
+Coherence - a DLNA/UPnP Framework for the Digital Living; 2012; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://coherence.beebits.net/"
 
 \end_inset
 
- Cling Framework, http://4thline.org/projects/cling
-\end_layout
 
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-28"
-
-\end_inset
-
-Cyberlink for Java, http://www.cybergarage.org/twiki/bin/view/Main/CyberLinkForJav
-a
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-29"
-
-\end_inset
-
- MiniUPnP, http://miniupnp.free.fr/
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-30"
-
-\end_inset
-
-MiniDLNA, http://sourceforge.net/projects/minidlna/
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-31"
-
-\end_inset
-
-Coherence http://coherence.beebits.net/wiki/WikiStart#CurrentState
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-32"
-
-\end_inset
-
- Licencja MIT, http://www.opensource.org/licenses/mit-license.php
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-40"
-
-\end_inset
-
-Licencja GPL, http://www.gnu.org/licenses/gpl.html
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-33"
-
-\end_inset
-
-Test Baz danych Open Source, SDJ Extra nr 17, PHP Starter Kit, http://www.scribd.c
-om/doc/51087611/2/Test-baz-danych-Open-Source
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-34"
-
-\end_inset
-
-Typy multimedialne MIME, http://tools.ietf.org/html/rfc2046
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-35"
-
-\end_inset
-
-MPEG-4 ISO/IEC 14496-10
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-36"
-
-\end_inset
-
-SQLAlchemy http://www.sqlalchemy.org/
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-38"
-
-\end_inset
-
-AllShare
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-39"
-
-\end_inset
-
-JSON, http://www.json.org/
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-41"
-
-\end_inset
-
-http://www.digitalversus.com/tv-television/dlna-standard-real-mess-a971.html
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-42"
-
-\end_inset
-
-Instrukcja obsługi telewizora Samsung UE46D6750WS
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-43"
-
-\end_inset
-
-RFC 5219, http://tools.ietf.org/html/rfc5219
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-44"
-
-\end_inset
-
-Obrazy PNG, Wikipedia, 2012, http://pl.wikipedia.org/wiki/Portable_Network_Graphic
-s
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-26"
-
-\end_inset
-
-ISO/IEC 10918, JPEG
 \end_layout
 
 \begin_layout Bibliography
@@ -15858,7 +15658,252 @@ key "key-25"
 
 \end_inset
 
-Wikipedia, http://pl.wikipedia.org/wiki/Kontener_multimedialny, 2011
+Licencja MIT; Massachusetts Institute of Technology; 1988; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.opensource.org/licenses/mit-license.php"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-26"
+
+\end_inset
+
+Licencja GNU General Public License; Free Software Foundation; 2007; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.gnu.org/licenses/gpl.html"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-27"
+
+\end_inset
+
+Test Baz danych Open Source; SDJ Extra nr 17 PHP Starter Kit; 2005
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-28"
+
+\end_inset
+
+Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types; N.
+ Freed, N.
+ Borenstein; Internet Engineering Task Force; 1996
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-29"
+
+\end_inset
+
+SQLAlchemy; Michael Bayer i inni; 2012; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.sqlalchemy.org/"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-30"
+
+\end_inset
+
+The DLNA standard: a real mess; Vincent Lheur; 2010; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.digitalversus.com/tv-television/dlna-standard-real-mess-a971.html"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-31"
+
+\end_inset
+
+Instrukcja obsługi telewizora Samsung UE46D6750WS; Samsung; 2011; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://downloadcenter.samsung.com/content/UM/201112/20111208190558077/Web_GSDVBEUA_Pol.pdf"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-32"
+
+\end_inset
+
+RFC 2616 Hypertext Transfer Protocol -- HTTP/1.1; R.
+ Fielding, J.
+ Gettys, J.
+ Mogul, H.
+ Frystyk, L.
+ Masinter, P.
+ Leach, T.
+ Berners-Lee; Internet Engineering Task Force; 1999
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-33"
+
+\end_inset
+
+RFC 5219 A More Loss-Tolerant RTP Payload Format for MP3 Audio; R.
+ Finlayson; Internet Engineering Task Force; 2008
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-34"
+
+\end_inset
+
+RFC 4627 The application/json Media Type for JavaScript Object Notation
+ (JSON); D.
+ Crockford; Internet Engineering Task Force; 2006
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-35"
+
+\end_inset
+
+SOAP Simple Object Access Protocol; Nilo Mitra; World Wide Web Consortium
+ W3C; 2007
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-36"
+
+\end_inset
+
+Extensible Markup Language (XML) 1.0 (Fifth Edition), Tim Bray, Jean Paoli,
+ C.
+ M.
+ Sperberg-McQueen, Eve Maler, François Yergeau; World Wide Web Consortium
+ W3C; 2008
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-37"
+
+\end_inset
+
+MPEG-4; Wikipedia; 2012; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://en.wikipedia.org/wiki/MPEG-4"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-38"
+
+\end_inset
+
+Obrazy PNG; Wikipedia; 2012; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://en.wikipedia.org/wiki/Portable_Network_Graphics"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-39"
+
+\end_inset
+
+Obrazy JPEG; Wikipedia; 2012; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://en.wikipedia.org/wiki/JPEG"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-40"
+
+\end_inset
+
+Definicja kontenera multimedialnego; Wikipedia; 2012; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://en.wikipedia.org/wiki/Digital_container_format"
+
+\end_inset
+
+
 \end_layout
 
 \end_body
