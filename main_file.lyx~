@@ -257,18 +257,8 @@ nymi.
  plików koniecznymi do obsługi.
  Brak zdefiniowanych formatów sprawia, że specyfikacja jest liberalna i
  może być bardzo długo aktualna, jednakże dla użytkowników oznacza to problemy
- ze współpracą urządzeń ze sobą i brak gwarancji, że urządzenia obsługujące
- UPnP A/V będą potrafiły odtworzyć materiał 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-udostępniany przez serwer multimedialny.
+ ze wzajemną współpracą urządzeń i brak gwarancji, że urządzenia obsługujące
+ UPnP A/V będą potrafiły odtworzyć udostępniany im materiał.
  Udało się to natomiast specyfikacji DLNA (ang.
  
 \emph on
@@ -377,20 +367,11 @@ Druga część tego rozdziału została poświęcona napisanej, na potrzeby nini
 
 \begin_layout Standard
 Druga część pracy, 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-tytuł, nie numerek
-\end_layout
-
+\begin_inset Quotes pld
 \end_inset
 
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "part:Implementacja-serwera-UPnP"
-
+Implementacja serwea UPnP A/V
+\begin_inset Quotes prd
 \end_inset
 
 , rozpoczyna się w trzecim rozdziale, w której opisano zaprogramowane oprogramow
@@ -543,17 +524,7 @@ dowe takie jak WiFi 802.11abgn, Bluetooth (pomijany jest tu fakt braku możliwo�
 \end_layout
 
 \begin_layout Standard
-Raport techniczny UPnP
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-wrong key
-\end_layout
-
-\end_inset
-
- 
+Raport techniczny UPnP 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -1050,22 +1021,11 @@ SOAP (ang.
 \end_layout
 
 \begin_layout Standard
-Do wzajemnego wykrywania się urządzeń UPnP wykorzystuje protokół SSDP.
+Do wzajemnego wykrywania się urządzeń, UPnP wykorzystuje protokół SSDP.
  Urządzenia kontrolowane, które można nazwać serwerami usług wysyłają pakiety
  SSDP, co oznacza rozgłaszanie dołączenia do sieci.
- W przypadku punktów kontrolnych SSDP jest wykorzystywany do wykrywania,
- którymi mogą zarządzać.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-zdanie
-\end_layout
-
-\end_inset
-
-
+ W przypadku punktów kontrolnych, SSDP jest wykorzystywany do wykrywania
+ urządzeń lub usług, którymi mogą zarządzać.
 \end_layout
 
 \begin_layout Standard
@@ -2270,16 +2230,6 @@ Zmienne, których wartości są zbyt duże lub których wartości ulegają bardz
 non-evented
 \emph default
 , czyli jako niezgłaszane w rozsyłanych pakietach.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-wrong key
-\end_layout
-
-\end_inset
-
- 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -2373,16 +2323,6 @@ key "key-1"
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-wrong key
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2397,16 +2337,6 @@ key "key-1"
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-wrong key
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2417,16 +2347,6 @@ Często do kontroli urządzenia poprzez warstwę prezentacji wykorzystywane
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-wrong key
-\end_layout
 
 \end_inset
 
@@ -3025,24 +2945,61 @@ Wyznaczenie najlepszego sposobu transmisji oraz formatu danych,
 
 \begin_layout Enumerate
 Konfigurowanie serwera oraz odtwarzacza renderującego; wykorzystywane są
- takie polecenia jak: 
-\emph on
-ConnectionManager::PrepareForConnection(), AVTransport::Play(), AVTransport::Sto
-p(), AVTransport::Pause(), AVTransport::Seek() itd.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-better maybe?
+ takie polecenia jak:
 \end_layout
 
-\end_inset
+\begin_deeper
+\begin_layout Enumerate
 
-
+\emph on
+ConnectionManager::PrepareForConnection() 
+\emph default
+- przygotowanie do połączenia
+\emph on
+,
 \end_layout
 
+\begin_layout Enumerate
+
+\emph on
+AVTransport::Play() - 
+\emph default
+odtwarzaj
+\emph on
+, 
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+AVTransport::Stop() - 
+\emph default
+zakończ
+\emph on
+, 
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+AVTransport::Pause() 
+\emph default
+- zatrzymaj
+\emph on
+, 
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+AVTransport::Seek() - 
+\emph default
+przewiń, 
+\emph on
+itd.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Wyznaczenie zawartości do przesłania,
 \end_layout
@@ -6579,18 +6536,14 @@ Istnieje wiele standardów napisów do filmów, które mogą być w prosty spos�
  i nie specyfikuje jakie rodzaje napisów powinny być obsługiwane oraz w
  jaki sposób.
  Informacje o sposobie udostępniania napisów zostały określone jedynie w
- specyfikacji UPnP A/V dla urządzeń renderujących [http://www.upnp.org/specs/av/UP
-nP-av-RenderingControl-v3-Service-20101231.pdf]
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
+ specyfikacji UPnP A/V dla urządzeń renderujących.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-7"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -6656,12 +6609,6 @@ Urządzenia DLNA (i nie tylko) posiadają wbudowane dekodery formatów wideo,
 \end_layout
 
 \begin_layout Part
-\begin_inset CommandInset label
-LatexCommand label
-name "part:Implementacja-serwera-UPnP"
-
-\end_inset
-
 Implementacja serwera UPnP A/V
 \end_layout
 
@@ -7209,22 +7156,10 @@ który spełnił najwięcej stawianych wymagań i dlatego też został wybrany
  jako szkielet napisanej aplikacji.
  
 \emph on
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-jaki
-\end_layout
-
-\end_inset
-
 Coherence 
 \emph default
-jest zarówno programem udostępniającym prosty serwer multimediów, serwer
- renderujący.
+jest zarówno programem udostępniającym prosty serwer multimediów, jak i
+ serwer renderujący.
  Posiada wiele wtyczek do popularnych programów (np.
  Rhytmbox, Totem, Picasa).
  Jest na bieżąco rozwijany, zaś jego licencja - MIT 
@@ -9303,18 +9238,8 @@ backround
 foreground
 \emph default
 ), w którym wszystkie komunikaty są wyświetlane w oknie wiersza poleceń.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-repair
-\end_layout
-
-\end_inset
-
-Uruchamianie w tle odbywa się w trybie demona zgodnie z nazewnictwem systemu
- Linux lub usługi, zgodnie z nazewnictwem systemu Windows.
+ Uruchamianie programu w tle odbywa się w trybie demona zgodnie z nazewnictwem
+ systemu Linux lub usługi, zgodnie z nazewnictwem systemu Windows.
  W pierwszej kolejności aplikacja otwiera pliki baz danych, z których wczytywane
  są ustawienia oraz ścieżki wyszukiwania plików multimedialnych.
  W przypadku poprawnego wczytania wszystkich danych aplikacja tworzy główny
@@ -11095,7 +11020,7 @@ rozdzielczość 1280x720,
 \end_layout
 
 \begin_layout Itemize
-24 klatki na sekundęm
+24 klatki na sekundę,
 \end_layout
 
 \end_deeper
@@ -11136,17 +11061,17 @@ rozdzielczość 1920x1080,
 \end_layout
 
 \begin_layout Itemize
-24 klatki na sekundę.
+24 klatki na sekundę,
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-napisy zewnętrzne.
+napisy zewnętrzne,
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-plik AVI
+plik AVI,
 \end_layout
 
 \begin_deeper
@@ -11155,7 +11080,7 @@ plik AVI
 \end_layout
 
 \begin_layout Itemize
-plik wideo XVID MPEG-4
+plik wideo XVID MPEG-4,
 \end_layout
 
 \begin_deeper
@@ -11164,13 +11089,13 @@ rozdzielczość 576x432,
 \end_layout
 
 \begin_layout Itemize
-24 klatki na sekundę
+24 klatki na sekundę,
 \end_layout
 
 \end_deeper
 \end_deeper
 \begin_layout Itemize
-plik WMV
+plik WMV,
 \end_layout
 
 \begin_deeper
@@ -11180,45 +11105,35 @@ plik wideo Windows Media Video 9,
 
 \begin_deeper
 \begin_layout Itemize
-rozdzielczość 1280x720
+rozdzielczość 1280x720,
 \end_layout
 
 \begin_layout Itemize
-24 klatki na sekundę
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-przecinki
-\end_layout
-
-\end_inset
-
-
+24 klatki na sekundę,
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-ścieżka audio Windows Media Audio 9 5.1.
+ścieżka audio Windows Media Audio 9 5.1,
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-plik MP4
+plik MP4,
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-plik wideo H.264
+plik wideo H.264,
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-rozdzielczość 1280x720
+rozdzielczość 1280x720,
 \end_layout
 
 \begin_layout Itemize
-25 klatek na sekundę
+25 klatek na sekundę,
 \end_layout
 
 \end_deeper
@@ -11544,8 +11459,8 @@ i docelowymi są odtwarzacze).
  Najnowsze oprogramowanie Samsung AllShare, bez względu na rodzaj urządzenia,
  na którym jest uruchomiony (telewizor, urządzenie mobilne, komputer PC),
  momentalnie wyświetlało istnienie serwera.
- W przypadku innych odtwarzaczy konieczne było wykorzystanie polecenia odświeżaj
-ącego zgormadzoną listę serwerów.
+ W przypadku innych odtwarzaczy konieczne było wykorzystanie polecenia,
+ dzięki któremu wywoływane jest odświeżenie listy serwerów.
  Wszystkie testowane urządzenia poprawnie wykryły serwer oraz prawidłowo
  wyświetlały jego nazwę (również z wykorzystaniem polskich znaków).
  Miniatura na urządzeniach innych niż mobilne, nie była wyświetlana w ogóle,
@@ -15357,17 +15272,14 @@ ji, czyli serwerów multimedialnych, których wybór jest wciąż mocno ogranicz
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "test"
+key "key-1"
 
 \end_inset
 
-UPnP Forum, UPnP Device Architecture 1.0, 2008.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-poprawić bibliografię
-\end_layout
+UPnP Device Architecture 1.0, UPnP Forum, 2008, 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.0-20080424.pdf"
 
 \end_inset
 
@@ -15382,8 +15294,14 @@ key "key-2"
 
 \end_inset
 
-Digital Living Network Alliance Home Networked Device Interoperability Guideline
-s Version: 1.0 
+UPnP Device Architecture V1.1 Annex A – IP Version 6 Support, 2011, 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.1-AnnexA.pdf"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -15394,8 +15312,60 @@ key "key-3-2"
 
 \end_inset
 
-Digital Living Network Alliance Home Networked Device Interoperability Guideline
-s Version: 1.0 Errata Version 2.0 
+MediaServer:2 Device Template Version 1.01, UPnP Forum, 2006, 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://upnp.org/specs/av/UPnP-av-MediaServer-v2-Device.pdf"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-4-1"
+
+\end_inset
+
+UPnP Forum UPnP AV Architecture:2, 2010
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-8"
+
+\end_inset
+
+ContentDirectory:1, Service Template Version 1.01, 2002, http://upnp.org/specs/av/
+UPnP-av-ContentDirectory-v1-Service.pdf
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-22"
+
+\end_inset
+
+ContentDirectory service:2 Service Template Version 1.01 – Document Version
+ 1.00, 2006
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-17"
+
+\end_inset
+
+http://www.upnp.org/specs/av/UPnP-av-RenderingControl-v3-Service-20101231.pdf
 \end_layout
 
 \begin_layout Bibliography
@@ -15406,18 +15376,8 @@ key "key-3"
 
 \end_inset
 
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://www.upnp.org/specs/gw/UPnP-gw-DeviceProtection-v1-Service-20110224.pdf
-\end_layout
-
-\end_inset
-
-
+Digital Living Network Alliance Home Networked Device Interoperability Guideline
+s Version: 1.0, Digital Living Network Alliance, 2004
 \end_layout
 
 \begin_layout Bibliography
@@ -15428,16 +15388,36 @@ key "key-4"
 
 \end_inset
 
+Digital Living Network Alliance Home Networked Device Interoperability Guideline
+s Version: 1.0 Errata Version 2.0, Digital Living Network Alliance, 2005
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-6"
+
+\end_inset
+
+DLNA Overview and Vision Whitepaper 2007 
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-7"
+
+\end_inset
+
 
 \begin_inset Flex URL
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
-http://www.google.com/url?q=http%3A%2F%2Fwww.pervasive.jku.at%2FResearch%2FPublicatio
-ns%2F_Documents%2F2011_Online%2520UPnP%2520AV%2520Device%2520Database%2520for%25
-20Quick%2520and%2520Easy%2520Capability%2520Checking_Riener.pdf&sa=D&sntz=1&usg=A
-FQjCNEMLLsCjydhx6Qy1L30d4wZ5HgUVA
+http://www.upnp.org/specs/gw/UPnP-gw-DeviceProtection-v1-Service-20110224.pdf
 \end_layout
 
 \end_inset
@@ -15455,7 +15435,32 @@ key "key-5"
 
 
 \begin_inset Flex URL
-status collapsed
+status open
+
+\begin_layout Plain Layout
+
+http://www.google.com/url?q=http%3A%2F%2Fwww.pervasive.jku.at%2FResearch%2FPublicatio
+ns%2F_Documents%2F2011_Online%2520UPnP%2520AV%2520Device%2520Database%2520for%25
+20Quick%2520and%2520Easy%2520Capability%2520Checking_Riener.pdf&sa=D&sntz=1&usg=A
+FQjCNEMLLsCjydhx6Qy1L30d4wZ5HgUVA
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-6"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status open
 
 \begin_layout Plain Layout
 
@@ -15473,13 +15478,13 @@ CNFB10Qj3jNXfAqwV_NNQaRlBOk5zg
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-6"
+key "key-7"
 
 \end_inset
 
 
 \begin_inset Flex URL
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -15497,13 +15502,13 @@ ohaL355J_g
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-7"
+key "key-8"
 
 \end_inset
 
 
 \begin_inset Flex URL
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -15520,7 +15525,7 @@ p.isng05.pdf&sa=D&sntz=1&usg=AFQjCNEZCczU2XK8hGsmHe7wU1mAbQpeKA
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-8"
+key "key-9"
 
 \end_inset
 
@@ -15532,29 +15537,7 @@ Abul Ahsan Md.
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-9"
-
-\end_inset
-
-UPnP Device Architecture V1.0 Annex A – IP Version 6 Support
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-10"
-
-\end_inset
-
-UPnP Device Template
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-11"
+key "key-12"
 
 \end_inset
 
@@ -15566,7 +15549,7 @@ Networked Digital Media Standards A UPnP / DLNA Overview, Allegro Software
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-12"
+key "key-13"
 
 \end_inset
 
@@ -15578,7 +15561,7 @@ RFC 2616 Hypertext Transfer Protocol -- HTTP/1.1, Internet Engineering Task
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-13"
+key "key-14"
 
 \end_inset
 
@@ -15589,7 +15572,7 @@ SOAP Simple Object Access Protocol, W3C, 2007
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-14"
+key "key-15"
 
 \end_inset
 
@@ -15600,7 +15583,7 @@ Extensible Markup Language (XML) 1.0 (Fifth Edition), W3C, 2008
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-15"
+key "key-16"
 
 \end_inset
 
@@ -15611,7 +15594,7 @@ Overview of UPnP AV Architecture, Intel Corporation, 2003
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-16"
+key "key-17"
 
 \end_inset
 
@@ -15622,7 +15605,7 @@ Abusing Universal Plug and Play, Armijn Hemel, 2008
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-17"
+key "key-18"
 
 \end_inset
 
@@ -15635,7 +15618,7 @@ Design and Implementation of home network systems using UPnP middleware
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-18"
+key "key-19"
 
 \end_inset
 
@@ -15647,18 +15630,7 @@ UPnP Design by Example: A Software Developers's Guide to Universal Plug
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-19"
-
-\end_inset
-
-UPnP Forum UPnP AV Architecture:2, 2010
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-20"
+key "key-21"
 
 \end_inset
 
@@ -15669,57 +15641,12 @@ Network Media Content Aggregator for DLNA Server, Jan Kubový, 2011
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-21"
-
-\end_inset
-
-ContentDirectory service:2 Service Template Version 1.01 – Document Version
- 1.00, 2006
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-22"
-
-\end_inset
-
-DLNA Overview and Vision Whitepaper 2007 
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-23"
+key "key-24"
 
 \end_inset
 
 http://brage.bibsys.no/hia/bitstream/URN:NBN:no-bibsys_brage_9695/1/andreas-haber-
 phone-based-upnp-control.pdf
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-24"
-
-\end_inset
-
-Wikipedia, http://pl.wikipedia.org/wiki/Kontener_multimedialny, 2011
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-26"
-
-\end_inset
-
-ISO/IEC 10918, JPEG
 \end_layout
 
 \begin_layout Bibliography
@@ -15793,6 +15720,17 @@ key "key-32"
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+key "key-40"
+
+\end_inset
+
+Licencja GPL, http://www.gnu.org/licenses/gpl.html
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "key-33"
 
 \end_inset
@@ -15838,18 +15776,6 @@ SQLAlchemy http://www.sqlalchemy.org/
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-37"
-
-\end_inset
-
-ContentDirectory:1, Service Template Version 1.01, 2002, http://upnp.org/specs/av/
-UPnP-av-ContentDirectory-v1-Service.pdf
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
 key "key-38"
 
 \end_inset
@@ -15872,19 +15798,6 @@ JSON, http://www.json.org/
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-label "40"
-key "key-40"
-
-\end_inset
-
-Licencja GPL, http://www.gnu.org/licenses/gpl.html
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-label "41"
 key "key-41"
 
 \end_inset
@@ -15896,7 +15809,6 @@ http://www.digitalversus.com/tv-television/dlna-standard-real-mess-a971.html
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-label "42"
 key "key-42"
 
 \end_inset
@@ -15908,7 +15820,6 @@ Instrukcja obsługi telewizora Samsung UE46D6750WS
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-label "43"
 key "key-43"
 
 \end_inset
@@ -15920,12 +15831,34 @@ RFC 5219, http://tools.ietf.org/html/rfc5219
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-label "44"
 key "key-44"
 
 \end_inset
 
-PNG, http://pl.wikipedia.org/wiki/Portable_Network_Graphics
+Obrazy PNG, Wikipedia, 2012, http://pl.wikipedia.org/wiki/Portable_Network_Graphic
+s
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-26"
+
+\end_inset
+
+ISO/IEC 10918, JPEG
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-25"
+
+\end_inset
+
+Wikipedia, http://pl.wikipedia.org/wiki/Kontener_multimedialny, 2011
 \end_layout
 
 \end_body
