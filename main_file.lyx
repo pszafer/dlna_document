@@ -48,7 +48,7 @@ dcs
 \use_esint 1
 \use_mhchem 1
 \use_mathdots 1
-\cite_engine basic
+\cite_engine natbib_numerical
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -2000,7 +2000,17 @@ key "key-10"
 
 \end_inset
 
- Najważniejszym elementem, z punktu widzenia autora, jest sposób opisu usługi.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+device template
+\end_layout
+
+\end_inset
+
+Najważniejszym elementem, z punktu widzenia autora, jest sposób opisu usługi.
  Powinien być stworzony tak, aby punkty kontrolne jak największej liczby
  producentów (stan idealny - wszystkich producentów) sprzętu i oprogramowania
  potrafiły uzyskać przydatne dla nich informacje.
@@ -2042,7 +2052,7 @@ ne poprzez modyfikację zmiennych określających stan usługi.
  punkty kontrolne.
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-11"
+key "key-15"
 
 \end_inset
 
@@ -2181,7 +2191,7 @@ cancellation message
 ) do wydawcy.
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-11"
+key "key-15"
 
 \end_inset
 
@@ -2215,7 +2225,7 @@ initial event message
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-11"
+key "key-15"
 
 \end_inset
 
@@ -2239,8 +2249,8 @@ key "key-1"
  Możliwy typ oraz rozmiar (wielkość) zmiennych jest zgodna ze schematem
  dokumentu XML 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "key-14"
+LatexCommand citet
+key "key-38"
 
 \end_inset
 
@@ -2658,7 +2668,7 @@ wewnętrzne
  publikacji pozostały takie same).
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-19"
+key "key-4"
 
 \end_inset
 
@@ -2855,7 +2865,7 @@ Dwie ostatnie usługi komunikują się ze swoimi odpowiednikami w implementacji
  jednoczesną zmianę ustawień w wielu urządzeniach UPnP A/V.
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-19"
+key "key-4"
 
 \end_inset
 
@@ -3037,7 +3047,7 @@ DMPr
  konsumentów, pośród różnych rodzajów produktów.
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-20"
+key "key-21"
 
 \end_inset
 
@@ -3065,7 +3075,7 @@ menedżer pobierania multimediów (ang.
 Mobile Digital Media Downloader M-DMD).
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-20"
+key "key-21"
 
 \end_inset
 
@@ -3102,7 +3112,7 @@ Menedżer pobierania multimediów, również jest urządzeniem działającym w
  Menedżerem pobierania może być smartfon lub przenośny odtwarzacz muzyki.
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-20"
+key "key-21"
 
 \end_inset
 
@@ -3226,7 +3236,7 @@ name "tab:Typy-obsługiwanych-plików"
 Typy obsługiwanych plików w DLNA - standardowe urządzenia
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-22"
+key "key-11"
 
 \end_inset
 
@@ -3406,7 +3416,7 @@ name "tab:2Typy-obsługiwanych-plików"
 Typy obsługiwanych plików w DLNA - urządzenia mobilne
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-22"
+key "key-11"
 
 \end_inset
 
@@ -3927,7 +3937,7 @@ textItem
 ).
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-6"
 
 \end_inset
 
@@ -4090,7 +4100,7 @@ dc:title - nazwa obiektu,
 upnp:class - klasa zawartości zgodna z UPnP
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-6"
 
 \end_inset
 
@@ -4113,7 +4123,7 @@ res - zasób / zasoby,
 upnp:writeStatus - określa czy dany obiekt może być modyfikowany.
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-6"
 
 \end_inset
 
@@ -4271,7 +4281,7 @@ dc:date - data powstania obrazu,
 dc:rights - określa prawa własności
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-21"
+key "key-6"
 
 \end_inset
 
@@ -5061,8 +5071,8 @@ W ogólnie rozumianym kontenerze multimedialnym może być przechowywanych
  i innych metadanych.
  Pozwala on na przechowywanie wszystkich tych danych w jednym pliku
 \begin_inset CommandInset citation
-LatexCommand cite
-key "key-24"
+LatexCommand citet
+key "key-42"
 
 \end_inset
 
@@ -5321,8 +5331,8 @@ Advanced Video Coding
 W przypadku zdjęć prym wiedzie format JPEG, który jest ustandaryzowany przez
  organizację ISO/IEC 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "key-26"
+LatexCommand citet
+key "key-41"
 
 \end_inset
 
@@ -5349,8 +5359,8 @@ Internet Engineering Task Force
 \emph default
 ) w dokumencie RFC 5219 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "key-33"
+LatexCommand citet
+key "key-35"
 
 \end_inset
 
@@ -5969,8 +5979,8 @@ Pliki graficzne zawierające zdjęcia, najczęściej przechowywane są w formaci
  szczegółów.JPEG jest standardem organizacji ISO o nazwie ISO/IEC IS 10918-1
  oraz ITU-T Recommendation T.81 (standard dwuczęściowy) 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "key-39"
+LatexCommand citet
+key "key-41"
 
 \end_inset
 
@@ -5986,8 +5996,8 @@ Portable Network Graphics
  formacie kompresji bezstratnej.
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "key-38"
+LatexCommand citet
+key "key-40"
 
 \end_inset
 
@@ -6588,8 +6598,8 @@ Advanced Video Coding
 \emph on
 MPEG-4 Part 10, Advanced Video Coding 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "key-35"
+LatexCommand citet
+key "key-39"
 
 \end_inset
 
@@ -7073,7 +7083,7 @@ Cling
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-27"
+key "key-22"
 
 \end_inset
 
@@ -7099,7 +7109,7 @@ m był
 CyberLink for Java 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-28"
+key "key-23"
 
 \end_inset
 
@@ -7135,7 +7145,27 @@ key "key-29"
 
 \end_inset
 
- lub MiniDLNA 
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+lub MiniDLNA 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-30"
@@ -7153,7 +7183,7 @@ Ostatnim opisanym w niniejszym podrozdziale będzie
 Coherence DLNA/UPNP Framework for Digital Living 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-31"
+key "key-24"
 
 \end_inset
 
@@ -7172,7 +7202,7 @@ jest zarówno programem udostępniającym prosty serwer multimediów, jak i
  Jest na bieżąco rozwijany, zaś jego licencja - MIT 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-32"
+key "key-25"
 
 \end_inset
 
@@ -8910,16 +8940,6 @@ Ustawienia serwera UPnP A/V
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-nazwa serwera - buuuu
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -9225,7 +9245,7 @@ MySQL
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-33"
+key "key-27"
 
 \end_inset
 
@@ -9891,7 +9911,7 @@ Coherence
 , MIT 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-32"
+key "key-25"
 
 \end_inset
 
@@ -10564,8 +10584,8 @@ JSON
 \emph default
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "key-39"
+LatexCommand citet
+key "key-36"
 
 \end_inset
 
@@ -11169,7 +11189,7 @@ Content Directory
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-37"
+key "key-5"
 
 \end_inset
 
@@ -13276,10 +13296,15 @@ MiniDLNA
 \begin_layout Standard
 Oprogramowanie MiniDLNA jest stworzony z myślą o platformie Linux, napisane
  w języku C++.
- Udostępniane jest w ramach publicznej licencji GPL (
+ Udostępniane jest w ramach publicznej licencji GNU GPL (ang.
+ 
+\emph on
+General Public License
+\emph default
+
 \begin_inset CommandInset citation
 LatexCommand cite
-key "key-40"
+key "key-26"
 
 \end_inset
 
@@ -14572,8 +14597,8 @@ VC1
 \begin_layout Plain Layout
 Źródło: instrukcja telewizora Samsung
 \begin_inset CommandInset citation
-LatexCommand cite
-key "key-31"
+LatexCommand citet
+key "key-33"
 
 \end_inset
 
@@ -14745,8 +14770,8 @@ MPEG
 \begin_layout Plain Layout
 Źródło: instrukcja telewizora Samsung
 \begin_inset CommandInset citation
-LatexCommand cite
-key "key-31"
+LatexCommand citet
+key "key-33"
 
 \end_inset
 
@@ -14964,6 +14989,17 @@ tekst
 </cell>
 </row>
 </lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Źródło: instrukcja telewizora Samsung
+\begin_inset CommandInset citation
+LatexCommand citet
+key "key-33"
 
 \end_inset
 
@@ -15273,6 +15309,13 @@ ji, czyli serwerów multimedialnych, których wybór jest wciąż mocno ogranicz
  Tak jak powszechnie wbudowane są usługi udostępniania i wyszukiwania plików,
  drukarek (często również oparte o protokół UPnP), tak serwer DLNA powinien
  być w przyszłości dostępny na tym samym poziomie.
+\begin_inset CommandInset citation
+LatexCommand citet
+key "key-42"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -15654,6 +15697,28 @@ target "http://coherence.beebits.net/"
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+key "key-9"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-10"
+
+\end_inset
+
+d
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Odnośniki
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "key-25"
 
 \end_inset
@@ -15736,6 +15801,16 @@ key "key-30"
 
 \end_inset
 
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+here
+\end_layout
+
+\end_inset
+
 The DLNA standard: a real mess; Vincent Lheur; 2010; 
 \begin_inset CommandInset href
 LatexCommand href
@@ -15750,7 +15825,7 @@ target "http://www.digitalversus.com/tv-television/dlna-standard-real-mess-a971.
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-31"
+key "key-33"
 
 \end_inset
 
@@ -15768,7 +15843,17 @@ target "http://downloadcenter.samsung.com/content/UM/201112/20111208190558077/We
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-32"
+key "key-34"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 
@@ -15786,7 +15871,7 @@ RFC 2616 Hypertext Transfer Protocol -- HTTP/1.1; R.
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-33"
+key "key-35"
 
 \end_inset
 
@@ -15798,7 +15883,7 @@ RFC 5219 A More Loss-Tolerant RTP Payload Format for MP3 Audio; R.
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-34"
+key "key-36"
 
 \end_inset
 
@@ -15811,7 +15896,17 @@ RFC 4627 The application/json Media Type for JavaScript Object Notation
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-35"
+key "key-37"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+dodać link
+\end_layout
 
 \end_inset
 
@@ -15823,7 +15918,7 @@ SOAP Simple Object Access Protocol; Nilo Mitra; World Wide Web Consortium
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-36"
+key "key-38"
 
 \end_inset
 
@@ -15838,7 +15933,7 @@ Extensible Markup Language (XML) 1.0 (Fifth Edition), Tim Bray, Jean Paoli,
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-37"
+key "key-39"
 
 \end_inset
 
@@ -15856,7 +15951,7 @@ target "http://en.wikipedia.org/wiki/MPEG-4"
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-38"
+key "key-40"
 
 \end_inset
 
@@ -15874,7 +15969,7 @@ target "http://en.wikipedia.org/wiki/Portable_Network_Graphics"
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-39"
+key "key-41"
 
 \end_inset
 
@@ -15892,7 +15987,7 @@ target "http://en.wikipedia.org/wiki/JPEG"
 \labelwidthstring Odnośniki
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-40"
+key "key-42"
 
 \end_inset
 
