@@ -36,7 +36,7 @@ dcs
 \graphics default
 \default_output_format pdf2
 \output_sync 0
-\bibtex_command bibtex
+\bibtex_command default
 \index_command default
 \float_placement H
 \paperfontsize default
@@ -48,12 +48,12 @@ dcs
 \use_esint 1
 \use_mhchem 1
 \use_mathdots 1
-\cite_engine natbib_numerical
+\cite_engine basic
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
-\use_refstyle 1
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -135,7 +135,7 @@ status open
 \backslash
 renewcommand*{
 \backslash
-tablename}{Tabela}  
+tablename}{Tabela}
 \end_layout
 
 \begin_layout Plain Layout
@@ -168,7 +168,7 @@ parindent}{1cm}
 \end_layout
 
 \begin_layout Title
-UPNP DLNA
+Analiza technologii UPnP A/V i DLNA w kontekście strumieniowania multimediów
 \end_layout
 
 \begin_layout Standard
@@ -291,14 +291,21 @@ iem materiałów w sieci lokalnej.
 \end_layout
 
 \begin_layout Standard
-W ramach pracy magisterskiej została zaprojektowana aplikacja serwera multimedia
-lnego UPnP A/V, zgodnego z odtwarzaczami multimedialnymi UPnP A/V oraz DLNA.
+Jednym z celów pracy jest przedstawienie standardów udostępniania multimediów
+ oraz wykazanie ich mankamentów.
+ Po standaryzowanych specyfikacjach oczekuje się jednakowego działania na
+ każdym urządzeniu.
+ W ramach pracy magisterskiej została zaprojektowana aplikacja serwera multimedi
+alnego UPnP A/V, zgodnego z odtwarzaczami multimedialnymi UPnP A/V oraz
+ DLNA.
  Autor zdecydował się napisać niniejszą aplikację, gdyż jego zdaniem, możliwości
- aplikacji umożliwiających udostępnianie multimediów w sieci, jest zdecydowanie
+ programów umożliwiających udostępnianie multimediów w sieci, jest zdecydowanie
  zbyt mały.
  W większości przypadków możliwe jest wykrycie cech, które nie działają.
  Problemy pojawiają się, gdy użytkownik chce przewinąć utwór muzyczny, zmienić
  ścieżkę dźwiękową w filmie, czy wczytać napisy do filmu.
+ Głównym założeniem postawionym przez autora przy pisaniu serwera multimedialneg
+o było zlikwidowanie niedogodności odtwarzania.
 \end_layout
 
 \begin_layout Standard
@@ -315,18 +322,18 @@ nego.
 \end_layout
 
 \begin_layout Standard
-W kolejnych rozdziałach zostały omówione zagadnienia dotyczące technologii
+W pracy magisterskiej zostały omówione zagadnienia dotyczące technologii
  UPnP A/V oraz pośrednio DLNA (jako technologii wywodzącej się z UPnP A/V).
  Przedstawiona została specyfikacja napisanej aplikacji, jej testy oraz
  porównanie do innych serwerów multimedialnych.
  Porównane zostały również odtwarzacze multimedialne.
  Autor starał się pokazać, ciągle obecne niedoskonałości obu specyfikacji
- i trudności przez które musi przejśc niejeden użytkownik, aby udostępniać
+ i trudności przez które musi przejść niejeden użytkownik, aby udostępniać
  treść dla urządzeń elektronicznych, poprzez przedstawiane protokoły.
 \end_layout
 
 \begin_layout Standard
-Pierwsza częśc niniejszej pracy składa się z dwóch rozdziałów, które definiują
+Pierwsza część niniejszej pracy składa się z dwóch rozdziałów, które definiują
  wykorzystywaną technologię.
  
 \end_layout
@@ -361,16 +368,11 @@ iono definicje bardzo ważnych pojęć w kontekście multimediów, takie jak
 \end_layout
 
 \begin_layout Standard
-Druga część tego rozdziału została poświęcona napisanej, na potrzeby niniejszej
- pracy magisterkiej, aplikacji serwera multimedialnego UPnP A/V.
-\end_layout
-
-\begin_layout Standard
 Druga część pracy, 
 \begin_inset Quotes pld
 \end_inset
 
-Implementacja serwea UPnP A/V
+Implementacja serwera UPnP A/V
 \begin_inset Quotes prd
 \end_inset
 
@@ -407,10 +409,6 @@ Niniejsza praca została oparta na ogólnodostępnych specyfikacjach UPnP oraz
  Pomocnym w opisie były również, udostępnione autorowi, specyfikacje DLNA.
 \end_layout
 
-\begin_layout Part
-Opis technologii
-\end_layout
-
 \begin_layout Chapter
 Standardy UPnP, UPnP A/V i DLNA
 \end_layout
@@ -433,15 +431,27 @@ UPnP umożliwia użytkownikowi wykrywać urządzenia sieciowe oraz wykorzystywa�
  Niniejsza praca skupia się głównie na ostatnim zagadnieniu (rozrywka).
  Posiada ono rozszerzenie, w oddzielnej specyfikacji, nazwanej UPnP A/V
  (ang.
- UPnP Audio/Video), która jest rozwinięciem podstawowego standardu UPnP.
+ 
+\emph on
+UPnP Audio / Video
+\emph default
+), która jest rozwinięciem podstawowego standardu UPnP.
  
 \end_layout
 
 \begin_layout Standard
 UPNP A/V została stworzona do odtwarzania plików multimedialnych.
  Definiuje pojęcia takie jak serwery multimedialne (ang.
- Media Servers) oraz odtwarzacze multimedialne (ang.
- Media Players).
+ 
+\emph on
+Media Servers
+\emph default
+) oraz odtwarzacze multimedialne (ang.
+ 
+\emph on
+Media Players
+\emph default
+).
  Zostały w niej określone bardzo elastyczne metody przesyłania multimediów,
  co sprawiło, że UPnP A/V nie rozpowszechniło się na szeroką skalę wśród
  producentów sprzętu elektronicznego oraz użytkowników domowych.
@@ -451,8 +461,12 @@ UPNP A/V została stworzona do odtwarzania plików multimedialnych.
 
 \begin_layout Standard
 DLNA (ang.
- Digital Living Network Alliance) jest międzynarodową organizacją, powstałą
- w 2003 roku z inicjatywy firmy Sony.
+ 
+\emph on
+Digital Living Network Alliance
+\emph default
+) jest międzynarodową organizacją, powstałą w 2003 roku z inicjatywy firmy
+ Sony.
  Stworzyła ona standard o tej samej nazwie (DLNA), który korzysta z protokołu
  UPNP A/V jako wzorca, przy czym jest bardziej restrykcyjna (np.
  posiada konkretne formaty multimediów odtwarzane przez zgodne urządzenia).
@@ -524,14 +538,21 @@ dowe takie jak WiFi 802.11abgn, Bluetooth (pomijany jest tu fakt braku możliwo�
 \end_layout
 
 \begin_layout Standard
-Raport techniczny UPnP 
+Raport techniczny UPnP (w wersjach 1.0 - 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
 
 \end_inset
 
- definiuje jedynie sposoby działania w obrębie sieci obsługiwanej przez
+ oraz 1.1 - 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "upnpdevarch11"
+
+\end_inset
+
+) definiuje jedynie sposoby działania w obrębie sieci obsługiwanej przez
  protokół IPv4.
  Aneks do głównego raportu określa różnice występujące, gdy urządzenie działa
  w obrębie sieci IPv6 
@@ -566,7 +587,14 @@ name "fig:Stos-protokołół-specyfikacji"
 
 \end_inset
 
-Stos protokołół specyfikacji UPnP
+Stos protokołów specyfikacji UPnP (źródło
+\begin_inset CommandInset citation
+LatexCommand cite
+key "publicoverview"
+
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -575,10 +603,34 @@ Stos protokołół specyfikacji UPnP
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
-	filename protocol_1.png
+	filename png/protokoly.png
 	display false
 	width 70page%
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
@@ -598,17 +650,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "test"
-
-\end_inset
-
-
 \begin_inset Caption
 
 \begin_layout Plain Layout
@@ -618,7 +659,14 @@ name "fig:Komunikacja"
 
 \end_inset
 
-Komunikacja
+Komunikacja (źródło
+\begin_inset CommandInset citation
+LatexCommand cite
+key "publicoverview"
+
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -627,11 +675,35 @@ Komunikacja
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
-	filename communicating.png
+	filename png/etapy_komunikacja_dlna.png
 	display false
-	width 70page%
+	scale 60
 	groupId figures
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
@@ -657,39 +729,75 @@ reference "fig:Stos-protokołół-specyfikacji"
 
 \begin_layout Itemize
 adresowanie IP (ang.
- IP addressing),
+ 
+\emph on
+IP addressing
+\emph default
+),
 \end_layout
 
 \begin_layout Itemize
 wykrywanie (ang.
- discovery),
+ 
+\emph on
+discovery
+\emph default
+),
 \end_layout
 
 \begin_layout Itemize
 opis usługi (ang.
- description),
+ 
+\emph on
+description
+\emph default
+),
 \end_layout
 
 \begin_layout Itemize
 kontrola (ang.
- control),
+ 
+\emph on
+control
+\emph default
+),
 \end_layout
 
 \begin_layout Itemize
-powiadomienia o zdarzeniach(ang.
- eventing lub event notification),
+powiadomienia o zdarzeniach (ang.
+ 
+\emph on
+eventing
+\emph default
+ lub 
+\emph on
+event notification
+\emph default
+),
 \end_layout
 
 \begin_layout Itemize
 prezentacja (ang.
- presentation).
+ 
+\emph on
+presentation
+\emph default
+).
 \end_layout
 
 \begin_layout Standard
 Urządzenia UPnP są klasyfikowane w dwóch głównych kategoriach: punktów kontrolny
 ch (ang.
- Control Points) oraz urządzeń kontrolowanych (ang.
- Controlled Devices).
+ 
+\emph on
+Control Points
+\emph default
+) oraz urządzeń kontrolowanych (ang.
+ 
+\emph on
+Controlled Devices
+\emph default
+).
  
 \end_layout
 
@@ -701,23 +809,14 @@ reference "fig:Komunikacja"
 
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Standard
-(http://www.upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.0-20080424.pdf)
-\end_layout
-
-\begin_layout Standard
-Architektura protokołu wykorzystuje stos protokołów przedstawiony w tabeli
- 
+, natomiast stos protokołów UPnP przedstawiony został w tabeli 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Test-tabeli"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -736,7 +835,14 @@ name "tab:Test-tabeli"
 
 \end_inset
 
-Stos protokołu UPnP
+Stos protokołu UPnP (źródło 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -1007,17 +1113,57 @@ UPnP Vendor
 
 \begin_layout Itemize
 SSDP (ang.
- Simple Service Discovery Protocol),
+ 
+\emph on
+Simple Service Discovery Protocol
+\emph default
+) (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SSDP"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "upnpdevarch11"
+
+\end_inset
+
+),
 \end_layout
 
 \begin_layout Itemize
 GENA (ang.
- General Event Notification Architecture),
+ 
+\emph on
+General Event Notification Architecture
+\emph default
+) (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "GENA"
+
+\end_inset
+
+),
 \end_layout
 
 \begin_layout Itemize
 SOAP (ang.
- Simple Object Access Protocol).
+ 
+\emph on
+Simple Object Access Protocol
+\emph default
+) (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "key-37"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -1029,7 +1175,14 @@ Do wzajemnego wykrywania się urządzeń, UPnP wykorzystuje protokół SSDP.
 \end_layout
 
 \begin_layout Standard
-W protokole SSDP wykorzystuje się rozgłaszanie HTTP typu unicast (
+W protokole SSDP wykorzystuje się rozgłaszanie HTTP (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "key-34"
+
+\end_inset
+
+) typu unicast (
 \emph on
 HTTPU
 \emph default
@@ -1038,7 +1191,11 @@ HTTPU
 HTTPMU)
 \emph default
 , z wykorzystaniem UDP (ang.
- User Datagram Protocol) jako protokołu transportu.
+ 
+\emph on
+User Datagram Protocol
+\emph default
+) jako protokołu transportu.
  Standardowo adresem multicast jest adres 239.255.255.255 oraz port numer 1900.
  Tryb 
 \emph on
@@ -1082,12 +1239,16 @@ Zarówno serwer, jak i klient UPnP musi komunikować się z wykorzystaniem
  protokołu IP.
  Organizacja UPnP Forum zdefiniowała, że każde urządzenie, które spełnia
  wymagania specyfikacji musi posiadać oprogramowanie serwera lub klienta
- protkołu DHCP (ang.
- Dynamic Host Configuration Protocol).
+ protokołu DHCP (ang.
+ 
+\emph on
+Dynamic Host Configuration Protocol
+\emph default
+).
  Podczas podłączania się do sieci, urządzenie podejmuje próbę uzyskania
  adresu IP od serwera DHCP (jeżeli urządzenie nie jest serwerem DHCP).
  Jeżeli urządzenie nie otrzyma adresu IP powinno wykorzystać tzw.
- autoadresowanie IP (urządzenie wybiera adres z określonej puli np.
+ auto-adresowanie IP (urządzenie wybiera adres z określonej puli np.
  169.254/16 lub w przypadku IPv6 FE80::/64).
  Raport techniczny stworzony przez organizację UPnP Forum określa dokładnie,
  że urządzenie powinno, poprzez wykorzystanie protokołu ARP, sprawdzić,
@@ -1202,7 +1363,11 @@ Rozgłaszanie wiąże się, niestety, z często niepotrzebnym obciążaniem siec
  Jednym ze sposobów zapobiegawczych, które wybrali autorzy specyfikacji,
  jest określony zalecany czas życia pakietu (
 \emph on
-TTL - ang.
+TTL - 
+\emph default
+ang
+\emph on
+.
  time-to-live
 \emph default
 ), który dla każdej wiadomości wynosi 4 (powinna istnieć możliwość modyfikacji
@@ -1226,7 +1391,14 @@ name "fig:Sposoby-wykrywania-urządzeń"
 
 \end_inset
 
-Sposoby wykrywania urządzeń
+Sposoby wykrywania urządzeń (źródło 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -1235,9 +1407,34 @@ Sposoby wykrywania urządzeń
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
-	filename discovery_messages.png
-	width 70page%
+	filename png/dicsovery_messages.png
+	display false
+	scale 75
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
@@ -1328,7 +1525,14 @@ name "tab:Stos-protokołu-UPnP"
 
 \end_inset
 
-Stos protokołu UPnP w przypadku rozgłaszania
+Stos protokołu UPnP w przypadku rozgłaszania (źródło 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -1442,7 +1646,7 @@ Pierwsza warstwa opisywanego stosu zawiera informacje specyficzne dla dostawcy
  (UUID - 
 \emph on
 ang.
- Universally unique identifier
+ Universally Unique Identifier
 \emph default
 ).
  Kolejną warstwą tego stosu są informacje dostarczane przez organizację
@@ -1590,15 +1794,27 @@ Trzy pozostałe warstwy nie są tematem niniejszej pracy.
 \end_layout
 
 \begin_layout Itemize
-NT - Notification Type - typ ogłoszenia,
+NT - 
+\emph on
+Notification Type
+\emph default
+ - typ ogłoszenia,
 \end_layout
 
 \begin_layout Itemize
-NTS - Notification Subtype - podtyp ogłoszenia,
+NTS - 
+\emph on
+Notification Subtype
+\emph default
+ - podtyp ogłoszenia,
 \end_layout
 
 \begin_layout Itemize
-USN - Unique Service Name - Unikalna nazwa usługi / UUID
+USN - 
+\emph on
+Unique Service Name 
+\emph default
+- Unikalna nazwa usługi / UUID
 \end_layout
 
 \begin_layout Itemize
@@ -1631,14 +1847,14 @@ Organizacja stanowiąca zasady protokołu UPnP w przypadku wykrywania urządzeń
 owała również wyszukiwanie się wzajemne urządzeń UPnP.
  Do wyszukiwania służy metoda M-SEARCH, której ogólny format przedstawia
  rysunek nr 
-\series bold
-
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Metoda-M-Search"
 
 \end_inset
 
+
+\series bold
 .
  
 \series default
@@ -1671,38 +1887,61 @@ Search Target
 \end_layout
 
 \begin_layout Itemize
-ssdp:all - wyszukiwanie wszystkich urządzeń i usług,
+
+\emph on
+ssdp:all
+\emph default
+ - wyszukiwanie wszystkich urządzeń i usług,
 \end_layout
 
 \begin_layout Itemize
-upnp:rootdevice - wyszukiwanie jedynie urządzeń głównych,
+
+\emph on
+upnp:rootdevice
+\emph default
+ - wyszukiwanie jedynie urządzeń głównych,
 \end_layout
 
 \begin_layout Itemize
-uuid:device-UUID - wyszukiwanie konkretnego urządzenia według jego identyfikator
-a UUID,
+
+\emph on
+uuid:device-UUID
+\emph default
+ - wyszukiwanie konkretnego urządzenia według jego identyfikatora UUID,
 \end_layout
 
 \begin_layout Itemize
-urn:schemas-upnp-org:device:deviceType:v - wyszukiwanie urządzenia według
- typu,
+
+\emph on
+urn:schemas-upnp-org:device:deviceType:v
+\emph default
+ - wyszukiwanie urządzenia według typu,
 \end_layout
 
 \begin_layout Itemize
-urn:schemas-upnp-org:device:serviceType:v - wyszukiwanie urządzenia według
- typu usługi, którą świadczy.
+
+\emph on
+urn:schemas-upnp-org:device:serviceType:v
+\emph default
+ - wyszukiwanie urządzenia według typu usługi, którą świadczy.
 \end_layout
 
 \begin_layout Itemize
-urn:domain-name:device:deviceType:v - takie jak przeszukiwanie urządzenia
- według typu, z tym, że nazwę domeny typ urządzenia i jego wersję definiuje
- producent urządzenia UPnP,
+
+\emph on
+urn:domain-name:device:deviceType:v
+\emph default
+ - takie jak przeszukiwanie urządzenia według typu, z tym, że nazwę domeny
+ typ urządzenia i jego wersję definiuje producent urządzenia UPnP,
 \end_layout
 
 \begin_layout Itemize
-urn:domain-name:device:serviceType:v - takie jak przeszukiwanie urządzenia
- według typu usługi, z tym, że nazwę domeny, typ urządzenia i jego wersję
- definiuje producent urządzenia UPnP.
+
+\emph on
+urn:domain-name:device:serviceType:v
+\emph default
+ - takie jak przeszukiwanie urządzenia według typu usługi, z tym, że nazwę
+ domeny, typ urządzenia i jego wersję definiuje producent urządzenia UPnP.
 \end_layout
 
 \begin_layout Standard
@@ -1741,10 +1980,6 @@ TTL.
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -1802,10 +2037,6 @@ ST: search target
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -1910,7 +2141,7 @@ reference "fig:Schemat-pobierania-opisu"
 \end_inset
 
 .
- Pojedyńczy schemat pobierania opisu można podzielić na dwie operacje, uzyskania
+ Pojedynczy schemat pobierania opisu można podzielić na dwie operacje, uzyskania
  informacji o urządzeniach oraz o usługach, które one oferują.
  W najprostszym schemacie cały proces wykonywany jest w kilku krokach:
 \end_layout
@@ -1939,7 +2170,7 @@ Opis urządzenia zawiera informacje o fizycznych i logicznych kontenerach.
  kontenery.
  Natomiast opis usług określa w sposób bardzo dokładny oferowane prze urządzenie
  funkcje.
- Pojedyńcze urządzenie fizyczne może zawierać wiele urządzeń logicznych,
+ Pojedyncze urządzenie fizyczne może zawierać wiele urządzeń logicznych,
  każde z nich może być skonfigurowane jako główne (ang.
  
 \emph on
@@ -1953,7 +2184,7 @@ root device
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -1965,7 +2196,14 @@ name "fig:Schemat-pobierania-opisu"
 
 \end_inset
 
-Schemat pobierania opisu usługi
+Schemat pobierania opisu usługi (źródło 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -1974,10 +2212,33 @@ Schemat pobierania opisu usługi
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
-	filename get_description.png
+	filename png/get_description.png
 	display false
-	width 70page%
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
@@ -1993,24 +2254,13 @@ Schemat pobierania opisu usługi
 Opis urządzenia/usługi jest napisany przez dostawcę oprogramowania.
  Jest napisany w języku XML i powinien być zgodny z wytycznymi przedstawionymi
  w szablonie opisu urządzenia.
- 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "key-10"
+LatexCommand citet
+key "key-1"
 
 \end_inset
 
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-device template
-\end_layout
-
-\end_inset
-
-Najważniejszym elementem, z punktu widzenia autora, jest sposób opisu usługi.
+ Najważniejszym elementem, z punktu widzenia autora, jest sposób opisu usługi.
  Powinien być stworzony tak, aby punkty kontrolne jak największej liczby
  producentów (stan idealny - wszystkich producentów) sprzętu i oprogramowania
  potrafiły uzyskać przydatne dla nich informacje.
@@ -2063,7 +2313,7 @@ key "key-15"
 
 \begin_layout Standard
 Przykładowe wywołanie akcji do usługi znajdującej się w urządzeniu UPnP
- zostało umieszoncze na rysunku 
+ zostało umieszczone na rysunku 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Wywołanie-akcji-przez"
@@ -2080,10 +2330,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
@@ -2093,7 +2339,14 @@ name "fig:Wywołanie-akcji-przez"
 
 \end_inset
 
-Wywołanie akcji przez punkt kontrolny
+Wywołanie akcji przez punkt kontrolny (źródło 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -2102,17 +2355,36 @@ Wywołanie akcji przez punkt kontrolny
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
-	filename control.png
+	filename png/wartość_zmiennej_żądanie.png
 	display false
-	width 70page%
 
 \end_inset
 
 
-\end_layout
+\begin_inset ERT
+status open
 
 \begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -2141,7 +2413,7 @@ W opisie urządzenia UPnP przesyłana jest lista akcji możliwych do wykonania
 event
 \emph default
 ) została zdefiniowana zmiana wartości wcześniej wspomnianych zmiennych.
- Każdy punkt kontrolny może zasubskrybować (z ang.
+ Każdy punkt kontrolny może subskrybować (z ang.
  
 \emph on
 subscribe)
@@ -2247,14 +2519,15 @@ key "key-1"
 \end_inset
 
  Możliwy typ oraz rozmiar (wielkość) zmiennych jest zgodna ze schematem
- dokumentu XML 
+ dokumentu XML.
+ 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "key-38"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -2283,7 +2556,14 @@ name "fig:Komunikacja-pomiędzy-punktem"
 \end_inset
 
 Komunikacja pomiędzy punktem kontrolnym, a usługą w przypadku zapisywania
- do subskrybcji
+ do subskrypcji (źródło 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -2292,17 +2572,36 @@ Komunikacja pomiędzy punktem kontrolnym, a usługą w przypadku zapisywania
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
-	filename eventing.png
+	filename png/eventing.png
 	display false
-	width 70theight%
 
 \end_inset
 
 
-\end_layout
+\begin_inset ERT
+status open
 
 \begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -2351,7 +2650,7 @@ key "key-1"
 
 \begin_layout Standard
 Często do kontroli urządzenia poprzez warstwę prezentacji wykorzystywane
- są pozostałe wartwy stosu UPnP.
+ są pozostałe warstwy stosu UPnP.
  Nie każdy interfejs UPnP umożliwia modyfikację wszystkich danych, co zmusza
  programistów do tworzenia alternatywnych sposobów kontroli usług UPnP.
 \begin_inset CommandInset citation
@@ -2373,7 +2672,15 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Żądanie strony prezentacji od urządzenia UPnP przez punkt kontrolny
+Żądanie strony prezentacji od urządzenia UPnP przez punkt kontrolny (źródło
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -2382,10 +2689,33 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
-	filename presentation.png
+	filename png/presentation.png
 	display false
-	width 70page%
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
@@ -2426,8 +2756,9 @@ zaczerpnęła
 \emph on
  
 \emph default
-mutlimedialne rodzaje urządzeń ze specyfikacji UPnP A/V oraz dodała elementy,
- które wyróżniają DLNA (np drukarkę multimediów).
+multimedialne rodzaje urządzeń ze specyfikacji UPnP A/V oraz dodała elementy,
+ które wyróżniają DLNA (np.
+ drukarkę multimediów).
  W niniejszym rozdziale zostaną przedstawione zarówno nazwy urządzeń DLNA,
  jak i multimedialnych urządzeń UPnP A/V.
 \end_layout
@@ -2521,10 +2852,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
@@ -2534,7 +2861,14 @@ name "fig:Schemat-odtwarzania-w"
 
 \end_inset
 
-Schemat odtwarzania w UPnP A/V
+Schemat odtwarzania w UPnP A/V (źródło 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-4"
+
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -2543,17 +2877,37 @@ Schemat odtwarzania w UPnP A/V
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
-	filename upnpavplaying.png
+	filename png/diagram_integracji_upnp.png
 	display false
 	width 70page%
 
 \end_inset
 
 
-\end_layout
+\begin_inset ERT
+status open
 
 \begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -2596,7 +2950,7 @@ kamera cyfrowa,
 \end_layout
 
 \begin_layout Itemize
-odtwarzacz BluRay / DVD.
+odtwarzacz Blu-Ray / DVD.
 \end_layout
 
 \begin_layout Standard
@@ -2695,12 +3049,12 @@ W przypadku UPnP A/V, w odtwarzaniu treści multimedialnych uczestniczy punkt
 \emph on
 push
 \emph default
-, w której serwer mutlimediów wysyła treść do wybranego przez punkt kontrolny
+, w której serwer multimediów wysyła treść do wybranego przez punkt kontrolny
  odtwarzacza renderującego, bądź też metodą 
 \emph on
 pull, 
 \emph default
-w której odtwarzaczacz renderujący (ang.
+w której odtwarzacz renderujący (ang.
  
 \emph on
 MediaRenderer
@@ -2734,7 +3088,14 @@ name "fig:Architektura-odtwarzania-UPnP"
 
 \end_inset
 
-Architektura odtwarzania UPnP A/V
+Architektura odtwarzania UPnP A/V (źródło 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-4"
+
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -2744,7 +3105,7 @@ Architektura odtwarzania UPnP A/V
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename playback_architecture_upnpav.png
+	filename png/playbackarchitecture.png
 	display false
 	width 70page%
 
@@ -2807,7 +3168,7 @@ telewizor,
 \end_layout
 
 \begin_layout Itemize
-odtwarzacz DVD/BluRay,
+odtwarzacz DVD / Blu-Ray,
 \end_layout
 
 \begin_layout Itemize
@@ -2914,7 +3275,7 @@ tablety itd.
 
 \begin_layout Standard
 Uproszczony sposób działania algorytmu punktu kontrolnego, współpracującego
- z pojedyńczym serwerem multimedialnych oraz serwerem renderującym wygląda
+ z pojedynczym serwerem multimedialnych oraz serwerem renderującym wygląda
  następująco:
 \end_layout
 
@@ -3128,7 +3489,7 @@ Multimedia w UPnP A/V i DLNA
 \end_layout
 
 \begin_layout Standard
-Specyfikacja UPnP A/V została stworzona do umożliwienia oraz ustandaryzowania
+Specyfikacja UPnP A/V została stworzona do umożliwienia oraz standaryzowania
  sposobu komunikacji między urządzeniami multimedialnymi w obrębie sieci
  lokalnej.
  Ponadto miała zapewnić współpracę między produktami różnych dostawców.
@@ -3233,14 +3594,14 @@ name "tab:Typy-obsługiwanych-plików"
 
 \end_inset
 
-Typy obsługiwanych plików w DLNA - standardowe urządzenia
+Typy obsługiwanych plików w DLNA - standardowe urządzenia (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-11"
 
 \end_inset
 
-
+)
 \end_layout
 
 \end_inset
@@ -3323,7 +3684,10 @@ PNG, GIF, TIFF
 \begin_inset Text
 
 \begin_layout Plain Layout
-Audio
+Audio (ang.
+ 
+\emph on
+Audio)
 \end_layout
 
 \end_inset
@@ -3413,14 +3777,14 @@ name "tab:2Typy-obsługiwanych-plików"
 
 \end_inset
 
-Typy obsługiwanych plików w DLNA - urządzenia mobilne
+Typy obsługiwanych plików w DLNA - urządzenia mobilne (
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-11"
 
 \end_inset
 
-
+)
 \end_layout
 
 \end_inset
@@ -3503,7 +3867,10 @@ PNG, GIF, TIFF
 \begin_inset Text
 
 \begin_layout Plain Layout
-Audio
+Audio (ang.
+ 
+\emph on
+Audio)
 \end_layout
 
 \end_inset
@@ -3682,7 +4049,14 @@ name "fig:Uproszczony-schemat-komunikacji"
 
 \end_inset
 
-Uproszczony schemat komunikacji 2 urządzeń
+Uproszczony schemat komunikacji 2 urządzeń (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-17"
+
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -3691,10 +4065,34 @@ Uproszczony schemat komunikacji 2 urządzeń
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
-	filename 2box_playing.png
+	filename png/komunikacja2urzadzen.png
 	display false
-	width 100text%
+	scale 75
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
@@ -3722,7 +4120,14 @@ name "fig:2Uproszczony-schemat-komunikacji"
 
 \end_inset
 
-Uproszczony schemat komunikacji 3 urządzeń
+Uproszczony schemat komunikacji 3 urządzeń (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-17"
+
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -3731,10 +4136,34 @@ Uproszczony schemat komunikacji 3 urządzeń
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
-	filename 3box_playing.png
+	filename png/komunikacja3urzadzen.png
 	display false
-	width 100text%
+	scale 75
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
@@ -3802,16 +4231,16 @@ Wyszukiwanie kończy się wraz z wyborem pliku z wykorzystaniem metod protokołu
 \end_layout
 
 \begin_layout Standard
-Odtwarzacz mutimedialny ma możliwość, działania w typowy sposób dla tradycyjnego
- odtwarzacza muzyki lub wideo/DVD.
+Odtwarzacz multimedialny ma możliwość, działania w typowy sposób dla tradycyjneg
+o odtwarzacza muzyki lub wideo/DVD.
  Posiada opcje przewijania materiału w przód, w tył.
  Przewijanie jest wykonywane przez podawanie pożądanych bajtów pliku (np.
  bajt 50 000 - 150 000) przez odtwarzacz multimedialny.
  Wykonywanie przewijania i skoków w filmie jest możliwe tylko wtedy gdy
  serwer multimedialny udostępnia rozmiar pliku lub długość nagrania (niektóre
  odtwarzacze wymagają jednostek w minutach dla długości muzyki czy filmu,
- pomimo, że prawdiłowo wykorzystują pobieranie tzn.
- pobierają okresloną ilość bajtów).
+ pomimo, że prawidłowo wykorzystują pobieranie tzn.
+ pobierają określoną ilość bajtów).
 \end_layout
 
 \begin_layout Standard
@@ -3981,19 +4410,50 @@ Schemat typu
 \emph on
 item
 \emph default
- wraz ze standardowymi podtypami
+ wraz ze standardowymi podtypami (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+
+\end_inset
+
+)
 \end_layout
 
 \end_inset
 
-upnp_av_contentdirectory_service:2 
+
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
-	filename item_type.png
+	filename png/upnp_av_architecture.png
 	display false
 	width 70page%
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
@@ -4076,35 +4536,55 @@ ContentDirectory
 object
 \emph default
  określa właściwości, które są wspólne dla każdego z udostępnianych plików,
- jak i dla ustrukturyzowanej logicznej kolekcji materiałów.
+ jak i dla strukturyzowanej logicznej kolekcji materiałów.
  Poniższa lista przedstawia wymagane właściwości dostarczane wraz z obiektem:
 \end_layout
 
 \begin_layout Itemize
-@id - unikalny identyfikator klasy głównej,
+
+\emph on
+@id
+\emph default
+ - unikalny identyfikator klasy głównej,
 \end_layout
 
 \begin_layout Itemize
-@parentID - identyfikator klasy nadrzędnej,
+
+\emph on
+@parentID
+\emph default
+ - identyfikator klasy nadrzędnej,
 \end_layout
 
 \begin_layout Itemize
-@restricted - określa czy właściwości obiektu mogą zostać zmienione,
+
+\emph on
+@restricted
+\emph default
+ - określa czy właściwości obiektu mogą zostać zmienione,
 \end_layout
 
 \begin_layout Itemize
-dc:title - nazwa obiektu,
+
+\emph on
+dc:title
+\emph default
+ - nazwa obiektu,
 \end_layout
 
 \begin_layout Itemize
-upnp:class - klasa zawartości zgodna z UPnP
+
+\emph on
+upnp:class
+\emph default
+ - klasa zawartości zgodna z UPnP.
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-6"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -4112,15 +4592,27 @@ Dodatkowymi właściwościami opisywanej klasy są:
 \end_layout
 
 \begin_layout Itemize
-dc:creator - twórca obiektu,
+
+\emph on
+dc:creator
+\emph default
+ - twórca obiektu,
 \end_layout
 
 \begin_layout Itemize
-res - zasób / zasoby,
+
+\emph on
+res
+\emph default
+ - zasób / zasoby,
 \end_layout
 
 \begin_layout Itemize
-upnp:writeStatus - określa czy dany obiekt może być modyfikowany.
+
+\emph on
+upnp:writeStatus
+\emph default
+ - określa czy dany obiekt może być modyfikowany.
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-6"
@@ -4160,14 +4652,29 @@ oraz wprowadza następujące właściwości (wszystkie są opcjonalne):
 \end_layout
 
 \begin_layout Itemize
-@refID - odniesienie do pliku głównego (w przypadku gdy plik znajduje się
- w logicznym kontenerze).
+
+\emph on
+@refID
+\emph default
+ - odniesienie do pliku głównego (w przypadku gdy plik znajduje się w logicznym
+ kontenerze).
  Jeżeli udostępniany zasób jest odniesieniem, wówczas opisywane pole jest
  obowiązkowe,
 \end_layout
 
 \begin_layout Itemize
-upnp:bookmarkID - identyfikator obiektu, do którego została stworzona zakładka.
+
+\emph on
+upnp:bookmarkID
+\emph default
+ - identyfikator obiektu, do którego została stworzona zakładka.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -4197,27 +4704,53 @@ object
 \end_layout
 
 \begin_layout Itemize
-@childCount - liczba obiektów, które znajdują się w kontenerze,
+
+\emph on
+@childCount
+\emph default
+ - liczba obiektów, które znajdują się w kontenerze,
 \end_layout
 
 \begin_layout Itemize
-upnp:CreateClass - zawiera klasy (typy obiektów), które mogą zostać stworzone
- wewnątrz kontenera,
+
+\emph on
+upnp:CreateClass
+\emph default
+ - zawiera klasy (typy obiektów), które mogą zostać stworzone wewnątrz kontenera
+,
 \end_layout
 
 \begin_layout Itemize
-upnp:SearchClass - zawiera listę klas (typów obiektów), które można wyszukać
- w danym kontenerze,
+
+\emph on
+upnp:SearchClass 
+\emph default
+- zawiera listę klas (typów obiektów), które można wyszukać w danym kontenerze,
 \end_layout
 
 \begin_layout Itemize
-@searchable - określa, czy na kontenerze może być wykonywane wyszukiwanie
- (wartośc 0 lub 1),
+
+\emph on
+@searchable
+\emph default
+ - określa, czy na kontenerze może być wykonywane wyszukiwanie (wartość
+ 0 lub 1),
 \end_layout
 
 \begin_layout Itemize
-@neverPlayable - określa, czy kontener kiedykolwiek będzie posiadał zawartość
- możliwą do odtwarzania (wartość 0 lub 1, domyślna wartość 0).
+
+\emph on
+@neverPlayable
+\emph default
+ - określa, czy kontener kiedykolwiek będzie posiadał zawartość możliwą
+ do odtwarzania (wartość 0 lub 1, domyślna wartość 0).
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -4249,43 +4782,75 @@ res -
 
 \begin_deeper
 \begin_layout Itemize
-res@resolution - rozdzielczość obrazu,
+
+\emph on
+res@resolution
+\emph default
+ - rozdzielczość obrazu,
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-upnp:longDescription - długi opis obrazu,
+
+\emph on
+upnp:longDescription
+\emph default
+ - długi opis obrazu,
 \end_layout
 
 \begin_layout Itemize
-upnp:storageMedium - rodzaj pamięci,
+
+\emph on
+upnp:storageMedium
+\emph default
+ - rodzaj pamięci,
 \end_layout
 
 \begin_layout Itemize
-upnp:rating - ocena,
+
+\emph on
+upnp:rating
+\emph default
+ - ocena,
 \end_layout
 
 \begin_layout Itemize
-dc:description - opis obrazu,
+
+\emph on
+dc:description
+\emph default
+ - opis obrazu,
 \end_layout
 
 \begin_layout Itemize
-dc:publisher - wydawca,
+
+\emph on
+dc:publisher
+\emph default
+ - wydawca,
 \end_layout
 
 \begin_layout Itemize
-dc:date - data powstania obrazu,
+
+\emph on
+dc:date
+\emph default
+ - data powstania obrazu,
 \end_layout
 
 \begin_layout Itemize
-dc:rights - określa prawa własności
+
+\emph on
+dc:rights
+\emph default
+ - określa prawa własności.
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-6"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -4303,6 +4868,13 @@ photo:imageItem
 upnp:album 
 \emph default
 - nazwa albumu.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4345,6 +4917,13 @@ TN (ang.
 thumbnail
 \emph default
 ) - miniatura.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4357,32 +4936,75 @@ Obsługiwany obowiązkowo typ grafik to JPEG_SM.
 \end_layout
 
 \begin_layout Itemize
-PNG_SM_ICO - profil małej ikony formatu PNG o maksymalnej rozdzielczości
- 48 x 48 pikseli, 
+profil PNG_SM_ICO,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+mała ikona formatu PNG,
 \end_layout
 
 \begin_layout Itemize
-PNG_LRG_ICO - profil dużej ikony formatu PNG o maksymalnej rozdzielczości
- 120 x 120 pikseli, 
+maksymalna rozdzielczość 48 x 48 pikseli, 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+profil PNG_LRG_ICO,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+duża ikona formatu PNG,
 \end_layout
 
 \begin_layout Itemize
-JPEG_SM_ICO - profil dużej ikony formatu JPEG o maksymalnej rozdzielczości
- 48 x 48 pikseli, 
+maksymalna rozdzielczość 120 x 120 pikseli, 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+profil JPEG_SM_ICO,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+mała ikona formatu JPEG,
 \end_layout
 
 \begin_layout Itemize
-JPEG_LRG_ICO - profil dużej ikony formatu JPEG o maksymalnej rozdzielczości
- 120 x 120 pikseli.
+maksymalna rozdzielczość 48 x 48 pikseli, 
 \end_layout
 
+\end_deeper
+\begin_layout Itemize
+profil JPEG_LRG_ICO,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+duża ikona formatu JPEG,
+\end_layout
+
+\begin_layout Itemize
+maksymalna rozdzielczość 120 x 120 pikseli.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-9"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 W przypadku ikon, jeżeli urządzenie wspiera ich udostępnianie, wówczas musi
  udostępniać ich wszystkie rozmiary.
 \end_layout
 
 \begin_layout Standard
-Na podstawie dokumentacji DLNA powstala tabela 
+Na podstawie dokumentacji DLNA powstała tabela 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Tabela-porównawcza-formatów"
@@ -4817,7 +5439,7 @@ Typ audio służy do udostępniania plików audio, które są przeznaczone jedyn
  do słuchania.
  Oznacza to, że klasa ta nie dotyczy ścieżki dźwiękowej w materiałach wideo,
  takich jak filmy czy transmisja telewizyjna.
- Klasą nadrzedną dla audio, jest klasa 
+ Klasą nadrzędną dla audio, jest klasa 
 \emph on
 item
 \emph default
@@ -4831,11 +5453,19 @@ res
 \end_layout
 
 \begin_layout Itemize
-upnp:genre - gatunek pliku audio,
+
+\emph on
+upnp:genre
+\emph default
+ - gatunek pliku audio,
 \end_layout
 
 \begin_layout Itemize
-dc:description - opis pliku,
+
+\emph on
+dc:description
+\emph default
+ - opis pliku,
 \end_layout
 
 \begin_layout Itemize
@@ -4863,16 +5493,31 @@ dc:language
 \end_layout
 
 \begin_layout Itemize
-dc:relation - dowiązania (powiązania) do innych utworów,
+
+\emph on
+dc:relation
+\emph default
+ - dowiązania (powiązania) do innych utworów,
 \end_layout
 
 \begin_layout Itemize
-dc:rights - informacje o prawach własności (m.in.
+
+\emph on
+dc:rights
+\emph default
+ - informacje o prawach własności (m.in.
  intelektualnej),
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Klasa audio posiada następujące podtypy, określające rodzaj dostępnego materialu
+Klasa audio posiada następujące podtypy, określające rodzaj dostępnego materiału
  dźwiękowego:
 \end_layout
 
@@ -4901,6 +5546,13 @@ książka audio (ang.
 audioBook
 \emph default
 ).
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4966,6 +5618,13 @@ podmiot odpowiedzialny za zasób,
 dc:date - 
 \emph default
 data związana z zasobem,
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4980,43 +5639,86 @@ res
 \end_layout
 
 \begin_layout Itemize
-upnp:region - region związany z zasobem (np.
+
+\emph on
+upnp:region
+\emph default
+ - region związany z zasobem (np.
  Europa, Ameryka),
 \end_layout
 
 \begin_layout Itemize
-upnp:radioCallSign - nazwa radio,
+
+\emph on
+upnp:radioCallSign
+\emph default
+ - nazwa radio,
 \end_layout
 
 \begin_layout Itemize
-upnp:radioStationID - identyfikator stacji (np.
+
+\emph on
+upnp:radioStationID
+\emph default
+ - identyfikator stacji (np.
  częstotliwość nadawania),
 \end_layout
 
 \begin_layout Itemize
-upnp:radioBand - pasmo nadawania (np.
+
+\emph on
+upnp:radioBand
+\emph default
+ - pasmo nadawania (np.
  AM, FM),
 \end_layout
 
 \begin_layout Itemize
-upnp:channelNr - powiązania kanału z numerem stacji w odbiorniku,
+
+\emph on
+upnp:channelNr
+\emph default
+ - powiązania kanału z numerem stacji w odbiorniku,
 \end_layout
 
 \begin_layout Itemize
-upnp:signalStrength - siła sygnału , 
+
+\emph on
+upnp:signalStrength
+\emph default
+ - siła sygnału , 
 \end_layout
 
 \begin_layout Itemize
-upnp:signalLocked - informacja czy częstotliwość odbioru została zablokowana
- (możliwość odbioru jednego kanału),
+
+\emph on
+upnp:signalLocked
+\emph default
+ - informacja czy częstotliwość odbioru została zablokowana (możliwość odbioru
+ jednego kanału),
 \end_layout
 
 \begin_layout Itemize
-upnp:tuned - informacja czy źródło jest odpowiednio ustawione,
+
+\emph on
+upnp:tuned
+\emph default
+ - informacja czy źródło jest odpowiednio ustawione,
 \end_layout
 
 \begin_layout Itemize
-upnp:recordable - informacja czy materiał może być nagrywany.
+
+\emph on
+upnp:recordable
+\emph default
+ - informacja czy materiał może być nagrywany.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5031,20 +5733,43 @@ res
 \end_layout
 
 \begin_layout Itemize
-upnp:storageMedium - rodzaj pamięci (np.
+
+\emph on
+upnp:storageMedium
+\emph default
+ - rodzaj pamięci (np.
  płyta CD),
 \end_layout
 
 \begin_layout Itemize
-upnp:producer - wydawca,
+
+\emph on
+upnp:producer
+\emph default
+ - wydawca,
 \end_layout
 
 \begin_layout Itemize
-dc:contributor - podmiot odpowiedzialny za zasób,
+
+\emph on
+dc:contributor
+\emph default
+ - podmiot odpowiedzialny za zasób,
 \end_layout
 
 \begin_layout Itemize
-dc:date - data związana z zasobem.
+
+\emph on
+dc:date
+\emph default
+ - data związana z zasobem.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -5069,14 +5794,13 @@ wy programisty, jak i użytkownika.
 W ogólnie rozumianym kontenerze multimedialnym może być przechowywanych
  wiele strumieni obrazów, audio, wideo, napisów, informacji o strumieniach
  i innych metadanych.
- Pozwala on na przechowywanie wszystkich tych danych w jednym pliku
+ Pozwala on na przechowywanie wszystkich tych danych w jednym pliku.
 \begin_inset CommandInset citation
 LatexCommand citet
 key "key-42"
 
 \end_inset
 
-.
  Natomiast jako format wideo definiowany jest sposób kodowania strumienia
  wideo.
  Analogiczne definicje dotyczą formatów audio oraz obrazów.
@@ -5102,74 +5826,149 @@ res
 \end_layout
 
 \begin_layout Itemize
-upnp:genre - gatunek pliku wideo,
+
+\emph on
+upnp:genre
+\emph default
+ - gatunek pliku wideo,
 \end_layout
 
 \begin_layout Itemize
-upnp:genre@id - identyfikator gatunku, zgodny ze schematem definiującym
- możliwe gatunki wykorzystywane w 
+
+\emph on
+upnp:genre@id
+\emph default
+ - identyfikator gatunku, zgodny ze schematem definiującym możliwe gatunki
+ wykorzystywane w 
 \emph on
 upnp:genre,
 \end_layout
 
 \begin_layout Itemize
-upnp:genre@extended - dodatkowe informacje o gatunku wideo,
+
+\emph on
+upnp:genre@extended
+\emph default
+ - dodatkowe informacje o gatunku wideo,
 \end_layout
 
 \begin_layout Itemize
-upnp:longDescription - długi opis,
+
+\emph on
+upnp:longDescription
+\emph default
+ - długi opis,
 \end_layout
 
 \begin_layout Itemize
-upnp:producer - producent
+
+\emph on
+upnp:producer
+\emph default
+ - producent
 \end_layout
 
 \begin_layout Itemize
-upnp:rating - ocena,
+
+\emph on
+upnp:rating
+\emph default
+ - ocena,
 \end_layout
 
 \begin_layout Itemize
-upnp:actor - obsada aktorów,
+
+\emph on
+upnp:actor
+\emph default
+ - obsada aktorów,
 \end_layout
 
 \begin_layout Itemize
-upnp:director - reżyser,
+
+\emph on
+upnp:director
+\emph default
+ - reżyser,
 \end_layout
 
 \begin_layout Itemize
-dc:description - opis,
+
+\emph on
+dc:description
+\emph default
+ - opis,
 \end_layout
 
 \begin_layout Itemize
-dc:publisher - wydawca,
+
+\emph on
+dc:publisher 
+\emph default
+- wydawca,
 \end_layout
 
 \begin_layout Itemize
-dc:language - język wideo,
+
+\emph on
+dc:language 
+\emph default
+- język wideo,
 \end_layout
 
 \begin_layout Itemize
-dc:relation - adres URL z powiązanymi materiałami,
+
+\emph on
+dc:relation
+\emph default
+ - adres URL z powiązanymi materiałami,
 \end_layout
 
 \begin_layout Itemize
-upnp:playbackCount - ilość odtworzeń materiału,
+
+\emph on
+upnp:playbackCount
+\emph default
+ - ilość odtworzeń materiału,
 \end_layout
 
 \begin_layout Itemize
-upnp:lastPlaybackTime - data ostatniego odtwarzania,
+
+\emph on
+upnp:lastPlaybackTime
+\emph default
+ - data ostatniego odtwarzania,
 \end_layout
 
 \begin_layout Itemize
-upnp:lastPlaybackPosition - ostatnia pozycja odtwarzania,
+
+\emph on
+upnp:lastPlaybackPosition
+\emph default
+ - ostatnia pozycja odtwarzania,
 \end_layout
 
 \begin_layout Itemize
-upnp:recordedDayOfWeek - dzień tygodnia, w którym nagranie zostało wykonane,
+
+\emph on
+upnp:recordedDayOfWeek
+\emph default
+ - dzień tygodnia, w którym nagranie zostało wykonane,
 \end_layout
 
 \begin_layout Itemize
-upnp:srsRecordScheduleID - identyfikator nagrania w harmonogramie nagrań.
+
+\emph on
+upnp:srsRecordScheduleID
+\emph default
+ - identyfikator nagrania w harmonogramie nagrań.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5200,11 +5999,18 @@ teledysk / klip muzyczny (
 musicVideoClip:videoItem
 \emph default
 ).
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Klasa film reprezentuje materiały filmowe i umożliwia załączenie dodatkowych
- danych odnośnie filmu w wyspecyfikowanych, przez autorów dokumentacji UPnP
+ danych odnośnie filmu w specyfikowanych, przez autorów dokumentacji UPnP
  A/V, atrybutach.Na atrybuty składają się:
 \end_layout
 
@@ -5278,6 +6084,13 @@ upnp:episodeCount
 upnp:episodeNr 
 \emph default
 - numer odcinka.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-6"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5328,15 +6141,15 @@ Advanced Video Coding
 \end_layout
 
 \begin_layout Standard
-W przypadku zdjęć prym wiedzie format JPEG, który jest ustandaryzowany przez
- organizację ISO/IEC 
+W przypadku zdjęć prym wiedzie format JPEG, który jest standaryzowany przez
+ organizację ISO/IEC (
 \begin_inset CommandInset citation
 LatexCommand citet
 key "key-41"
 
 \end_inset
 
-, jest formatem kompresji stratnej.
+), jest formatem kompresji stratnej.
  Jednakże kompromis między kompresją, a jakością obrazu (kompresja 10:1)
  jest na tyle zadowalający, że stał się najpopularniejszym formatem danych
  graficznych (z pominięciem zastosowań profesjonalnych, gdzie często wykorzystyw
@@ -5357,18 +6170,18 @@ MPEG-1/MPEG-2 Audio Layer 3
 \emph on
 Internet Engineering Task Force
 \emph default
-) w dokumencie RFC 5219 
+) w dokumencie RFC 5219 (
 \begin_inset CommandInset citation
 LatexCommand citet
 key "key-35"
 
 \end_inset
 
-.
+).
  W swojej pierwotnej, a zarazem najpopularniejszej wersji pozwala na zapis
  muzyki w postaci dźwięku jednokanałowego (mono) lub dwukanałowego (stereo)
  i oferuje najwyższy stopień kompresji, przy zachowaniu dobrej jakości dźwięku.
- W przypadku ścieżek dźwiękowych do filmów czętsze zastosowanie ma standard
+ W przypadku ścieżek dźwiękowych do filmów częstsze zastosowanie ma standard
  AC3 lub DTS (standard DLNA zapewnia wsparcie jedynie dla dźwięku AC3).
  Górują one nad MP3 możliwością przechowywania dźwięku przestrzennego.
 \end_layout
@@ -5393,7 +6206,7 @@ Muzyka
 \end_layout
 
 \begin_layout Standard
-Muzyke w kontekście udostępniania UPnP A/V oraz DLNA można rozumieć jako
+Muzyka w kontekście udostępniania UPnP A/V oraz DLNA można rozumieć jako
  pliki audio zawierające utwory muzyczne lub ścieżki dźwiękowe.
  Ilość formatów kompresji danych audio jest bardzo wiele.
  Niektóre służą do przesyłania głosu (np.
@@ -5505,7 +6318,17 @@ name "tab:Podział-formatów-plików"
 
 \end_inset
 
-Podział formatów plików graficznych (wiki)
+Podział formatów plików graficznych (źródło 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -5977,14 +6800,14 @@ Pliki graficzne zawierające zdjęcia, najczęściej przechowywane są w formaci
  Pierwszy z nich przeznaczony jest do zapisów obrazów naturalnych, w którym
  nie ma konieczności dokładnego odwzorowania ostrych krawędzi oraz uwydatniania
  szczegółów.JPEG jest standardem organizacji ISO o nazwie ISO/IEC IS 10918-1
- oraz ITU-T Recommendation T.81 (standard dwuczęściowy) 
+ oraz ITU-T Recommendation T.81 (standard dwuczęściowy).
+ 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "key-41"
 
 \end_inset
 
-.
  Drugi z nich, format PNG (ang.
  
 \emph on
@@ -6127,7 +6950,7 @@ Kontenery filmowe pozwalają przechowywać różne formaty: wideo (część z ni
  lub przechowywania materiału trójwymiarowego 3D.
  Informacje o zawartości kontenera multimedialnego znajdują się w metadanych
  pliku.
- Każdy rodzaj konteneru posiada (niestety) zróżnicowany sposób tworzenia
+ Każdy rodzaj kontenera posiada (niestety) zróżnicowany sposób tworzenia
  metadanych.
  Utrudnia to w znaczący sposób łatwe wsparcie ich jak największej ilości.
 \end_layout
@@ -6156,9 +6979,12 @@ index.bdmv
  (zawierający informacje o obiektach filmowych) oraz katalogów: PLAYLIST
  (lista odtwarzania filmu / rozdziały), CLIPINF (informacje o klipach wideo),
  STREAM (strumień audio wideo w kontenerze m2ts - ang.
- MPEG-2 Transport Stream), AUXDATA (pliki dźwiękowe oraz czcionki dla plików
- z napisami), BACKUP (katalogów zawierający kopie zapasowe plików index.bdmv
- oraz MovieObject.bdmv).
+ 
+\emph on
+MPEG-2 Transport Stream
+\emph default
+), AUXDATA (pliki dźwiękowe oraz czcionki dla plików z napisami), BACKUP
+ (katalogów zawierający kopie zapasowe plików index.bdmv oraz MovieObject.bdmv).
 \end_layout
 
 \begin_layout Standard
@@ -6596,14 +7422,14 @@ Advanced Video Coding
  projekty zostały połączone.
  Standard jest opisany w dokumencie 
 \emph on
-MPEG-4 Part 10, Advanced Video Coding 
+MPEG-4 Part 10, Advanced Video Coding (
 \begin_inset CommandInset citation
 LatexCommand citet
 key "key-39"
 
 \end_inset
 
-.
+).
 
 \emph default
  Uznawany obecnie za najbardziej wydajny standard kodowania, pozwalający
@@ -6625,10 +7451,6 @@ Urządzenia DLNA (i nie tylko) posiadają wbudowane dekodery formatów wideo,
  
 \end_layout
 
-\begin_layout Part
-Implementacja serwera UPnP A/V
-\end_layout
-
 \begin_layout Chapter
 Oprogramowanie serwera UPnP A/V
 \end_layout
@@ -6645,9 +7467,9 @@ WiFi
  odtwarzać materiały udostępniane przez serwery UPnP A/V oraz DLNA.
  Autor na potrzeby niniejszej pracy stworzył w pełni funkcjonalny serwer
  UPnP A/V współpracujący z urządzeniami UPnP A/V i DLNA.
- Głównym celem aplikacji jest umożliwenie kooperacji dwóch urządzeń ze sobą,
- w taki sposób, aby odtwarzacz potrafił wykorzystać jak największą możliwą
- ilość funkcji określoną w specyfikacjach UPnP A/V oraz DLNA.
+ Głównym celem aplikacji jest umożliwienie kooperacji dwóch urządzeń ze
+ sobą, w taki sposób, aby odtwarzacz potrafił wykorzystać jak największą
+ możliwą ilość funkcji określoną w specyfikacjach UPnP A/V oraz DLNA.
 \end_layout
 
 \begin_layout Section
@@ -6847,9 +7669,9 @@ W przypadku środowiska Java wymienione we wcześniejszych akapitach wymagania
  aplikacji Java, poddawała w wątpliwość wydajną pracę serwera zaprojektowanego
  w tym języku na mało wydajnych urządzeniach (np.
  routery).
- Po kilku próbah uruchomienia serwera Tomcat na routerze firmy Linksys E3000,
- autor podjął decyzję o zaprzestaniu dalszych prób i poszukiwaniu odpowiedniego
- środowiska do stworzenia aplikacji.
+ Po kilku próbach uruchomienia serwera Tomcat na routerze firmy Linksys
+ E3000, autor podjął decyzję o zaprzestaniu dalszych prób i poszukiwaniu
+ odpowiedniego środowiska do stworzenia aplikacji.
  Wybór padł na język Python do realizacji oprogramowania.
 \end_layout
 
@@ -6945,7 +7767,8 @@ Wykorzystane narzędzia
 
 \begin_layout Standard
 Aplikacja serwera UPnP A/V została napisana w języku Python (wersja 2.7).
- Jej szkielet został oparty o zmodyfikowaną wersję framework'a 
+ Jej szkielet został oparty o zmodyfikowaną wersję ramy projektowej (tzw.
+ framework'a) 
 \emph on
 Coherence, 
 \emph default
@@ -6962,7 +7785,8 @@ reference "sub:Framework’i-UPnP"
  
 \emph default
 Druga aplikacja, zapewniająca zarządzanie serwerem została napisana w języku
- Python, HTML oraz Javascript z wykorzystaniem popularnego framework'a Django.
+ Python, HTML oraz Javascript z wykorzystaniem popularnej ramy projektowej
+ Django.
 \end_layout
 
 \begin_layout Standard
@@ -7006,7 +7830,7 @@ T-SQL,
 
 \end_deeper
 \begin_layout Itemize
-framework'i
+ramy projektowe
 \end_layout
 
 \begin_deeper
@@ -7055,23 +7879,24 @@ name "sub:Framework’i-UPnP"
 
 \end_inset
 
-Framework’i UPnP
+Ramy projektowe UPnP
 \end_layout
 
 \begin_layout Standard
-W internecie można odnaleźć bardzo dużo framework'ów, które obsługują UPnP
- A/V oraz DLNA.
+W internecie można odnaleźć bardzo dużo ram projektowych (tzw.
+ framework'ów), które obsługują UPnP A/V oraz DLNA.
  Przed wyborem języka programowania autor skupił się na poszukiwaniu odpowiednie
 go środowiska (framework'a), który wspiera komunikację w sieci multimedialnej,
  posiada darmową, otwartą do modyfikacji licencję oraz nie obciąża w znaczący
  sposób systemu operacyjnego.
- Autor nie odnalazł framework'a, który natywnie wspierałby specyfikację
+ Autor nie odnalazł ramy projektowej, który natywnie wspierałby specyfikację
  DLNA.
  Jest to spowodowane prawdopodobnie koniecznością ponoszenia kosztów licencji
  DLNA.
- Liczba framework'ów, które wspierają protokół UPnP oraz UPnP A/V, pomimo
- że nie jest duża, to jest w zadowalający sposób zaimplementowana, dzięki
- czemu autor nie musiał zaprogramować niższych warstw opisywanego protokołu.
+ Liczba środowisk projktowych, które wspierają protokół UPnP oraz UPnP A/V,
+ pomimo że nie jest duża, to jest w zadowalający sposób zaimplementowana,
+ dzięki czemu autor nie musiał zaprogramować niższych warstw opisywanego
+ protokołu.
 \end_layout
 
 \begin_layout Standard
@@ -7103,8 +7928,8 @@ waniu dla komputerów klasy PC, jak i oprogramowaniu Java dla smartfonów
 \end_layout
 
 \begin_layout Standard
-Drugim branym pod uwagę jako podstawę do aplikacji serwera UPnP A/V framework'ie
-m był 
+Drugim branym pod uwagę jako podstawę do aplikacji serwera UPnP A/V ramą
+ projektową było oprogramowanie 
 \emph on
 CyberLink for Java 
 \begin_inset CommandInset citation
@@ -7140,35 +7965,15 @@ Linux
 \emph default
 programu MiniUPnP 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "key-29"
+LatexCommand citet
+key "key-25"
 
 \end_inset
 
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-lub MiniDLNA 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
+ lub MiniDLNA 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "key-30"
+LatexCommand citet
+key "key-26"
 
 \end_inset
 
@@ -7221,9 +8026,9 @@ szablony
  filmów itd.
  Niestety testy oprogramowania wykazały, że sposób implementacji protokołu
  nie zapewnia komunikacji z wieloma urządzeniami (w tym mobilnymi).
- Autor zdecydował się wykorzystać w swoim oprogramowaniu opisywany framework
- oraz wprowadzić w nim niezbędne modyfikacje, co dzięki liberalnej licencji
- MIT było możliwe.
+ Autor zdecydował się wykorzystać w swoim oprogramowaniu opisywaną ramę
+ projektową oraz wprowadzić w niej niezbędne modyfikacje, co dzięki liberalnej
+ licencji MIT było możliwe.
 \end_layout
 
 \begin_layout Section
@@ -7300,7 +8105,14 @@ zgodnie ze strukturą katalogów,
 \end_layout
 
 \begin_layout Itemize
-według typów plików (sortowanie według typów multimedialnych MIME),
+według typów plików (sortowanie według typów multimedialnych MIME 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "key-30"
+
+\end_inset
+
+),
 \end_layout
 
 \begin_layout Itemize
@@ -7797,7 +8609,7 @@ reference "tab:Parametry-dla-kategorii"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -8708,7 +9520,7 @@ Zarządzanie aplikacją
 
 \begin_layout Standard
 Serwer zarządzający serwerem multimediów UPnP A/V jest to aplikacja internetowa
- przygotowana w oparciu o framework 
+ przygotowana w oparciu o środowisko 
 \emph on
 Django.
  
@@ -8736,7 +9548,7 @@ Apache
 
 \begin_layout Standard
 Do zarządzania opcjami aplikacji konieczne jest wykorzystanie przeglądarki
- WWW i nawigowanie do udotępnianej strony WWW np.
+ WWW i nawigowanie do udostępnianej strony WWW np.
  
 \begin_inset Flex URL
 status collapsed
@@ -8779,6 +9591,12 @@ multimedia -
 media
 \emph default
 ,
+\end_layout
+
+\begin_layout Itemize
+dziennik zdarzeń - 
+\emph on
+help,
 \end_layout
 
 \begin_layout Itemize
@@ -8915,7 +9733,10 @@ reference "fig:Ustawienia-serwera-UPnP"
 
 \end_inset
 
-
+.
+ Na rysunku jest również widoczny komunikat o wyłączonym serwerze zarządzającym.
+ Wówczas ustawienia są możliwe tylko do odczytu.
+ Modyfikacja będzie możliwa po uruchomieniu serwera mutlimedialnego.
 \end_layout
 
 \begin_layout Standard
@@ -9085,6 +9906,60 @@ Wybieranie multimediów dla serwera UPnP A/V
 \end_layout
 
 \begin_layout Standard
+Trzecia opcja umożliwia użytkownikowi przeglądanie dziennika zdarzeń serwera
+ multimedialnego UPnP A/V, który umożliwia sprawdzenie wszystkich akcji
+ wykonanych przez serwer multimedialny.
+ Przykładowy widok dziennika zdarzeń widoczny jest na rysunku 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Dziennik-zdarzeń-serwera"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Dziennik-zdarzeń-serwera"
+
+\end_inset
+
+Dziennik zdarzeń serwera UPnP A/V
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename dlnaserver_web4.png
+	display false
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Ostatni z dostępnych ekranów, 
 \begin_inset Quotes pld
 \end_inset
@@ -9217,7 +10092,7 @@ w wersji 3
 \emph on
 SQLite
 \emph default
- została stworzona z myślą o przechowywaniu małej ilości rekodordów.
+ została stworzona z myślą o przechowywaniu małej ilości rekordów.
  Obsługuje się ją poprzez zewnętrzną bibliotekę.
  W wypadku opisywanej aplikacji wykorzystany został framework 
 \emph on
@@ -9225,8 +10100,8 @@ SQLAlchemy
 \emph default
 (wersja 0.6) 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "key-36"
+LatexCommand citet
+key "key-31"
 
 \end_inset
 
@@ -9244,8 +10119,8 @@ MySQL
  narzut komunikacyjny).
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "key-27"
+LatexCommand citet
+key "key-29"
 
 \end_inset
 
@@ -9257,7 +10132,7 @@ Główna aplikacja, która udostępnia multimedia w sieci UPnP A/V i DLNA ma
  możliwość uruchomienia w tle (ang.
  
 \emph on
-backround
+background
 \emph default
 ) lub w trybie pierwszoplanowym (ang.
  
@@ -9274,7 +10149,7 @@ foreground
 \emph on
 MediaStore
 \emph default
-, który jest klasą nadrzedną dla wszystkich udostępnianych obiektów 
+, który jest klasą nadrzędną dla wszystkich udostępnianych obiektów 
 \emph on
 MediaItem, 
 \emph default
@@ -9328,10 +10203,34 @@ Diagram sekwencji modułu serwera UPnP A/V
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
-	filename diagram_sekwencji.png
+	filename png/diagram_sekwencji.png
 	display false
-	width 80page%
+	width 70page%
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
@@ -9442,7 +10341,7 @@ Klasa
 MediaStore
 \emph default
  jest pierwszą inicjalizowaną klasą, która jest dziedziczona po klasach
- framework'a 
+ środowiska 
 \emph on
 Coherence
 \emph default
@@ -9556,12 +10455,12 @@ Katalogi
 \end_layout
 
 \begin_layout Standard
-Wczytanie pliku multimedialnego lub tworzenie konteneru, precyzyjnie określając
+Wczytanie pliku multimedialnego lub tworzenie kontenera, precyzyjnie określając
  od strony implementacyjnej, jest stworzeniem obiektu 
 \emph on
 MediaItem
 \emph default
-, gdzie jeden plik lub kontener, oznacza pojedyńczy obiekt 
+, gdzie jeden plik lub kontener, oznacza pojedynczy obiekt 
 \emph on
 MediaItem
 \emph default
@@ -9607,10 +10506,34 @@ MediaStore
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
-	filename diagram_stanow_mediastore.png
+	filename png/diagram_stanow_mediastore.png
 	display false
-	width 80page%
+	width 77page%
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
@@ -9631,7 +10554,7 @@ Klasa
 \emph on
 MediaItem
 \emph default
- przechowuje informacje o pojedyńczym obiekcie schematu UPnP.
+ przechowuje informacje o pojedynczym obiekcie schematu UPnP.
  Wyróżniamy tu takie typy jak:
 \end_layout
 
@@ -9861,10 +10784,34 @@ MediaItem
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
-	filename diagram_stanow_mediaitem.png
+	filename png/diagram_stanow_mediaitem.png
 	display false
-	width 80page%
+	width 75page%
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
@@ -9877,7 +10824,7 @@ MediaItem
 \end_layout
 
 \begin_layout Subsection
-Modyfikacja frameworka UPnP Coherence
+Modyfikacja ramy projektowej UPnP Coherence
 \end_layout
 
 \begin_layout Standard
@@ -9910,8 +10857,8 @@ Coherence
 \emph default
 , MIT 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "key-25"
+LatexCommand citet
+key "key-27"
 
 \end_inset
 
@@ -10405,7 +11352,7 @@ id sesji - identyfikator sesji WWW,
 
 \begin_layout Itemize
 kontener MIME - wartość bool'owska określająca czy serwer UPnP A/V tworzy
- biblioteke multimedialną kontenerów MIME,
+ bibliotekę multimedialną kontenerów MIME,
 \end_layout
 
 \begin_layout Itemize
@@ -10648,6 +11595,18 @@ JSON
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
 { 
 \begin_inset Quotes pld
 \end_inset
@@ -10665,6 +11624,17 @@ Running
 \end_inset
 
  }
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -10859,7 +11829,7 @@ reference "chap:Przegląd-oprogramowania-UPnP"
 \end_layout
 
 \begin_layout Standard
-Poza opisanymi powyżej urządzeniami przetestowane zostały pojedyńcze modele
+Poza opisanymi powyżej urządzeniami przetestowane zostały pojedyncze modele
  (dzięki udostępnieniu sprzętu przez jeden ze znanych marketów elektronicznych)
  telewizorów firm, takich jak Sony Bravia, Phillips oraz LG Smart TV.
  W kolejnych podrozdziałach zostały przedstawione jedynie wyniki testów,
@@ -11023,7 +11993,7 @@ plik z rozszerzeniem M4A.
 \end_layout
 
 \begin_layout Standard
-Ostatnimi przygotwanymi plikami były pliki wideo, o następujących parametrach:
+Ostatnimi przygotowanymi plikami były pliki wideo, o następujących parametrach:
 \end_layout
 
 \begin_layout Itemize
@@ -11454,8 +12424,8 @@ Windows Media Connect
 
 \begin_layout Standard
 Problemów w trakcie pisania oprogramowania wystąpiło dużo więcej, jednakże
- autor wybrał te, które pozwolą czytelnikowi zauważyć, jak pomimo ustandaryzowan
-ia sposoby udostępniania multimediów w sieci, różni producenci tworzą własne
+ autor wybrał te, które pozwolą czytelnikowi zauważyć, jak pomimo standaryzacji
+ sposobów udostępniania multimediów w sieci, różni producenci tworzą własne
  schematy, całkiem odrębne od specyfikacji.
 \end_layout
 
@@ -11465,7 +12435,7 @@ Wyniki testów
 
 \begin_layout Standard
 Niniejszy podrozdział zawiera opisane wyniki poszczególnych testów, których
- procedura wykonania została opisana w poprzednim punkcie
+ procedura wykonania została opisana w poprzednim punkcie 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Sposób-testowania-aplikacji"
@@ -11542,10 +12512,34 @@ Karta Szczegóły serwera DLNA w odtwarzaczu mobilnym DLNA - Samsung AllShare
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
 	filename server_description.png
 	display false
-	height 20pheight%
+	height 30pheight%
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
@@ -11584,7 +12578,7 @@ na na wszystkich sprawdzanych urządzeniach oraz oprogramowaniu dla komputerów
 
 \begin_layout Standard
 Po dodaniu zawartości, pakiet informujący o konieczności aktualizacji listy
- plików, został spreparowany poprawnie i wszystkie zasubskrybowane urządzenia
+ plików, został spreparowany poprawnie i wszystkie subskrybowane urządzenia
  go otrzymały.
  Jednakże niektóre programy klienckie UPnP A/V (np.
  Samsung AllShare) nie reagują żądaniem odświeżenia listy plików, przez
@@ -13089,7 +14083,7 @@ Oprogramowanie UPnP A/V oraz DLNA umożliwia wygodne odtwarzanie materiałów
 \begin_layout Standard
 W rozdziale zostały zestawione wybrane programy, zgodne ze standardami UPnP
  A/V lub DLNA.
- W kolejnych podrozdziałach wyróżnione zostały możliwości serwerów mutlimedialny
+ W kolejnych podrozdziałach wyróżnione zostały możliwości serwerów multimedialny
 ch, a następnie odtwarzaczy multimedialnych.
  Drugi z podrozdziałów opisuje zarówno oprogramowanie dla komputerów typu
  PC, jak i odtwarzaczy sprawdzanych w sprzęcie elektronicznym, czyli w tym
@@ -13146,9 +14140,15 @@ Program, w wersji dla systemu Microsoft Windows, umożliwia dodanie następując
 \end_layout
 
 \begin_layout Itemize
-*.3GP, *.ASF, *.AVI, *.DIVX, *.F4V, *.FLV, *.M1V, *.M2TS, *.M4V, *.MKV, *.MOV, *.MP4,
- *.MPEG, *.MPG, *.MPGV, *.MPV, *.MTS, *.PS, *.QT, *.RM, *.RMVB, *.SVI, *.TP, *.TRP,
- *.TS, *.VOB, *.VRO, *.WMV.
+*.3GP, *.ASF, *.AVI, *.DIVX, *.F4V, *.FLV, *.M1V, *.M2TS, *.M4V, *.MKV, 
+\begin_inset Newline newline
+\end_inset
+
+*.MOV, *.MP4, *.MPEG, *.MPG, *.MPGV, *.MPV, *.MTS, *.PS, *.QT, *.RM, 
+\begin_inset Newline newline
+\end_inset
+
+*.RMVB, *.SVI, *.TP, *.TRP, *.TS, *.VOB, *.VRO, *.WMV.
  
 \end_layout
 
@@ -13167,8 +14167,11 @@ e parametry rozszerzenia:
 \end_layout
 
 \begin_layout Itemize
-*.3GA, *.AAC, *.AC3, *.AU, *.AMR, *.APE, *.DAT, *.FLAC, *.LPCM, *.M4A, *.MP2, *.MP3,
- *.MPA, *.OGG, *.PCM, *.RA, *.VOX, *.WAV, *.WMA.
+*.3GA, *.AAC, *.AC3, *.AU, *.AMR, *.APE, *.DAT, *.FLAC, *.LPCM, *.M4A, 
+\begin_inset Newline newline
+\end_inset
+
+*.MP2, *.MP3, *.MPA, *.OGG, *.PCM, *.RA, *.VOX, *.WAV, *.WMA.
  
 \end_layout
 
@@ -13219,7 +14222,7 @@ Nero MediaHome 4
 \end_layout
 
 \begin_layout Standard
-Nero MediaHome 4 jest to płatne oprogramowanie (do testów wykorzysywana
+Nero MediaHome 4 jest to płatne oprogramowanie (do testów wykorzystywana
  była wersja próbna) udostępniające multimedia, podobnie jak większość aplikacji
 , takie które są wyspecyfikowane w technologii DLNA.
  
@@ -13228,6 +14231,32 @@ Nero MediaHome 4 jest to płatne oprogramowanie (do testów wykorzysywana
 \begin_layout Standard
 W pliku pomocy programu zostały przedstawione obsługiwane rozszerzenia.
  
+\begin_inset Newline newline
+\end_inset
+
+Dla plików wideo: 
+\end_layout
+
+\begin_layout Itemize
+*.3GP, *.AVI, *.DIVX, *.ASF, *.DV, *.MPEG, *.MPG, *.MPE, *.M1V, 
+\begin_inset Newline newline
+\end_inset
+
+*.DAT, *.MPEG2, *.MPG2, *.M2V, *.PVA, *.MOD, *.TOD, *.VOB, 
+\begin_inset Newline newline
+\end_inset
+
+*.MP2P, *.PS, *.MP2T, *.TS, MP4, *.M4P, *.MOV, *.QT, *.WMV, *.DVR-MS, *.FLV, *.MP4.
+ 
+\end_layout
+
+\begin_layout Standard
+Dla plików obrazów: 
+\end_layout
+
+\begin_layout Itemize
+*.BMP, *.GIF, *.JPEG, *.JPG, *.JPE, *.PNG, *.TIFF, *.TIF, *.WMF.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -13235,20 +14264,11 @@ Dla plików audio są to:
 \end_layout
 
 \begin_layout Itemize
-*.AIFF, *.AIF, *.MP1, *.MP2, *.MP3, *.MPA, *.MP4, *.AC3, *.AAC, *.M4A, *.MP4, *.WAV,
- *.WAVE, *.WMA, *.OGG, OGM, *.LPCM, *.PCM, *.L16.
- Dla plików obrazów: *.BMP, *.GIF, *.JPEG, *.JPG, *.JPE, *.PNG, *.TIFF, *.TIF, *.WMF.
- 
-\end_layout
+*.AIFF, *.AIF, *.MP1, *.MP2, *.MP3, *.MPA, *.MP4, *.AC3, *.AAC, 
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
-Dla plików wideo: 
-\end_layout
-
-\begin_layout Itemize
-*.3GP, *.AVI, *.DIVX, *.ASF, *.DV, *.MPEG, *.MPG, *.MPE, *.M1V, *.DAT, *.MPEG2, *.MPG2,
- *.M2V, *.PVA, *.MOD, *.TOD, *.VOB, *.MP2P, *.PS, *.MP2T, *.TS, MP4, *.M4P, *.MOV,
- *.QT, *.WMV, *.DVR-MS, *.FLV, *.MP4.
+*.M4A, *.MP4, *.WAV, *.WAVE, *.WMA, *.OGG, OGM, *.LPCM, *.PCM, *.L16.
  
 \end_layout
 
@@ -13285,7 +14305,7 @@ Wszystkie przetestowane urządzenia poprawnie odtwarzają materiały udostępnia
  wadą, którą jest brak wieloplatformowości.
  Drugą cechą, która może odstraszyć przeciętnego użytkownika jest cena oprogramo
 wania (około 40 USD).
- Biorąc pod uwagę, że większośc odtwarzaczy jest darmowych, jest to niewątpliwie
+ Biorąc pod uwagę, że większość odtwarzaczy jest darmowych, jest to niewątpliwie
  wada.
 \end_layout
 
@@ -13303,8 +14323,8 @@ General Public License
 \emph default
 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "key-26"
+LatexCommand citet
+key "key-28"
 
 \end_inset
 
@@ -13407,7 +14427,7 @@ Coherence
 \emph default
 jest framework'iem wykorzystywanym do działania w sieci UPnP A/V i DLNA.
  Funkcjonuje jako warstwa tworząca komunikaty UPnP.
- Może być również uruchomiony jako samoodzielny program wykorzystujący wtyczki
+ Może być również uruchomiony jako samodzielny program wykorzystujący wtyczki
  do zdefiniowania celu działania.
  Jedną z wtyczek jest udostępnianie multimediów w sieci lokalnej, zgodnie
  z protokołem UPnP A/V.
@@ -13496,7 +14516,7 @@ Graphical User Interface
 Dla systemu Windows warto wymienić odtwarzacze Windows Media Player oraz
  Samsung AllShare, które potrafią wyszukać serwery DLNA, UPnP A/V i odtworzyć
  ich zawartość.
- Pierwszy program, poza podstawowymi funkacjami odtwarzania, nie posiada
+ Pierwszy program, poza podstawowymi funkcjami odtwarzania, nie posiada
  rozbudowanych cech, takich jak obsługa napisów, co jest jego niewątpliwą
  wadą.
  Odtwarza jedynie filmy z rozszerzeniami AVI, WMV.
@@ -15094,8 +16114,8 @@ e.
  Zapewniają one lepszą jakość dźwięku, niż obsługiwane rodzaje ścieżek (np.
  AC3 lub MP3).
 \begin_inset CommandInset citation
-LatexCommand cite
-key "key-30"
+LatexCommand citet
+key "key-32"
 
 \end_inset
 
@@ -15122,8 +16142,8 @@ Obrazy sprawiają wielu odtwarzaczom problem, gdy nie posiadają dostosowanej
  Każdy inny, powołując się na standard DLNA, nie będzie obsługiwany.
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "key-30"
+LatexCommand citet
+key "key-32"
 
 \end_inset
 
@@ -15139,7 +16159,7 @@ Standard DLNA nie zobowiązuje producentów do obsługi wiele popularnych rodzaj
  Obsługiwane kontenery przez DLNA to MP4 oraz ASF.
  Są to kontenery multimedialne dużo rzadziej spotykane, niż AVI oraz MKV.
  Obsługiwane przez standard kontenery posiadają wiele ograniczeń.
- Jednym z ograniczeń, bardzo odczuwalnym w erze filmów HD, jest cecha konetenera
+ Jednym z ograniczeń, bardzo odczuwalnym w erze filmów HD, jest cecha kontenera
  MP4, który przyjmuje rozdzielczość 720 x 576 pikseli jako maksymalną.
  W takim przypadku o film w rozdzielczości full HD, zgodnie ze standardem,
  nie może zostać przesłany.
@@ -15148,8 +16168,8 @@ e wideo, każdy o rozdzielczości 1920 x 1080 pikseli (każde oko powinno mieć
  dostarczany materiał full HD).
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "key-30"
+LatexCommand citet
+key "key-32"
 
 \end_inset
 
@@ -15284,14 +16304,14 @@ ntowana.
 \begin_layout Standard
 Niniejsza praca magisterska miała za zadanie opisać technologie UPnP A/V
  oraz DLNA.
- Są one bardzo do siebie zblżone, gdyż UPnP A/V było specyfikacją bazową
+ Są one bardzo do siebie zbliżone, gdyż UPnP A/V było specyfikacją bazową
  dla, nowszego standardu DLNA.
  Pośrednio wyjaśniono również specyfikę głównego standardu (na którym obie
  bazują), to jest UPnP.
  Opisany został protokół zawarty w tym standardzie UPnP oraz komunikat przygotow
 ane na potrzeby udostępniania treści multimedialnych.
  Przybliżono również sposób kodowania plików muzycznych, graficznych, wideo.
- W tym wypadku większośc uwagi została skupiona na formatach najpopularniejszych
+ W tym wypadku większość uwagi została skupiona na formatach najpopularniejszych
 , a nie tych, które zostały narzucone przez którykolwiek ze standardów.
 \end_layout
 
@@ -15309,17 +16329,10 @@ ji, czyli serwerów multimedialnych, których wybór jest wciąż mocno ogranicz
  Tak jak powszechnie wbudowane są usługi udostępniania i wyszukiwania plików,
  drukarek (często również oparte o protokół UPnP), tak serwer DLNA powinien
  być w przyszłości dostępny na tym samym poziomie.
-\begin_inset CommandInset citation
-LatexCommand citet
-key "key-42"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-1"
@@ -15337,7 +16350,25 @@ target "http://www.upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.0-2008042
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "upnpdevarch11"
+
+\end_inset
+
+UPnP Device Architecture 1.1; UPnP Forum; 2008; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.1.pdf"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-2"
@@ -15355,7 +16386,25 @@ target "http://upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.1-AnnexA.pdf"
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "publicoverview"
+
+\end_inset
+
+UPnP Forum Public Overview 2011-2012, 2011, 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://upnp.org/resources/documents/UPnP_Forum_PublicOverview_2011_12.pdf"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-3"
@@ -15373,7 +16422,7 @@ target "http://upnp.org/specs/av/UPnP-av-MediaServer-v2-Device.pdf"
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-4"
@@ -15391,7 +16440,7 @@ target "http://www.upnp.org/specs/av/UPnP-av-AVArchitecture-v2-20101231.pdf"
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-5"
@@ -15409,7 +16458,7 @@ target "http://upnp.org/specs/av/UPnP-av-ContentDirectory-v1-Service.pdf"
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-6"
@@ -15428,7 +16477,7 @@ target "http://upnp.org/specs/av/UPnP-av-ContentDirectory-v2-Service.pdf"
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-7"
@@ -15446,7 +16495,7 @@ target "http://www.upnp.org/specs/av/UPnP-av-RenderingControl-v3-Service-2010123
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-8"
@@ -15464,7 +16513,7 @@ target "http://www.upnp.org/specs/gw/UPnP-gw-DeviceProtection-v1-Service-2011022
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-9"
@@ -15476,7 +16525,7 @@ s Version: 1.0; Digital Living Network Alliance; 2004
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-10"
@@ -15488,7 +16537,7 @@ s Version: 1.0 Errata Version 2.0; Digital Living Network Alliance; 2005
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-11"
@@ -15500,7 +16549,7 @@ DLNA Overview and Vision Whitepaper 2007; Digital Living Network Alliance;
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-12"
@@ -15513,7 +16562,7 @@ Online UPnP A/V Device Database for Quick and Easy Capability Checking;
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-13"
@@ -15525,7 +16574,7 @@ UPnP Services and Jini Clients ; Jan Newmarch; School of Network Computing
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-14"
@@ -15545,7 +16594,7 @@ target "http://www.tml.tkk.fi/Publications/C/25/papers/Haque_final.pdf"
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-15"
@@ -15564,7 +16613,7 @@ target "http://www.allegrosoft.com/UPnP_DLNA_White_Paper.pdf"
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-16"
@@ -15575,7 +16624,7 @@ Overview of UPnP AV Architecture; Intel Corporation; 2003
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-17"
@@ -15586,7 +16635,7 @@ DLNA 1.5 Requirements Overview; Tony Dou; Intel Corporation; 2006
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-18"
@@ -15604,7 +16653,7 @@ target "http://www.upnp-hacks.org/elce-presentatie.pdf"
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-19"
@@ -15617,7 +16666,7 @@ Design and Implementation of Home Network Systems using UPnP middleware
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-20"
@@ -15629,7 +16678,7 @@ UPnP Design by Example: A Software Developers's Guide to Universal Plug
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-21"
@@ -15640,7 +16689,7 @@ Network Media Content Aggregator for DLNA Server; Jan Kubový; 2011
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-22"
@@ -15658,7 +16707,7 @@ target "http://4thline.org/projects/cling"
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-23"
@@ -15676,7 +16725,7 @@ target "http://www.cybergarage.org/twiki/bin/view/Main/CyberLinkForJava"
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-24"
@@ -15694,32 +16743,46 @@ target "http://coherence.beebits.net/"
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-9"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-10"
-
-\end_inset
-
-d
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-25"
+
+\end_inset
+
+MiniUPNP; Thomas Bernard; 2011; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://miniupnp.free.fr/"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring References
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-26"
+
+\end_inset
+
+MiniDLNA; 2011; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://sourceforge.net/projects/minidlna/"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring References
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-27"
 
 \end_inset
 
@@ -15734,10 +16797,10 @@ target "http://www.opensource.org/licenses/mit-license.php"
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-26"
+key "key-28"
 
 \end_inset
 
@@ -15752,10 +16815,10 @@ target "http://www.gnu.org/licenses/gpl.html"
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-27"
+key "key-29"
 
 \end_inset
 
@@ -15763,10 +16826,10 @@ Test Baz danych Open Source; SDJ Extra nr 17 PHP Starter Kit; 2005
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-28"
+key "key-30"
 
 \end_inset
 
@@ -15776,10 +16839,10 @@ Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types; N.
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-29"
+key "key-31"
 
 \end_inset
 
@@ -15794,10 +16857,10 @@ target "http://www.sqlalchemy.org/"
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-30"
+key "key-32"
 
 \end_inset
 
@@ -15812,7 +16875,7 @@ target "http://www.digitalversus.com/tv-television/dlna-standard-real-mess-a971.
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-33"
@@ -15830,20 +16893,10 @@ target "http://downloadcenter.samsung.com/content/UM/201112/20111208190558077/We
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-34"
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \end_inset
 
@@ -15858,7 +16911,7 @@ RFC 2616 Hypertext Transfer Protocol -- HTTP/1.1; R.
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-35"
@@ -15870,7 +16923,7 @@ RFC 5219 A More Loss-Tolerant RTP Payload Format for MP3 Audio; R.
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-36"
@@ -15883,20 +16936,35 @@ RFC 4627 The application/json Media Type for JavaScript Object Notation
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "key-37"
+key "SSDP"
 
 \end_inset
 
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-dodać link
+Simple Service Discovery Protocol/1.0; Yaron Y.
+ Goland, Ting Cai, Paul Leach, Ye Gu; Internet Engineering Task Force; 1999
 \end_layout
+
+\begin_layout Bibliography
+\labelwidthstring References
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "GENA"
+
+\end_inset
+
+General Event Notification Architecture Base; J.
+ Cohen, S.
+ Aggarwal; Internet Engineering Task Force; 1998
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring References
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-37"
 
 \end_inset
 
@@ -15905,7 +16973,7 @@ SOAP Simple Object Access Protocol; Nilo Mitra; World Wide Web Consortium
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-38"
@@ -15920,7 +16988,7 @@ Extensible Markup Language (XML) 1.0 (Fifth Edition), Tim Bray, Jean Paoli,
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-39"
@@ -15938,7 +17006,7 @@ target "http://en.wikipedia.org/wiki/MPEG-4"
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-40"
@@ -15956,7 +17024,7 @@ target "http://en.wikipedia.org/wiki/Portable_Network_Graphics"
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-41"
@@ -15974,7 +17042,7 @@ target "http://en.wikipedia.org/wiki/JPEG"
 \end_layout
 
 \begin_layout Bibliography
-\labelwidthstring Odnośniki
+\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-42"
@@ -15985,6 +17053,24 @@ Definicja kontenera multimedialnego; Wikipedia; 2012;
 \begin_inset CommandInset href
 LatexCommand href
 target "http://en.wikipedia.org/wiki/Digital_container_format"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring References
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "formatyPlikow"
+
+\end_inset
+
+Podział formatów plików graficznych; Wikipedia; 2012; 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://pl.wikipedia.org/wiki/Formaty_plik%C3%B3w_graficznych"
 
 \end_inset
 
